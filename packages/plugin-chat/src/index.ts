@@ -14,7 +14,7 @@ const info = <const>{
     },
     ai_model: {
       type: ParameterType.STRING,
-      default: "gpt-3.5-turbo-16k",
+      default: "gpt-4o",
     },
     chat_field_placeholder: {
       type: ParameterType.STRING,

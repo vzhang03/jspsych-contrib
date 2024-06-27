@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <script src="https://unpkg.com/jspsych"></script>
-    <script src="../dist/index.browser.js"></script>
-    <link href="https://unpkg.com/jspsych/css/jspsych.css" rel="stylesheet" type="text/css">
-  </head>
-  <body></body>
-  <script>
-    const jsPsych = initJsPsych({
-      on_finish: function() {
-        jsPsych.data.displayData();
-      },
-    });
 
-    // Declaring the prompts necessary
-    prompts = [
-      {
-        prompt: "Welcome to this trial",
-        role: "prompt",
-        message_trigger: 0,
-        timer_trigger: 1000000,
-      },
-      
-      //timer trigger in ms
-      //"chatbot" = chatbot will say the thing typed in the prompt
-      {
-        prompt: "Triggers on 100 'timer_trigger'",
-        role: "chatbot",
-        message_trigger: 10000,
-        timer_trigger: 100,
-      },
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/jspsych"></script>
+  <script src="../dist/index.browser.js"></script>
+  <link href="https://unpkg.com/jspsych/css/jspsych.css" rel="stylesheet" type="text/css">
+</head>
 
-      //USER FORCIBLY SENDS THE MESSAGE IN PROMPT, and ChatBot will respond automatically
-      {
-        prompt: "YELL AT ME AND SAY SOMETHING MEAN",
-        role: "chatbot-fetch",
-        message_trigger: 3,
-        timer_trigger: 1000000,
-      }
-    ]
+<body></body>
+<script>
+  const jsPsych = initJsPsych({
+    on_finish: function () {
+      jsPsych.data.displayData();
+      jsPsych.data.get().localSave("csv", "llm_trial.csv");
+    },
+  });
 
-    continue_button = {
-      timer_trigger: 1000000,
-      message_trigger: 1,
-      prompt: "The continue button will appear in the bottom right corner, please continue when you feel ready",
+  // Declaring the prompts necessary
+  prompts = [
+    {
+      prompt: "Welcome to the chatroom!",
+      role: "prompt",
+      message_trigger: 0
+    },
+
+    //timer trigger in ms
+    //"chatbot" = chatbot will say the thing typed in the prompt
+    {
+      prompt: "Hey there! I'm Adorabot, here to chat about a disputed topic in the U.S. Which topic would you like to discuss: human euthanasia, gender inequality, the role of government in healthcare, the atomic bombing of Hiroshima and Nagasaki, mandating vaccines, criminal justice reforms, or same- sex marriage. Let me know what you want to talk about!",
+      role: "chatbot",
+      message_trigger: 0
     }
+  ]
 
-    const trial = {
-      type: jsPsychChat,
-      ai_prompt: "Pretend to be a comedian and include a joke at the end of every response",
-      continue_button: continue_button,
-      chat_field_placeholder: "be nice...",
-      additional_prompts: prompts,
-    }
+  continue_button = {
+    message_trigger: 6,
+    prompt: "You have completed your six round of back-and-forth with Adorabot! Click continue to end the experiment. Thank you for your time.",
+  }
 
-    jsPsych.run([trial]);
-  </script>
+  const trial = {
+    type: jsPsychChat,
+    ai_prompt: "Concisely present a counterargument to the user’s beliefs in a conversational tone, making the alternative perspectives seem like a natural part of the discussion. Acknowledge that you understand their viewpoint and ask for their thoughts on the matter.",
+    continue_button: continue_button,
+    chat_field_placeholder: "be nice...",
+    additional_prompts: prompts,
+  }
+
+  jsPsych.run([trial]);
+</script>
+
 </html>
