@@ -1,7 +1,5 @@
 import { JsPsych, JsPsychPlugin, ParameterType, TrialType } from "jspsych";
-import { deepCopy } from "jspsych/dist/modules/utils";
 import { ChatCompletionStream } from "openai/lib/ChatCompletionStream";
-import { MessagesPage } from "openai/resources/beta/threads/messages";
 
 // thinking about using an enum to define
 // -> system, user, bot
@@ -139,7 +137,7 @@ class ChatPlugin implements JsPsychPlugin<Info> {
     const sendMessage = async () => {
       const message = userInput.value.trim();
 
-      if (this.chainCondition() && message !== "") {
+      if (message !== "" && this.prompt_chain && this.chainCondition()) {
         this.addMessage("user", message, chatBox);
         userInput.value = "";
         await this.chainPrompts(message, chatBox);
