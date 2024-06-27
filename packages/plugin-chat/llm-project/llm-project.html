@@ -29,23 +29,25 @@
     //"chatbot" = chatbot will say the thing typed in the prompt
     {
       message: "Hey there! I'm Adorabot, here to chat about a disputed topic in the U.S. Which topic would you like to discuss: human euthanasia, gender inequality, the role of government in healthcare, the atomic bombing of Hiroshima and Nagasaki, mandating vaccines, criminal justice reforms, or same- sex marriage. Let me know what you want to talk about!",
-      role: "chatbot",
+      role: "chatbot-message",
       message_trigger: 0
     }
   ]
 
   continue_button = {
     message_trigger: 6,
-    prompt: "You have completed your six round of back-and-forth with Adorabot! Click continue to end the experiment. Thank you for your time.",
+    message: "You have completed your six round of back-and-forth with Adorabot! Click continue to end the experiment. Thank you for your time.",
   }
 
   const trial = {
     type: jsPsychChat,
-    ai_prompt: "Concisely present one counterargument and one alternative perspective for the main poin the user raises in a conversational tone. Briefly acknowledge the user's point and ask for their thoughts on the matter.",
+    ai_prompt: "Briefly acknowledge the user's point. Concisely present specific counterarguments and alternative perspective to the user's points. Ask for their thought on specific things you bring up.",
     continue_button: continue_button,
     chat_field_placeholder: "be nice...",
     additional_prompts: prompts,
   }
+  //past prompts
+  // "In a conversational tone, concisely present specific counterarguments to the user's points. Briefly acknowledge the user's point and ask for their specific thought on your response."
 
   jsPsych.run([trial]);
 </script>
