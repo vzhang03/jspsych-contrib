@@ -1,183 +1,185 @@
 /* styles.css */
 
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    overflow-x: hidden;
-  }
-  
-  .chat-page {
-    /* width: 100vw;
-    height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensure no overflow */
-    padding-top: 60px; /* Adjust based on the height of .bot-title */
-  }
-  
-  
-  .bot-title {
-    height: 80px;
-    width: 100%;
-    background-color: #706EA0;
-    padding: 10px;
-    position: fixed; /* Fix the position to the top */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure it stays above other content */
-  }
-  
-  .bot-title-text {
-    color: black;
-    font-weight: 1000;
-    font-size: 40px;
-    text-align: center;
-  }
-  
-  
-  /* Chat container */
-  .chat-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Prevent overflow */
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Chat box */
-  .chat-box {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 30px 20px 20px; /* Not sure about the direction of these */
-    margin-top: 10px; 
-    overflow-y: auto;
-    max-height: 90vh; 
-    box-sizing: border-box; 
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .chat-box::before {
-    content: '';
-    display: block;
-    height: 20px; /* Adjust this value to control the extra space */
-    width: 100%;
-    flex-shrink: 0; /* Ensure the space doesn't collapse */
-  }
-  
-  /* Chat fields */
-  .chat-fields {
-    padding: 10px;
-    display: flex;
-    /* overflow: hidden; 
-    width: calc(100% - 40px); 
-    box-sizing: border-box;  */
-    width: 100%; /* Occupy full width of .chat-box */
-    box-sizing: border-box;
-    align-items: center; /* Center items vertically */
-  }
-  
-  /* User input */
-  #user-input {
-    padding: 10px;
-    border: none;
-    border-radius: 10px; 
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%; 
-    font-family: inherit; 
-    font-size: inherit; 
-    resize: none; 
-    height: auto; 
-    overflow-y: auto; 
-    flex: 1; 
-  }
-  
-  /* Send button */
-  #send-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-left: 10px;
-    width: auto; 
-    font-family: inherit;
-    font-size: inherit;
-    transition: background-color 0.3s ease; /* Add a transition for hover effect */
-  }
-  
-  /* Hover effect for send button */
-  #send-btn:hover {
-    background-color: #45A049; /* Slightly darker shade on hover */
-  }
-  
-  /* Submit button */
-  #continue-btn {
-    background-color: #FF914D; /* Different background color */
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-left: 10px;
-    width: auto; 
-    font-family: inherit;
-    font-size: inherit;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for distinction */
-    transition: background-color 0.3s ease; /* Add a transition for hover effect */
-    font-style: italic;
-  }
-  
-  /* Hover effect for submit button */
-  #continue-btn:hover {
-    background-color: #e28043; /* Darker shade on hover */
-  }
-  
-  /* User message */
-  .user-message {
-    align-self: flex-end; 
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    max-width: 70%;
-    word-wrap: break-word; 
-    text-align: left; 
-  }
-  
-  /* Chatbot message */
-  .chatbot-message {
-    align-self: flex-start; 
-    background-color: #d1e7dd; /* Change this color to something contrasting */
-    color: black; 
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    max-width: 70%; 
-    word-wrap: break-word; 
-    text-align: left; 
-  }
-  
-  .prompt-message {
-    border-radius: 10px;
-    background-color: #faf39d; 
-    color: #6B503F;
-    padding: 10px;
-    margin: 5px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #d1d0e5;
+  overflow-x: hidden;
+}
+
+.chat-page {
+  /* width: 100vw;
+  height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow */
+  padding-top: 60px; /* Adjust based on the height of .bot-title */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow*/
+}
+
+
+.bot-title {
+  /* height: 80px; */
+  height: 8vh;
+  width: 100%;
+  background-color: #706EA0;
+  padding: 10px;
+  position: fixed; /* Fix the position to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.bot-title-text {
+  color: black;
+  font-weight: 1000;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+/* Chat container */
+.chat-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent overflow */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Chat box */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px 20px 20px; /* Not sure about the direction of these */
+  margin-top: 10px; 
+  overflow-y: auto;
+  max-height: 80vh; 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box::before {
+  content: '';
+  display: block;
+  height: 20px; /* Adjust this value to control the extra space */
+  width: 100%;
+  flex-shrink: 0; /* Ensure the space doesn't collapse */
+}
+
+/* Chat fields */
+.chat-fields {
+  padding: 10px;
+  display: flex;
+  /* overflow: hidden; 
+  width: calc(100% - 40px); 
+  box-sizing: border-box;  */
+  width: 100%; /* Occupy full width of .chat-box */
+  box-sizing: border-box;
+  align-items: center; /* Center items vertically */
+}
+
+/* User input */
+#user-input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px; 
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  font-family: inherit; 
+  font-size: inherit; 
+  resize: none; 
+  height: auto; 
+  overflow-y: auto; 
+  flex: 1; 
+}
+
+/* Send button */
+#send-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  width: auto; 
+  font-family: inherit;
+  font-size: inherit;
+  transition: background-color 0.3s ease; /* Add a transition for hover effect */
+}
+
+/* Hover effect for send button */
+#send-btn:hover {
+  background-color: #45A049; /* Slightly darker shade on hover */
+}
+
+/* Submit button */
+#continue-btn {
+  background-color: #FF914D; /* Different background color */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  width: auto; 
+  font-family: inherit;
+  font-size: inherit;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for distinction */
+  transition: background-color 0.3s ease; /* Add a transition for hover effect */
+  font-style: italic;
+}
+
+/* Hover effect for submit button */
+#continue-btn:hover {
+  background-color: #e28043; /* Darker shade on hover */
+}
+
+.user-message, .chatbot-message, .prompt-message {
+  padding: 10px;
+  margin: 5px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.user-message, .chatbot-message {
+  max-width: 70%;
+  word-wrap: break-word; 
+  text-align: left; 
+}
+
+/* User message */
+.user-message {
+  align-self: flex-end; 
+  background-color: #4CAF50; 
+  color: white;
+}
+
+/* Chatbot message */
+.chatbot-message {
+  align-self: flex-start; 
+  background-color: #d1e7dd; /* Change this color to something contrasting */
+  color: black; 
+}
+
+.prompt-message {
+  background-color: #faf39d; 
+  color: #6B503F;
+}
