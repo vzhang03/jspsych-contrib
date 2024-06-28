@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/jspsych"></script>
+  <script src="../dist/index.browser.js"></script>
+  <link href="https://unpkg.com/jspsych/css/jspsych.css" rel="stylesheet" type="text/css">
+</head>
+
+<body></body>
+<script>
+  const jsPsych = initJsPsych({
+    on_finish: function () {
+      jsPsych.data.displayData();
+      // jsPsych.data.get().localSave("csv", "llm_trial.csv");
+    },
+  });
+
+  // Declaring the prompts necessary
+  prompts = [
+    {
+      message: "Welcome to the chatroom!",
+      role: "system-prompt",
+      message_trigger: 0
+    },
+
+    //timer trigger in ms
+    //"chatbot" = chatbot will say the thing typed in the prompt
+    {
+      message: "Hey there! I'm Adorabot, here to chat about a disputed topic in the U.S. Which topic would you like to discuss: human euthanasia, gender inequality, the role of government in healthcare, the atomic bombing of Hiroshima and Nagasaki, mandating vaccines, criminal justice reforms, or same-sex marriage?",
+      role: "chatbot-message",
+      message_trigger: 0
+    },
+    {
+      message: "Ask the user to share their views on the topic that they have identified.",
+      role: "chatbot-prompt",
+      message_trigger: 1
+    },
+    {
+      message: "Use colloquial language. In one sentence, say you understand the user's point, then concisely present a specific alternative perspective that counters the user points. Ask why the user think what they think. Match your response to the user response.",
+      role: "chatbot-prompt",
+      message_trigger: 2
+    },
+    {
+      message: "Use colloquial language. In one sentence, say you understand the user's point, then concisely present a specific alternative perspective that counters the user points. Ask why the user think what they think. Match your response to the user response.",
+      role: "chatbot-prompt",
+      message_trigger: 3
+    },
+    {
+      message: "Use colloquial language. In one sentence, say you understand the user's point, then concisely present a specific alternative perspective that counters the user points. Ask why the user think what they think. Match your response to the user response.",
+      role: "chatbot-prompt",
+      message_trigger: 4
+    },
+    {
+      message: "Use colloquial language. In one sentence, say you understand the user's point, then concisely present a specific alternative perspective that counters the user points. Ask why the user think what they think. Match your response to the user response.",
+      role: "chatbot-prompt",
+      message_trigger: 5
+    }
+  ]
+
+  continue_button = {
+    message_trigger: 6,
+    message: "You have completed your six rounds of back-and-forth with Adorabot! Click continue to proceed with the experiment.",
+  }
+
+
+  const trial = {
+    type: jsPsychChat,
+    ai_prompt: "Match your response length to the user message length.",
+    continue_button: continue_button,
+    chat_field_placeholder: "Share your views...",
+    additional_prompts: prompts,
+  }
+  //past prompts
+  // "In a conversational tone, concisely present specific counterarguments to the user's points. Briefly acknowledge the user's point and ask for their specific thought on your response."
+
+  jsPsych.run([trial]);
+</script>
+
+</html>
