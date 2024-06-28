@@ -37,19 +37,19 @@
   prompt_chain = {
       message_trigger: 1,
       // timer_trigger: 1,
-      prompts: ["Identify the user's main argument.", "In one sentence, akcnowledge the user's perspective. Provide an alternative perspective and relate it to the user's experience."], // Ask the user what has led them to believe in the argument below.
+      prompts: ["First, reiterate the user's statement. Second, you want to improve the user's open-mindedness and willingness to converse about this topic with others. Identify whether it would be most successful to do so by asking the user a deeper question about their beliefs based on what they've just stated, by providing a counter argument to the user's beliefs and asking what the user thinks, or by explaining why some people have different views from the user's views and asking what the user thinks.", "In one sentence, akcnowledge the user's perspective. Then, in a couple sentences, comply with the information below. Do not explicitly state that you are trying to expand open-mindedness or willingness to converse, or that you have selected a specific approach for responding to the user. Be conversational. Do not overgeneralize."], // Ask the user what has led them to believe in the argument below.
     }
 
   continue_button = {
     message_trigger: 6,
-    message: "You have completed your six round of back-and-forth with Adorabot! Click continue to end the experiment. Thank you for your time.",
+    message: "You have completed your six rounds of messages with Adorabot! Click continue to proceed with the experiment.",
   }
 
   const trial = {
     type: jsPsychChat,
-    ai_prompt: "Ask the user what their thoughts are on the topic and ask them to explain their experience.",
+    ai_prompt: "Ask the user what their views are.",
     continue_button: continue_button,
-    chat_field_placeholder: "be nice...",
+    chat_field_placeholder: "Share your perspective...",
     additional_prompts: prompts,
     prompt_chain: prompt_chain
   }
