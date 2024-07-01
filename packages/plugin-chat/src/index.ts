@@ -1,12 +1,10 @@
 import { JsPsych, JsPsychPlugin, ParameterType, TrialType } from "jspsych";
 import { ChatCompletionStream } from "openai/lib/ChatCompletionStream";
 
-// CHANGES FOR IAN
-// system-prompt instead of prompt for the prompts that want to display in yellow
-// deleted chatbot-fetch
-// fixed error checking for null values message/timer_trigger, implemented null checking within trigger methods that check prompts
-// implementing dynamic prompting
-// bot naming feature
+import { ChatLog } from "./ChatLog";
+
+// NEED TO FIX
+// if prompting bot but not message shoudl not pop up with message
 
 const info = <const>{
   name: "chat",
@@ -30,7 +28,7 @@ const info = <const>{
     },
     continue_button: {
       type: ParameterType.COMPLEX,
-      default: {},
+      default: { message_trigger: 0 },
       nested: {
         timer_trigger: {
           type: ParameterType.INT,
@@ -108,12 +106,12 @@ type Info = typeof info;
  */
 class ChatPlugin implements JsPsychPlugin<Info> {
   static info = info;
-  private prompt: {}[]; // keeps track of prompt to send to GPT
   private researcher_prompts: {}[]; // keeps track of researcher's prompts that need to be displayed
   private prompt_chain: {};
   private messages_sent: number; // notes number of messages sent to calculate prompts
   private timer_start: number; // notes beginning of session in order to calculate prompts
   private ai_model: string; // keeps track of model
+  private chatLog: ChatLog;
 
   constructor(private jsPsych: JsPsych) {}
 
@@ -145,12 +143,14 @@ class ChatPlugin implements JsPsychPlugin<Info> {
     const userInput = display_element.querySelector("#user-input") as HTMLInputElement;
     const sendButton = display_element.querySelector("#send-btn") as HTMLButtonElement;
     const continueButton = display_element.querySelector("#continue-btn") as HTMLButtonElement;
+    var keyPressLog = [];
 
     // Setting up Trial Logic
     // Function to handle logic of sending user message, and data collection
     const sendMessage = async () => {
       const message = userInput.value.trim();
-      this.addMessage("user", message, chatBox);
+      this.addMessage("user", message, chatBox, (keyPressLog = keyPressLog));
+      keyPressLog = [];
       userInput.value = "";
 
       // prompt chaining or simple requests
@@ -177,8 +177,19 @@ class ChatPlugin implements JsPsychPlugin<Info> {
       }
     });
 
+    // Function to log all keypresses
+    const logKeypress = (event) => {
+      keyPressLog.push(event.key);
+    };
+
+    // Event listener for all keypresses on userInput
+    userInput.addEventListener("keydown", logKeypress);
+
     continueButton.addEventListener("click", () => {
-      this.jsPsych.finishTrial({ chatLogs: this.prompt });
+      this.jsPsych.finishTrial({
+        prompt: this.chatLog.getPrompt(),
+        logs: this.chatLog.getChatLogs(),
+      });
     });
 
     // Setting up Trial
@@ -187,23 +198,24 @@ class ChatPlugin implements JsPsychPlugin<Info> {
 
   initializeTrialVariables(trial: TrialType<Info>) {
     this.timer_start = performance.now();
+    this.chatLog = new ChatLog();
     this.messages_sent = 0;
     this.ai_model = trial.ai_model;
 
-    // sets prompt
-    this.prompt = [];
-    this.updatePrompt(trial.ai_prompt, "system");
+    this.chatLog.updatePrompt(trial.ai_prompt, "system");
     // sets researcher prompts and removes any that can't trigger
-    this.researcher_prompts = trial.additional_prompts.filter((researcher_prompt) => {
-      if (
-        researcher_prompt["message_trigger"] === null &&
-        researcher_prompt["timer_trigger"] === null
-      ) {
-        console.error("Missing required property in researcher prompt:", researcher_prompt);
-        return false;
-      }
-      return true;
-    });
+    this.researcher_prompts = trial.additional_prompts
+      ? trial.additional_prompts.filter((researcher_prompt) => {
+          if (
+            researcher_prompt["message_trigger"] === null &&
+            researcher_prompt["timer_trigger"] === null
+          ) {
+            console.error("Missing required property in researcher prompt:", researcher_prompt);
+            return false;
+          }
+          return true;
+        })
+      : [];
 
     // sets continue button and removes any that can't trigger
     const continue_button = trial.continue_button;
@@ -258,28 +270,26 @@ class ChatPlugin implements JsPsychPlugin<Info> {
     }
   }
 
-  // updates prompts behind the scenes when we add messages to the screen
-  private updatePrompt(message, role): void {
-    const time = Math.round(performance.now());
-    const newMessage = { role: role, content: message, time: time };
-    this.prompt.push(newMessage);
-  }
-
   // Handles updates to system with the prompt and to the screen
-  addMessage(role, message, chatBox) {
+  addMessage(role, message, chatBox, keyPressLog?) {
     const newMessage = document.createElement("div");
     // Handles logic of updating prompts and error checking
     switch (role) {
       case "chatbot": // writing to screen handled caller function
-        this.updatePrompt(message, "assistant");
+        this.chatLog.updatePrompt(message, "assistant");
         return;
       case "user":
-        this.updatePrompt(message, "user");
+        this.chatLog.updatePrompt(message, "user", keyPressLog);
         break;
       case "chatbot-message": // set by researcher, needs be seperate case because doesn't update prompts
         role = "chatbot";
+        this.chatLog.logMessage(message, role);
         break;
       case "system-prompt": // set by researcher
+        this.chatLog.logMessage(message, role);
+        break;
+      case "chatbot-prompt": // logging already handled by "cleanSystem"
+        role = "system-prompt";
         break;
       default:
         console.error("Incorrect role");
@@ -305,13 +315,13 @@ class ChatPlugin implements JsPsychPlugin<Info> {
       // allows to pass in non defined prompts
       if (prompt) response = await this.fetchGPT(prompt, newMessage);
       // special case when wanting to prompt with own thing
-      else response = await this.fetchGPT(this.prompt, newMessage);
+      else response = await this.fetchGPT(this.chatLog.getPrompt(), newMessage);
 
       chatBox.scrollTop = chatBox.scrollHeight;
       this.addMessage("chatbot", response, chatBox); // saves to prompt
       return response;
     } catch (error) {
-      this.addMessage("chatbot", "error fetching bot response", chatBox);
+      newMessage.innerHTML = "error fetching bot response";
       return "error fetching response";
     }
   }
@@ -337,15 +347,15 @@ class ChatPlugin implements JsPsychPlugin<Info> {
             const message = researcher_prompt["message"];
 
             if (prompt !== null && typeof prompt === "string") {
-              this.updatePrompt(prompt, "system");
+              this.chatLog.cleanSystem(prompt, message);
             } else
               console.error(
                 researcher_prompt,
                 "is missing prompt field or it isn't in the correct format"
               );
 
-            if (message !== null && typeof prompt === "string") {
-              this.addMessage("system-prompt", message, chatBox);
+            if (message !== null && typeof prompt === "string" && message !== "") {
+              this.addMessage(researcher_prompt["role"], message, chatBox);
             }
             break;
           case "continue": // displays continue button, error checking that pipelining is working
@@ -354,6 +364,7 @@ class ChatPlugin implements JsPsychPlugin<Info> {
               return false;
             }
             continueButton.style.display = "block";
+            // implement check here
             this.addMessage("system-prompt", researcher_prompt["message"], chatBox);
             break;
           default:
@@ -380,30 +391,36 @@ class ChatPlugin implements JsPsychPlugin<Info> {
   }
 
   private async chainPrompts(message, chatBox) {
-    for (let i = 0; i < this.prompt_chain["prompts"].length; i++) {
-      var temp_prompt = [];
+    const cleaned_prompt = this.chatLog.cleanConversation();
+    const logChain = [];
 
+    for (let i = 0; i < this.prompt_chain["prompts"].length; i++) {
+      const temp_prompt = [...cleaned_prompt];
       const prompt = this.prompt_chain["prompts"][i];
       const new_sys = {
         role: "system",
         content: prompt,
       };
       temp_prompt.push(new_sys);
+      logChain.push(new_sys);
 
       const user_message = {
         role: "user",
         content: message,
       };
       temp_prompt.push(user_message);
-
-      console.log("current prompt and input:", temp_prompt);
+      logChain.push(user_message);
 
       if (i === this.prompt_chain["prompts"].length - 1) {
-        await this.updateAndProcessGPT(chatBox, temp_prompt);
-      } else message = await this.fetchGPT(temp_prompt); // Ensure to await if fetchGPT is asynchronous
-
-      console.log("assistant message:", message);
+        message = await this.updateAndProcessGPT(chatBox, temp_prompt);
+        logChain.push({ role: "assistant", content: message });
+      } else {
+        message = await this.fetchGPT(temp_prompt); // Ensure to await if fetchGPT is asynchronous
+        logChain.push({ role: "assistant", content: message });
+      }
     }
+
+    this.chatLog.logMessage(logChain, "chain-prompt");
   }
 }
 
