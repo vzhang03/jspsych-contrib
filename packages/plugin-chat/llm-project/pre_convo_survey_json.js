@@ -1027,8 +1027,8 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Barring business and institutions from discriminating based on vaccination status is wrong",
-          text: "Barring business and institutions from discriminating based on vaccination status is wrong",
+            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
           value: "Schools should be allowed to require vaccinations for attendance",

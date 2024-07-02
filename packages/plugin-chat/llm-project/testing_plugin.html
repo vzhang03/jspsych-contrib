@@ -373,38 +373,10 @@
             });
         };
 
-        // placeholder interventions 
+        // INTERVENTIONS
 
-        var counter_bot = {
-            type: jsPsychHtmlKeyboardResponse,
-            stimulus: `
-        <p> counter bot stimulus <p>
-      `,
-            post_trial_gap: 1000,
-
-        }
-
-        var question_bot = {
-            type: jsPsychHtmlKeyboardResponse,
-            stimulus: `
-        <p> question bot stimulus <p>
-      `,
-            post_trial_gap: 1000,
-
-        }
-
-        var viewpoint_placeholder = {
-            type: jsPsychHtmlKeyboardResponse,
-            stimulus: `
-        <p> viewpoint bot stimulus <p>
-      `,
-            post_trial_gap: 1000,
-
-        }
-
-
-        // Declaring the prompts necessary for viewpoint bot
-        viewpoint_prompts = [
+        // Declaring the prompts necessary for Adorabot
+        prompts = [
             {
                 message: "Welcome to the chatroom!",
                 role: "system-prompt",
@@ -425,8 +397,8 @@
                     const topicChoiceAsString = lowercaseFirstLetter(chosenTopic);
                     const bot_row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
                         .rowAsString["row"]; //extracting the statement again because it didn't work if i tried to use the string from earlier
-                        const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
-                    return `Hey there! I'm Adorabot, here to chat about ${topicChoiceAsString}, a disputed topic in the U.S.  To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                    const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
+                    return `Hey there! I'm Adorabot, here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
                 message_trigger: 0
@@ -438,14 +410,32 @@
             message: "You have completed your six rounds of messages with Adorabot! Click continue to proceed with the experiment.",
         }
 
-        const viewpoint_trial = {
+        // Condition-specific bots
+        const counter_trial = {
             type: jsPsychChat,
-            ai_prompt: "Use colloquial language. In one sentence, say you understand the user's point. Then, explain in detail the kinds of different people in society who might disagree with the user's view and why. For example, if the user is against same-sex marriage, you might explain that a gay person might feel that they deserve to be legally wed to the person they love just like a straight person. Ask what the user thinks. Match your response to the user's response length. Ensure that you are mentioning specific types of people (i.e., people who have had specific experiences, have certain identities or jobs, etc.) and explaining why those people feel the way that they do.",
+            ai_prompt: "Use colloquial language. In one sentence, say you understand the user's point. Then, concisely present a specific argument or alternative perspective that counters the user's points. Ask why the user think what they think. Match your response to the user's response length. Don't dive deeper into implementing the user's views. Ensure that your message includes a counterargument; do not simply agree with the user. Do not give a counterargument that has already been mentioned.",
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
-            additional_prompts: viewpoint_prompts,
+            additional_prompts: prompts,
         };
+        jsPsych.run([counter_trial]);
 
+        const question_trial = {
+            type: jsPsychChat,
+            ai_prompt: "Always ask a question about the user's stance. Use colloquial language. Ask why the user think what they think or ask if there were any experience that led to their views. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of the government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
+            continue_button: continue_button,
+            chat_field_placeholder: "Share your perspective...",
+            additional_prompts: prompts,
+        };
+        jsPsych.run([question_trial]);
+
+        const viewpoint_trial = {
+            type: jsPsychChat,
+            ai_prompt: "prompt",
+            continue_button: continue_button,
+            chat_field_placeholder: "Share your perspective...",
+            additional_prompts: prompts,
+        };
         jsPsych.run([viewpoint_trial]);
 
         var control_intervention = {
@@ -699,7 +689,7 @@
             pre_convo_survey_trial,
             // pre_bot_instructions_break,
             // pre_convo_instructions,
-            counter_bot,
+            counter_trial,
             // post_convo_break,
             // republican_survey,
             // democrat_survey,
@@ -722,7 +712,7 @@
             pre_convo_survey_trial,
             // pre_bot_instructions_break,
             // pre_convo_instructions,
-            question_bot,
+            question_trial,
             // post_convo_break,
             // republican_survey,
             // democrat_survey,
