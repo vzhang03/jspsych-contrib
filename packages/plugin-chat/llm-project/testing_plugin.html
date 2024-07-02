@@ -59,14 +59,36 @@
             },
         });
 
-        // timelines for conditions
+        // // disable right-click
+        // document.addEventListener('contextmenu', function (e) {
+        //     e.preventDefault();
+        // });
+
+        // // disable keyboard shortcuts
+        // document.addEventListener('keydown', function (e) {
+        //     if (e.key === 'F12' ||
+        //         (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        //         (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        //         (e.ctrlKey && e.key === 'U') ||
+        //         (e.ctrlKey && e.shiftKey && e.key === 'C')) {
+        //         e.preventDefault();
+        //     }
+        // });
+
+        // // disable text selection
+        // document.addEventListener('selectstart', function (e) {
+        //     e.preventDefault();
+        // });
+
+
+        // create timelines for conditions. the contents of each timeline are at the bottom of this doc
         var counter_timeline = [];
         var question_timeline = [];
         var viewpoint_timeline = [];
         var control_timeline = [];
 
+        // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
-        // condition assignment 
         async function createExperiment() {
             const condition = 2 //await jsPsychPipe.getCondition("P09AXWX5b5t6"); 
             if (condition == 0) { timeline = counter_timeline; }
@@ -208,7 +230,7 @@
         }
 
         let rowAsString;
-
+        let topicChoice;
         /* pushing survey in timeline with both slider and non-slider questions */
         const pre_convo_survey_trial = {
             type: jsPsychSurvey,
@@ -222,6 +244,12 @@
                 console.log('Pre-convo survey data:', data);
                 // for post-survey party questions
                 data.response["political-affiliation"];
+
+                // get topic choice to feed into chat later
+                let topicChoice = data.response['topicChoice'];
+                console.log(topicChoice);
+
+
                 // extract issue-specific polarization survey responses from the data object
                 // need to iterate through the possible questions
                 // first, create a constant that lists the possible questions
@@ -235,7 +263,6 @@
                     "same-sex-polarization"
                 ];
 
-
                 // then extract and process each row's responses
                 possibleQuestions.forEach(row => {
                     let surveyResponses = data.response[row];
@@ -245,11 +272,6 @@
                         let relevantRow = extractrelevantRow(surveyResponses);
                         console.log('Relevant rows', relevantRow);  // Debugging line
 
-                        // relevantRow.forEach(rowObj => {
-                        //     let rowAsString = rowObj.row.toString();
-                        //     console.log('Row as string:', rowAsString);  // Debugging line
-                        // });
-
                         // convert relevant row into a string so we can feed it into chat later
                         relevantRow.forEach(rowObj => {
                             data.rowAsString = rowObj;
@@ -257,13 +279,13 @@
                         });
 
                     } else {
-                        console.log('No responses');  // Debugging line
+                        console.log('No responses');  // debugging line
                     };
                 });
             }
         };
-        // timeline.push(pre_convo_survey_trial);
 
+        // timeline.push(pre_convo_survey_trial);
 
         /* break inbetween pre-intervention survey and counter_bot conversation */
         var pre_bot_instructions_break = {
@@ -392,15 +414,22 @@
             //timer trigger in ms
             //"chatbot" = chatbot will say the thing typed in the prompt
             {
-                message: "Hey there! I'm Adorabot, here to chat about a disputed topic in the U.S. Which topic would you like to discuss: human euthanasia, gender inequality, the role of government in healthcare, the atomic bombing of Hiroshima and Nagasaki, mandating vaccines, criminal justice reforms, or same-sex marriage?",
+                message: () => { //put this as ai_prompt because it was reading errors if i didn't 
+                    //function is to insert depolarization string into the bot's prompt 
+                    const lowercaseFirstLetter = (str) => { //function to convert the first letter of the string into lowercase so it can be seamlessly inserted into the bot's question
+                        if (!str) return str;  // return the string if it's empty or not a string
+                        return str.charAt(0).toLowerCase() + str.slice(1);
+                    };
+                    const chosenTopic = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
+                        .response["topicChoice"];
+                    const topicChoiceAsString = lowercaseFirstLetter(chosenTopic);
+                    const bot_row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
+                        .rowAsString["row"]; //extracting the statement again because it didn't work if i tried to use the string from earlier
+                        const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
+                    return `Hey there! I'm Adorabot, here to chat about ${topicChoiceAsString}, a disputed topic in the U.S.  To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                },
                 role: "chatbot-message",
                 message_trigger: 0
-            },
-
-            {
-                prompt: "Use colloquial language. In one sentence, say you understand the user's point. Then, explain in detail the kinds of different people in society who might disagree with the user's view and why. For example, if the user is against same-sex marriage, you might explain that a gay person might feel that they deserve to be legally wed to the person they love just like a straight person. Ask what the user thinks. Match your response to the user's response length. Ensure that you are mentioning specific types of people (i.e., people who have had specific experiences, have certain identities or jobs, etc.) and explaining why those people feel the way that they do.",
-                role: "chatbot-prompt",
-                message_trigger: 1,
             }
         ]
 
@@ -411,17 +440,7 @@
 
         const viewpoint_trial = {
             type: jsPsychChat,
-            ai_prompt: () => { //put this as ai_prompt because it was reading errors if i didn't 
-            //function is to insert depolarization string into the bot's prompt 
-                const lowercaseFirstLetter = (str) => { //function to convert the first letter of the string into lowercase so it can be seamlessly inserted into the bot's question
-                    if (!str) return str;  // return the string if it's empty or not a string
-                    return str.charAt(0).toLowerCase() + str.slice(1);
-                };
-                const bot_row = jsPsych.data.get().filter({phase: "pre-convo-survey"}).values()[0]
-                    .rowAsString["row"]; //extracting the statement again because it didn't work if i tried to use the string from earlier
-                const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
-                return `Give a 1 sentence comment on the complexity of the <topic> then say: To get the conversation started, could you explain your view on whether ${bot_row_formatted}?“ Match the length of your response to the length of the message that the user sent.`; // actual bot prompt
-            },
+            ai_prompt: "Use colloquial language. In one sentence, say you understand the user's point. Then, explain in detail the kinds of different people in society who might disagree with the user's view and why. For example, if the user is against same-sex marriage, you might explain that a gay person might feel that they deserve to be legally wed to the person they love just like a straight person. Ask what the user thinks. Match your response to the user's response length. Ensure that you are mentioning specific types of people (i.e., people who have had specific experiences, have certain identities or jobs, etc.) and explaining why those people feel the way that they do.",
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             additional_prompts: viewpoint_prompts,
@@ -538,7 +557,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 1"
+                        .response["topicChoice"] == "human euthanasia in the U.S."
                 );
             },
         };
@@ -555,7 +574,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 2"
+                        .response["topicChoice"] == "gender inequality in the U.S."
                 );
             },
         };
@@ -573,7 +592,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 3"
+                        .response["topicChoice"] == "the role of the U.S. government in healthcare"
                 );
             },
         };
@@ -590,7 +609,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 4"
+                        .response["topicChoice"] == "atomic bombings of Hiroshima and Nagasaki"
                 );
             },
         };
@@ -607,7 +626,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 5"
+                        .response["topicChoice"] == "mandating vaccines in the U.S."
                 );
             },
         };
@@ -625,7 +644,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 6"
+                        .response["topicChoice"] == "criminal justice reform in the U.S."
                 );
             },
         };
@@ -643,7 +662,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topic-choice"] == "Item 7"
+                        .response["topicChoice"] == "same-sex marriage in the U.S."
                 );
             },
         };
@@ -693,8 +712,9 @@
             // vaccines_post_survey,
             // criminal_post_survey,
             // same_sex_post_survey,
-            // last_question
-            )
+            // last_question,
+            // jsPsych
+        )
 
         question_timeline.push(
             // welcome,
@@ -715,31 +735,33 @@
             // vaccines_post_survey,
             // criminal_post_survey,
             // same_sex_post_survey,
-            // last_question
-            )
+            // last_question,
+            // jsPsych
+        )
 
         viewpoint_timeline.push(
-           // welcome,
-          //  preliminary_convo_instructions,
+            welcome,
+            preliminary_convo_instructions,
             pre_convo_survey_trial,
-          //  pre_bot_instructions_break,
-          //  pre_convo_instructions,
+            pre_bot_instructions_break,
+            pre_convo_instructions,
             viewpoint_trial,
-            // post_convo_break,
-            // republican_survey,
-            // democrat_survey,
-            // neutral_survey,
-            // other_survey,
-            // euthanasia_post_survey,
-            // gender_post_survey,
-            // healthcare_post_survey,
-            // bombings_post_survey,
-            // vaccines_post_survey,
-            // criminal_post_survey,
-            // same_sex_post_survey,
-            // last_question,
-            // goodbye
-            )
+            post_convo_break,
+            republican_survey,
+            democrat_survey,
+            neutral_survey,
+            other_survey,
+            euthanasia_post_survey,
+            gender_post_survey,
+            healthcare_post_survey,
+            bombings_post_survey,
+            vaccines_post_survey,
+            criminal_post_survey,
+            same_sex_post_survey,
+            last_question,
+            goodbye,
+            jsPsych
+        )
 
         control_timeline.push(
             welcome,
@@ -759,7 +781,8 @@
             vaccines_post_survey,
             criminal_post_survey,
             same_sex_post_survey,
-            goodbye
+            goodbye,
+            jsPsych
         )
 
         const save_data = {
@@ -773,10 +796,10 @@
         /* redirect to Prolific experiment page NEED TO INSERT CORRECT LINK */
         var jsPsych = initJsPsych({
             on_finish: function () {
-                //window.location = "https://openguessr.com/"
-                jsPsych.data.displayData();
+                window.location = "https://openguessr.com/"
             },
         });
+
         //run experiment
         jsPsych.run(timeline);
     </script>

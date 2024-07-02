@@ -28,13 +28,13 @@
     //timer trigger in ms
     //"chatbot" = chatbot will say the thing typed in the prompt
     {
-      message: "Hey there! I'm Adorabot, here to chat about a disputed topic in the U.S. Which topic would you like to discuss: human euthanasia, gender inequality, the role of government in healthcare, the atomic bombing of Hiroshima and Nagasaki, mandating vaccines, criminal justice reforms, or same-sex marriage?",
+      message: "Hey there! I'm Adorabot, here to chat about a disputed topic in the U.S. Which topic would you like to discuss: human euthanasia, gender inequality, the role of the government in healthcare, the atomic bombing of Hiroshima and Nagasaki, mandating vaccines, criminal justice reforms, or same-sex marriage?",
       role: "chatbot-message",
       message_trigger: 0
     },
 
     {
-      prompt: "Always ask a question about the user's stance. Use colloquial language. Ask why the user think what they think or ask if there were any experience that led to their views. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
+      prompt: "Always ask a question about the user's stance. Use colloquial language. Ask why the user think what they think or ask if there were any experience that led to their views. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of the government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
       role: "chatbot-prompt",
       message_trigger: 1,
     }
@@ -48,7 +48,7 @@
 
   const trial = {
     type: jsPsychChat,
-    ai_prompt: "Give a 1 sentence comment on the complexity of the <topic> then say: “Could you explain your view on <topic> to get the conversation started?Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
+    ai_prompt: "Give a 1 sentence comment on the complexity of the <topic> then say: “Could you explain your view on <topic> to get the conversation started?Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of the government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
     continue_button: continue_button,
     chat_field_placeholder: "Share your views...",
     additional_prompts: prompts,
