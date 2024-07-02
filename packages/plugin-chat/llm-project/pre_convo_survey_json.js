@@ -869,7 +869,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "bombing-polarization",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
       isRequired: false,
