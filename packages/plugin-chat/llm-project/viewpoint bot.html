@@ -32,11 +32,12 @@
       role: "chatbot-message",
       message_trigger: 0
     },
-
+//Explain in detail experiences of people that lead them having different perspectives from the user. 
+//Explain in detail how people with differing stance on the topic have experience that oppose the user's view. Ask what the user thinks about those people's stance. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.
     {
-      prompt: "Use colloquial language. In one sentence, say you understand the user's point. Then, explain in detail how people in different job positision or with different experiene can hold different views from the user with examples of specific types of people. Ask what the user thinks. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
+      prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide an alternative viewpoint of people with different jobs, positions in society, beliefs. Give different perspectives each time. Ask what the user thinks about those people's stance. Acknowledge the user's perpsective. Responde in 1 paragraph.",
       role: "chatbot-prompt",
-      message_trigger: 2,
+      message_trigger: 1,
     }
   ]
 
@@ -49,7 +50,7 @@
     type: jsPsychChat,
     ai_prompt: "Give a 1 sentence comment on the complexity of the <topic> then say: “Could you explain your view on <topic> to get the conversation started?Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
     continue_button: continue_button,
-    chat_field_placeholder: "be nice...",
+    chat_field_placeholder: "Share your thought...",
     additional_prompts: prompts,
   }
   //past prompts
