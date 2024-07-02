@@ -398,7 +398,7 @@
             },
 
             {
-                prompt: "blah blah blah",
+                prompt: "Use colloquial language. In one sentence, say you understand the user's point. Then, explain in detail the kinds of different people in society who might disagree with the user's view and why. For example, if the user is against same-sex marriage, you might explain that a gay person might feel that they deserve to be legally wed to the person they love just like a straight person. Ask what the user thinks. Match your response to the user's response length. Ensure that you are mentioning specific types of people (i.e., people who have had specific experiences, have certain identities or jobs, etc.) and explaining why those people feel the way that they do.",
                 role: "chatbot-prompt",
                 message_trigger: 1,
             }
@@ -411,15 +411,16 @@
 
         const viewpoint_trial = {
             type: jsPsychChat,
-            ai_prompt: () => {
-                const lowercaseFirstLetter = (str) => {
-                    if (!str) return str;  // Return the string if it's empty or not a string
+            ai_prompt: () => { //put this as ai_prompt because it was reading errors if i didn't 
+            //function is to insert depolarization string into the bot's prompt 
+                const lowercaseFirstLetter = (str) => { //function to convert the first letter of the string into lowercase so it can be seamlessly inserted into the bot's question
+                    if (!str) return str;  // return the string if it's empty or not a string
                     return str.charAt(0).toLowerCase() + str.slice(1);
                 };
                 const bot_row = jsPsych.data.get().filter({phase: "pre-convo-survey"}).values()[0]
-                    .rowAsString["row"];
-                const bot_row_formatted = lowercaseFirstLetter(bot_row);
-                return `Give a 1 sentence comment on the complexity of the <topic> then say: To get the conversation started, could you explain your view on whether ${bot_row_formatted}?“ Match the length of your response to the length of the message that the user sent.`;
+                    .rowAsString["row"]; //extracting the statement again because it didn't work if i tried to use the string from earlier
+                const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
+                return `Give a 1 sentence comment on the complexity of the <topic> then say: To get the conversation started, could you explain your view on whether ${bot_row_formatted}?“ Match the length of your response to the length of the message that the user sent.`; // actual bot prompt
             },
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",

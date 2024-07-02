@@ -1,573 +1,573 @@
 var pre_convo_survey_json = {
   elements: [
-    {
-      type: "checkbox",
-      name: "ethnicity",
-      title: "What is your ethnicity? (Select all that apply)",
-      isRequired: false,
-      choices: [
-        {
-          value: "Item 1",
-          text: "White",
-        },
-        {
-          value: "Item 2",
-          text: "Black or African American",
-        },
-        {
-          value: "Item 3",
-          text: "Hispanic or Latino",
-        },
-        {
-          value: "Item 4",
-          text: "Asian",
-        },
-        {
-          value: "Item 5",
-          text: "Native American or Alaska Native",
-        },
-        {
-          value: "Item 6",
-          text: "Middle Eastern or North African",
-        },
-        {
-          value: "Item 7",
-          text: "Native Hawaiian or Other Pacific Islander",
-        },
-      ],
-      showOtherItem: true,
-      otherText: "Other (please specify)",
-    },
-    {
-      type: "radiogroup",
-      name: "political-affiliation",
-      title: "What is your political affiliation? (Select one)",
-      isRequired: false,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Republican",
-        },
-        {
-          value: "Item 2",
-          text: "Democrat",
-        },
-        {
-          value: "Item 3",
-          text: "Independent",
-        },
-      ],
-      showOtherItem: true,
-      otherText: "Other (please specify)",
-    },
-    {
-      type: "radiogroup",
-      name: "gender-identification",
-      title: "With which gender do you most identify? (Select one)",
-      isRequired: false,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Male",
-        },
-        {
-          value: "Item 2",
-          text: "Female",
-        },
-      ],
-      showOtherItem: true,
-    },
-    {
-      type: "radiogroup",
-      name: "education-level",
-      title: "What is the highest level of education that you have completed? (Select one)",
-      isRequired: false,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Less than high school",
-        },
-        {
-          value: "Item 2",
-          text: "High school diploma or GED",
-        },
-        {
-          value: "Item 3",
-          text: "Some college, no degree",
-        },
-        {
-          value: "Item 4",
-          text: "Associate degree",
-        },
-        {
-          value: "Item 5",
-          text: "Bachelor's degree",
-        },
-        {
-          value: "Item 6",
-          text: "Master's degree",
-        },
-        {
-          value: "Item 7",
-          text: "Doctoral degree (PhD, EdD, etc.)",
-        },
-        {
-          value: "Item 8",
-          text: "Professional degree (JD, MD, etc.)",
-        },
-      ],
-    },
-    {
-      type: "text",
-      name: "religious-affiliation",
-      title: "With which religious family do you most identify? (Fill in)",
-      isRequired: false,
-    },
-    {
-      type: "radiogroup",
-      name: "political-ideology",
-      title: "How would you describe your political ideology? (Select one)",
-      isRequired: false,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Very conservative",
-        },
-        {
-          value: "Item 2",
-          text: "Conservative",
-        },
-        {
-          value: "Item 3",
-          text: "Somewhat conservative",
-        },
-        {
-          value: "Item 4",
-          text: "Moderate",
-        },
-        {
-          value: "Item 5",
-          text: "Somewhat liberal",
-        },
-        {
-          value: "Item 6",
-          text: "Liberal",
-        },
-        {
-          value: "Item 7",
-          text: "Very liberal",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "personality-trait-identification",
-      title:
-        "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "I see myself as extraverted, enthusiastic",
-        },
-        {
-          value: "Row 2",
-          text: "I see myself as critical, quarrelsome",
-        },
-        {
-          value: "Row 3",
-          text: "I see myself as dependable, self-disciplined",
-        },
-        {
-          value: "Row 4",
-          text: "I see myself as anxious, easily upset",
-        },
-        {
-          value: "Row 5",
-          text: "I see myself as open to new experiences, complex",
-        },
-        {
-          value: "Row 6",
-          text: "I see myself as reserved, quiet",
-        },
-        {
-          value: "Row 7",
-          text: "I see myself as sympathetic, warm",
-        },
-        {
-          value: "Row 8",
-          text: "I see myself as disorganized, careless",
-        },
-        {
-          value: "Row 9",
-          text: "I see myself as calm, emotionally stable",
-        },
-        {
-          value: "Row 10",
-          text: "I see myself as conventional, uncreative",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "rating-republicans",
-      visibleIf: "{political-affiliation} <> 'Item 1'",
-      title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disgree strongly",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Republicans are intelligent",
-        },
-        {
-          value: "Row 2",
-          text: "Republicans are open-minded",
-        },
-        {
-          value: "Row 3",
-          text: "Republicans are generous",
-        },
-        {
-          value: "Row 4",
-          text: "Republicans are hypocritical",
-        },
-        {
-          value: "Row 5",
-          text: "Republicans are selfish",
-        },
-        {
-          value: "Row 6",
-          text: "Republicans are mean",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "rating-democrats",
-      visibleIf: "{political-affiliation} <> 'Item 2'",
-      title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Democrats are intelligent",
-        },
-        {
-          value: "Row 2",
-          text: "Democrats are open-minded",
-        },
-        {
-          value: "Row 3",
-          text: "Democrats are generous",
-        },
-        {
-          value: "Row 4",
-          text: "Democrats are hypocritical",
-        },
-        {
-          value: "Row 5",
-          text: "Democrats are selfish",
-        },
-        {
-          value: "Row 6",
-          text: "Democrats are mean",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "interacting-with-republicans",
-      visibleIf: "{political-affiliation} <> 'Item 1'",
-      title: "To what extent do these statements apply to you?",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Very untrue of me",
-        },
-        {
-          value: "Column 2",
-          text: "Untrue of me",
-        },
-        {
-          value: "Column 3",
-          text: "Somewhat untrue of me",
-        },
-        {
-          value: "Column 4",
-          text: "Neither true nor untrue of me",
-        },
-        {
-          value: "Column 5",
-          text: "Somewhat true of me",
-        },
-        {
-          value: "Column 6",
-          text: "True of me",
-        },
-        {
-          value: "Column 7",
-          text: "Very true of me",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "I would be unhappy if someone in my immediate family married a republican",
-        },
-        {
-          value: "Row 2",
-          text: "I would be unhappy if I had to spend time socializing with a republican",
-        },
-        {
-          value: "Row 3",
-          text: "I would be unhappy if I had to work closely with a republican on the job",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "interacting-with-democrats",
-      visibleIf: "{political-affiliation} <> 'Item 2'",
-      title: "To what extent do these statements apply to you?",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Very untrue of me",
-        },
-        {
-          value: "Column 2",
-          text: "Untrue of me",
-        },
-        {
-          value: "Column 3",
-          text: "Somewhat untrue of me",
-        },
-        {
-          value: "Column 4",
-          text: "Neither true nor untrue of me",
-        },
-        {
-          value: "Column 5",
-          text: "Somewhat true of me",
-        },
-        {
-          value: "Column 6",
-          text: "True of me",
-        },
-        {
-          value: "Column 7",
-          text: "Very true of me",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "I would be unhappy if someone in my immediate family married a democrat",
-        },
-        {
-          value: "Row 2",
-          text: "I would be unhappy if I had to spend time socializing with a democrat",
-        },
-        {
-          value: "Row 3",
-          text: "I would be unhappy if I had to work closely with a democrat on the job",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "self-reported-tendency-for-strong-opinions",
-      title: "How much do you agree or disagree with the following statements?",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "I form opinions about everything",
-        },
-        {
-          value: "Row 2",
-          text: "I prefer to avoid taking extreme positions",
-        },
-        {
-          value: "Row 3",
-          text: "It is very important to me to hold strong opinions",
-        },
-        {
-          value: "Row 4",
-          text: "I want to know exactly what is good and bad about everything",
-        },
-        {
-          value: "Row 5",
-          text: "I often prefer to remain neutral about complex issues",
-        },
-        {
-          value: "Row 6",
-          text: "If something does not affect me, I do not usually determine if it is good or bad",
-        },
-        {
-          value: "Row 7",
-          text: "I enjoy strongly liking and disliking new things",
-        },
-        {
-          value: "Row 8",
-          text: "There are many things for which I do not have a preference",
-        },
-        {
-          value: "Row 9",
-          text: "It bothers me to remain neutral",
-        },
-        {
-          value: "Row 10",
-          text: "I like to have strong opinions even when I am not personally involved",
-        },
-        {
-          value: "Row 11",
-          text: "I have many more opinions than the average person",
-        },
-        {
-          value: "Row 12",
-          text: "I would rather have a strong opinion than no opinion at all",
-        },
-        {
-          value: "Row 13",
-          text: "I pay a lot of attention to whether things are good or bad",
-        },
-        {
-          value: "Row 14",
-          text: "I only form strong opinions when I have to",
-        },
-        {
-          value: "Row 15",
-          text: "I like to decide that new things are really good or really bad",
-        },
-        {
-          value: "Row 16",
-          text: "I am pretty much indifferent to many important issues",
-        },
-      ],
-    },
+    // {
+    //   type: "checkbox",
+    //   name: "ethnicity",
+    //   title: "What is your ethnicity? (Select all that apply)",
+    //   isRequired: false,
+    //   choices: [
+    //     {
+    //       value: "Item 1",
+    //       text: "White",
+    //     },
+    //     {
+    //       value: "Item 2",
+    //       text: "Black or African American",
+    //     },
+    //     {
+    //       value: "Item 3",
+    //       text: "Hispanic or Latino",
+    //     },
+    //     {
+    //       value: "Item 4",
+    //       text: "Asian",
+    //     },
+    //     {
+    //       value: "Item 5",
+    //       text: "Native American or Alaska Native",
+    //     },
+    //     {
+    //       value: "Item 6",
+    //       text: "Middle Eastern or North African",
+    //     },
+    //     {
+    //       value: "Item 7",
+    //       text: "Native Hawaiian or Other Pacific Islander",
+    //     },
+    //   ],
+    //   showOtherItem: true,
+    //   otherText: "Other (please specify)",
+    // },
+    // {
+    //   type: "radiogroup",
+    //   name: "political-affiliation",
+    //   title: "What is your political affiliation? (Select one)",
+    //   isRequired: false,
+    //   choices: [
+    //     {
+    //       value: "Item 1",
+    //       text: "Republican",
+    //     },
+    //     {
+    //       value: "Item 2",
+    //       text: "Democrat",
+    //     },
+    //     {
+    //       value: "Item 3",
+    //       text: "Independent",
+    //     },
+    //   ],
+    //   showOtherItem: true,
+    //   otherText: "Other (please specify)",
+    // },
+    // {
+    //   type: "radiogroup",
+    //   name: "gender-identification",
+    //   title: "With which gender do you most identify? (Select one)",
+    //   isRequired: false,
+    //   choices: [
+    //     {
+    //       value: "Item 1",
+    //       text: "Male",
+    //     },
+    //     {
+    //       value: "Item 2",
+    //       text: "Female",
+    //     },
+    //   ],
+    //   showOtherItem: true,
+    // },
+    // {
+    //   type: "radiogroup",
+    //   name: "education-level",
+    //   title: "What is the highest level of education that you have completed? (Select one)",
+    //   isRequired: false,
+    //   choices: [
+    //     {
+    //       value: "Item 1",
+    //       text: "Less than high school",
+    //     },
+    //     {
+    //       value: "Item 2",
+    //       text: "High school diploma or GED",
+    //     },
+    //     {
+    //       value: "Item 3",
+    //       text: "Some college, no degree",
+    //     },
+    //     {
+    //       value: "Item 4",
+    //       text: "Associate degree",
+    //     },
+    //     {
+    //       value: "Item 5",
+    //       text: "Bachelor's degree",
+    //     },
+    //     {
+    //       value: "Item 6",
+    //       text: "Master's degree",
+    //     },
+    //     {
+    //       value: "Item 7",
+    //       text: "Doctoral degree (PhD, EdD, etc.)",
+    //     },
+    //     {
+    //       value: "Item 8",
+    //       text: "Professional degree (JD, MD, etc.)",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "text",
+    //   name: "religious-affiliation",
+    //   title: "With which religious family do you most identify? (Fill in)",
+    //   isRequired: false,
+    // },
+    // {
+    //   type: "radiogroup",
+    //   name: "political-ideology",
+    //   title: "How would you describe your political ideology? (Select one)",
+    //   isRequired: false,
+    //   choices: [
+    //     {
+    //       value: "Item 1",
+    //       text: "Very conservative",
+    //     },
+    //     {
+    //       value: "Item 2",
+    //       text: "Conservative",
+    //     },
+    //     {
+    //       value: "Item 3",
+    //       text: "Somewhat conservative",
+    //     },
+    //     {
+    //       value: "Item 4",
+    //       text: "Moderate",
+    //     },
+    //     {
+    //       value: "Item 5",
+    //       text: "Somewhat liberal",
+    //     },
+    //     {
+    //       value: "Item 6",
+    //       text: "Liberal",
+    //     },
+    //     {
+    //       value: "Item 7",
+    //       text: "Very liberal",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "personality-trait-identification",
+    //   title:
+    //     "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "I see myself as extraverted, enthusiastic",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "I see myself as critical, quarrelsome",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "I see myself as dependable, self-disciplined",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "I see myself as anxious, easily upset",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "I see myself as open to new experiences, complex",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "I see myself as reserved, quiet",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "I see myself as sympathetic, warm",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "I see myself as disorganized, careless",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "I see myself as calm, emotionally stable",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "I see myself as conventional, uncreative",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "rating-republicans",
+    //   visibleIf: "{political-affiliation} <> 'Item 1'",
+    //   title: "How strongly do you agree or disagree with the following statements?",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disgree strongly",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Republicans are intelligent",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Republicans are open-minded",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Republicans are generous",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Republicans are hypocritical",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Republicans are selfish",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Republicans are mean",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "rating-democrats",
+    //   visibleIf: "{political-affiliation} <> 'Item 2'",
+    //   title: "How strongly do you agree or disagree with the following statements?",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Democrats are intelligent",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Democrats are open-minded",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Democrats are generous",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Democrats are hypocritical",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Democrats are selfish",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Democrats are mean",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "interacting-with-republicans",
+    //   visibleIf: "{political-affiliation} <> 'Item 1'",
+    //   title: "To what extent do these statements apply to you?",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Very untrue of me",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Untrue of me",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Somewhat untrue of me",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither true nor untrue of me",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Somewhat true of me",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "True of me",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Very true of me",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "I would be unhappy if someone in my immediate family married a republican",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "I would be unhappy if I had to spend time socializing with a republican",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "I would be unhappy if I had to work closely with a republican on the job",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "interacting-with-democrats",
+    //   visibleIf: "{political-affiliation} <> 'Item 2'",
+    //   title: "To what extent do these statements apply to you?",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Very untrue of me",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Untrue of me",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Somewhat untrue of me",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither true nor untrue of me",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Somewhat true of me",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "True of me",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Very true of me",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "I would be unhappy if someone in my immediate family married a democrat",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "I would be unhappy if I had to spend time socializing with a democrat",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "I would be unhappy if I had to work closely with a democrat on the job",
+    //     },
+    //   ],
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "self-reported-tendency-for-strong-opinions",
+    //   title: "How much do you agree or disagree with the following statements?",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "I form opinions about everything",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "I prefer to avoid taking extreme positions",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "It is very important to me to hold strong opinions",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "I want to know exactly what is good and bad about everything",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "I often prefer to remain neutral about complex issues",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "If something does not affect me, I do not usually determine if it is good or bad",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "I enjoy strongly liking and disliking new things",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "There are many things for which I do not have a preference",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "It bothers me to remain neutral",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "I like to have strong opinions even when I am not personally involved",
+    //     },
+    //     {
+    //       value: "Row 11",
+    //       text: "I have many more opinions than the average person",
+    //     },
+    //     {
+    //       value: "Row 12",
+    //       text: "I would rather have a strong opinion than no opinion at all",
+    //     },
+    //     {
+    //       value: "Row 13",
+    //       text: "I pay a lot of attention to whether things are good or bad",
+    //     },
+    //     {
+    //       value: "Row 14",
+    //       text: "I only form strong opinions when I have to",
+    //     },
+    //     {
+    //       value: "Row 15",
+    //       text: "I like to decide that new things are really good or really bad",
+    //     },
+    //     {
+    //       value: "Row 16",
+    //       text: "I am pretty much indifferent to many important issues",
+    //     },
+    //   ],
+    // },
     {
       type: "radiogroup",
       name: "topic-choice",
@@ -1216,997 +1216,997 @@ var pre_convo_survey_json = {
       ],
       rowsOrder: "random",
     },
-    {
-      type: "expression",
-      name: "euthanasia-slider1",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about human euthanasia in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "euthanasia-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about human euthanasia in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="euthanasia-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "euthanasia-slider2",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "euthanasia-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="euthanasia-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "euthanasia-slider3",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "euthanasia-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="euthanasia-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "euthanasia-slider4",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "euthanasia-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="euthanasia-slider4-placeholder"></div>', // Placeholder for the slider
-    },
+    // {
+    //   type: "expression",
+    //   name: "euthanasia-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about human euthanasia in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "euthanasia-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about human euthanasia in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="euthanasia-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "euthanasia-slider2",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "euthanasia-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="euthanasia-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "euthanasia-slider3",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "euthanasia-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="euthanasia-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "euthanasia-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "euthanasia-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="euthanasia-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
 
-    {
-      type: "expression",
-      name: "gender-slider1",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "gender-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="gender-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "gender-slider2",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "gender-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="gender-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "gender-slider3",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "gender-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="gender-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "gender-slider4",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "gender-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="gender-slider4-placeholder"></div>', // Placeholder for the slider
-    },
+    // {
+    //   type: "expression",
+    //   name: "gender-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "gender-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="gender-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "gender-slider2",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "gender-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="gender-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "gender-slider3",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "gender-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="gender-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "gender-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "gender-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="gender-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
 
-    {
-      type: "expression",
-      name: "healthcare-slider1",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the role of the government in U.S. healthcare, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "healthcare-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the role of the government in U.S. healthcare, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="healthcare-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "healthcare-slider2",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "healthcare-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="healthcare-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "healthcare-slider3",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "healthcare-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="healthcare-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "healthcare-slider4",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "healthcare-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="healthcare-slider4-placeholder"></div>', // Placeholder for the slider
-    },
+    // {
+    //   type: "expression",
+    //   name: "healthcare-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the role of the government in U.S. healthcare, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "healthcare-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the role of the government in U.S. healthcare, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="healthcare-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "healthcare-slider2",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "healthcare-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="healthcare-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "healthcare-slider3",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "healthcare-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="healthcare-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "healthcare-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "healthcare-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="healthcare-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
 
-    {
-      type: "expression",
-      name: "bombing-slider1",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "bombing-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="bombing-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "bombing-slider2",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "bombing-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="bombing-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "bombing-slider3",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "bombing-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="bombing-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "bombing-slider4",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "bombing-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="bombing-slider4-placeholder"></div>', // Placeholder for the slider
-    },
+    // {
+    //   type: "expression",
+    //   name: "bombing-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "bombing-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="bombing-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "bombing-slider2",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "bombing-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="bombing-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "bombing-slider3",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "bombing-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="bombing-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "bombing-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "bombing-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="bombing-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
 
-    {
-      type: "expression",
-      name: "vaccines-slider1",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about mandating vaccines in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "vaccines-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about mandating vaccines in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="vaccines-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "vaccines-slider2",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "vaccines-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="vaccines-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "vaccines-slider3",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "vaccines-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="vaccines-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "vaccines-slider4",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "vaccines-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="vaccines-slider4-placeholder"></div>', // Placeholder for the slider
-    },
+    // {
+    //   type: "expression",
+    //   name: "vaccines-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about mandating vaccines in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "vaccines-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about mandating vaccines in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="vaccines-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "vaccines-slider2",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "vaccines-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="vaccines-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "vaccines-slider3",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "vaccines-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="vaccines-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "vaccines-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "vaccines-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="vaccines-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
 
-    {
-      type: "expression",
-      name: "criminal-slider1",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "criminal-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="criminal-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "criminal-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "criminal-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="criminal-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "criminal-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "criminal-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="criminal-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "criminal-slider4",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "criminal-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="criminal-slider4-placeholder"></div>', // Placeholder for the slider
-    },
+    // {
+    //   type: "expression",
+    //   name: "criminal-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "criminal-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="criminal-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "criminal-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "criminal-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="criminal-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "criminal-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "criminal-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="criminal-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "criminal-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "criminal-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="criminal-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
 
-    {
-      type: "expression",
-      name: "same-sex-slider1",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about same-sex marriage in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-    },
-    {
-      type: "html",
-      name: "same-sex-slider1-placeholder",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about same-sex marriage in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
-      html: '<div id="same-sex-slider1-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "same-sex-slider2",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "same-sex-slider2-placeholder",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="same-sex-slider2-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "same-sex-slider3",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "same-sex-slider3-placeholder",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="same-sex-slider3-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "expression",
-      name: "same-sex-slider4",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-    },
-    {
-      type: "html",
-      name: "same-sex-slider4-placeholder",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
-      html: '<div id="same-sex-slider4-placeholder"></div>', // Placeholder for the slider
-    },
-    {
-      type: "matrix",
-      name: "euthanasia-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 1'",
-      title:
-        "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "expression",
+    //   name: "same-sex-slider1",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about same-sex marriage in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "same-sex-slider1-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about same-sex marriage in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+    //   html: '<div id="same-sex-slider1-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "same-sex-slider2",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "same-sex-slider2-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="same-sex-slider2-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "same-sex-slider3",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "same-sex-slider3-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="same-sex-slider3-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "expression",
+    //   name: "same-sex-slider4",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    // },
+    // {
+    //   type: "html",
+    //   name: "same-sex-slider4-placeholder",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+    //   html: '<div id="same-sex-slider4-placeholder"></div>', // Placeholder for the slider
+    // },
+    // {
+    //   type: "matrix",
+    //   name: "euthanasia-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    //   ],
+    // },
 
-    {
-      type: "matrix",
-      name: "gender-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 2'",
-      title:
-        "Imagine that you are asked to have a serious conversation about gender inequality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "matrix",
+    //   name: "gender-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about gender inequality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    //   ],
+    // },
 
-    {
-      type: "matrix",
-      name: "healthcare-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 3'",
-      title:
-        "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "matrix",
+    //   name: "healthcare-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    //   ],
+    // },
 
-    {
-      type: "matrix",
-      name: "bombing-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 4'",
-      title:
-        "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "matrix",
+    //   name: "bombing-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    //   ],
+    // },
 
-    {
-      type: "matrix",
-      name: "vaccines-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 5'",
-      title:
-        "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "matrix",
+    //   name: "vaccines-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    //   ],
+    // },
 
-    {
-      type: "matrix",
-      name: "criminal-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 6'",
-      title:
-        "Imagine that you are asked to have a serious conversation about criminal justice reform in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "matrix",
+    //   name: "criminal-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about criminal justice reform in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    //   ],
+    // },
 
-    {
-      type: "matrix",
-      name: "same-sex-offending-reason",
-      visibleIf: "{topic-choice} = 'Item 7'",
-      title:
-        "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Do not want to offend someone",
-        },
-        {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
-        },
-        {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
-        },
-        {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
-        },
-        {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
-        },
-        {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
-        },
-        {
-          value: "Row 7",
-          text: "Previous negative experiences",
-        },
-        {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
-        },
-        {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
-        },
-        {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
-        },
-      ],
-    },
+    // {
+    //   type: "matrix",
+    //   name: "same-sex-offending-reason",
+    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   title:
+    //     "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+    //   isRequired: false,
+    //   columns: [
+    //     {
+    //       value: "Column 1",
+    //       text: "Disagree strongly",
+    //     },
+    //     {
+    //       value: "Column 2",
+    //       text: "Disagree moderately",
+    //     },
+    //     {
+    //       value: "Column 3",
+    //       text: "Disagree a little",
+    //     },
+    //     {
+    //       value: "Column 4",
+    //       text: "Neither agree nor disagree",
+    //     },
+    //     {
+    //       value: "Column 5",
+    //       text: "Agree a little",
+    //     },
+    //     {
+    //       value: "Column 6",
+    //       text: "Agree moderately",
+    //     },
+    //     {
+    //       value: "Column 7",
+    //       text: "Agree strongly",
+    //     },
+    //   ],
+    //   rows: [
+    //     {
+    //       value: "Row 1",
+    //       text: "Do not want to offend someone",
+    //     },
+    //     {
+    //       value: "Row 2",
+    //       text: "Do not want to be offended by someone",
+    //     },
+    //     {
+    //       value: "Row 3",
+    //       text: "Do not want to be in an awkward, tense, or confrontational situation",
+    //     },
+    //     {
+    //       value: "Row 4",
+    //       text: "Do not want to deal with emotional distress or fatigue",
+    //     },
+    //     {
+    //       value: "Row 5",
+    //       text: "Do not want people judging me negatively or misunderstanding me",
+    //     },
+    //     {
+    //       value: "Row 6",
+    //       text: "Do not want to come off as ignorant or uneducated",
+    //     },
+    //     {
+    //       value: "Row 7",
+    //       text: "Previous negative experiences",
+    //     },
+    //     {
+    //       value: "Row 8",
+    //       text: "Do not want to incur social repercussions",
+    //     },
+    //     {
+    //       value: "Row 9",
+    //       text: "Afraid of feeling disempowered, unheard, or invalidated",
+    //     },
+    //     {
+    //       value: "Row 10",
+    //       text: "Afraid of feeling unsafe",
+    //     },
+    // ],
+    // },
   ],
 };
