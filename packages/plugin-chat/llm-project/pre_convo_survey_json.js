@@ -570,36 +570,36 @@ var pre_convo_survey_json = {
     // },
     {
       type: "radiogroup",
-      name: "topic-choice",
+      name: "topicChoice",
       title: "Which topic would you like to discuss with the chatbot?",
       isRequired: false,
       choices: [
         {
-          value: "Item 1",
+          value: "human euthanasia in the U.S.",
           text: "Human euthanasia in the U.S.",
         },
         {
-          value: "Item 2",
+          value: "gender inequality in the U.S.",
           text: "Gender inequality in the U.S.",
         },
         {
-          value: "Item 3",
+          value: "the role of the U.S. government in healthcare",
           text: "The role of the U.S. government in healthcare",
         },
         {
-          value: "Item 4",
+          value: "the atomic bombings of Hiroshima and Nagasaki",
           text: "The atomic bombings of Hiroshima and Nagasaki",
         },
         {
-          value: "Item 5",
+          value: "mandating vaccines in the U.S.",
           text: "Mandating vaccines in the U.S.",
         },
         {
-          value: "Item 6",
+          value: "criminal justice reform in the U.S.",
           text: "Criminal justice reform in the U.S.",
         },
         {
-          value: "Item 7",
+          value: "same-sex marriage in the U.S.",
           text: "Same-sex marriage in the U.S.",
         },
       ],
@@ -607,7 +607,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "euthanasia-polarization",
-      visibleIf: "{topic-choice} = 'Item 1'",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
       isRequired: false,
@@ -694,7 +694,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "gender-polarization",
-      visibleIf: "{topic-choice} = 'Item 2'",
+      visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender inequality in the U.S.? ",
       isRequired: false,
@@ -783,7 +783,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "healthcare-polarization",
-      visibleIf: "{topic-choice} = 'Item 3'",
+      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
       isRequired: false,
@@ -869,7 +869,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "bombing-polarization",
-      visibleIf: "{topic-choice} = 'Item 4'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
       isRequired: false,
@@ -959,7 +959,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "vaccines-polarization",
-      visibleIf: "{topic-choice} = 'Item 5'",
+      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
       isRequired: false,
@@ -1027,8 +1027,8 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Barring business and institutions from discriminating based on vaccination status is wrong",
-          text: "Barring business and institutions from discriminating based on vaccination status is wrong",
+            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
           value: "Schools should be allowed to require vaccinations for attendance",
@@ -1044,7 +1044,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "criminal-polarization",
-      visibleIf: "{topic-choice} = 'Item 6'",
+      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on criminal justice reform in the U.S.? ",
       isRequired: false,
@@ -1131,7 +1131,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "same-sex-polarization",
-      visibleIf: "{topic-choice} = 'Item 7'",
+      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
       isRequired: false,
@@ -1219,14 +1219,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "euthanasia-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about human euthanasia in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "euthanasia-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about human euthanasia in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="euthanasia-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1234,14 +1234,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "euthanasia-slider2",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "euthanasia-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="euthanasia-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1249,14 +1249,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "euthanasia-slider3",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "euthanasia-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="euthanasia-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1264,14 +1264,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "euthanasia-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "euthanasia-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in human euthanasia in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="euthanasia-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1280,14 +1280,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "gender-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "gender-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="gender-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1295,14 +1295,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "gender-slider2",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "gender-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="gender-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1310,14 +1310,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "gender-slider3",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "gender-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="gender-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1325,14 +1325,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "gender-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "gender-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="gender-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1341,14 +1341,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "healthcare-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the role of the government in U.S. healthcare, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "healthcare-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the role of the government in U.S. healthcare, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="healthcare-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1356,14 +1356,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "healthcare-slider2",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "healthcare-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="healthcare-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1371,14 +1371,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "healthcare-slider3",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "healthcare-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="healthcare-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1386,14 +1386,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "healthcare-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "healthcare-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="healthcare-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1402,14 +1402,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "bombing-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "bombing-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="bombing-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1417,14 +1417,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "bombing-slider2",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "bombing-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="bombing-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1432,14 +1432,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "bombing-slider3",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "bombing-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="bombing-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1447,14 +1447,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "bombing-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "bombing-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="bombing-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1463,14 +1463,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "vaccines-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about mandating vaccines in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "vaccines-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about mandating vaccines in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="vaccines-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1478,14 +1478,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "vaccines-slider2",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "vaccines-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="vaccines-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1493,14 +1493,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "vaccines-slider3",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "vaccines-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="vaccines-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1508,14 +1508,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "vaccines-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "vaccines-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in mandating vaccines in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="vaccines-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1524,14 +1524,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "criminal-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "criminal-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="criminal-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1539,14 +1539,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "criminal-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "criminal-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="criminal-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1554,14 +1554,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "criminal-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "criminal-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="criminal-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1569,14 +1569,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "criminal-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "criminal-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="criminal-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1585,14 +1585,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "same-sex-slider1",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about same-sex marriage in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     // },
     // {
     //   type: "html",
     //   name: "same-sex-slider1-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about same-sex marriage in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     //   html: '<div id="same-sex-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1600,14 +1600,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "same-sex-slider2",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "same-sex-slider2-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="same-sex-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1615,14 +1615,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "same-sex-slider3",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "same-sex-slider3-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="same-sex-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1630,14 +1630,14 @@ var pre_convo_survey_json = {
     // {
     //   type: "expression",
     //   name: "same-sex-slider4",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     // },
     // {
     //   type: "html",
     //   name: "same-sex-slider4-placeholder",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     //   html: '<div id="same-sex-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1645,7 +1645,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "euthanasia-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 1'",
+    //   visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,
@@ -1726,7 +1726,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "gender-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 2'",
+    //   visibleIf: "{topicChoice} = 'gender inequality in the U.S.'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about gender inequality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,
@@ -1807,7 +1807,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "healthcare-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 3'",
+    //   visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,
@@ -1888,7 +1888,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "bombing-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 4'",
+    //   visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,
@@ -1969,7 +1969,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "vaccines-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 5'",
+    //   visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,
@@ -2050,7 +2050,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "criminal-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 6'",
+    //   visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about criminal justice reform in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,
@@ -2131,7 +2131,7 @@ var pre_convo_survey_json = {
     // {
     //   type: "matrix",
     //   name: "same-sex-offending-reason",
-    //   visibleIf: "{topic-choice} = 'Item 7'",
+    //   visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
     //   title:
     //     "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
     //   isRequired: false,

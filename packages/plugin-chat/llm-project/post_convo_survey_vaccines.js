@@ -175,7 +175,7 @@ var post_convo_survey_vaccines = {
         },
         {
           value: "Row 4",
-          text: "Barring business and institutions from discriminating based on vaccination status",
+          text: "Barring businesses and institutions from discriminating based on vaccination status",
         },
         {
           value: "Row 5",
