@@ -5,7 +5,7 @@ var post_convo_survey_euthanasia = {
       name: "euthanasia-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -64,14 +64,14 @@ var post_convo_survey_euthanasia = {
       name: "euthanasia-free-response",
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about human euthanasia in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "radiogroup",
       name: "euthanasia-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse with others about human euthanasia in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       choices: [
         {
           value: "Item 1",
@@ -108,96 +108,29 @@ var post_convo_survey_euthanasia = {
       name: "euthanasia-what-affected-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on euthanasia?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "euthanasia-new-perspective-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about human euthanasia? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "euthanasia-still-contributes-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about human euthanasia in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "matrix",
-      name: "euthanasia-polarization1-post",
+      name: "euthanasia-polarization-post",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about human euthanasia in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Allowing euthanasia for terminally ill patients who request it",
-        },
-        {
-          value: "Row 2",
-          text: "Providing legal protections for doctors who perform euthanasia",
-        },
-        {
-          value: "Row 3",
-          text: "Allowing family members to request euthanasia on behalf of incapacitated patients",
-        },
-        {
-          value: "Row 4",
-          text: "Requiring psychological evaluations before euthanasia can be performed",
-        },
-        {
-          value: "Row 5",
-          text: "Banning euthanasia for patients with non-terminal conditions",
-        },
-        {
-          value: "Row 6",
-          text: "Banning euthanasia for all patients",
-        },
-        {
-          value: "Row 7",
-          text: "Allowing euthanasia to be performed at home",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "euthanasia-polarization2-post",
-      title:
-        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? Rate on the 7 point scale.",
-      isRequired: true,
+        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -230,22 +163,94 @@ var post_convo_survey_euthanasia = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Euthanasia should be allowed for terminally ill patients who request it",
+          text: "Euthanasia should be allowed for terminally ill patients who request it",
+        },
+        {
+          value: "Legal protections should be provided for doctors who perform euthanasia",
+          text: "Legal protections should be provided for doctors who perform euthanasia",
+        },
+        {
+          value:
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+          text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+        },
+        {
+          value:
+            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+          text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+        },
+        {
+          value: "Euthanasia should be banned for patients with non-terminal conditions",
+          text: "Euthanasia should be banned for patients with non-terminal conditions",
+        },
+        {
+          value: "Euthanasia should be banned for all patients",
+          text: "Euthanasia should be banned for all patients",
+        },
+        {
+          value: "Euthanasia should not be performed at home",
+          text: "Euthanasia should not be performed at home",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "euthanasia-polarization-general-post",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The benefits of euthanasia outweigh the potential downsides",
           text: "The benefits of euthanasia outweigh the potential downsides",
         },
         {
-          value: "Row 2",
+          value: "The federal government should make it easier for people to access euthanasia",
           text: "The federal government should make it easier for people to access euthanasia",
         },
         {
-          value: "Row 3",
+          value: "More access to euthanasia would alleviate suffering for terminally ill patient",
           text: "More access to euthanasia would alleviate suffering for terminally ill patients",
         },
         {
-          value: "Row 4",
+          value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],
+      rowsOrder: "random",
     },
     {
       type: "expression",
@@ -304,7 +309,7 @@ var post_convo_survey_euthanasia = {
       name: "euthanasia-reason-of-avoidance-post",
       title:
         "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -383,21 +388,21 @@ var post_convo_survey_euthanasia = {
       name: "euthanasia-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about human euthanasia in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "euthanasia-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on human euthanasia in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "euthanasia-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about human euthanasia in the U.S.? If so, what occurred in these moments?",
-      isRequired: true,
+      isRequired: false,
     },
   ],
 };

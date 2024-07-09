@@ -6,7 +6,7 @@ var post_convo_survey_criminal = {
 
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -67,14 +67,14 @@ var post_convo_survey_criminal = {
 
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "radiogroup",
       name: "criminal-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse with others about the criminal justice system in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       choices: [
         {
           value: "Item 1",
@@ -112,7 +112,7 @@ var post_convo_survey_criminal = {
 
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the criminal justice system in the U.S.?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
@@ -120,7 +120,7 @@ var post_convo_survey_criminal = {
 
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the criminal justice system? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
@@ -128,80 +128,15 @@ var post_convo_survey_criminal = {
 
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "matrix",
-      name: "criminal-polarization1-post",
-
+      name: "criminal-polarization-post",
+      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about the criminal justice system in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row1",
-          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system",
-        },
-        {
-          value: "Row2",
-          text: "Enhancing mental health support services for incarcerated individuals",
-        },
-        {
-          value: "Row3",
-          text: "Banning the use of solitary confinement as a punishment",
-        },
-        {
-          value: "Row4",
-          text: "Allowing greater access to educational programs for inmates",
-        },
-        {
-          value: "Row5",
-          text: "Permitting non-violent offenders to serve sentences through community service or house arrest",
-        },
-        {
-          value: "Row6",
-          text: "Restricting the use of private prisons",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "criminal-polarization2-post",
-
-      title:
-        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? Rate on the 7 point scale.",
-      isRequired: true,
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -234,22 +169,95 @@ var post_convo_survey_criminal = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+        },
+        {
+          value:
+            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+          text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+        },
+        {
+          value: "The use of solitary confinement as a punishment should be banned",
+          text: "The use of solitary confinement as a punishment should be banned",
+        },
+        {
+          value: "Inmates should have greater access to educational programs",
+          text: "Inmates should have greater access to educational programs",
+        },
+        {
+          value:
+            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+          text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+        },
+        {
+          value: "The use of private prisons should be restricted",
+          text: "The use of private prisons should be restricted",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "criminal-polarization-general-post",
+      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The benefits of the criminal justice system outweigh the potential downsides",
           text: "The benefits of the criminal justice system outweigh the potential downsides",
         },
         {
-          value: "Row 2",
+          value:
+            "The federal government should implement stricter regulations to reduce incarceration rates",
           text: "The federal government should implement stricter regulations to reduce incarceration rates",
         },
         {
-          value: "Row 3",
+          value:
+            "The federal government should implement more robust rehabilitation programs to improve public safety",
           text: "The federal government should implement more robust rehabilitation programs to improve public safety",
         },
         {
-          value: "Row 4",
+          value:
+            "The federal government should implement greater punishments to improve public safety",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],
+      rowsOrder: "random",
     },
     {
       type: "expression",
@@ -318,7 +326,7 @@ var post_convo_survey_criminal = {
 
       title:
         "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -397,21 +405,21 @@ var post_convo_survey_criminal = {
       name: "criminal-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "criminal-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the criminal justice system in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "criminal-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the criminal justice system in the U.S.? If so, what occurred in these moments?",
-      isRequired: true,
+      isRequired: false,
     },
   ],
 };

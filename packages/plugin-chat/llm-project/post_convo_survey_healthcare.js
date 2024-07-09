@@ -5,7 +5,7 @@ var post_convo_survey_healthcare = {
       name: "healthcare-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -64,14 +64,14 @@ var post_convo_survey_healthcare = {
       name: "healthcare-free-response",
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the role of the U.S. government in healthcare? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "radiogroup",
       name: "healthcare-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse with others about the role of the U.S. government in healthcare. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       choices: [
         {
           value: "Item 1",
@@ -108,96 +108,29 @@ var post_convo_survey_healthcare = {
       name: "healthcare-what-affected-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the role of the government in healthcare?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-new-perspective-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the role of the U.S. government in healthcare? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-still-contributes-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the role of the U.S. government in healthcare? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "matrix",
-      name: "healthcare-polarization1-post",
+      name: "healthcare-polarization-post",
+      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about the role of the U.S. government in healthcare. Rate on the 7 point scale.",
-      isRequired: true,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Implementing a universal healthcare system",
-        },
-        {
-          value: "Row 2",
-          text: "Expanding Medicaid to cover more low-income individuals",
-        },
-        {
-          value: "Row 3",
-          text: "Regulating prescription drug prices to make them more affordable",
-        },
-        {
-          value: "Row 4",
-          text: "Providing government subsidies for private health insurance",
-        },
-        {
-          value: "Row 5",
-          text: "Allowing the government to negotiate drug prices with pharmaceutical companies",
-        },
-        {
-          value: "Row 6",
-          text: "Increasing government funding for mental health services",
-        },
-        {
-          value: "Row 7",
-          text: "Allowing the competitive market to drive healthcare prices",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "healthcare-polarization2-post",
-      title:
-        "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? Rate on the 7 point scale.",
-      isRequired: true,
+        "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -230,22 +163,94 @@ var post_convo_survey_healthcare = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "A universal healthcare system should be implemented in the U.S.",
+          text: "A universal healthcare system should be implemented in the U.S.",
+        },
+        {
+          value: "Medicaid should be expanded to cover more low-income individuals",
+          text: "Medicaid should be expanded to cover more low-income individuals",
+        },
+        {
+          value: "Prescription drug prices should be regulated to make them more affordable",
+          text: "Prescription drug prices should be regulated to make them more affordable",
+        },
+        {
+          value: "Government subsidies should be provided for private health insurance",
+          text: "Government subsidies should be provided for private health insurance",
+        },
+        {
+          value: "The government should negotiate drug prices with pharmaceutical companies",
+          text: "The government should negotiate drug prices with pharmaceutical companies",
+        },
+        {
+          value: "Government funding should be increased for mental health services",
+          text: "Government funding should be increased for mental health services",
+        },
+        {
+          value: "The competitive market should drive healthcare prices",
+          text: "The competitive market should drive healthcare prices",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "healthcare-polarization-general-post",
+      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
+      title:
+        "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The federal government should ensure that all citizens have access to healthcare",
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value: "Row 2",
+          value: "Government involvement in healthcare would worsen overall public health",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
-          value: "Row 3",
+          value: "More government regulation in healthcare would lead to better patient outcomes",
           text: "More government regulation in healthcare would lead to better patient outcomes",
         },
         {
-          value: "Row 4",
+          value:
+            "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],
+      rowsOrder: "random",
     },
     {
       type: "expression",
@@ -305,7 +310,7 @@ var post_convo_survey_healthcare = {
       name: "healthcare-reason-of-avoidance-post",
       title:
         "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -384,21 +389,21 @@ var post_convo_survey_healthcare = {
       name: "healthcare-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the role of the U.S. government in healthcare? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the role of the U.S. government in healthcare? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the role of the U.S. government in healthcare? If so, what occurred in these moments?",
-      isRequired: true,
+      isRequired: false,
     },
   ],
 };

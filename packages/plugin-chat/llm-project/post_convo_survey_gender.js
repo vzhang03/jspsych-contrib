@@ -5,7 +5,7 @@ var post_convo_survey_gender = {
       name: "gender-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -64,14 +64,14 @@ var post_convo_survey_gender = {
       name: "gender-free-response",
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about gender equality in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "radiogroup",
       name: "gender-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse with others about gender equality in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       choices: [
         {
           value: "Item 1",
@@ -108,96 +108,29 @@ var post_convo_survey_gender = {
       name: "gender-what-affected-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on gender equality?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "gender-new-perspective-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about gender equality in the U.S.? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "gender-still-contributes-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about gender equality in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "matrix",
-      name: "gender-polarization1-post",
+      name: "gender-polarization-post",
+      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about gender equality in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Implementing gender quotas in corporate boards and executive positions",
-        },
-        {
-          value: "Row 2",
-          text: "Mandating equal pay for equal work regardless of gender",
-        },
-        {
-          value: "Row 3",
-          text: "Providing paid parental leave for both mothers and fathers",
-        },
-        {
-          value: "Row 4",
-          text: "Offering free childcare services to support working parents",
-        },
-        {
-          value: "Row 5",
-          text: "Increasing funding for programs aimed at reducing gender-based violence",
-        },
-        {
-          value: "Row 6",
-          text: "Encouraging gender diversity in STEM fields through scholarships and grants",
-        },
-        {
-          value: "Row 7",
-          text: "Disregarding gender when selecting candidates for career advancement opportunities",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "gender-polarization2-post",
-      title:
-        "How much do you agree or disagree with the following statements on gender equality in the U.S.? Rate on the 7 point scale.",
-      isRequired: true,
+        "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -209,7 +142,7 @@ var post_convo_survey_gender = {
         },
         {
           value: "Column 3",
-          text: "Disagree somewhat",
+          text: "Disagree a little",
         },
         {
           value: "Column 4",
@@ -230,24 +163,98 @@ var post_convo_survey_gender = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Gender quotas should be implemented in corporate boards and executive positions",
+          text: "Gender quotas should be implemented in corporate boards and executive positions",
+        },
+        {
+          value:
+            "Mandating equal pay for equal work regardless of gender would improve gender equality",
+          text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
+        },
+        {
+          value: "Both mothers and fathers should be provided with parental leave",
+          text: "Both mothers and fathers should be provided with parental leave",
+        },
+        {
+          value: "Free childcare services should be provided to support working parents",
+          text: "Free childcare services should be provided to support working parents",
+        },
+        {
+          value: "Funding for programs aimed at reducing gender-based violence should be increased",
+          text: "Funding for programs aimed at reducing gender-based violence should be increased",
+        },
+        {
+          value:
+            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
+          text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
+        },
+        {
+          value:
+            "Gender should be disregarded when selecting candidates for career advancement opportunities",
+          text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "gender-polarization-general-post",
+      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "Efforts to reduce gender equality benefit society as a whole",
           text: "Efforts to reduce gender equality benefit society as a whole",
         },
         {
-          value: "Row 2",
+          value: "The federal government should take more action to address gender equality",
           text: "The federal government should take more action to address gender equality",
         },
         {
-          value: "Row 3",
+          value: "Reducing gender equality would lead to more opportunities for everyone",
           text: "Reducing gender equality would lead to more opportunities for everyone",
         },
         {
-          value: "Row 4",
+          value:
+            "Efforts to reduce equality for women often create unfair advantages for women over men",
           text: "Efforts to reduce equality for women often create unfair advantages for women over men",
         },
       ],
+      rowsOrder: "random",
     },
-
     {
       type: "expression",
       name: "gender-slider1-post",
@@ -305,7 +312,7 @@ var post_convo_survey_gender = {
       name: "gender-reason-of-avoidance-post",
       title:
         "Imagine that you are asked to have a serious conversation about gender equality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -384,21 +391,21 @@ var post_convo_survey_gender = {
       name: "gender-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about gender equality in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "gender-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on gender equality in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "gender-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about gender equality in the U.S.? If so, what occurred in these moments?",
-      isRequired: true,
+      isRequired: false,
     },
   ],
 };
