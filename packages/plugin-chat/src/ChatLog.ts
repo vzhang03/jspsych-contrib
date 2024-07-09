@@ -45,14 +45,13 @@ export class ChatLog {
   }
 
   // Chain Condition -- have it be a list of the chain and what happens before and after
-
   // called when temporary chainPrompting
   cleanConversation(): {}[] {
     const res = this.prompt.filter((message: any, index: number, array: any[]) => {
       if ("role" in message && message["role"] === "system") {
         return false;
       }
-      // Exclude the last message, why? - only called when needed
+      // Exclude the last message because will be user message - only want existing conversation
       if (index === array.length - 1) {
         return false;
       }
