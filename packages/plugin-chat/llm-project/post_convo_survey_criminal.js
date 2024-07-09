@@ -6,7 +6,7 @@ var post_convo_survey_criminal = {
 
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -40,11 +40,11 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value: "Row 1",
-          text: "I had little patience for arguments about criminal justice reform in the U.S. that I disagree with",
+          text: "I had little patience for arguments about the criminal justice system in the U.S. that I disagree with",
         },
         {
           value: "Row 2",
-          text: "I avoided messages about criminal justice reform in the U.S. that I disagree with",
+          text: "I avoided messages about the criminal justice system in the U.S. that I disagree with",
         },
         {
           value: "Row 3",
@@ -52,7 +52,7 @@ var post_convo_survey_criminal = {
         },
         {
           value: "Row 4",
-          text: "I was open to considering other political viewpoints about criminal justice reform in the U.S.",
+          text: "I was open to considering other political viewpoints about the criminal justice system in the U.S.",
         },
         {
           value: "Row 5",
@@ -66,15 +66,15 @@ var post_convo_survey_criminal = {
       name: "criminal-free-response",
 
       title:
-        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about criminal justice reform in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
+        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
+      isRequired: true,
     },
     {
       type: "radiogroup",
       name: "criminal-willing-to-converse-likert-post",
       title:
-        "Rate this conversation's effect on your willingness to converse with others about criminal justice reform in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
+        "Rate this conversation's effect on your willingness to converse with others about the criminal justice system in the U.S. Rate on the 7 point scale.",
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -111,32 +111,32 @@ var post_convo_survey_criminal = {
       name: "criminal-what-affected-post",
 
       title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on criminal justice reform in the U.S.?",
-      isRequired: false,
+        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the criminal justice system in the U.S.?",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "criminal-new-perspective-post",
 
       title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about criminal justice reform? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: false,
+        "Throughout this conversation, were there any moments that opened you up to a new perspective about the criminal justice system? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "criminal-still-contributes-post",
 
       title:
-        "What still contributes to your willingness or unwillingness to converse with others about criminal justice reform in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
+        "What still contributes to your willingness or unwillingness to converse with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
+      isRequired: true,
     },
     {
       type: "matrix",
       name: "criminal-polarization1-post",
 
       title:
-        "Please indicate whether you would support or oppose the following proposals about criminal justice reform in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
+        "Please indicate whether you would support or oppose the following proposals about the criminal justice system in the U.S. Rate on the 7 point scale.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -200,8 +200,8 @@ var post_convo_survey_criminal = {
       name: "criminal-polarization2-post",
 
       title:
-        "How much do you agree or disagree with the following statements on criminal justice reform in the U.S.? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? Rate on the 7 point scale.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -235,7 +235,7 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value: "Row 1",
-          text: "The benefits of criminal justice reform outweigh the potential downsides",
+          text: "The benefits of the criminal justice system outweigh the potential downsides",
         },
         {
           value: "Row 2",
@@ -256,14 +256,14 @@ var post_convo_survey_criminal = {
       name: "criminal-slider1-post",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the criminal justice system in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     },
     {
       type: "html",
       name: "criminal-slider1-post-placeholder",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about criminal justice reform in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the criminal justice system in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
       html: '<div id="criminal-slider1-post-placeholder"></div>', // Placeholder for the slider
     },
     {
@@ -271,14 +271,14 @@ var post_convo_survey_criminal = {
       name: "criminal-slider2-post",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider2-post-placeholder",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider2-post-placeholder"></div>', // Placeholder for the slider
     },
     {
@@ -286,14 +286,14 @@ var post_convo_survey_criminal = {
       name: "criminal-slider3-post",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider3-post-placeholder",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider3-post-placeholder"></div>', // Placeholder for the slider
     },
     {
@@ -301,14 +301,14 @@ var post_convo_survey_criminal = {
       name: "criminal-slider4-post",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider4-post-placeholder",
 
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in criminal justice reform in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider4-post-placeholder"></div>', // Placeholder for the slider
     },
 
@@ -317,8 +317,8 @@ var post_convo_survey_criminal = {
       name: "criminal-reason-of-avoidance-post",
 
       title:
-        "Imagine that you are asked to have a serious conversation about criminal justice reform in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: false,
+        "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -396,22 +396,22 @@ var post_convo_survey_criminal = {
       type: "comment",
       name: "criminal-other-willingness-post",
       title:
-        "What still contributes to your willingness or unwillingness to converse with others about criminal justice reform in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
+        "What still contributes to your willingness or unwillingness to converse with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "criminal-convo-effect-on-willingness-post",
       title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on criminal justice reform in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: false,
+        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the criminal justice system in the U.S.? What made you feel like the conversation was or was not productive?",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "criminal-convo-effect-on-perspectives-post",
       title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about criminal justice reform in the U.S.? If so, what occurred in these moments?",
-      isRequired: false,
+        "Throughout this conversation, were there any moments that opened you up to a new perspective about the criminal justice system in the U.S.? If so, what occurred in these moments?",
+      isRequired: true,
     },
   ],
 };

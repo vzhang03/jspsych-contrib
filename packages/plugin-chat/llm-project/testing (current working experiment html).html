@@ -57,28 +57,28 @@
             },
         });
 
-        /// PRIOR TO LAUNCHING PILOT ADD JSPSYCH PIPE IN THE ASYNC FUNCTION AND CHANGE ALL JSON ISREQUIREDS TO TRUE 
+        // PRIOR TO LAUNCHING PILOT ADD JSPSYCH PIPE IN THE ASYNC FUNCTION AND CHANGE ALL JSON ISREQUIREDS TO TRUE 
 
-        // // disable right-click
-        // document.addEventListener('contextmenu', function (e) {
-        //     e.preventDefault();
-        // });
+        // disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
 
-        // // disable keyboard shortcuts
-        // document.addEventListener('keydown', function (e) {
-        //     if (e.key === 'F12' ||
-        //         (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-        //         (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-        //         (e.ctrlKey && e.key === 'U') ||
-        //         (e.ctrlKey && e.shiftKey && e.key === 'C')) {
-        //         e.preventDefault();
-        //     }
-        // });
+        // disable keyboard shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+                (e.ctrlKey && e.key === 'U') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'C')) {
+                e.preventDefault();
+            }
+        });
 
-        // // disable text selection
-        // document.addEventListener('selectstart', function (e) {
-        //     e.preventDefault();
-        // });
+        // disable text selection
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();
+        });
 
 
         // create timelines for conditions. the contents of each timeline are at the bottom of this doc
@@ -119,7 +119,7 @@
     <p> Before you chat with the bot, there is a survey for you to fill out. </p>
     <div style='width: 700px;'>
     </div>
-    <p>Press any key to proceed to the questionnaire. </p>
+    <p> Press any key to proceed to the questionnaire. </p>
   `,
             post_trial_gap: 500,
         };
@@ -302,8 +302,9 @@
         var pre_convo_instructions = {
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
-        <p> You will be chatting with Adorabot, a chatbot designed for conversations about disputed topics. </p>
-        <p> The conversation is a safe space for you. There is no right or wrong answer, no good or bad response. </p>
+        <p> You will be conversing with a chatbot designed for conversations about disputed topics. </p>
+        <p> Be as truthful to your beliefs as possible during the conversation, and try your best to give full responses to the bot. </p>
+        <p> The conversation will end after you and the bot exchange ten messages. There is no right or wrong answer, no good or bad response to the bot. </p>
         <p> Press any key when you are ready to begin the conversation. </p>
       `,
             post_trial_gap: 1000,
@@ -405,7 +406,9 @@
                 message_trigger: 0
             },
             {
-                prompt: "Pretend you are a conversational partner whose goal is to open people up to new perspectives by always responding to the other person's argument with a counterargument. Don't dive into asking the user how they would implement their views. Use colloquial language. Concisely present a specific argument that counters the user's perspective. At the end of your response, ask the user what they think. Keep your response short; match the length of your response to the user's message length. Ensure that your message includes a counterargument; do not simply agree with the user. Be conversational. Do not tell the user that you are trying to make them more open-minded.",
+                prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+                Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+                Task: You should always respond to the other person's argument with a counterargument. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always match the length of your response to the user's message length. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
             }
@@ -419,7 +422,9 @@
         // Condition-specific bots
         const counter_trial = {
             type: jsPsychChat,
-            ai_prompt: "Pretend you are a conversational partner whose goal is to open people up to new perspectives by always responding to the other person's argument with a counterargument. Don't dive into asking the user how they would implement their views. Use colloquial language. Concisely present a specific argument that counters the user's perspective. At the end of your response, ask the user what they think. Keep your response short; match the length of your response to the user's message length. Ensure that your message includes a counterargument; do not simply agree with the user. Be conversational. Do not tell the user that you are trying to make them more open-minded.",
+            ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+            Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+            Task: You should always respond to the other person's argument with a counterargument. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always match the length of your response to the user's message length. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             additional_prompts: counter_prompts,
@@ -455,14 +460,18 @@
                 message_trigger: 0
             },
             {
-                prompt: "Always ask a question about the user's stance. Use colloquial language. Ask why the user thinks what they think or ask if there were any experiences that led to their views. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of the government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
+                prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics.
+                Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+                Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
             }
         ]
         const question_trial = {
             type: jsPsychChat,
-            ai_prompt: "Always ask a question about the user's stance. Use colloquial language. Ask why the user thinks what they think or ask if there were any experiences that led to their views. Match your response to the user's response length. If the user talks about a topic that is not human euthanasia, gender inequality, the role of the government in healthcare, atomic bombing, vaccine mandate, criminal justice reform, or same-sex marriage, remind the user that you are here to talk about the above topics without asking a question.",
+            ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics.
+            Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+            Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             additional_prompts: question_prompts,
@@ -500,7 +509,9 @@
             },
             {
                 //prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide the alternative viewpoints of people with different jobs, positions in society, beliefs, etc. Give different perspectives each time. Ask what the user thinks about those peoples' stances. Acknowledge the user's perpsective. Respond in 1 paragraph.",
-                prompt: "Always identify a specific group of people with differing opinions from the user. Explain in detail their experiences and why they disagree with the user's input. Provide an alternative perspective of people with different jobs, positions in society, beliefs. Give uniquely different perspectives each time. Ask what the user thinks about those people's stance. Acknowledge the user's perspective. Responde in 1 paragraph. Match your response to the user's response length.",
+                prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+                Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+                Task: You should always identify a specific group of people who may have differing opinions from the user. You should always explain, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
             }
@@ -508,7 +519,9 @@
         const viewpoint_trial = {
             type: jsPsychChat,
             //ai_prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide the alternative viewpoints of people with different jobs, positions in society, beliefs, etc. Give different perspectives each time. Ask what the user thinks about those peoples' stances. Acknowledge the user's perpsective. Respond in 1 paragraph.",
-            ai_prompt: "Always identify a specific group of people with differing opinions from the user. Explain in detail their experiences and why they disagree with the user's input. Provide an alternative perspective of people with different jobs, positions in society, beliefs. Give uniquely different perspectives each time. Ask what the user thinks about those people's stance. Acknowledge the user's perspective. Responde in 1 paragraph. Match your response to the user's response length.",
+            ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+            Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+            Task: You should always identify a specific group of people who may have differing opinions from the user. You should always explain, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             additional_prompts: viewpoint_prompts,
@@ -641,7 +654,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topicChoice"] == "gender inequality in the U.S."
+                        .response["topicChoice"] == "gender equality in the U.S."
                 );
             },
         };
@@ -761,49 +774,49 @@
         //  timeline.push(goodbye);
 
         counter_timeline.push(
-            // welcome,
-            // preliminary_convo_instructions,
+            welcome,
+            preliminary_convo_instructions,
             pre_convo_survey_trial,
-            // pre_bot_instructions_break,
-            // pre_convo_instructions,
+            pre_bot_instructions_break,
+            pre_convo_instructions,
             counter_trial,
-            // post_convo_break,
-            // republican_survey,
-            // democrat_survey,
-            // neutral_survey,
-            // other_survey,
-            // euthanasia_post_survey,
-            // gender_post_survey,
-            // healthcare_post_survey,
-            // bombings_post_survey,
-            // vaccines_post_survey,
-            // criminal_post_survey,
-            // same_sex_post_survey,
-            // last_question,
-            // jsPsych
+            post_convo_break,
+            republican_survey,
+            democrat_survey,
+            neutral_survey,
+            other_survey,
+            euthanasia_post_survey,
+            gender_post_survey,
+            healthcare_post_survey,
+            bombings_post_survey,
+            vaccines_post_survey,
+            criminal_post_survey,
+            same_sex_post_survey,
+            last_question,
+            jsPsych
         )
 
         question_timeline.push(
-            // welcome,
-            // preliminary_convo_instructions,
+            welcome,
+            preliminary_convo_instructions,
             pre_convo_survey_trial,
-            // pre_bot_instructions_break,
-            // pre_convo_instructions,
+            pre_bot_instructions_break,
+            pre_convo_instructions,
             question_trial,
-            // post_convo_break,
-            // republican_survey,
-            // democrat_survey,
-            // neutral_survey,
-            // other_survey,
-            // euthanasia_post_survey,
-            // gender_post_survey,
-            // healthcare_post_survey,
-            // bombings_post_survey,
-            // vaccines_post_survey,
-            // criminal_post_survey,
-            // same_sex_post_survey,
-            // last_question,
-            // jsPsych
+            post_convo_break,
+            republican_survey,
+            democrat_survey,
+            neutral_survey,
+            other_survey,
+            euthanasia_post_survey,
+            gender_post_survey,
+            healthcare_post_survey,
+            bombings_post_survey,
+            vaccines_post_survey,
+            criminal_post_survey,
+            same_sex_post_survey,
+            last_question,
+            jsPsych
         )
 
         viewpoint_timeline.push(
