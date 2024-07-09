@@ -5,7 +5,7 @@ var post_convo_survey_gender = {
       name: "gender-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -39,11 +39,11 @@ var post_convo_survey_gender = {
       rows: [
         {
           value: "Row 1",
-          text: "I had little patience for arguments about gender inequality in the U.S. that I disagree with",
+          text: "I had little patience for arguments about gender equality in the U.S. that I disagree with",
         },
         {
           value: "Row 2",
-          text: "I avoided messages about gender inequality in the U.S. that I disagree with",
+          text: "I avoided messages about gender equality in the U.S. that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_gender = {
         },
         {
           value: "Row 4",
-          text: "I was open to considering other political viewpoints about gender inequality in the U.S.",
+          text: "I was open to considering other political viewpoints about gender equality in the U.S.",
         },
         {
           value: "Row 5",
@@ -63,15 +63,15 @@ var post_convo_survey_gender = {
       type: "comment",
       name: "gender-free-response",
       title:
-        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about gender inequality in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
+        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about gender equality in the U.S.? Please freely reflect in the space below.",
+      isRequired: true,
     },
     {
       type: "radiogroup",
       name: "gender-willing-to-converse-likert-post",
       title:
-        "Rate this conversation's effect on your willingness to converse with others about gender inequality in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
+        "Rate this conversation's effect on your willingness to converse with others about gender equality in the U.S. Rate on the 7 point scale.",
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -107,29 +107,29 @@ var post_convo_survey_gender = {
       type: "comment",
       name: "gender-what-affected-post",
       title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on gender inequality?",
-      isRequired: false,
+        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on gender equality?",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "gender-new-perspective-post",
       title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about gender inequality in the U.S.? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: false,
+        "Throughout this conversation, were there any moments that opened you up to a new perspective about gender equality in the U.S.? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "gender-still-contributes-post",
       title:
-        "What still contributes to your willingness or unwillingness to converse with others about gender inequality in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
+        "What still contributes to your willingness or unwillingness to converse with others about gender equality in the U.S.? Please freely reflect in the space below.",
+      isRequired: true,
     },
     {
       type: "matrix",
       name: "gender-polarization1-post",
       title:
-        "Please indicate whether you would support or oppose the following proposals about gender inequality in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
+        "Please indicate whether you would support or oppose the following proposals about gender equality in the U.S. Rate on the 7 point scale.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -196,8 +196,8 @@ var post_convo_survey_gender = {
       type: "matrix",
       name: "gender-polarization2-post",
       title:
-        "How much do you agree or disagree with the following statements on gender inequality in the U.S.? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on gender equality in the U.S.? Rate on the 7 point scale.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -231,19 +231,19 @@ var post_convo_survey_gender = {
       rows: [
         {
           value: "Row 1",
-          text: "Efforts to reduce gender inequality benefit society as a whole",
+          text: "Efforts to reduce gender equality benefit society as a whole",
         },
         {
           value: "Row 2",
-          text: "The federal government should take more action to address gender inequality",
+          text: "The federal government should take more action to address gender equality",
         },
         {
           value: "Row 3",
-          text: "Reducing gender inequality would lead to more opportunities for everyone",
+          text: "Reducing gender equality would lead to more opportunities for everyone",
         },
         {
           value: "Row 4",
-          text: "Efforts to reduce inequality for women often create unfair advantages for women over men",
+          text: "Efforts to reduce equality for women often create unfair advantages for women over men",
         },
       ],
     },
@@ -252,60 +252,60 @@ var post_convo_survey_gender = {
       type: "expression",
       name: "gender-slider1-post",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender equality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     },
     {
       type: "html",
       name: "gender-slider1-post-placeholder",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender inequality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
+        "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about gender equality in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
       html: '<div id="gender-slider1-post-placeholder"></div>', // Placeholder for the slider
     },
     {
       type: "expression",
       name: "gender-slider2-post",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender equality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "gender-slider2-post-placeholder",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about gender equality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="gender-slider2-post-placeholder"></div>', // Placeholder for the slider
     },
     {
       type: "expression",
       name: "gender-slider3-post",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender equality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "gender-slider3-post-placeholder",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on gender equality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="gender-slider3-post-placeholder"></div>', // Placeholder for the slider
     },
     {
       type: "expression",
       name: "gender-slider4-post",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender equality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "gender-slider4-post-placeholder",
       title:
-        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender inequality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
+        "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in gender equality in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="gender-slider4-post-placeholder"></div>', // Placeholder for the slider
     },
     {
       type: "matrix",
       name: "gender-reason-of-avoidance-post",
       title:
-        "Imagine that you are asked to have a serious conversation about gender inequality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: false,
+        "Imagine that you are asked to have a serious conversation about gender equality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -383,22 +383,22 @@ var post_convo_survey_gender = {
       type: "comment",
       name: "gender-other-willingness-post",
       title:
-        "What still contributes to your willingness or unwillingness to converse with others about gender inequality in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
+        "What still contributes to your willingness or unwillingness to converse with others about gender equality in the U.S.? Please freely reflect in the space below.",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "gender-convo-effect-on-willingness-post",
       title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on gender inequality in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: false,
+        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on gender equality in the U.S.? What made you feel like the conversation was or was not productive?",
+      isRequired: true,
     },
     {
       type: "comment",
       name: "gender-convo-effect-on-perspectives-post",
       title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about gender inequality in the U.S.? If so, what occurred in these moments?",
-      isRequired: false,
+        "Throughout this conversation, were there any moments that opened you up to a new perspective about gender equality in the U.S.? If so, what occurred in these moments?",
+      isRequired: true,
     },
   ],
 };

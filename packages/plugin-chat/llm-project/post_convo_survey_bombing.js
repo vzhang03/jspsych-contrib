@@ -5,7 +5,7 @@ var post_convo_survey_bombing = {
       name: "bombing-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -64,14 +64,14 @@ var post_convo_survey_bombing = {
       name: "bombing-free-response",
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "radiogroup",
       name: "bombing-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse about the atomic bombings of Hiroshima and Nagasaki with others. Rate on the 7 point scale.",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -108,28 +108,28 @@ var post_convo_survey_bombing = {
       name: "bombing-what-affected-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the atomic bombings?",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "comment",
       name: "bombing-new-perspective-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the atomic bombings? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "comment",
       name: "bombing-still-contributes-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "matrix",
       name: "bombing-polarization1-post",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? Rate on the 7 point scale.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -265,7 +265,7 @@ var post_convo_survey_bombing = {
       name: "bombing-reason-of-avoidance-post",
       title:
         "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -344,21 +344,21 @@ var post_convo_survey_bombing = {
       name: "bombings-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "comment",
       name: "bombings-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views the atomic bombings of Hiroshima and Nagasaki? What made you feel like the conversation was or was not productive?",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "comment",
       name: "bombings-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the atomic bombings of Hiroshima and Nagasaki? If so, what occurred in these moments?",
-      isRequired: false,
+      isRequired: true,
     },
   ],
 };
