@@ -109,7 +109,6 @@
             type: jsPsychHtmlKeyboardResponse,
             stimulus: "Welcome to the experiment! Press any key to begin.",
         };
-        //    timeline.push(welcome);
 
         /* brief instructions for people in convo timelines */
         var preliminary_convo_instructions = {
@@ -123,7 +122,6 @@
   `,
             post_trial_gap: 500,
         };
-        //    timeline.push(preliminary_convo_instructions);
 
         /* brief instructions for people in control timeline */
         var preliminary_control_instructions = {
@@ -137,10 +135,8 @@
   `,
             post_trial_gap: 500,
         };
-        //    timeline.push(preliminary_convo_instructions);
 
         /* pre-chat survey with different topic options implemented via SurveyJS */
-        // TURN ALL ISREQUIRED: FALSE TO :TRUE BEFORE POSTING EXPERIMENT. IT IS TURNED TO FALSE FOR CONVENIENCE OF TESTING RIGHT NOW
 
         /* slider constant for pre-convo survey */
         const initializePreSlider = (survey) => {
@@ -285,8 +281,6 @@
             }
         };
 
-        // timeline.push(pre_convo_survey_trial);
-
         /* break inbetween pre-intervention survey and counter_bot conversation */
         var pre_bot_instructions_break = {
             type: jsPsychHtmlKeyboardResponse,
@@ -297,7 +291,6 @@
       `,
             post_trial_gap: 1000,
         };
-        //  timeline.push(pre_counter_convo_break);
 
         var pre_convo_instructions = {
             type: jsPsychHtmlKeyboardResponse,
@@ -309,7 +302,6 @@
       `,
             post_trial_gap: 1000,
         };
-        //  timeline.push(pre__convo_instructins);
 
         /* break inbetween pre-intervention survey and counter_bot conversation */
         var pre_control_break = {
@@ -321,7 +313,6 @@
       `,
             post_trial_gap: 1000,
         };
-        //  timeline.push(pre_control_break);
 
 
         /* define post-chatinstructions, add post-chat survey */
@@ -338,7 +329,6 @@
       `,
             post_trial_gap: 1000,
         };
-        //  timeline.push(post_convo_break);
 
         var post_control_break = {
             type: jsPsychHtmlKeyboardResponse,
@@ -349,7 +339,6 @@
       `,
             post_trial_gap: 1000,
         };
-        //  timeline.push(post_control_break);
 
         const initializePostSlider = (survey) => {
             survey.onAfterRenderQuestion.add(function (survey, options) {
@@ -407,7 +396,7 @@
             },
             {
                 prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
-                Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+                Style: You should be conversational and use a friendly tone of voice. You should match your response to the user's input length.
                 Task: You should always respond to the other person's argument with a counterargument. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always match the length of your response to the user's message length. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
@@ -423,7 +412,7 @@
         const counter_trial = {
             type: jsPsychChat,
             ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
-            Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+            Style: You should be conversational and use a friendly tone of voice. You should match your response to the user's input length.
             Task: You should always respond to the other person's argument with a counterargument. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always match the length of your response to the user's message length. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
@@ -461,7 +450,7 @@
             },
             {
                 prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics.
-                Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+                Style: You should be conversational and use a friendly tone of voice. You should match your response to the user's input length.
                 Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
@@ -470,7 +459,7 @@
         const question_trial = {
             type: jsPsychChat,
             ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics.
-            Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+            Style: You should be conversational and use a friendly tone of voice. You should match your response to the user's input length.
             Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
@@ -510,7 +499,7 @@
             {
                 //prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide the alternative viewpoints of people with different jobs, positions in society, beliefs, etc. Give different perspectives each time. Ask what the user thinks about those peoples' stances. Acknowledge the user's perpsective. Respond in 1 paragraph.",
                 prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
-                Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+                Style: You should be conversational and use a friendly tone of voice. You should match your response to the user's input length.
                 Task: You should always identify a specific group of people who may have differing opinions from the user. You should always explain, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
@@ -520,7 +509,7 @@
             type: jsPsychChat,
             //ai_prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide the alternative viewpoints of people with different jobs, positions in society, beliefs, etc. Give different perspectives each time. Ask what the user thinks about those peoples' stances. Acknowledge the user's perpsective. Respond in 1 paragraph.",
             ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
-            Style: You should be conversational and use colloquial language. You should match your response to the user's input length.
+            Style: You should be conversational and use a friendly tone of voice. You should match your response to the user's input length.
             Task: You should always identify a specific group of people who may have differing opinions from the user. You should always explain, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
