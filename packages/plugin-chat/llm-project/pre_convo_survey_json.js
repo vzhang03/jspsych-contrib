@@ -643,22 +643,6 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The benefits of euthanasia outweigh the potential downsides",
-          text: "The benefits of euthanasia outweigh the potential downsides",
-        },
-        {
-          value: "The federal government should make it easier for people to access euthanasia",
-          text: "The federal government should make it easier for people to access euthanasia",
-        },
-        {
-          value: "More access to euthanasia would alleviate suffering for terminally ill patient",
-          text: "More access to euthanasia would alleviate suffering for terminally ill patients",
-        },
-        {
-          value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
-          text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
-        },
-        {
           value: "Euthanasia should be allowed for terminally ill patients who request it",
           text: "Euthanasia should be allowed for terminally ill patients who request it",
         },
@@ -693,7 +677,137 @@ var pre_convo_survey_json = {
     },
     {
       type: "matrix",
+      name: "euthanasia-polarization-general",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The benefits of euthanasia outweigh the potential downsides",
+          text: "The benefits of euthanasia outweigh the potential downsides",
+        },
+        {
+          value: "The federal government should make it easier for people to access euthanasia",
+          text: "The federal government should make it easier for people to access euthanasia",
+        },
+        {
+          value: "More access to euthanasia would alleviate suffering for terminally ill patient",
+          text: "More access to euthanasia would alleviate suffering for terminally ill patients",
+        },
+        {
+          value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
+          text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
       name: "gender-polarization",
+      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "Gender quotas should be implemented in corporate boards and executive positions",
+          text: "Gender quotas should be implemented in corporate boards and executive positions",
+        },
+        {
+          value:
+            "Mandating equal pay for equal work regardless of gender would improve gender equality",
+          text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
+        },
+        {
+          value: "Both mothers and fathers should be provided with parental leave",
+          text: "Both mothers and fathers should be provided with parental leave",
+        },
+        {
+          value: "Free childcare services should be provided to support working parents",
+          text: "Free childcare services should be provided to support working parents",
+        },
+        {
+          value: "Funding for programs aimed at reducing gender-based violence should be increased",
+          text: "Funding for programs aimed at reducing gender-based violence should be increased",
+        },
+        {
+          value:
+            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
+          text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
+        },
+        {
+          value:
+            "Gender should be disregarded when selecting candidates for career advancement opportunities",
+          text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "gender-polarization-general",
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
@@ -746,43 +860,82 @@ var pre_convo_survey_json = {
             "Efforts to reduce equality for women often create unfair advantages for women over men",
           text: "Efforts to reduce equality for women often create unfair advantages for women over men",
         },
-        {
-          value: "Gender quotas should be implemented in corporate boards and executive positions",
-          text: "Gender quotas should be implemented in corporate boards and executive positions",
-        },
-        {
-          value:
-            "Mandating equal pay for equal work regardless of gender would improve gender equality",
-          text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
-        },
-        {
-          value: "Both mothers and fathers should be provided with parental leave",
-          text: "Both mothers and fathers should be provided with parental leave",
-        },
-        {
-          value: "Free childcare services should be provided to support working parents",
-          text: "Free childcare services should be provided to support working parents",
-        },
-        {
-          value: "Funding for programs aimed at reducing gender-based violence should be increased",
-          text: "Funding for programs aimed at reducing gender-based violence should be increased",
-        },
-        {
-          value:
-            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
-          text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
-        },
-        {
-          value:
-            "Gender should be disregarded when selecting candidates for career advancement opportunities",
-          text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
-        },
       ],
       rowsOrder: "random",
     },
     {
       type: "matrix",
       name: "healthcare-polarization",
+      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
+      title:
+        "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "A universal healthcare system should be implemented in the U.S.",
+          text: "A universal healthcare system should be implemented in the U.S.",
+        },
+        {
+          value: "Medicaid should be expanded to cover more low-income individuals",
+          text: "Medicaid should be expanded to cover more low-income individuals",
+        },
+        {
+          value: "Prescription drug prices should be regulated to make them more affordable",
+          text: "Prescription drug prices should be regulated to make them more affordable",
+        },
+        {
+          value: "Government subsidies should be provided for private health insurance",
+          text: "Government subsidies should be provided for private health insurance",
+        },
+        {
+          value: "The government should negotiate drug prices with pharmaceutical companies",
+          text: "The government should negotiate drug prices with pharmaceutical companies",
+        },
+        {
+          value: "Government funding should be increased for mental health services",
+          text: "Government funding should be increased for mental health services",
+        },
+        {
+          value: "The competitive market should drive healthcare prices",
+          text: "The competitive market should drive healthcare prices",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "healthcare-polarization-general",
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
@@ -835,40 +988,86 @@ var pre_convo_survey_json = {
             "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
-        {
-          value: "A universal healthcare system should be implemented in the U.S.",
-          text: "A universal healthcare system should be implemented in the U.S.",
-        },
-        {
-          value: "Medicaid should be expanded to cover more low-income individuals",
-          text: "Medicaid should be expanded to cover more low-income individuals",
-        },
-        {
-          value: "Prescription drug prices should be regulated to make them more affordable",
-          text: "Prescription drug prices should be regulated to make them more affordable",
-        },
-        {
-          value: "Government subsidies should be provided for private health insurance",
-          text: "Government subsidies should be provided for private health insurance",
-        },
-        {
-          value: "The government should negotiate drug prices with pharmaceutical companies",
-          text: "The government should negotiate drug prices with pharmaceutical companies",
-        },
-        {
-          value: "Government funding should be increased for mental health services",
-          text: "Government funding should be increased for mental health services",
-        },
-        {
-          value: "The competitive market should drive healthcare prices",
-          text: "The competitive market should drive healthcare prices",
-        },
       ],
       rowsOrder: "random",
     },
     {
       type: "matrix",
       name: "bombing-polarization",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
+      title:
+        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "A memorial should be established in the U.S. to honor the victims of the bombings",
+          text: "A memorial should be established in the U.S. to honor the victims of the bombings",
+        },
+        {
+          value:
+            "The U.S. government should provide financial reparations to the survivors and their families",
+          text: "The U.S. government should provide financial reparations to the survivors and their families",
+        },
+        {
+          value: "The bombings were justified to bring a swift end to the war",
+          text: "The bombings were justified to bring a swift end to the war",
+        },
+        {
+          value: "The bombings were morally wrong",
+          text: "The bombings were morally wrong",
+        },
+        {
+          value:
+            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+          text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+        },
+        {
+          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
+          text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
+        },
+        {
+          value:
+            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+          text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    ,
+    {
+      type: "matrix",
+      name: "bombing-polarization-general",
       visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
@@ -921,44 +1120,80 @@ var pre_convo_survey_json = {
             "The bombings should be included in educational curricula as a significant historical event",
           text: "The bombings should be included in educational curricula as a significant historical event",
         },
-        {
-          value:
-            "A memorial should be established in the U.S. to honor the victims of the bombings",
-          text: "A memorial should be established in the U.S. to honor the victims of the bombings",
-        },
-        {
-          value:
-            "The U.S. government should provide financial reparations to the survivors and their families",
-          text: "The U.S. government should provide financial reparations to the survivors and their families",
-        },
-        {
-          value: "The bombings were justified to bring a swift end to the war",
-          text: "The bombings were justified to bring a swift end to the war",
-        },
-        {
-          value: "The bombings were morally wrong",
-          text: "The bombings were morally wrong",
-        },
-        {
-          value:
-            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
-          text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
-        },
-        {
-          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
-          text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
-        },
-        {
-          value:
-            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
-          text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
-        },
       ],
       rowsOrder: "random",
     },
     {
       type: "matrix",
       name: "vaccines-polarization",
+      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+          text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+        },
+        {
+          value: "Vaccines should be mandated for healthcare workers",
+          text: "Vaccines should be mandated for healthcare workers",
+        },
+        {
+          value: "Businesses should be allowed to require proof of vaccination for entry",
+          text: "Businesses should be allowed to require proof of vaccination for entry",
+        },
+        {
+          value:
+            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+        },
+        {
+          value: "Schools should be allowed to require vaccinations for attendance",
+          text: "Schools should be allowed to require vaccinations for attendance",
+        },
+        {
+          value: "All government-approved vaccines should be mandated",
+          text: "All government-approved vaccines should be mandated",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "vaccines-polarization-general",
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
@@ -1012,38 +1247,81 @@ var pre_convo_survey_json = {
             "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
-        {
-          value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
-          text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
-        },
-        {
-          value: "Vaccines should be mandated for healthcare workers",
-          text: "Vaccines should be mandated for healthcare workers",
-        },
-        {
-          value: "Businesses should be allowed to require proof of vaccination for entry",
-          text: "Businesses should be allowed to require proof of vaccination for entry",
-        },
-        {
-          value:
-            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
-          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
-        },
-        {
-          value: "Schools should be allowed to require vaccinations for attendance",
-          text: "Schools should be allowed to require vaccinations for attendance",
-        },
-        {
-          value: "All government-approved vaccines should be mandated",
-          text: "All government-approved vaccines should be mandated",
-        },
       ],
       rowsOrder: "random",
     },
     {
       type: "matrix",
       name: "criminal-polarization",
+      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+        },
+        {
+          value:
+            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+          text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+        },
+        {
+          value: "The use of solitary confinement as a punishment should be banned",
+          text: "The use of solitary confinement as a punishment should be banned",
+        },
+        {
+          value: "Inmates should have greater access to educational programs",
+          text: "Inmates should have greater access to educational programs",
+        },
+        {
+          value:
+            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+          text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+        },
+        {
+          value: "The use of private prisons should be restricted",
+          text: "The use of private prisons should be restricted",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "criminal-polarization-general",
       visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
@@ -1098,39 +1376,81 @@ var pre_convo_survey_json = {
             "The federal government should implement greater punishments to improve public safety",
           text: "The federal government should implement greater punishments to improve public safety",
         },
-        {
-          value:
-            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
-          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
-        },
-        {
-          value:
-            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
-          text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
-        },
-        {
-          value: "The use of solitary confinement as a punishment should be banned",
-          text: "The use of solitary confinement as a punishment should be banned",
-        },
-        {
-          value: "Inmates should have greater access to educational programs",
-          text: "Inmates should have greater access to educational programs",
-        },
-        {
-          value:
-            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
-          text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
-        },
-        {
-          value: "The use of private prisons should be restricted",
-          text: "The use of private prisons should be restricted",
-        },
       ],
       rowsOrder: "random",
     },
     {
       type: "matrix",
       name: "same-sex-polarization",
+      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
+      isRequired: false,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "Same-sex marriage should remain legalized nationwide",
+          text: "Same-sex marriage should remain legalized nationwide",
+        },
+        {
+          value: "Adoption rights should be granted to married same-sex couples",
+          text: "Adoption rights should be granted to married same-sex couples",
+        },
+        {
+          value:
+            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+          text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+        },
+        {
+          value:
+            "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
+          text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
+        },
+        {
+          value:
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+          text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+        },
+        {
+          value:
+            "Discrimination against same-sex couples in housing and public accommodations should be banned",
+          text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "same-sex-polarization-general",
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
@@ -1184,34 +1504,6 @@ var pre_convo_survey_json = {
           value:
             "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
           text: "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
-        },
-        {
-          value: "Same-sex marriage should remain legalized nationwide",
-          text: "Same-sex marriage should remain legalized nationwide",
-        },
-        {
-          value: "Adoption rights should be granted to married same-sex couples",
-          text: "Adoption rights should be granted to married same-sex couples",
-        },
-        {
-          value:
-            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
-          text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
-        },
-        {
-          value:
-            "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
-          text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
-        },
-        {
-          value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
-          text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
-        },
-        {
-          value:
-            "Discrimination against same-sex couples in housing and public accommodations should be banned",
-          text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
         },
       ],
       rowsOrder: "random",
