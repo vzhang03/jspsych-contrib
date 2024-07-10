@@ -365,7 +365,7 @@
 
         // INTERVENTIONS
 
-        // Declaring the prompts necessary for Adorabot
+        // Declaring the prompts necessary for MOCA
         counter_prompts = [
             {
                 message: "Welcome to the chatroom!",
@@ -389,7 +389,7 @@
                     const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
                     const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
                         .response["topicChoice"];
-                    return `Hey there! I'm Adorabot, here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
                 message_trigger: 0
@@ -405,7 +405,7 @@
 
         continue_button = {
             message_trigger: 10,
-            message: "You have completed your six rounds of messages with Adorabot! Click continue to proceed with the experiment.",
+            message: "You have completed your six rounds of messages! Click continue to proceed with the experiment.",
         }
 
         // Condition-specific bots
@@ -443,7 +443,7 @@
                     const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
                     const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
                         .response["topicChoice"];
-                    return `Hey there! I'm Adorabot, here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
                 message_trigger: 0
@@ -491,7 +491,7 @@
                     const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
                     const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
                         .response["topicChoice"];
-                    return `Hey there! I'm Adorabot, here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
                 message_trigger: 0
