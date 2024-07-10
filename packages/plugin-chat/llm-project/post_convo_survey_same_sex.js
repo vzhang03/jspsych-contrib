@@ -305,7 +305,6 @@ var post_convo_survey_same_sex = {
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="same-sex-slider4-post-placeholder"></div>', // Placeholder for the slider
     },
-
     {
       type: "matrix",
       name: "same-sex-reason-of-avoidance-post",

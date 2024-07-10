@@ -198,7 +198,6 @@ var post_convo_survey_criminal = {
       ],
       rowsOrder: "random",
     },
-
     {
       type: "matrix",
       name: "criminal-polarization-general-post",

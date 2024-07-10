@@ -193,7 +193,6 @@ var post_convo_survey_healthcare = {
       ],
       rowsOrder: "random",
     },
-
     {
       type: "matrix",
       name: "healthcare-polarization-general-post",

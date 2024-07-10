@@ -124,7 +124,6 @@ var post_convo_survey_vaccines = {
         "What still contributes to your willingness or unwillingness to converse with others about mandating vaccines in the U.S.? Please freely reflect in the space below.",
       isRequired: false,
     },
-
     {
       type: "matrix",
       name: "vaccines-polarization-post",
@@ -192,7 +191,6 @@ var post_convo_survey_vaccines = {
       ],
       rowsOrder: "random",
     },
-
     {
       type: "matrix",
       name: "vaccines-polarization-general-post",

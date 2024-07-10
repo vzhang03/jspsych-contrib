@@ -124,7 +124,6 @@ var post_convo_survey_bombing = {
         "What still contributes to your willingness or unwillingness to converse with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
       isRequired: false,
     },
-
     {
       type: "matrix",
       name: "bombing-polarization-post",
@@ -198,7 +197,6 @@ var post_convo_survey_bombing = {
       ],
       rowsOrder: "random",
     },
-    ,
     {
       type: "matrix",
       name: "bombing-polarization-general-post",

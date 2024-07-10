@@ -90,7 +90,7 @@
         // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
         async function createExperiment() {
-            const condition = 2 //await jsPsychPipe.getCondition("P09AXWX5b5t6"); 
+            const condition = 3 //await jsPsychPipe.getCondition("P09AXWX5b5t6"); 
             if (condition == 0) { timeline = counter_timeline; }
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
@@ -678,7 +678,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topicChoice"] == "atomic bombings of Hiroshima and Nagasaki"
+                        .response["topicChoice"] == "the atomic bombings of Hiroshima and Nagasaki"
                 );
             },
         };
@@ -713,7 +713,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["topicChoice"] == "criminal justice reform in the U.S."
+                        .response["topicChoice"] == "the criminal justice system in the U.S."
                 );
             },
         };

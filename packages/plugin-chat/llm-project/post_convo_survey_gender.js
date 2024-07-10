@@ -196,7 +196,6 @@ var post_convo_survey_gender = {
       ],
       rowsOrder: "random",
     },
-
     {
       type: "matrix",
       name: "gender-polarization-general-post",

@@ -130,31 +130,31 @@ var pre_convo_survey_json = {
       isRequired: false,
       choices: [
         {
-          value: "Item 1",
+          value: "Very conservative",
           text: "Very conservative",
         },
         {
-          value: "Item 2",
+          value: "Conservative",
           text: "Conservative",
         },
         {
-          value: "Item 3",
+          value: "Somewhat conservative",
           text: "Somewhat conservative",
         },
         {
-          value: "Item 4",
+          value: "Moderate",
           text: "Moderate",
         },
         {
-          value: "Item 5",
+          value: "Somewhat liberal",
           text: "Somewhat liberal",
         },
         {
-          value: "Item 6",
+          value: "Liberal",
           text: "Liberal",
         },
         {
-          value: "Item 7",
+          value: "Very liberal",
           text: "Very liberal",
         },
       ],
@@ -595,7 +595,7 @@ var pre_convo_survey_json = {
           text: "Mandating vaccines in the U.S.",
         },
         {
-          value: "criminal justice reform in the U.S.",
+          value: "the criminal justice system in the U.S.",
           text: "The criminal justice system in the U.S.",
         },
         {
@@ -804,7 +804,6 @@ var pre_convo_survey_json = {
       ],
       rowsOrder: "random",
     },
-
     {
       type: "matrix",
       name: "gender-polarization-general",
@@ -1064,7 +1063,6 @@ var pre_convo_survey_json = {
       ],
       rowsOrder: "random",
     },
-    ,
     {
       type: "matrix",
       name: "bombing-polarization-general",
@@ -1190,7 +1188,6 @@ var pre_convo_survey_json = {
       ],
       rowsOrder: "random",
     },
-
     {
       type: "matrix",
       name: "vaccines-polarization-general",
@@ -1253,7 +1250,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "criminal-polarization",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
       isRequired: false,
@@ -1322,7 +1319,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "criminal-polarization-general",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
       isRequired: false,
@@ -1816,14 +1813,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider1",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the criminal justice system in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     },
     {
       type: "html",
       name: "criminal-slider1-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the criminal justice system in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
       html: '<div id="criminal-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1831,14 +1828,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider2-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider2-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1846,14 +1843,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider3-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider3-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1861,14 +1858,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider4",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider4-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider4-placeholder"></div>', // Placeholder for the slider
@@ -2176,7 +2173,6 @@ var pre_convo_survey_json = {
         },
       ],
     },
-
     {
       type: "matrix",
       name: "bombing-offending-reason",
@@ -2257,7 +2253,6 @@ var pre_convo_survey_json = {
         },
       ],
     },
-
     {
       type: "matrix",
       name: "vaccines-offending-reason",
@@ -2338,11 +2333,10 @@ var pre_convo_survey_json = {
         },
       ],
     },
-
     {
       type: "matrix",
       name: "criminal-offending-reason",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
       isRequired: false,
@@ -2419,7 +2413,6 @@ var pre_convo_survey_json = {
         },
       ],
     },
-
     {
       type: "matrix",
       name: "same-sex-offending-reason",
