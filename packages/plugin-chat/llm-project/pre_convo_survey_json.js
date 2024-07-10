@@ -163,7 +163,7 @@ var pre_convo_survey_json = {
       type: "matrix",
       name: "personality-trait-identification",
       title:
-        "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
+        "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement on the following seven point scale. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
       isRequired: false,
       columns: [
         {
