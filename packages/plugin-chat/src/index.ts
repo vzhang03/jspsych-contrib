@@ -197,9 +197,8 @@ class ChatPlugin implements JsPsychPlugin<Info> {
     this.ai_model = trial.ai_model;
 
     // this.chatLog.updateConversationLog(trial.ai_prompt, "system");
-    this.chatLog.setPrompt(trial.ai_prompt);
+    this.chatLog.setPrompt(trial.ai_prompt); // sets researcher prompts and removes any that can't trigger
 
-    // sets researcher prompts and removes any that can't trigger
     this.researcher_prompts = trial.additional_prompts
       ? trial.additional_prompts.filter((researcher_prompt) => {
           if (
@@ -237,13 +236,24 @@ class ChatPlugin implements JsPsychPlugin<Info> {
   // Call to backend, newMessage is the document item to print (optional because when chaining don't want them to display)
   async fetchGPT(messages, newMessage?) {
     try {
-      const response = await fetch("http://localhost:3000/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ messages, ai_model: this.ai_model }), // Corrected JSON structure
-      });
+      var response;
+      if (window.location.href.includes("127.0.0.1")) {
+        response = await fetch("http://localhost:3000/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ messages, ai_model: this.ai_model }), // Corrected JSON structure
+        });
+      } else {
+        response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ messages, ai_model: this.ai_model }), // Corrected JSON structure
+        });
+      }
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -308,13 +318,13 @@ class ChatPlugin implements JsPsychPlugin<Info> {
 
     try {
       var response = undefined;
-      // allows to pass in non defined prompts
+
       if (prompt) {
+        // allows to pass in non defined prompts
         response = await this.fetchGPT(prompt, newMessage);
         console.log(prompt);
-      }
-      // special case when wanting to prompt with own thing
-      else {
+      } else {
+        // special case when wanting to prompt with own thing
         response = await this.fetchGPT(this.chatLog.getPrompt(), newMessage);
         console.log(this.chatLog.getPrompt());
       }
