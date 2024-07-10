@@ -5,8 +5,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #d1d0e5;
+  background-color: #9c9ad05c;
   overflow-x: hidden;
 }
 
@@ -17,10 +16,10 @@ html, body {
   justify-content: center;
   align-items: center;
   overflow: hidden; /* Ensure no overflow */
-  padding-top: 60px; /* Adjust based on the height of .bot-title */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow*/
+  /* padding-top: 60px; Adjust based on the height of .bot-title */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add a subtle box shadow */
+  background-color: #000000;
 }
-
 
 .bot-title {
   /* height: 80px; */
@@ -39,8 +38,9 @@ html, body {
 
 .bot-title-text {
   color: black;
-  font-weight: 1000;
-  font-size: 40px;
+  font-family: "Cantarell", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   text-align: center;
 }
 
@@ -51,11 +51,10 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
   overflow: hidden; /* Prevent overflow */
   padding: 20px;
   box-sizing: border-box;
@@ -68,7 +67,8 @@ html, body {
   padding: 10px 30px 20px 20px; /* Not sure about the direction of these */
   margin-top: 10px; 
   overflow-y: auto;
-  max-height: 80vh; 
+  /* max-height: 80vh;  for title sizing */ 
+  max-height: 85vh;
   box-sizing: border-box; 
   display: flex;
   flex-direction: column;
@@ -84,7 +84,7 @@ html, body {
 
 /* Chat fields */
 .chat-fields {
-  padding: 10px;
+  padding: 30px;
   display: flex;
   /* overflow: hidden; 
   width: calc(100% - 40px); 
@@ -92,6 +92,9 @@ html, body {
   width: 100%; /* Occupy full width of .chat-box */
   box-sizing: border-box;
   align-items: center; /* Center items vertically */
+  background: #F1F1F1;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 20px;
 }
 
 /* User input */
@@ -99,63 +102,67 @@ html, body {
   padding: 10px;
   border: none;
   border-radius: 10px; 
-  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%; 
-  font-family: inherit; 
-  font-size: inherit; 
   resize: none; 
   height: auto; 
   overflow-y: auto; 
   flex: 1; 
+
+  font-family: "Cantarell", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  /* background: #FFFFFF; */
+}
+
+#send-btn, #continue-btn {
+  font-family: "Exo", sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 33.23px;
+  border: none;
+  padding: 10px 30px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 20px;
 }
 
 /* Send button */
 #send-btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 30px;
+  background-color: #D1D0E5;;
+  color: #000000;
   cursor: pointer;
   margin-left: 10px;
   width: auto; 
-  font-family: inherit;
-  font-size: inherit;
   transition: background-color 0.3s ease; /* Add a transition for hover effect */
 }
 
 /* Hover effect for send button */
 #send-btn:hover {
-  background-color: #45A049; /* Slightly darker shade on hover */
+  background-color: #cac8e3;  ; /* Slightly darker shade on hover */
 }
 
 /* Submit button */
 #continue-btn {
-  background-color: #FF914D; /* Different background color */
+  background-color: #FFFAC180; /* Different background color */
   color: black;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 30px;
   cursor: pointer;
   margin-left: 10px;
   width: auto; 
-  font-family: inherit;
-  font-size: inherit;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for distinction */
   transition: background-color 0.3s ease; /* Add a transition for hover effect */
-  font-style: italic;
 }
 
 /* Hover effect for submit button */
 #continue-btn:hover {
-  background-color: #e28043; /* Darker shade on hover */
+  background-color: #f9f2a1a8; /* Darker shade on hover */
 }
 
-.user-message, .chatbot-message, .system-prompt-message {
+/* .system-prompt-message  */
+.user-message, .chatbot-message {
   padding: 10px 15px;
   margin: 5px;
-  margin-top: 15px;
+  margin-top: 30px;
   border-radius: 15px;
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -165,13 +172,20 @@ html, body {
   max-width: 70%;
   word-wrap: break-word; 
   text-align: left; 
+  font-family: "Cantarell", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  font-style: normal;
+  /* border: 1px solid #000000; */
 }
 
 /* User message */
 .user-message {
   align-self: flex-end; 
-  background-color: #4CAF50; 
-  color: white;
+  background-color: #D1D0E5; 
+  color: #000000;
+  border-radius: 15px 15px 0px 15px;
 }
 
 /* Chatbot message */
@@ -179,11 +193,19 @@ html, body {
   align-self: flex-start; 
   background-color: #d1e7dd; /* Change this color to something contrasting */
   color: black; 
+  border-radius: 15px 15px 15px 0px;
 }
 
 .system-prompt-message {
-  background-color: #faf39d; 
-  color: #6B503F;
+  /* background: #FFFAC180; */
+  margin-top: 30px;
+  color: #3e3e51c5;
+
+  font-family: Exo;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
 }
 
 /* Add pseudo-elements for the speech bubble tails */
@@ -194,13 +216,14 @@ html, body {
   width: 0;
   height: 0;
   border: 20px solid transparent;
+  /* border: 1px solid #000000; */
 }
 
 /* Tail for user message */
 .user-message::after {
   right: -10px;
   bottom: 1px; /* Adjust this value to align the tail */
-  border-left-color: #4CAF50;
+  border-left-color: #D1D0E5;
   border-right: 0;
   border-bottom: 0;
   border-top: 20px solid transparent;
@@ -208,9 +231,16 @@ html, body {
 
 /* Tail for chatbot message */
 .chatbot-message::after {
-  left: -10px;
-  bottom: 1px; /* Adjust this value to align the tail */
+  left: -9px;
+  bottom: 0px; /* Adjust this value to align the tail */
   border-right-color: #d1e7dd;
   border-left: 0;
   border-bottom: 0;
+}
+/* Data display */
+#jspsych-data-display {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  width: 100%;
+  overflow-x: auto;
 }
