@@ -4,7 +4,7 @@ var pre_convo_survey_json = {
       type: "checkbox",
       name: "ethnicity",
       title: "What is your ethnicity? (Select all that apply)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -42,7 +42,7 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "political-affiliation",
       title: "What is your political affiliation? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -64,7 +64,7 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "gender-identification",
       title: "With which gender do you most identify? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -81,7 +81,7 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "education-level",
       title: "What is the highest level of education that you have completed? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "Item 1",
@@ -121,13 +121,13 @@ var pre_convo_survey_json = {
       type: "text",
       name: "religious-affiliation",
       title: "With which religious family do you most identify? (Fill in)",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "radiogroup",
       name: "political-ideology",
       title: "How would you describe your political ideology? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "Very conservative",
@@ -164,7 +164,7 @@ var pre_convo_survey_json = {
       name: "personality-trait-identification",
       title:
         "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement on the following seven point scale. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -243,7 +243,7 @@ var pre_convo_survey_json = {
       name: "rating-republicans",
       visibleIf: "{political-affiliation} <> 'Item 1'",
       title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -306,7 +306,7 @@ var pre_convo_survey_json = {
       name: "rating-democrats",
       visibleIf: "{political-affiliation} <> 'Item 2'",
       title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -369,7 +369,7 @@ var pre_convo_survey_json = {
       name: "interacting-with-republicans",
       visibleIf: "{political-affiliation} <> 'Item 1'",
       title: "To what extent do these statements apply to you?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -420,7 +420,7 @@ var pre_convo_survey_json = {
       name: "interacting-with-democrats",
       visibleIf: "{political-affiliation} <> 'Item 2'",
       title: "To what extent do these statements apply to you?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -470,7 +470,7 @@ var pre_convo_survey_json = {
       type: "matrix",
       name: "self-reported-tendency-for-strong-opinions",
       title: "How much do you agree or disagree with the following statements?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -572,7 +572,7 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "topicChoice",
       title: "Which topic would you like to discuss with the chatbot?",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "human euthanasia in the U.S.",
@@ -610,7 +610,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -681,7 +681,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -738,7 +738,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -810,7 +810,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -868,7 +868,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -938,7 +938,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -996,7 +996,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1069,7 +1069,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1127,7 +1127,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1194,7 +1194,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1253,7 +1253,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1322,7 +1322,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1382,7 +1382,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1451,7 +1451,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1937,7 +1937,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2018,7 +2018,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about gender equality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2099,7 +2099,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2179,7 +2179,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2259,7 +2259,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2339,7 +2339,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2419,7 +2419,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
