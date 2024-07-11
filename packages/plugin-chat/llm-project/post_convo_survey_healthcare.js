@@ -5,7 +5,7 @@ var post_convo_survey_healthcare = {
       name: "healthcare-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -64,14 +64,14 @@ var post_convo_survey_healthcare = {
       name: "healthcare-free-response",
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the role of the U.S. government in healthcare? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "radiogroup",
       name: "healthcare-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse with others about the role of the U.S. government in healthcare. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       choices: [
         {
           value: "Item 1",
@@ -108,28 +108,28 @@ var post_convo_survey_healthcare = {
       name: "healthcare-what-affected-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the role of the government in healthcare?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-new-perspective-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the role of the U.S. government in healthcare? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-still-contributes-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the role of the U.S. government in healthcare? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "matrix",
       name: "healthcare-polarization1-post",
       title:
         "Please indicate whether you would support or oppose the following proposals about the role of the U.S. government in healthcare. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -197,7 +197,7 @@ var post_convo_survey_healthcare = {
       name: "healthcare-polarization2-post",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -305,7 +305,7 @@ var post_convo_survey_healthcare = {
       name: "healthcare-reason-of-avoidance-post",
       title:
         "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -384,21 +384,21 @@ var post_convo_survey_healthcare = {
       name: "healthcare-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about the role of the U.S. government in healthcare? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the role of the U.S. government in healthcare? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "healthcare-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about the role of the U.S. government in healthcare? If so, what occurred in these moments?",
-      isRequired: true,
+      isRequired: false,
     },
   ],
 };

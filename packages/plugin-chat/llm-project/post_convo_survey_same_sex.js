@@ -5,7 +5,7 @@ var post_convo_survey_same_sex = {
       name: "same-sex-openmindedness",
       title:
         "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -64,14 +64,14 @@ var post_convo_survey_same_sex = {
       name: "same-sex-free-response",
       title:
         "After your conversation with the chat bot, do you feel more willing to have a conversation with others about same-sex marriage in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "radiogroup",
       name: "same-sex-willing-to-converse-likert-post",
       title:
         "Rate this conversation's effect on your willingness to converse with others about same-sex marriage in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       choices: [
         {
           value: "Item 1",
@@ -108,28 +108,28 @@ var post_convo_survey_same_sex = {
       name: "same-sex-what-affected-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on same-sex marriage in the U.S.?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "same-sex-new-perspective-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about same-sex marriage in the U.S.? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "same-sex-still-contributes-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about same-sex marriage in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "matrix",
       name: "same-sex-polarization1-post",
       title:
         "Please indicate whether you would support or oppose the following proposals about same-sex marriage. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -193,7 +193,7 @@ var post_convo_survey_same_sex = {
       name: "same-sex-polarization2-post",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -301,7 +301,7 @@ var post_convo_survey_same_sex = {
       name: "same-sex-reason-of-avoidance-post",
       title:
         "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -380,21 +380,21 @@ var post_convo_survey_same_sex = {
       name: "same-sex-other-willingness-post",
       title:
         "What still contributes to your willingness or unwillingness to converse with others about same-sex marriage in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "same-sex-convo-effect-on-willingness-post",
       title:
         "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on same-sex marriage in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
+      isRequired: false,
     },
     {
       type: "comment",
       name: "same-sex-convo-effect-on-perspectives-post",
       title:
         "Throughout this conversation, were there any moments that opened you up to a new perspective about same-sex marriage in the U.S.? If so, what occurred in these moments?",
-      isRequired: true,
+      isRequired: false,
     },
   ],
 };

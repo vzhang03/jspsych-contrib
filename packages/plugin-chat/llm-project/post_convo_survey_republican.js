@@ -4,7 +4,7 @@ var post_convo_survey_republican = {
       type: "matrix",
       name: "rating-democrats-post",
       title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
@@ -66,7 +66,7 @@ var post_convo_survey_republican = {
       type: "matrix",
       name: "interacting-with-democrats-post",
       title: "To what extent do these statements apply to you?",
-      isRequired: true,
+      isRequired: false,
       columns: [
         {
           value: "Column 1",
