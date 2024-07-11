@@ -24,7 +24,7 @@
     <script src="post_convo_survey_gender.js"></script> <!-- survey -->
     <script src="post_convo_survey_same_sex.js"></script> <!-- survey -->
     <script src="post_convo_survey_criminal.js"></script> <!-- survey -->
-   <!-- <script src="experimental_group_last_questions.js"></script> <!-- survey -->
+    <!-- <script src="experimental_group_last_questions.js"></script> <!-- survey -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css" />
     <!-- for slider questions -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
@@ -60,7 +60,16 @@
             },
         });
 
-        // PRIOR TO LAUNCHING PILOT ADD JSPSYCH PIPE IN THE ASYNC FUNCTION AND CHANGE ALL JSON ISREQUIREDS TO TRUE 
+        // capture info from Prolific
+        var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+        var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+        var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+        jsPsych.data.addProperties({
+            subject_id: subject_id,
+            study_id: study_id,
+            session_id: session_id
+        });
 
         // disable right-click
         document.addEventListener('contextmenu', function (e) {
@@ -93,7 +102,7 @@
         // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
         async function createExperiment() {
-            const condition =  await jsPsychPipe.getCondition("P09AXWX5b5t6");
+            const condition = await jsPsychPipe.getCondition("P09AXWX5b5t6");
             if (condition == 0) { timeline = counter_timeline; }
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
@@ -730,7 +739,7 @@
             type: jsPsychSurvey,
             survey_json: () => {
                 const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
-                        .response["topicChoice"];
+                    .response["topicChoice"];
                 var experimental_group_last_questions = {
                     elements: [
                         {
