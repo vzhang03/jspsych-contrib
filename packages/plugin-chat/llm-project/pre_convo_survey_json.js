@@ -57,8 +57,6 @@ var pre_convo_survey_json = {
           text: "Independent",
         },
       ],
-      showOtherItem: true,
-      otherText: "Other (please specify)",
     },
     {
       type: "radiogroup",
@@ -251,7 +249,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 2",
-          text: "Disgree strongly",
+          text: "disagree strongly",
         },
         {
           value: "Column 3",
@@ -626,7 +624,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -697,7 +695,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -754,7 +752,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -826,7 +824,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -884,7 +882,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -954,7 +952,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1012,7 +1010,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1085,7 +1083,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1143,7 +1141,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1210,7 +1208,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1269,7 +1267,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1338,7 +1336,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1398,7 +1396,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1467,7 +1465,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1691,14 +1689,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider1",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     },
     {
       type: "html",
       name: "bombing-slider1-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
       html: '<div id="bombing-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1706,14 +1704,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider2",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "bombing-slider2-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="bombing-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1721,14 +1719,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider3",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "bombing-slider3-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="bombing-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1736,14 +1734,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider4",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "bombing-slider4-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="bombing-slider4-placeholder"></div>', // Placeholder for the slider
@@ -2176,7 +2174,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "bombing-offending-reason",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
       isRequired: true,

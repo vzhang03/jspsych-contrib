@@ -4,7 +4,7 @@ var post_convo_survey_same_sex = {
       type: "matrix",
       name: "same-sex-openmindedness",
       title:
-        "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
+        "Rate the following statements on the seven point scale: When you have conversations about same-sex marriage in the U.S., you...",
       isRequired: true,
       columns: [
         {
@@ -39,90 +39,25 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value: "Row 1",
-          text: "I had little patience for arguments about same-sex marriage in the U.S. that I disagree with",
+          text: "...have little patience for arguments about same-sex marriage that you disagree with",
         },
         {
           value: "Row 2",
-          text: "I avoided messages about same-sex marriage in the U.S. that I disagree with",
+          text: "...avoid messages about same-sex marriage that you disagree with",
         },
         {
           value: "Row 3",
-          text: "I believed it was a waste of time to pay attention to certain political ideas",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
         },
         {
           value: "Row 4",
-          text: "I was open to considering other political viewpoints about same-sex marriage in the U.S.",
+          text: "...are open to considering other political viewpoints about same-sex marriage",
         },
         {
           value: "Row 5",
-          text: "I considered as many different opinions as possible",
+          text: "...consider as many different opinions as possible about same-sex marriage",
         },
       ],
-    },
-    {
-      type: "comment",
-      name: "same-sex-free-response",
-      title:
-        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about same-sex marriage in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
-    },
-    {
-      type: "radiogroup",
-      name: "same-sex-willing-to-converse-likert-post",
-      title:
-        "Rate this conversation's effect on your willingness to converse with others about same-sex marriage in the U.S. Rate on the 7 point scale.",
-      isRequired: true,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Much less willing",
-        },
-        {
-          value: "Item 2",
-          text: "Moderately less willing",
-        },
-        {
-          value: "Item 3",
-          text: "Somewhat less willing",
-        },
-        {
-          value: "Item 4",
-          text: "Neither more nor less willing",
-        },
-        {
-          value: "Item 5",
-          text: "Somewhat more willing",
-        },
-        {
-          value: "Item 6",
-          text: "Moderately more willing",
-        },
-        {
-          value: "Item 7",
-          text: "Much more willing",
-        },
-      ],
-    },
-    {
-      type: "comment",
-      name: "same-sex-what-affected-post",
-      title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on same-sex marriage in the U.S.?",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "same-sex-new-perspective-post",
-      title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about same-sex marriage in the U.S.? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "same-sex-still-contributes-post",
-      title:
-        "What still contributes to your willingness or unwillingness to converse with others about same-sex marriage in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
     },
     {
       type: "matrix",
@@ -146,7 +81,7 @@ var post_convo_survey_same_sex = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -215,7 +150,7 @@ var post_convo_survey_same_sex = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -383,27 +318,6 @@ var post_convo_survey_same_sex = {
           text: "Afraid of feeling unsafe",
         },
       ],
-    },
-    {
-      type: "comment",
-      name: "same-sex-other-willingness-post",
-      title:
-        "What still contributes to your willingness or unwillingness to converse with others about same-sex marriage in the U.S.? Please freely reflect in the space below.",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "same-sex-convo-effect-on-willingness-post",
-      title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on same-sex marriage in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "same-sex-convo-effect-on-perspectives-post",
-      title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about same-sex marriage in the U.S.? If so, what occurred in these moments?",
-      isRequired: true,
     },
   ],
 };

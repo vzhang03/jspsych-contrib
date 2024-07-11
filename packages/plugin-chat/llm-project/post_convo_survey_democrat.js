@@ -12,7 +12,7 @@ var post_convo_survey_democrat = {
         },
         {
           value: "Column 2",
-          text: "Disgree moderately",
+          text: "disagree moderately",
         },
         {
           value: "Column 3",

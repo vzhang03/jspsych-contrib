@@ -4,7 +4,7 @@ var post_convo_survey_bombing = {
       type: "matrix",
       name: "bombing-openmindedness",
       title:
-        "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
+        "Rate the following statements on the seven point scale: When you have conversations about the atomic bombings of Hiroshima and Nagasaki, you...",
       isRequired: true,
       columns: [
         {
@@ -39,90 +39,25 @@ var post_convo_survey_bombing = {
       rows: [
         {
           value: "Row 1",
-          text: "I had little patience for arguments about the atomic bombings of Hiroshima and Nagasaki that I disagree with",
+          text: "...have little patience for arguments about the atomic bombings that you disagree with",
         },
         {
           value: "Row 2",
-          text: "I avoided messages about the atomic bombings of Hiroshima and Nagasaki that I disagree with",
+          text: "...avoid messages about the atomic bombings that you disagree with",
         },
         {
           value: "Row 3",
-          text: "I believed it was a waste of time to pay attention to certain political ideas",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
         },
         {
           value: "Row 4",
-          text: "I was open to considering other political viewpoints about the atomic bombings of Hiroshima and Nagasaki",
+          text: "...are open to considering other political viewpoints about the atomic bombings",
         },
         {
           value: "Row 5",
-          text: "I considered as many different opinions as possible",
+          text: "...consider as many different opinions as possible about the atomic bombings",
         },
       ],
-    },
-    {
-      type: "comment",
-      name: "bombing-free-response",
-      title:
-        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
-      isRequired: true,
-    },
-    {
-      type: "radiogroup",
-      name: "bombing-willing-to-converse-likert-post",
-      title:
-        "Rate this conversation's effect on your willingness to converse about the atomic bombings of Hiroshima and Nagasaki with others. Rate on the 7 point scale.",
-      isRequired: true,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Much less willing",
-        },
-        {
-          value: "Item 2",
-          text: "Moderately less willing",
-        },
-        {
-          value: "Item 3",
-          text: "Somewhat less willing",
-        },
-        {
-          value: "Item 4",
-          text: "Neither more nor less willing",
-        },
-        {
-          value: "Item 5",
-          text: "Somewhat more willing",
-        },
-        {
-          value: "Item 6",
-          text: "Moderately more willing",
-        },
-        {
-          value: "Item 7",
-          text: "Much more willing",
-        },
-      ],
-    },
-    {
-      type: "comment",
-      name: "bombing-what-affected-post",
-      title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the atomic bombings?",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "bombing-new-perspective-post",
-      title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about the atomic bombings? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "bombing-still-contributes-post",
-      title:
-        "What still contributes to your willingness or unwillingness to converse with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
-      isRequired: true,
     },
     {
       type: "matrix",
@@ -146,7 +81,7 @@ var post_convo_survey_bombing = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -219,7 +154,7 @@ var post_convo_survey_bombing = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -385,27 +320,6 @@ var post_convo_survey_bombing = {
           text: "Afraid of feeling unsafe",
         },
       ],
-    },
-    {
-      type: "comment",
-      name: "bombings-other-willingness-post",
-      title:
-        "What still contributes to your willingness or unwillingness to converse with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "bombings-convo-effect-on-willingness-post",
-      title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views the atomic bombings of Hiroshima and Nagasaki? What made you feel like the conversation was or was not productive?",
-      isRequired: true,
-    },
-    {
-      type: "comment",
-      name: "bombings-convo-effect-on-perspectives-post",
-      title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about the atomic bombings of Hiroshima and Nagasaki? If so, what occurred in these moments?",
-      isRequired: true,
     },
   ],
 };
