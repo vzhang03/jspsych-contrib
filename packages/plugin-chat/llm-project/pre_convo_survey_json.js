@@ -7,31 +7,31 @@ var pre_convo_survey_json = {
       isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "White",
           text: "White",
         },
         {
-          value: "Item 2",
+          value: "Black or African American",
           text: "Black or African American",
         },
         {
-          value: "Item 3",
+          value: "Hispanic or Latino",
           text: "Hispanic or Latino",
         },
         {
-          value: "Item 4",
+          value: "Asian",
           text: "Asian",
         },
         {
-          value: "Item 5",
+          value: "Native American or Alaska Native",
           text: "Native American or Alaska Native",
         },
         {
-          value: "Item 6",
+          value: "Middle Eastern or North African",
           text: "Middle Eastern or North African",
         },
         {
-          value: "Item 7",
+          value: "Native Hawaiian or Other Pacific Islander",
           text: "Native Hawaiian or Other Pacific Islander",
         },
       ],
@@ -45,15 +45,15 @@ var pre_convo_survey_json = {
       isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Republican",
           text: "Republican",
         },
         {
-          value: "Item 2",
+          value: "Democrat",
           text: "Democrat",
         },
         {
-          value: "Item 3",
+          value: "Independent",
           text: "Independent",
         },
       ],
@@ -67,11 +67,11 @@ var pre_convo_survey_json = {
       isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Male",
           text: "Male",
         },
         {
-          value: "Item 2",
+          value: "Female",
           text: "Female",
         },
       ],
@@ -84,19 +84,19 @@ var pre_convo_survey_json = {
       isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Less than high school",
           text: "Less than high school",
         },
         {
-          value: "Item 2",
+          value: "High school diploma or GED",
           text: "High school diploma or GED",
         },
         {
-          value: "Item 3",
+          value: "Some college, no degree",
           text: "Some college, no degree",
         },
         {
-          value: "Item 4",
+          value: "Associate degree",
           text: "Associate degree",
         },
         {
@@ -104,15 +104,15 @@ var pre_convo_survey_json = {
           text: "Bachelor's degree",
         },
         {
-          value: "Item 6",
+          value: "Master's degree",
           text: "Master's degree",
         },
         {
-          value: "Item 7",
+          value: "Doctoral degree (PhD, EdD, etc.)",
           text: "Doctoral degree (PhD, EdD, etc.)",
         },
         {
-          value: "Item 8",
+          value: "Professional degree (JD, MD, etc.)",
           text: "Professional degree (JD, MD, etc.)",
         },
       ],
@@ -276,27 +276,27 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "intelligent",
           text: "Republicans are intelligent",
         },
         {
-          value: "Row 2",
+          value: "open-minded",
           text: "Republicans are open-minded",
         },
         {
-          value: "Row 3",
+          value: "generous",
           text: "Republicans are generous",
         },
         {
-          value: "Row 4",
+          value: "hypocritical",
           text: "Republicans are hypocritical",
         },
         {
-          value: "Row 5",
+          value: "selfish",
           text: "Republicans are selfish",
         },
         {
-          value: "Row 6",
+          value: "mean",
           text: "Republicans are mean",
         },
       ],
@@ -339,27 +339,27 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "intelligent",
           text: "Democrats are intelligent",
         },
         {
-          value: "Row 2",
+          value: "open-minded",
           text: "Democrats are open-minded",
         },
         {
-          value: "Row 3",
+          value: "generous",
           text: "Democrats are generous",
         },
         {
-          value: "Row 4",
+          value: "hypocritical",
           text: "Democrats are hypocritical",
         },
         {
-          value: "Row 5",
+          value: "selfish",
           text: "Democrats are selfish",
         },
         {
-          value: "Row 6",
+          value: "mean",
           text: "Democrats are mean",
         },
       ],
@@ -402,15 +402,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "married",
           text: "I would be unhappy if someone in my immediate family married a republican",
         },
         {
-          value: "Row 2",
+          value: "socializing",
           text: "I would be unhappy if I had to spend time socializing with a republican",
         },
         {
-          value: "Row 3",
+          value: "work",
           text: "I would be unhappy if I had to work closely with a republican on the job",
         },
       ],
@@ -453,15 +453,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "married",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "Row 2",
+          value: "socializing",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "Row 3",
+          value: "work",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],
@@ -503,67 +503,67 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "I form opinions about everything",
           text: "I form opinions about everything",
         },
         {
-          value: "Row 2",
+          value: "I prefer to avoid taking extreme positions",
           text: "I prefer to avoid taking extreme positions",
         },
         {
-          value: "Row 3",
+          value: "It is very important to me to hold strong opinions",
           text: "It is very important to me to hold strong opinions",
         },
         {
-          value: "Row 4",
+          value: "I want to know exactly what is good and bad about everything",
           text: "I want to know exactly what is good and bad about everything",
         },
         {
-          value: "Row 5",
+          value: "I often prefer to remain neutral about complex issues",
           text: "I often prefer to remain neutral about complex issues",
         },
         {
-          value: "Row 6",
+          value: "If something does not affect me, I do not usually determine if it is good or bad",
           text: "If something does not affect me, I do not usually determine if it is good or bad",
         },
         {
-          value: "Row 7",
+          value: "I enjoy strongly liking and disliking new things",
           text: "I enjoy strongly liking and disliking new things",
         },
         {
-          value: "Row 8",
+          value: "There are many things for which I do not have a preference",
           text: "There are many things for which I do not have a preference",
         },
         {
-          value: "Row 9",
+          value: "It bothers me to remain neutral",
           text: "It bothers me to remain neutral",
         },
         {
-          value: "Row 10",
+          value: "I like to have strong opinions even when I am not personally involved",
           text: "I like to have strong opinions even when I am not personally involved",
         },
         {
-          value: "Row 11",
+          value: "I have many more opinions than the average person",
           text: "I have many more opinions than the average person",
         },
         {
-          value: "Row 12",
+          value: "I would rather have a strong opinion than no opinion at all",
           text: "I would rather have a strong opinion than no opinion at all",
         },
         {
-          value: "Row 13",
+          value: "I pay a lot of attention to whether things are good or bad",
           text: "I pay a lot of attention to whether things are good or bad",
         },
         {
-          value: "Row 14",
+          value: "I only form strong opinions when I have to",
           text: "I only form strong opinions when I have to",
         },
         {
-          value: "Row 15",
+          value: "I like to decide that new things are really good or really bad",
           text: "I like to decide that new things are really good or really bad",
         },
         {
-          value: "Row 16",
+          value: "I am pretty much indifferent to many important issues",
           text: "I am pretty much indifferent to many important issues",
         },
       ],
@@ -1970,19 +1970,19 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
