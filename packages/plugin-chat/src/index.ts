@@ -21,7 +21,7 @@ const info = <const>{
     },
     bot_name: {
       type: ParameterType.STRING,
-      default: "Adora-bot",
+      default: undefined,
     },
     continue_button: {
       type: ParameterType.COMPLEX,
@@ -114,15 +114,18 @@ class ChatPlugin implements JsPsychPlugin<Info> {
 
   trial(display_element: HTMLElement, trial: TrialType<Info>) {
     this.initializeTrialVariables(trial);
+    var botTitle = trial.bot_name
+      ? `<div class="bot-title">
+      <h1 class="bot-title-text">` +
+        trial.bot_name +
+        `</h1>
+    </div>`
+      : "";
 
     var html =
-      `<div class="chat-page">
-      <div class="bot-title">
-        <h1 class="bot-title-text">` +
-      trial.bot_name +
-      `</h1>
-      </div>
-      <div class="chat-container">
+      `<div class="chat-page">` +
+      botTitle +
+      `<div class="chat-container">
         <div class="chat-box" id="chat-box"></div>
 
         <div class="chat-fields"> 
@@ -136,6 +139,7 @@ class ChatPlugin implements JsPsychPlugin<Info> {
     </div>`;
 
     display_element.innerHTML = html;
+    document.body.style.backgroundColor = "#9c9ad05c";
     const chatBox = display_element.querySelector("#chat-box") as HTMLElement;
     const userInput = display_element.querySelector("#user-input") as HTMLInputElement;
     const sendButton = display_element.querySelector("#send-btn") as HTMLButtonElement;
@@ -156,13 +160,19 @@ class ChatPlugin implements JsPsychPlugin<Info> {
       } else if (message !== "") {
         await this.updateAndProcessGPT(chatBox);
       }
+
+      chatBox.scrollTop = chatBox.scrollHeight;
       // inc messages and check researcher prompts
       this.messages_sent += 1;
       this.checkResearcherPrompts(chatBox, continueButton);
     };
 
     // Event listener for send button click
-    sendButton.addEventListener("click", sendMessage);
+    sendButton.addEventListener("click", function (event) {
+      if (userInput.value.trim() != "") {
+        sendMessage();
+      }
+    });
 
     // Event listener for Enter key press
     userInput.addEventListener("keydown", function (event) {
@@ -197,9 +207,8 @@ class ChatPlugin implements JsPsychPlugin<Info> {
     this.ai_model = trial.ai_model;
 
     // this.chatLog.updateConversationLog(trial.ai_prompt, "system");
-    this.chatLog.setPrompt(trial.ai_prompt);
+    this.chatLog.setPrompt(trial.ai_prompt); // sets researcher prompts and removes any that can't trigger
 
-    // sets researcher prompts and removes any that can't trigger
     this.researcher_prompts = trial.additional_prompts
       ? trial.additional_prompts.filter((researcher_prompt) => {
           if (
@@ -235,15 +244,26 @@ class ChatPlugin implements JsPsychPlugin<Info> {
   }
 
   // Call to backend, newMessage is the document item to print (optional because when chaining don't want them to display)
-  async fetchGPT(messages, newMessage?) {
+  async fetchGPT(messages, chatBox, newMessage?) {
     try {
-      const response = await fetch("http://localhost:3000/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ messages, ai_model: this.ai_model }), // Corrected JSON structure
-      });
+      var response;
+      if (window.location.href.includes("127.0.0.1")) {
+        response = await fetch("http://localhost:3000/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ messages, ai_model: this.ai_model }), // Corrected JSON structure
+        });
+      } else {
+        response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ messages, ai_model: this.ai_model }), // Corrected JSON structure
+        });
+      }
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -254,7 +274,8 @@ class ChatPlugin implements JsPsychPlugin<Info> {
       if (newMessage) {
         // prints to screen if specified, otherwise only fetch
         runner.on("content", (delta, snapshot) => {
-          newMessage.innerHTML = snapshot.replace(/\n/g, "<br>");
+          newMessage.innerHTML += delta.replace(/\n/g, "<br>");
+          chatBox.scrollTop = chatBox.scrollHeight;
         });
       }
 
@@ -308,14 +329,14 @@ class ChatPlugin implements JsPsychPlugin<Info> {
 
     try {
       var response = undefined;
-      // allows to pass in non defined prompts
+
       if (prompt) {
-        response = await this.fetchGPT(prompt, newMessage);
+        // allows to pass in non defined prompts
+        response = await this.fetchGPT(prompt, chatBox, newMessage);
         console.log(prompt);
-      }
-      // special case when wanting to prompt with own thing
-      else {
-        response = await this.fetchGPT(this.chatLog.getPrompt(), newMessage);
+      } else {
+        // special case when wanting to prompt with own thing
+        response = await this.fetchGPT(this.chatLog.getPrompt(), chatBox, newMessage);
         console.log(this.chatLog.getPrompt());
       }
 
@@ -420,7 +441,7 @@ class ChatPlugin implements JsPsychPlugin<Info> {
         message = await this.updateAndProcessGPT(chatBox, temp_prompt);
         logChain.push({ role: "assistant", content: message });
       } else {
-        message = await this.fetchGPT(temp_prompt); // Ensure to await if fetchGPT is asynchronous
+        message = await this.fetchGPT(temp_prompt, chatBox); // Ensure to await if fetchGPT is asynchronous
         logChain.push({ role: "assistant", content: message });
       }
     }

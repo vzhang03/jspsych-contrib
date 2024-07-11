@@ -4,34 +4,34 @@ var pre_convo_survey_json = {
       type: "checkbox",
       name: "ethnicity",
       title: "What is your ethnicity? (Select all that apply)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "White",
           text: "White",
         },
         {
-          value: "Item 2",
+          value: "Black or African American",
           text: "Black or African American",
         },
         {
-          value: "Item 3",
+          value: "Hispanic or Latino",
           text: "Hispanic or Latino",
         },
         {
-          value: "Item 4",
+          value: "Asian",
           text: "Asian",
         },
         {
-          value: "Item 5",
+          value: "Native American or Alaska Native",
           text: "Native American or Alaska Native",
         },
         {
-          value: "Item 6",
+          value: "Middle Eastern or North African",
           text: "Middle Eastern or North African",
         },
         {
-          value: "Item 7",
+          value: "Native Hawaiian or Other Pacific Islander",
           text: "Native Hawaiian or Other Pacific Islander",
         },
       ],
@@ -42,18 +42,18 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "political-affiliation",
       title: "What is your political affiliation? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Republican",
           text: "Republican",
         },
         {
-          value: "Item 2",
+          value: "Democrat",
           text: "Democrat",
         },
         {
-          value: "Item 3",
+          value: "Independent",
           text: "Independent",
         },
       ],
@@ -64,14 +64,14 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "gender-identification",
       title: "With which gender do you most identify? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Male",
           text: "Male",
         },
         {
-          value: "Item 2",
+          value: "Female",
           text: "Female",
         },
       ],
@@ -81,22 +81,22 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "education-level",
       title: "What is the highest level of education that you have completed? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Less than high school",
           text: "Less than high school",
         },
         {
-          value: "Item 2",
+          value: "High school diploma or GED",
           text: "High school diploma or GED",
         },
         {
-          value: "Item 3",
+          value: "Some college, no degree",
           text: "Some college, no degree",
         },
         {
-          value: "Item 4",
+          value: "Associate degree",
           text: "Associate degree",
         },
         {
@@ -104,15 +104,15 @@ var pre_convo_survey_json = {
           text: "Bachelor's degree",
         },
         {
-          value: "Item 6",
+          value: "Master's degree",
           text: "Master's degree",
         },
         {
-          value: "Item 7",
+          value: "Doctoral degree (PhD, EdD, etc.)",
           text: "Doctoral degree (PhD, EdD, etc.)",
         },
         {
-          value: "Item 8",
+          value: "Professional degree (JD, MD, etc.)",
           text: "Professional degree (JD, MD, etc.)",
         },
       ],
@@ -121,40 +121,40 @@ var pre_convo_survey_json = {
       type: "text",
       name: "religious-affiliation",
       title: "With which religious family do you most identify? (Fill in)",
-      isRequired: false,
+      isRequired: true,
     },
     {
       type: "radiogroup",
       name: "political-ideology",
       title: "How would you describe your political ideology? (Select one)",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
-          value: "Item 1",
+          value: "Very conservative",
           text: "Very conservative",
         },
         {
-          value: "Item 2",
+          value: "Conservative",
           text: "Conservative",
         },
         {
-          value: "Item 3",
+          value: "Somewhat conservative",
           text: "Somewhat conservative",
         },
         {
-          value: "Item 4",
+          value: "Moderate",
           text: "Moderate",
         },
         {
-          value: "Item 5",
+          value: "Somewhat liberal",
           text: "Somewhat liberal",
         },
         {
-          value: "Item 6",
+          value: "Liberal",
           text: "Liberal",
         },
         {
-          value: "Item 7",
+          value: "Very liberal",
           text: "Very liberal",
         },
       ],
@@ -163,8 +163,8 @@ var pre_convo_survey_json = {
       type: "matrix",
       name: "personality-trait-identification",
       title:
-        "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
-      isRequired: false,
+        "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement on the following seven point scale. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -197,43 +197,43 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "I see myself as extraverted, enthusiastic",
           text: "I see myself as extraverted, enthusiastic",
         },
         {
-          value: "Row 2",
+          value: "I see myself as critical, quarrelsome",
           text: "I see myself as critical, quarrelsome",
         },
         {
-          value: "Row 3",
+          value: "I see myself as dependable, self-disciplined",
           text: "I see myself as dependable, self-disciplined",
         },
         {
-          value: "Row 4",
+          value: "I see myself as anxious, easily upset",
           text: "I see myself as anxious, easily upset",
         },
         {
-          value: "Row 5",
+          value: "I see myself as open to new experiences, complex",
           text: "I see myself as open to new experiences, complex",
         },
         {
-          value: "Row 6",
+          value: "I see myself as reserved, quiet",
           text: "I see myself as reserved, quiet",
         },
         {
-          value: "Row 7",
+          value: "I see myself as sympathetic, warm",
           text: "I see myself as sympathetic, warm",
         },
         {
-          value: "Row 8",
+          value: "I see myself as disorganized, careless",
           text: "I see myself as disorganized, careless",
         },
         {
-          value: "Row 9",
+          value: "I see myself as calm, emotionally stable",
           text: "I see myself as calm, emotionally stable",
         },
         {
-          value: "Row 10",
+          value: "I see myself as conventional, uncreative",
           text: "I see myself as conventional, uncreative",
         },
       ],
@@ -243,7 +243,7 @@ var pre_convo_survey_json = {
       name: "rating-republicans",
       visibleIf: "{political-affiliation} <> 'Item 1'",
       title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -276,27 +276,27 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Republicans are intelligent",
           text: "Republicans are intelligent",
         },
         {
-          value: "Row 2",
+          value: "Republicans are open-minded",
           text: "Republicans are open-minded",
         },
         {
-          value: "Row 3",
+          value: "Republicans are generous",
           text: "Republicans are generous",
         },
         {
-          value: "Row 4",
+          value: "Republicans are hypocritical",
           text: "Republicans are hypocritical",
         },
         {
-          value: "Row 5",
+          value: "Republicans are selfish",
           text: "Republicans are selfish",
         },
         {
-          value: "Row 6",
+          value: "Republicans are mean",
           text: "Republicans are mean",
         },
       ],
@@ -306,7 +306,7 @@ var pre_convo_survey_json = {
       name: "rating-democrats",
       visibleIf: "{political-affiliation} <> 'Item 2'",
       title: "How strongly do you agree or disagree with the following statements?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -339,27 +339,27 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Democrats are intelligent",
           text: "Democrats are intelligent",
         },
         {
-          value: "Row 2",
+          value: "Democrats are open-minded",
           text: "Democrats are open-minded",
         },
         {
-          value: "Row 3",
+          value: "Democrats are generous",
           text: "Democrats are generous",
         },
         {
-          value: "Row 4",
+          value: "Democrats are hypocritical",
           text: "Democrats are hypocritical",
         },
         {
-          value: "Row 5",
+          value: "Democrats are selfish",
           text: "Democrats are selfish",
         },
         {
-          value: "Row 6",
+          value: "Democrats are mean",
           text: "Democrats are mean",
         },
       ],
@@ -369,7 +369,7 @@ var pre_convo_survey_json = {
       name: "interacting-with-republicans",
       visibleIf: "{political-affiliation} <> 'Item 1'",
       title: "To what extent do these statements apply to you?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -402,15 +402,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "married",
           text: "I would be unhappy if someone in my immediate family married a republican",
         },
         {
-          value: "Row 2",
+          value: "socializing",
           text: "I would be unhappy if I had to spend time socializing with a republican",
         },
         {
-          value: "Row 3",
+          value: "work",
           text: "I would be unhappy if I had to work closely with a republican on the job",
         },
       ],
@@ -420,7 +420,7 @@ var pre_convo_survey_json = {
       name: "interacting-with-democrats",
       visibleIf: "{political-affiliation} <> 'Item 2'",
       title: "To what extent do these statements apply to you?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -453,15 +453,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "married",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "Row 2",
+          value: "socializing",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "Row 3",
+          value: "work",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],
@@ -470,7 +470,7 @@ var pre_convo_survey_json = {
       type: "matrix",
       name: "self-reported-tendency-for-strong-opinions",
       title: "How much do you agree or disagree with the following statements?",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -503,67 +503,67 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "I form opinions about everything",
           text: "I form opinions about everything",
         },
         {
-          value: "Row 2",
+          value: "I prefer to avoid taking extreme positions",
           text: "I prefer to avoid taking extreme positions",
         },
         {
-          value: "Row 3",
+          value: "It is very important to me to hold strong opinions",
           text: "It is very important to me to hold strong opinions",
         },
         {
-          value: "Row 4",
+          value: "I want to know exactly what is good and bad about everything",
           text: "I want to know exactly what is good and bad about everything",
         },
         {
-          value: "Row 5",
+          value: "I often prefer to remain neutral about complex issues",
           text: "I often prefer to remain neutral about complex issues",
         },
         {
-          value: "Row 6",
+          value: "If something does not affect me, I do not usually determine if it is good or bad",
           text: "If something does not affect me, I do not usually determine if it is good or bad",
         },
         {
-          value: "Row 7",
+          value: "I enjoy strongly liking and disliking new things",
           text: "I enjoy strongly liking and disliking new things",
         },
         {
-          value: "Row 8",
+          value: "There are many things for which I do not have a preference",
           text: "There are many things for which I do not have a preference",
         },
         {
-          value: "Row 9",
+          value: "It bothers me to remain neutral",
           text: "It bothers me to remain neutral",
         },
         {
-          value: "Row 10",
+          value: "I like to have strong opinions even when I am not personally involved",
           text: "I like to have strong opinions even when I am not personally involved",
         },
         {
-          value: "Row 11",
+          value: "I have many more opinions than the average person",
           text: "I have many more opinions than the average person",
         },
         {
-          value: "Row 12",
+          value: "I would rather have a strong opinion than no opinion at all",
           text: "I would rather have a strong opinion than no opinion at all",
         },
         {
-          value: "Row 13",
+          value: "I pay a lot of attention to whether things are good or bad",
           text: "I pay a lot of attention to whether things are good or bad",
         },
         {
-          value: "Row 14",
+          value: "I only form strong opinions when I have to",
           text: "I only form strong opinions when I have to",
         },
         {
-          value: "Row 15",
+          value: "I like to decide that new things are really good or really bad",
           text: "I like to decide that new things are really good or really bad",
         },
         {
-          value: "Row 16",
+          value: "I am pretty much indifferent to many important issues",
           text: "I am pretty much indifferent to many important issues",
         },
       ],
@@ -572,7 +572,7 @@ var pre_convo_survey_json = {
       type: "radiogroup",
       name: "topicChoice",
       title: "Which topic would you like to discuss with the chatbot?",
-      isRequired: false,
+      isRequired: true,
       choices: [
         {
           value: "human euthanasia in the U.S.",
@@ -595,7 +595,7 @@ var pre_convo_survey_json = {
           text: "Mandating vaccines in the U.S.",
         },
         {
-          value: "criminal justice reform in the U.S.",
+          value: "the criminal justice system in the U.S.",
           text: "The criminal justice system in the U.S.",
         },
         {
@@ -610,7 +610,78 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "Euthanasia should be allowed for terminally ill patients who request it",
+          text: "Euthanasia should be allowed for terminally ill patients who request it",
+        },
+        {
+          value: "Legal protections should be provided for doctors who perform euthanasia",
+          text: "Legal protections should be provided for doctors who perform euthanasia",
+        },
+        {
+          value:
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+          text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+        },
+        {
+          value:
+            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+          text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+        },
+        {
+          value: "Euthanasia should be banned for patients with non-terminal conditions",
+          text: "Euthanasia should be banned for patients with non-terminal conditions",
+        },
+        {
+          value: "Euthanasia should be banned for all patients",
+          text: "Euthanasia should be banned for all patients",
+        },
+        {
+          value: "Euthanasia should not be performed at home",
+          text: "Euthanasia should not be performed at home",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "euthanasia-polarization-general",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -658,36 +729,6 @@ var pre_convo_survey_json = {
           value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
-        {
-          value: "Euthanasia should be allowed for terminally ill patients who request it",
-          text: "Euthanasia should be allowed for terminally ill patients who request it",
-        },
-        {
-          value: "Legal protections should be provided for doctors who perform euthanasia",
-          text: "Legal protections should be provided for doctors who perform euthanasia",
-        },
-        {
-          value:
-            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
-          text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
-        },
-        {
-          value:
-            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
-          text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
-        },
-        {
-          value: "Euthanasia should be banned for patients with non-terminal conditions",
-          text: "Euthanasia should be banned for patients with non-terminal conditions",
-        },
-        {
-          value: "Euthanasia should be banned for all patients",
-          text: "Euthanasia should be banned for all patients",
-        },
-        {
-          value: "Euthanasia should not be performed at home",
-          text: "Euthanasia should not be performed at home",
-        },
       ],
       rowsOrder: "random",
     },
@@ -697,7 +738,79 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "Gender quotas should be implemented in corporate boards and executive positions",
+          text: "Gender quotas should be implemented in corporate boards and executive positions",
+        },
+        {
+          value:
+            "Mandating equal pay for equal work regardless of gender would improve gender equality",
+          text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
+        },
+        {
+          value: "Both mothers and fathers should be provided with parental leave",
+          text: "Both mothers and fathers should be provided with parental leave",
+        },
+        {
+          value: "Free childcare services should be provided to support working parents",
+          text: "Free childcare services should be provided to support working parents",
+        },
+        {
+          value: "Funding for programs aimed at reducing gender-based violence should be increased",
+          text: "Funding for programs aimed at reducing gender-based violence should be increased",
+        },
+        {
+          value:
+            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
+          text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
+        },
+        {
+          value:
+            "Gender should be disregarded when selecting candidates for career advancement opportunities",
+          text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "gender-polarization-general",
+      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -746,37 +859,6 @@ var pre_convo_survey_json = {
             "Efforts to reduce equality for women often create unfair advantages for women over men",
           text: "Efforts to reduce equality for women often create unfair advantages for women over men",
         },
-        {
-          value: "Gender quotas should be implemented in corporate boards and executive positions",
-          text: "Gender quotas should be implemented in corporate boards and executive positions",
-        },
-        {
-          value:
-            "Mandating equal pay for equal work regardless of gender would improve gender equality",
-          text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
-        },
-        {
-          value: "Both mothers and fathers should be provided with parental leave",
-          text: "Both mothers and fathers should be provided with parental leave",
-        },
-        {
-          value: "Free childcare services should be provided to support working parents",
-          text: "Free childcare services should be provided to support working parents",
-        },
-        {
-          value: "Funding for programs aimed at reducing gender-based violence should be increased",
-          text: "Funding for programs aimed at reducing gender-based violence should be increased",
-        },
-        {
-          value:
-            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
-          text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
-        },
-        {
-          value:
-            "Gender should be disregarded when selecting candidates for career advancement opportunities",
-          text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
-        },
       ],
       rowsOrder: "random",
     },
@@ -786,7 +868,77 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "A universal healthcare system should be implemented in the U.S.",
+          text: "A universal healthcare system should be implemented in the U.S.",
+        },
+        {
+          value: "Medicaid should be expanded to cover more low-income individuals",
+          text: "Medicaid should be expanded to cover more low-income individuals",
+        },
+        {
+          value: "Prescription drug prices should be regulated to make them more affordable",
+          text: "Prescription drug prices should be regulated to make them more affordable",
+        },
+        {
+          value: "Government subsidies should be provided for private health insurance",
+          text: "Government subsidies should be provided for private health insurance",
+        },
+        {
+          value: "The government should negotiate drug prices with pharmaceutical companies",
+          text: "The government should negotiate drug prices with pharmaceutical companies",
+        },
+        {
+          value: "Government funding should be increased for mental health services",
+          text: "Government funding should be increased for mental health services",
+        },
+        {
+          value: "The competitive market should drive healthcare prices",
+          text: "The competitive market should drive healthcare prices",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "healthcare-polarization-general",
+      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
+      title:
+        "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -835,34 +987,6 @@ var pre_convo_survey_json = {
             "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
-        {
-          value: "A universal healthcare system should be implemented in the U.S.",
-          text: "A universal healthcare system should be implemented in the U.S.",
-        },
-        {
-          value: "Medicaid should be expanded to cover more low-income individuals",
-          text: "Medicaid should be expanded to cover more low-income individuals",
-        },
-        {
-          value: "Prescription drug prices should be regulated to make them more affordable",
-          text: "Prescription drug prices should be regulated to make them more affordable",
-        },
-        {
-          value: "Government subsidies should be provided for private health insurance",
-          text: "Government subsidies should be provided for private health insurance",
-        },
-        {
-          value: "The government should negotiate drug prices with pharmaceutical companies",
-          text: "The government should negotiate drug prices with pharmaceutical companies",
-        },
-        {
-          value: "Government funding should be increased for mental health services",
-          text: "Government funding should be increased for mental health services",
-        },
-        {
-          value: "The competitive market should drive healthcare prices",
-          text: "The competitive market should drive healthcare prices",
-        },
       ],
       rowsOrder: "random",
     },
@@ -872,7 +996,80 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "A memorial should be established in the U.S. to honor the victims of the bombings",
+          text: "A memorial should be established in the U.S. to honor the victims of the bombings",
+        },
+        {
+          value:
+            "The U.S. government should provide financial reparations to the survivors and their families",
+          text: "The U.S. government should provide financial reparations to the survivors and their families",
+        },
+        {
+          value: "The bombings were justified to bring a swift end to the war",
+          text: "The bombings were justified to bring a swift end to the war",
+        },
+        {
+          value: "The bombings were morally wrong",
+          text: "The bombings were morally wrong",
+        },
+        {
+          value:
+            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+          text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+        },
+        {
+          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
+          text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
+        },
+        {
+          value:
+            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+          text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "bombing-polarization-general",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
+      title:
+        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -921,38 +1118,6 @@ var pre_convo_survey_json = {
             "The bombings should be included in educational curricula as a significant historical event",
           text: "The bombings should be included in educational curricula as a significant historical event",
         },
-        {
-          value:
-            "A memorial should be established in the U.S. to honor the victims of the bombings",
-          text: "A memorial should be established in the U.S. to honor the victims of the bombings",
-        },
-        {
-          value:
-            "The U.S. government should provide financial reparations to the survivors and their families",
-          text: "The U.S. government should provide financial reparations to the survivors and their families",
-        },
-        {
-          value: "The bombings were justified to bring a swift end to the war",
-          text: "The bombings were justified to bring a swift end to the war",
-        },
-        {
-          value: "The bombings were morally wrong",
-          text: "The bombings were morally wrong",
-        },
-        {
-          value:
-            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
-          text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
-        },
-        {
-          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
-          text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
-        },
-        {
-          value:
-            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
-          text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
-        },
       ],
       rowsOrder: "random",
     },
@@ -962,7 +1127,74 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+          text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+        },
+        {
+          value: "Vaccines should be mandated for healthcare workers",
+          text: "Vaccines should be mandated for healthcare workers",
+        },
+        {
+          value: "Businesses should be allowed to require proof of vaccination for entry",
+          text: "Businesses should be allowed to require proof of vaccination for entry",
+        },
+        {
+          value:
+            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+        },
+        {
+          value: "Schools should be allowed to require vaccinations for attendance",
+          text: "Schools should be allowed to require vaccinations for attendance",
+        },
+        {
+          value: "All government-approved vaccines should be mandated",
+          text: "All government-approved vaccines should be mandated",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "vaccines-polarization-general",
+      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1012,42 +1244,85 @@ var pre_convo_survey_json = {
             "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
-        {
-          value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
-          text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
-        },
-        {
-          value: "Vaccines should be mandated for healthcare workers",
-          text: "Vaccines should be mandated for healthcare workers",
-        },
-        {
-          value: "Businesses should be allowed to require proof of vaccination for entry",
-          text: "Businesses should be allowed to require proof of vaccination for entry",
-        },
-        {
-          value:
-            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
-          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
-        },
-        {
-          value: "Schools should be allowed to require vaccinations for attendance",
-          text: "Schools should be allowed to require vaccinations for attendance",
-        },
-        {
-          value: "All government-approved vaccines should be mandated",
-          text: "All government-approved vaccines should be mandated",
-        },
       ],
       rowsOrder: "random",
     },
     {
       type: "matrix",
       name: "criminal-polarization",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+        },
+        {
+          value:
+            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+          text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+        },
+        {
+          value: "The use of solitary confinement as a punishment should be banned",
+          text: "The use of solitary confinement as a punishment should be banned",
+        },
+        {
+          value: "Inmates should have greater access to educational programs",
+          text: "Inmates should have greater access to educational programs",
+        },
+        {
+          value:
+            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+          text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+        },
+        {
+          value: "The use of private prisons should be restricted",
+          text: "The use of private prisons should be restricted",
+        },
+      ],
+      rowsOrder: "random",
+    },
+
+    {
+      type: "matrix",
+      name: "criminal-polarization-general",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1098,33 +1373,6 @@ var pre_convo_survey_json = {
             "The federal government should implement greater punishments to improve public safety",
           text: "The federal government should implement greater punishments to improve public safety",
         },
-        {
-          value:
-            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
-          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
-        },
-        {
-          value:
-            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
-          text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
-        },
-        {
-          value: "The use of solitary confinement as a punishment should be banned",
-          text: "The use of solitary confinement as a punishment should be banned",
-        },
-        {
-          value: "Inmates should have greater access to educational programs",
-          text: "Inmates should have greater access to educational programs",
-        },
-        {
-          value:
-            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
-          text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
-        },
-        {
-          value: "The use of private prisons should be restricted",
-          text: "The use of private prisons should be restricted",
-        },
       ],
       rowsOrder: "random",
     },
@@ -1134,7 +1382,76 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
-      isRequired: false,
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "Same-sex marriage should remain legalized nationwide",
+          text: "Same-sex marriage should remain legalized nationwide",
+        },
+        {
+          value: "Adoption rights should be granted to married same-sex couples",
+          text: "Adoption rights should be granted to married same-sex couples",
+        },
+        {
+          value:
+            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+          text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+        },
+        {
+          value:
+            "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
+          text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
+        },
+        {
+          value:
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+          text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+        },
+        {
+          value:
+            "Discrimination against same-sex couples in housing and public accommodations should be banned",
+          text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "same-sex-polarization-general",
+      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1184,34 +1501,6 @@ var pre_convo_survey_json = {
           value:
             "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
           text: "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
-        },
-        {
-          value: "Same-sex marriage should remain legalized nationwide",
-          text: "Same-sex marriage should remain legalized nationwide",
-        },
-        {
-          value: "Adoption rights should be granted to married same-sex couples",
-          text: "Adoption rights should be granted to married same-sex couples",
-        },
-        {
-          value:
-            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
-          text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
-        },
-        {
-          value:
-            "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
-          text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
-        },
-        {
-          value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
-          text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
-        },
-        {
-          value:
-            "Discrimination against same-sex couples in housing and public accommodations should be banned",
-          text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
         },
       ],
       rowsOrder: "random",
@@ -1524,14 +1813,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider1",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the criminal justice system in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     },
     {
       type: "html",
       name: "criminal-slider1-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the criminal justice system in the U.S., where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
       html: '<div id="criminal-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1539,14 +1828,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider2-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider2-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1554,14 +1843,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider3-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider3-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1569,14 +1858,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "criminal-slider4",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "criminal-slider4-placeholder",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the criminal justice system in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="criminal-slider4-placeholder"></div>', // Placeholder for the slider
@@ -1648,7 +1937,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1681,43 +1970,43 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],
@@ -1729,7 +2018,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about gender equality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1762,43 +2051,43 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],
@@ -1810,7 +2099,7 @@ var pre_convo_survey_json = {
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1843,55 +2132,54 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],
     },
-
     {
       type: "matrix",
       name: "bombing-offending-reason",
       visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -1924,55 +2212,54 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],
     },
-
     {
       type: "matrix",
       name: "vaccines-offending-reason",
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2005,55 +2292,54 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],
     },
-
     {
       type: "matrix",
       name: "criminal-offending-reason",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2086,55 +2372,54 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],
     },
-
     {
       type: "matrix",
       name: "same-sex-offending-reason",
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
-      isRequired: false,
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -2167,43 +2452,43 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Do not want to offend someone",
           text: "Do not want to offend someone",
         },
         {
-          value: "Row 2",
+          value: "Do not want to be offended by someone",
           text: "Do not want to be offended by someone",
         },
         {
-          value: "Row 3",
+          value: "Do not want to be in an awkward, tense, or confrontational situation",
           text: "Do not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
+          value: "Do not want to deal with emotional distress or fatigue",
           text: "Do not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
+          value: "Do not want people judging me negatively or misunderstanding me",
           text: "Do not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
+          value: "Do not want to come off as ignorant or uneducated",
           text: "Do not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
+          value: "Previous negative experiences",
           text: "Previous negative experiences",
         },
         {
-          value: "Row 8",
+          value: "Do not want to incur social repercussions",
           text: "Do not want to incur social repercussions",
         },
         {
-          value: "Row 9",
+          value: "Afraid of feeling disempowered, unheard, or invalidated",
           text: "Afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
+          value: "Afraid of feeling unsafe",
           text: "Afraid of feeling unsafe",
         },
       ],

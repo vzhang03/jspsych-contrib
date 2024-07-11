@@ -132,76 +132,11 @@ var post_convo_survey_criminal = {
     },
     {
       type: "matrix",
-      name: "criminal-polarization1-post",
-
+      name: "criminal-polarization-post",
+      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about the criminal justice system in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row1",
-          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system",
-        },
-        {
-          value: "Row2",
-          text: "Enhancing mental health support services for incarcerated individuals",
-        },
-        {
-          value: "Row3",
-          text: "Banning the use of solitary confinement as a punishment",
-        },
-        {
-          value: "Row4",
-          text: "Allowing greater access to educational programs for inmates",
-        },
-        {
-          value: "Row5",
-          text: "Permitting non-violent offenders to serve sentences through community service or house arrest",
-        },
-        {
-          value: "Row6",
-          text: "Restricting the use of private prisons",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "criminal-polarization2-post",
-
-      title:
-        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -234,22 +169,94 @@ var post_convo_survey_criminal = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+          text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+        },
+        {
+          value:
+            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+          text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+        },
+        {
+          value: "The use of solitary confinement as a punishment should be banned",
+          text: "The use of solitary confinement as a punishment should be banned",
+        },
+        {
+          value: "Inmates should have greater access to educational programs",
+          text: "Inmates should have greater access to educational programs",
+        },
+        {
+          value:
+            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+          text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+        },
+        {
+          value: "The use of private prisons should be restricted",
+          text: "The use of private prisons should be restricted",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "criminal-polarization-general-post",
+      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The benefits of the criminal justice system outweigh the potential downsides",
           text: "The benefits of the criminal justice system outweigh the potential downsides",
         },
         {
-          value: "Row 2",
+          value:
+            "The federal government should implement stricter regulations to reduce incarceration rates",
           text: "The federal government should implement stricter regulations to reduce incarceration rates",
         },
         {
-          value: "Row 3",
+          value:
+            "The federal government should implement more robust rehabilitation programs to improve public safety",
           text: "The federal government should implement more robust rehabilitation programs to improve public safety",
         },
         {
-          value: "Row 4",
+          value:
+            "The federal government should implement greater punishments to improve public safety",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],
+      rowsOrder: "random",
     },
     {
       type: "expression",

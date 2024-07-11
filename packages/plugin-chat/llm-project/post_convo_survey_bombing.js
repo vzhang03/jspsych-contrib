@@ -126,10 +126,11 @@ var post_convo_survey_bombing = {
     },
     {
       type: "matrix",
-      name: "bombing-polarization1-post",
+      name: "bombing-polarization-post",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
-        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -162,52 +163,98 @@ var post_convo_survey_bombing = {
       ],
       rows: [
         {
-          value: "Row 1",
-          text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
-        },
-        {
-          value: "Row 2",
-          text: "The U.S. government should have issued a formal apology to Japan",
-        },
-        {
-          value: "Row 3",
-          text: "The bombings should be recognized as a war crime under international law",
-        },
-        {
-          value: "Row 4",
-          text: "The bombings should be included in educational curricula as a significant historical event",
-        },
-        {
-          value: "Row 5",
+          value:
+            "A memorial should be established in the U.S. to honor the victims of the bombings",
           text: "A memorial should be established in the U.S. to honor the victims of the bombings",
         },
         {
-          value: "Row 6",
+          value:
+            "The U.S. government should provide financial reparations to the survivors and their families",
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value: "Row 7",
+          value: "The bombings were justified to bring a swift end to the war",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
-          value: "Row 8",
+          value: "The bombings were morally wrong",
           text: "The bombings were morally wrong",
         },
         {
-          value: "Row 9",
+          value:
+            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
           text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
         },
         {
-          value: "Row 10",
+          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
           text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
         },
         {
-          value: "Row 11",
+          value:
+            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
           text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
         },
       ],
+      rowsOrder: "random",
     },
-
+    {
+      type: "matrix",
+      name: "bombing-polarization-general-post",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
+      title:
+        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
+          text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
+        },
+        {
+          value: "The U.S. government should have issued a formal apology to Japan",
+          text: "The U.S. government should have issued a formal apology to Japan",
+        },
+        {
+          value: "The bombings should be recognized as a war crime under international law",
+          text: "The bombings should be recognized as a war crime under international law",
+        },
+        {
+          value:
+            "The bombings should be included in educational curricula as a significant historical event",
+          text: "The bombings should be included in educational curricula as a significant historical event",
+        },
+      ],
+      rowsOrder: "random",
+    },
     {
       type: "expression",
       name: "bombing-slider1-post",

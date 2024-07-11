@@ -126,78 +126,11 @@ var post_convo_survey_euthanasia = {
     },
     {
       type: "matrix",
-      name: "euthanasia-polarization1-post",
+      name: "euthanasia-polarization-post",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about human euthanasia in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Allowing euthanasia for terminally ill patients who request it",
-        },
-        {
-          value: "Row 2",
-          text: "Providing legal protections for doctors who perform euthanasia",
-        },
-        {
-          value: "Row 3",
-          text: "Allowing family members to request euthanasia on behalf of incapacitated patients",
-        },
-        {
-          value: "Row 4",
-          text: "Requiring psychological evaluations before euthanasia can be performed",
-        },
-        {
-          value: "Row 5",
-          text: "Banning euthanasia for patients with non-terminal conditions",
-        },
-        {
-          value: "Row 6",
-          text: "Banning euthanasia for all patients",
-        },
-        {
-          value: "Row 7",
-          text: "Allowing euthanasia to be performed at home",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "euthanasia-polarization2-post",
-      title:
-        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -230,22 +163,94 @@ var post_convo_survey_euthanasia = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Euthanasia should be allowed for terminally ill patients who request it",
+          text: "Euthanasia should be allowed for terminally ill patients who request it",
+        },
+        {
+          value: "Legal protections should be provided for doctors who perform euthanasia",
+          text: "Legal protections should be provided for doctors who perform euthanasia",
+        },
+        {
+          value:
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+          text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+        },
+        {
+          value:
+            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+          text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+        },
+        {
+          value: "Euthanasia should be banned for patients with non-terminal conditions",
+          text: "Euthanasia should be banned for patients with non-terminal conditions",
+        },
+        {
+          value: "Euthanasia should be banned for all patients",
+          text: "Euthanasia should be banned for all patients",
+        },
+        {
+          value: "Euthanasia should not be performed at home",
+          text: "Euthanasia should not be performed at home",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "euthanasia-polarization-general-post",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The benefits of euthanasia outweigh the potential downsides",
           text: "The benefits of euthanasia outweigh the potential downsides",
         },
         {
-          value: "Row 2",
+          value: "The federal government should make it easier for people to access euthanasia",
           text: "The federal government should make it easier for people to access euthanasia",
         },
         {
-          value: "Row 3",
+          value: "More access to euthanasia would alleviate suffering for terminally ill patient",
           text: "More access to euthanasia would alleviate suffering for terminally ill patients",
         },
         {
-          value: "Row 4",
+          value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],
+      rowsOrder: "random",
     },
     {
       type: "expression",

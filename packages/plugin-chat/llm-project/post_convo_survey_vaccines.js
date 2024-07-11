@@ -126,74 +126,11 @@ var post_convo_survey_vaccines = {
     },
     {
       type: "matrix",
-      name: "vaccines-polarization1-post",
+      name: "vaccines-polarization-post",
+      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about mandating vaccines in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row 1",
-          text: "Preventing people without vaccinations from entering public spaces and transportation",
-        },
-        {
-          value: "Row 2",
-          text: "Mandating vaccines for healthcare workers",
-        },
-        {
-          value: "Row 3",
-          text: "Allowing businesses to require proof of vaccination for entry",
-        },
-        {
-          value: "Row 4",
-          text: "Barring businesses and institutions from discriminating based on vaccination status",
-        },
-        {
-          value: "Row 5",
-          text: "Allowing schools to require vaccinations for attendance",
-        },
-        {
-          value: "Row 6",
-          text: "Mandating a vaccine once it has been successfully deployed in a certain number of trials",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "vaccines-polarization2-post",
-      title:
-        "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -224,6 +161,94 @@ var post_convo_survey_vaccines = {
           text: "Agree strongly",
         },
       ],
+      rows: [
+        {
+          value:
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+          text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+        },
+        {
+          value: "Vaccines should be mandated for healthcare workers",
+          text: "Vaccines should be mandated for healthcare workers",
+        },
+        {
+          value: "Businesses should be allowed to require proof of vaccination for entry",
+          text: "Businesses should be allowed to require proof of vaccination for entry",
+        },
+        {
+          value:
+            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+          text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+        },
+        {
+          value: "Schools should be allowed to require vaccinations for attendance",
+          text: "Schools should be allowed to require vaccinations for attendance",
+        },
+        {
+          value: "All government-approved vaccines should be mandated",
+          text: "All government-approved vaccines should be mandated",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "vaccines-polarization-general-post",
+      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value: "The benefits of vaccine mandates outweigh the potential downsides",
+          text: "The benefits of vaccine mandates outweigh the potential downsides",
+        },
+        {
+          value: "The federal government should make it mandatory for people to get vaccinated",
+          text: "The federal government should make it mandatory for people to get vaccinated",
+        },
+        {
+          value:
+            "More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
+          text: "More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
+        },
+        {
+          value:
+            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
+          text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
+        },
+      ],
+      rowsOrder: "random",
     },
     {
       type: "expression",

@@ -126,74 +126,11 @@ var post_convo_survey_same_sex = {
     },
     {
       type: "matrix",
-      name: "same-sex-polarization1-post",
+      name: "same-sex-polarization-post",
+      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
-        "Please indicate whether you would support or oppose the following proposals about same-sex marriage. Rate on the 7 point scale.",
-      isRequired: false,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Oppose strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Oppose moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Oppose slightly",
-        },
-        {
-          value: "Column 4",
-          text: "Neither oppose nor support",
-        },
-        {
-          value: "Column 5",
-          text: "Support slightly",
-        },
-        {
-          value: "Column 6",
-          text: "Support moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Support strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "Row1",
-          text: "Keeping same-sex marriage legalized nationwide",
-        },
-        {
-          value: "Row2",
-          text: "Granting adoption rights to married same-sex couples",
-        },
-        {
-          value: "Row3",
-          text: "Providing employment non-discrimination protections for LGBTQ+ individuals",
-        },
-        {
-          value: "Row4",
-          text: "Allowing same-sex couples to receive spousal benefits (e.g., health insurance, survivor benefits)",
-        },
-        {
-          value: "Row5",
-          text: "Not providing the same federal rights and support for same-sex couples as opposite-sex couples",
-        },
-        {
-          value: "Row6",
-          text: "Barring discrimination against same-sex couples in housing and public accommodations",
-        },
-      ],
-      rowsOrder: "random",
-    },
-    {
-      type: "matrix",
-      name: "same-sex-polarization2-post",
-      title:
-        "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? Rate on the 7 point scale.",
-      isRequired: false,
+        "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -226,22 +163,95 @@ var post_convo_survey_same_sex = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "Same-sex marriage should remain legalized nationwide",
+          text: "Same-sex marriage should remain legalized nationwide",
+        },
+        {
+          value: "Adoption rights should be granted to married same-sex couples",
+          text: "Adoption rights should be granted to married same-sex couples",
+        },
+        {
+          value:
+            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+          text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+        },
+        {
+          value:
+            "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
+          text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
+        },
+        {
+          value:
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+          text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+        },
+        {
+          value:
+            "Discrimination against same-sex couples in housing and public accommodations should be banned",
+          text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
+        },
+      ],
+      rowsOrder: "random",
+    },
+    {
+      type: "matrix",
+      name: "same-sex-polarization-general-post",
+      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
+      title:
+        "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
+      isRequired: true,
+      columns: [
+        {
+          value: "Column 1",
+          text: "Disagree strongly",
+        },
+        {
+          value: "Column 2",
+          text: "Disagree moderately",
+        },
+        {
+          value: "Column 3",
+          text: "Disagree a little",
+        },
+        {
+          value: "Column 4",
+          text: "Neither agree nor disgree",
+        },
+        {
+          value: "Column 5",
+          text: "Agree a little",
+        },
+        {
+          value: "Column 6",
+          text: "Agree moderately",
+        },
+        {
+          value: "Column 7",
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
           text: "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
         },
         {
-          value: "Row 2",
+          value: "The federal government should ensure equal rights for married same-sex couples",
           text: "The federal government should ensure equal rights for married same-sex couples",
         },
         {
-          value: "Row 3",
+          value:
+            "More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
           text: "More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
         },
         {
-          value: "Row 4",
+          value:
+            "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
           text: "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
         },
       ],
+      rowsOrder: "random",
     },
     {
       type: "expression",
@@ -295,7 +305,6 @@ var post_convo_survey_same_sex = {
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in same-sex marriage in the U.S., where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="same-sex-slider4-post-placeholder"></div>', // Placeholder for the slider
     },
-
     {
       type: "matrix",
       name: "same-sex-reason-of-avoidance-post",
