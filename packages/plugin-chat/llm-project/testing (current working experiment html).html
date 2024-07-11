@@ -54,9 +54,9 @@
         /* redirect to Prolific experiment page NEED TO INSERT CORRECT LINK */
         var jsPsych = initJsPsych({
             on_finish: function () {
-                //  window.location = "https://openguessr.com/";
                 jsPsych.data.displayData();
                 jsPsych.data.get().localSave("csv", "llm_trial.csv");
+                window.location = "https://openguessr.com/";
             },
         });
 
@@ -93,7 +93,7 @@
         // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
         async function createExperiment() {
-            const condition = await jsPsychPipe.getCondition("P09AXWX5b5t6");
+            const condition =  await jsPsychPipe.getCondition("P09AXWX5b5t6");
             if (condition == 0) { timeline = counter_timeline; }
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
@@ -526,10 +526,10 @@
 
                 var control_intervention_json = {
                     elements: [{
-                        "type": "comment",
-                        "name": "control-free-response",
-                        "title": `Please freely reflect in the space below on the following statement: "${row}"`,
-                        "isRequired": false,
+                        type: "comment",
+                        name: "control-free-response",
+                        title: `Please freely reflect in the space below on the following statement: "${row}"`,
+                        isRequired: true,
                     }]
                 }
                 return control_intervention_json
