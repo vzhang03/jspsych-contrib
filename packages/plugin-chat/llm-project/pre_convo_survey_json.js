@@ -1507,7 +1507,6 @@ var pre_convo_survey_json = {
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the role of the government in U.S. healthcare, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="healthcare-slider4-placeholder"></div>', // Placeholder for the slider
     },
-
     {
       type: "expression",
       name: "bombing-slider1",
@@ -1756,7 +1755,7 @@ var pre_convo_survey_json = {
       name: "euthanasia-offending-reason",
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
-        "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about human euthanasia in the U.S. with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -1790,44 +1789,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -1837,7 +1836,7 @@ var pre_convo_survey_json = {
       name: "gender-offending-reason",
       visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
-        "Imagine that you are asked to have a serious conversation about gender equality in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about gender equality in the U.S. with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -1871,44 +1870,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -1918,7 +1917,7 @@ var pre_convo_survey_json = {
       name: "healthcare-offending-reason",
       visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
-        "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about the role of the U.S. government in healthcare with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -1952,44 +1951,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -1998,7 +1997,7 @@ var pre_convo_survey_json = {
       name: "bombing-offending-reason",
       visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
-        "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -2032,44 +2031,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -2078,7 +2077,7 @@ var pre_convo_survey_json = {
       name: "vaccines-offending-reason",
       visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
-        "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about mandating vaccines in the U.S. with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -2112,44 +2111,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -2158,7 +2157,7 @@ var pre_convo_survey_json = {
       name: "criminal-offending-reason",
       visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
       title:
-        "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -2192,44 +2191,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -2238,7 +2237,7 @@ var pre_convo_survey_json = {
       name: "same-sex-offending-reason",
       visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
-        "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
+        "Imagine that you are asked to have a serious conversation about same-sex marriage in the U.S. with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
       isRequired: true,
       columns: [
         {
@@ -2272,44 +2271,44 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Do not want to offend someone",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Do not want to be offended by someone",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Do not want to be in an awkward, tense, or confrontational situation",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Do not want to deal with emotional distress or fatigue",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Do not want people judging me negatively or misunderstanding me",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Do not want to come off as ignorant or uneducated",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Previous negative experiences",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Do not want to incur social repercussions",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Afraid of feeling disempowered, unheard, or invalidated",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Afraid of feeling unsafe",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
