@@ -81,7 +81,7 @@ var pre_convo_survey_json = {
           text: "High school diploma or GED",
         },
         {
-          value: "Some college, no degree",
+          value: "Some college; no degree",
           text: "Some college, no degree",
         },
         {
@@ -97,11 +97,11 @@ var pre_convo_survey_json = {
           text: "Master's degree",
         },
         {
-          value: "Doctoral degree (PhD, EdD, etc.)",
+          value: "Doctoral degree (PhD; EdD; etc.)",
           text: "Doctoral degree (PhD, EdD, etc.)",
         },
         {
-          value: "Professional degree (JD, MD, etc.)",
+          value: "Professional degree (JD; MD; etc.)",
           text: "Professional degree (JD, MD, etc.)",
         },
       ],

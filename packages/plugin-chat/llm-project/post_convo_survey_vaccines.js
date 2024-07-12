@@ -38,23 +38,25 @@ var post_convo_survey_vaccines = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "...have little patience for arguments about vaccines mandates that I disagree with",
           text: "...have little patience for arguments about vaccines mandates that I disagree with",
         },
         {
-          value: "Row 2",
+          value: "...avoid messages about vaccines mandates that I disagree with",
           text: "...avoid messages about vaccines mandates that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
           text: "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
         },
         {
-          value: "Row 4",
+          value: "...am open to considering other political viewpoints about vaccines mandates",
           text: "...am open to considering other political viewpoints about vaccines mandates",
         },
         {
-          value: "Row 5",
+          value: "...consider as many different opinions as possible about vaccine mandates",
           text: "...consider as many different opinions as possible about vaccine mandates",
         },
       ],

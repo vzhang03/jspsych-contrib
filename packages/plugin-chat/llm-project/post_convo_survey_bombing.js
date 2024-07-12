@@ -38,23 +38,25 @@ var post_convo_survey_bombing = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "...have little patience for arguments about the atomic bombings that I disagree with",
           text: "...have little patience for arguments about the atomic bombings that I disagree with",
         },
         {
-          value: "Row 2",
+          value: "...avoid messages about the atomic bombings that I disagree with",
           text: "...avoid messages about the atomic bombings that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
         },
         {
-          value: "Row 4",
+          value: "...am open to considering other political viewpoints about the atomic bombings",
           text: "...am open to considering other political viewpoints about the atomic bombings",
         },
         {
-          value: "Row 5",
+          value: "...consider as many different opinions as possible about the atomic bombings",
           text: "...consider as many different opinions as possible about the atomic bombings",
         },
       ],

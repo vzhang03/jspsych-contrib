@@ -38,23 +38,25 @@ var post_convo_survey_euthanasia = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "...have little patience for arguments about human euthanasia that I disagree with",
           text: "...have little patience for arguments about human euthanasia that I disagree with",
         },
         {
-          value: "Row 2",
+          value: "...avoid messages about human euthanasia that I disagree with",
           text: "...avoid messages about human euthanasia that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
           text: "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
         },
         {
-          value: "Row 4",
+          value: "...am open to considering other political viewpoints about human euthanasia",
           text: "...am open to considering other political viewpoints about human euthanasia",
         },
         {
-          value: "Row 5",
+          value: "...consider as many different opinions as possible about human euthanasia",
           text: "...consider as many different opinions as possible about human euthanasia",
         },
       ],

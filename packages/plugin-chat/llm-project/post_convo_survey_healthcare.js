@@ -38,23 +38,28 @@ var post_convo_survey_healthcare = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "...have little patience for arguments about the role of the government in healthcare that I disagree with",
           text: "...have little patience for arguments about the role of the government in healthcare that I disagree with",
         },
         {
-          value: "Row 2",
+          value:
+            "...avoid messages about the role of the government in healthcare that I disagree with",
           text: "...avoid messages about the role of the government in healthcare that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare",
         },
         {
-          value: "Row 4",
+          value:
+            "...am open to considering other political viewpoints about the role of the government in healthcare",
           text: "...am open to considering other political viewpoints about the role of the government in healthcare",
         },
         {
-          value: "Row 5",
+          value:
+            "...consider as many different opinions as possible about the role of the government in healthcare",
           text: "...consider as many different opinions as possible about the role of the government in healthcare",
         },
       ],

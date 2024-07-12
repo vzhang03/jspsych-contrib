@@ -38,23 +38,25 @@ var post_convo_survey_same_sex = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "...have little patience for arguments about same-sex marriage that I disagree with",
           text: "...have little patience for arguments about same-sex marriage that I disagree with",
         },
         {
-          value: "Row 2",
+          value: "...avoid messages about same-sex marriage that I disagree with",
           text: "...avoid messages about same-sex marriage that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
           text: "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
         },
         {
-          value: "Row 4",
+          value: "...am open to considering other political viewpoints about same-sex marriage",
           text: "...am open to considering other political viewpoints about same-sex marriage",
         },
         {
-          value: "Row 5",
+          value: "...consider as many different opinions as possible about same-sex marriage",
           text: "...consider as many different opinions as possible about same-sex marriage",
         },
       ],

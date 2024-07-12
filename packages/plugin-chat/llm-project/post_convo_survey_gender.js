@@ -38,23 +38,24 @@ var post_convo_survey_gender = {
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "...have little patience for arguments about gender equality that I disagree with",
           text: "...have little patience for arguments about gender equality that I disagree with",
         },
         {
-          value: "Row 2",
+          value: "...avoid messages about gender equality that I disagree with",
           text: "...avoid messages about gender equality that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about gender equality",
           text: "...believe it is a waste of time to pay attention to certain political ideas about gender equality",
         },
         {
-          value: "Row 4",
+          value: "...am open to considering other political viewpoints about gender equality",
           text: "...am open to considering other political viewpoints about gender equality",
         },
         {
-          value: "Row 5",
+          value: "...consider as many different opinions as possible about gender equality",
           text: "...consider as many different opinions as possible about gender equality",
         },
       ],
