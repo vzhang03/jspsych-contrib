@@ -57,8 +57,6 @@ var pre_convo_survey_json = {
           text: "Independent",
         },
       ],
-      showOtherItem: true,
-      otherText: "Other (please specify)",
     },
     {
       type: "radiogroup",
@@ -161,87 +159,8 @@ var pre_convo_survey_json = {
     },
     {
       type: "matrix",
-      name: "personality-trait-identification",
-      title:
-        "Here are a number of personality traits that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement on the following seven point scale. You should rate the extent to which the pair of traits applies to you, even if one characteristic applies more strongly than the other.",
-      isRequired: true,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "I see myself as extraverted, enthusiastic",
-          text: "I see myself as extraverted, enthusiastic",
-        },
-        {
-          value: "I see myself as critical, quarrelsome",
-          text: "I see myself as critical, quarrelsome",
-        },
-        {
-          value: "I see myself as dependable, self-disciplined",
-          text: "I see myself as dependable, self-disciplined",
-        },
-        {
-          value: "I see myself as anxious, easily upset",
-          text: "I see myself as anxious, easily upset",
-        },
-        {
-          value: "I see myself as open to new experiences, complex",
-          text: "I see myself as open to new experiences, complex",
-        },
-        {
-          value: "I see myself as reserved, quiet",
-          text: "I see myself as reserved, quiet",
-        },
-        {
-          value: "I see myself as sympathetic, warm",
-          text: "I see myself as sympathetic, warm",
-        },
-        {
-          value: "I see myself as disorganized, careless",
-          text: "I see myself as disorganized, careless",
-        },
-        {
-          value: "I see myself as calm, emotionally stable",
-          text: "I see myself as calm, emotionally stable",
-        },
-        {
-          value: "I see myself as conventional, uncreative",
-          text: "I see myself as conventional, uncreative",
-        },
-      ],
-    },
-    {
-      type: "matrix",
       name: "rating-republicans",
-      visibleIf: "{political-affiliation} <> 'Item 1'",
+      visibleIf: "{political-affiliation} <> 'Republican'",
       title: "How strongly do you agree or disagree with the following statements?",
       isRequired: true,
       columns: [
@@ -251,7 +170,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 2",
-          text: "Disgree strongly",
+          text: "disagree strongly",
         },
         {
           value: "Column 3",
@@ -304,7 +223,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "rating-democrats",
-      visibleIf: "{political-affiliation} <> 'Item 2'",
+      visibleIf: "{political-affiliation} <> 'Democrat'",
       title: "How strongly do you agree or disagree with the following statements?",
       isRequired: true,
       columns: [
@@ -367,7 +286,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "interacting-with-republicans",
-      visibleIf: "{political-affiliation} <> 'Item 1'",
+      visibleIf: "{political-affiliation} <> 'Republican'",
       title: "To what extent do these statements apply to you?",
       isRequired: true,
       columns: [
@@ -418,7 +337,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "interacting-with-democrats",
-      visibleIf: "{political-affiliation} <> 'Item 2'",
+      visibleIf: "{political-affiliation} <> 'Democrat'",
       title: "To what extent do these statements apply to you?",
       isRequired: true,
       columns: [
@@ -463,108 +382,6 @@ var pre_convo_survey_json = {
         {
           value: "work",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
-        },
-      ],
-    },
-    {
-      type: "matrix",
-      name: "self-reported-tendency-for-strong-opinions",
-      title: "How much do you agree or disagree with the following statements?",
-      isRequired: true,
-      columns: [
-        {
-          value: "Column 1",
-          text: "Disagree strongly",
-        },
-        {
-          value: "Column 2",
-          text: "Disagree moderately",
-        },
-        {
-          value: "Column 3",
-          text: "Disagree a little",
-        },
-        {
-          value: "Column 4",
-          text: "Neither agree nor disagree",
-        },
-        {
-          value: "Column 5",
-          text: "Agree a little",
-        },
-        {
-          value: "Column 6",
-          text: "Agree moderately",
-        },
-        {
-          value: "Column 7",
-          text: "Agree strongly",
-        },
-      ],
-      rows: [
-        {
-          value: "I form opinions about everything",
-          text: "I form opinions about everything",
-        },
-        {
-          value: "I prefer to avoid taking extreme positions",
-          text: "I prefer to avoid taking extreme positions",
-        },
-        {
-          value: "It is very important to me to hold strong opinions",
-          text: "It is very important to me to hold strong opinions",
-        },
-        {
-          value: "I want to know exactly what is good and bad about everything",
-          text: "I want to know exactly what is good and bad about everything",
-        },
-        {
-          value: "I often prefer to remain neutral about complex issues",
-          text: "I often prefer to remain neutral about complex issues",
-        },
-        {
-          value: "If something does not affect me, I do not usually determine if it is good or bad",
-          text: "If something does not affect me, I do not usually determine if it is good or bad",
-        },
-        {
-          value: "I enjoy strongly liking and disliking new things",
-          text: "I enjoy strongly liking and disliking new things",
-        },
-        {
-          value: "There are many things for which I do not have a preference",
-          text: "There are many things for which I do not have a preference",
-        },
-        {
-          value: "It bothers me to remain neutral",
-          text: "It bothers me to remain neutral",
-        },
-        {
-          value: "I like to have strong opinions even when I am not personally involved",
-          text: "I like to have strong opinions even when I am not personally involved",
-        },
-        {
-          value: "I have many more opinions than the average person",
-          text: "I have many more opinions than the average person",
-        },
-        {
-          value: "I would rather have a strong opinion than no opinion at all",
-          text: "I would rather have a strong opinion than no opinion at all",
-        },
-        {
-          value: "I pay a lot of attention to whether things are good or bad",
-          text: "I pay a lot of attention to whether things are good or bad",
-        },
-        {
-          value: "I only form strong opinions when I have to",
-          text: "I only form strong opinions when I have to",
-        },
-        {
-          value: "I like to decide that new things are really good or really bad",
-          text: "I like to decide that new things are really good or really bad",
-        },
-        {
-          value: "I am pretty much indifferent to many important issues",
-          text: "I am pretty much indifferent to many important issues",
         },
       ],
     },
@@ -626,7 +443,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -697,7 +514,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -754,7 +571,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -826,7 +643,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -884,7 +701,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -954,7 +771,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1012,7 +829,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1085,7 +902,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1143,7 +960,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1210,7 +1027,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1269,7 +1086,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1338,7 +1155,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1398,7 +1215,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1467,7 +1284,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -1691,14 +1508,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider1",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
     },
     {
       type: "html",
       name: "bombing-slider1-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who strongly disagrees with you about the atomic bombings of Hiroshima and Nagasaki, where a score of 0 is absolute unwillingness to converse and 100 is absolute willingness to converse. A score of 50 is neutral.",
       html: '<div id="bombing-slider1-placeholder"></div>', // Placeholder for the slider
@@ -1706,14 +1523,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider2",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "bombing-slider2-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would push against your views about the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="bombing-slider2-placeholder"></div>', // Placeholder for the slider
@@ -1721,14 +1538,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider3",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "bombing-slider3-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who would challenge your perspective on the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="bombing-slider3-placeholder"></div>', // Placeholder for the slider
@@ -1736,14 +1553,14 @@ var pre_convo_survey_json = {
     {
       type: "expression",
       name: "bombing-slider4",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
     },
     {
       type: "html",
       name: "bombing-slider4-placeholder",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Using the slider, please rate your willingness to have a conversation with someone who is heavily invested in the atomic bombings of Hiroshima and Nagasaki, where 0 is absolute unwillingness and 100 is absolute willingness.",
       html: '<div id="bombing-slider4-placeholder"></div>', // Placeholder for the slider
@@ -2176,7 +1993,7 @@ var pre_convo_survey_json = {
     {
       type: "matrix",
       name: "bombing-offending-reason",
-      visibleIf: "{topicChoice} = 'atomic bombings of Hiroshima and Nagasaki'",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation.",
       isRequired: true,

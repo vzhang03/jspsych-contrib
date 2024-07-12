@@ -24,7 +24,7 @@
     <script src="post_convo_survey_gender.js"></script> <!-- survey -->
     <script src="post_convo_survey_same_sex.js"></script> <!-- survey -->
     <script src="post_convo_survey_criminal.js"></script> <!-- survey -->
-    <script src="experimental_group_last_question.js"></script> <!-- survey -->
+    <!-- <script src="experimental_group_last_questions.js"></script> <!-- survey -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css" />
     <!-- for slider questions -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
@@ -38,6 +38,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
         /* slider format */
         .slider {
             font-size: 20px;
@@ -53,10 +54,20 @@
         /* redirect to Prolific experiment page NEED TO INSERT CORRECT LINK */
         var jsPsych = initJsPsych({
             on_finish: function () {
-              //  window.location = "https://openguessr.com/";
                 jsPsych.data.displayData();
                 jsPsych.data.get().localSave("csv", "llm_trial.csv");
+                window.location = "https://openguessr.com/";
             },
+        });
+
+        var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+        var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+        var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+        jsPsych.data.addProperties({
+            subject_id: subject_id,
+            study_id: study_id,
+            session_id: session_id
         });
 
         // PRIOR TO LAUNCHING PILOT ADD JSPSYCH PIPE IN THE ASYNC FUNCTION AND CHANGE ALL JSON ISREQUIREDS TO TRUE 
@@ -413,11 +424,11 @@
         ]
 
         continue_button = {
-            message_trigger: 10,
+            message_trigger: 7,
             message: "You have completed your ten rounds of messages! Click continue to proceed with the experiment.",
         }
-/*"Add a short and specific counter-argument for the inputted perspective. Do not agree. Do not provide a greeting.",*/
-//, "Provide a short and specific example or reason why the inputted perspective is wrong. Always argue against the input. Do not agree with the user.", "Match the input to the user's response length", "Append a question to the end of the input asking what the user thinks about the inputted stance. Do not remove the input."
+        /*"Add a short and specific counter-argument for the inputted perspective. Do not agree. Do not provide a greeting.",*/
+        //, "Provide a short and specific example or reason why the inputted perspective is wrong. Always argue against the input. Do not agree with the user.", "Match the input to the user's response length", "Append a question to the end of the input asking what the user thinks about the inputted stance. Do not remove the input."
         /*prompt_chain = {
             message_trigger: 0,
             prompts: ["Identify the user's main point.", "Provide a specific example or reason why the user's perspective is wrong. Hold the opposite stance from the user. Match the input to the user's response length."],
@@ -541,10 +552,10 @@
 
                 var control_intervention_json = {
                     elements: [{
-                        "type": "comment",
-                        "name": "control-free-response",
-                        "title": `Please freely reflect in the space below on the following statement: "${row}"`,
-                        "isRequired": false,
+                        type: "comment",
+                        name: "control-free-response",
+                        title: `Please freely reflect in the space below on the following statement: "${row}"`,
+                        isRequired: true,
                     }]
                 }
                 return control_intervention_json
@@ -564,7 +575,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["political-affiliation"] == "Item 1"
+                        .response["political-affiliation"] == "Republican"
                 );
             },
         };
@@ -579,7 +590,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["political-affiliation"] == "Item 2"
+                        .response["political-affiliation"] == "Democrat"
                 );
             },
         };
@@ -599,7 +610,7 @@
             conditional_function: () => {
                 return (
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .response["political-affiliation"] == "Item 3"
+                        .response["political-affiliation"] == "Independent"
                 );
             },
         };
@@ -618,7 +629,7 @@
             ],
             conditional_function: () => {
                 // Assuming there's a different or no specific filter condition for "other" affiliations
-                return !["Item 1", "Item 2", "Item 3"].includes(
+                return !["Republican", "Democrat", "Independent"].includes(
                     jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
                         .response["political-affiliation"]
                 );
@@ -725,7 +736,6 @@
             },
         };
 
-
         var same_sex_post_survey = {
             timeline: [
                 {
@@ -742,9 +752,89 @@
             },
         };
 
-        var last_question = {
+        var last_questions = {
             type: jsPsychSurvey,
-            survey_json: experimental_group_last_question,
+            survey_json: () => {
+                const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
+                    .response["topicChoice"];
+                var experimental_group_last_questions = {
+                    elements: [
+                        {
+                            type: "comment",
+                            name: "free-response",
+                            title:
+                                `After your conversation with the chat bot, do you feel more willing to have a conversation with others about ${topicChoiceAsString}? Please freely reflect in the space below.`,
+                            isRequired: true,
+                        },
+                        {
+                            type: "radiogroup",
+                            name: "willing-to-converse-likert-post",
+                            title:
+                                `Rate this conversation's effect on your willingness to converse about ${topicChoiceAsString} with others. Rate on the seven point scale.`,
+                            isRequired: true,
+                            choices: [
+                                {
+                                    value: "Item 1",
+                                    text: "Much less willing",
+                                },
+                                {
+                                    value: "Item 2",
+                                    text: "Moderately less willing",
+                                },
+                                {
+                                    value: "Item 3",
+                                    text: "Somewhat less willing",
+                                },
+                                {
+                                    value: "Item 4",
+                                    text: "Neither more nor less willing",
+                                },
+                                {
+                                    value: "Item 5",
+                                    text: "Somewhat more willing",
+                                },
+                                {
+                                    value: "Item 6",
+                                    text: "Moderately more willing",
+                                },
+                                {
+                                    value: "Item 7",
+                                    text: "Much more willing",
+                                },
+                            ],
+                        },
+                        {
+                            type: "comment",
+                            name: "convo-effect-on-willingness-post",
+                            title:
+                                `What parts of this conversation, if any, affected your willingness to talk with someone who has different views about ${topicChoiceAsString}? What made you feel like the conversation was or was not productive?`,
+                            isRequired: true,
+                        },
+                        {
+                            type: "comment",
+                            name: "new-perspective-post",
+                            title:
+                                `Throughout this conversation, were there any moments that opened you up to a new perspective about ${topicChoiceAsString}? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?`,
+                            isRequired: true,
+                        },
+                        {
+                            type: "comment",
+                            name: "still-contributes-post",
+                            title:
+                                `What still contributes to your willingness or unwillingness to converse with others about ${topicChoiceAsString}? Please freely reflect in the space below.`,
+                            isRequired: true,
+                        },
+                        {
+                            type: "comment",
+                            name: "feelings-about-bot",
+                            title:
+                                `We are still working on improving our chatbot. How did you like talking with the bot? What do you wish were different? Please provide any feedback regarding your conversation that we have not already covered.`,
+                            isRequired: true,
+                        },
+                    ],
+                };
+                return experimental_group_last_questions
+            },
             survey_function: initializePostSlider,
         };
 
@@ -782,7 +872,7 @@
             vaccines_post_survey,
             criminal_post_survey,
             same_sex_post_survey,
-            last_question,
+            last_questions,
             goodbye
         )
 
@@ -805,7 +895,7 @@
             vaccines_post_survey,
             criminal_post_survey,
             same_sex_post_survey,
-            last_question,
+            last_questions,
             goodbye
         )
 
@@ -828,7 +918,7 @@
             vaccines_post_survey,
             criminal_post_survey,
             same_sex_post_survey,
-            last_question,
+            last_questions,
             goodbye
         )
 
@@ -865,7 +955,7 @@
 
 
         //run experiment
-       // jsPsych.run(timeline);
+        // jsPsych.run(timeline);
 
     </script>
 </body>

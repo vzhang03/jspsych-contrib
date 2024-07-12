@@ -38,6 +38,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
         /* slider format */
         .slider {
             font-size: 20px;
@@ -53,7 +54,7 @@
         /* redirect to Prolific experiment page NEED TO INSERT CORRECT LINK */
         var jsPsych = initJsPsych({
             on_finish: function () {
-              //  window.location = "https://openguessr.com/";
+                //  window.location = "https://openguessr.com/";
                 jsPsych.data.displayData();
                 jsPsych.data.get().localSave("csv", "llm_trial.csv");
             },
@@ -409,8 +410,8 @@
             message_trigger: 10,
             message: "You have completed your ten rounds of messages! Click continue to proceed with the experiment.",
         }
-/*"Add a short and specific counter-argument for the inputted perspective. Do not agree. Do not provide a greeting.",*/
-//, "Provide a short and specific example or reason why the inputted perspective is wrong. Always argue against the input. Do not agree with the user.", "Match the input to the user's response length", "Append a question to the end of the input asking what the user thinks about the inputted stance. Do not remove the input."
+        /*"Add a short and specific counter-argument for the inputted perspective. Do not agree. Do not provide a greeting.",*/
+        //, "Provide a short and specific example or reason why the inputted perspective is wrong. Always argue against the input. Do not agree with the user.", "Match the input to the user's response length", "Append a question to the end of the input asking what the user thinks about the inputted stance. Do not remove the input."
         /*prompt_chain = {
             message_trigger: 0,
             prompts: ["Identify the user's main point.", "Provide a specific example or reason why the user's perspective is wrong. Hold the opposite stance from the user. Match the input to the user's response length."],
@@ -859,7 +860,7 @@
 
 
         //run experiment
-       // jsPsych.run(timeline);
+        // jsPsych.run(timeline);
 
     </script>
 </body>

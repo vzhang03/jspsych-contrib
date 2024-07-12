@@ -3,10 +3,9 @@ var post_convo_survey_criminal = {
     {
       type: "matrix",
       name: "criminal-openmindedness",
-
       title:
-        "Regarding your experience conversing with the chat bot, how much do you agree or disagree with the following statements? Rate on the 7 point scale.",
-      isRequired: false,
+        "Rate the following statements on the seven point scale: When you have conversations about the U.S. criminal justice system, you...",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -40,95 +39,25 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value: "Row 1",
-          text: "I had little patience for arguments about the criminal justice system in the U.S. that I disagree with",
+          text: "...have little patience for arguments about the criminal justice system that you disagree with",
         },
         {
           value: "Row 2",
-          text: "I avoided messages about the criminal justice system in the U.S. that I disagree with",
+          text: "...avoid messages about the criminal justice system that you disagree with",
         },
         {
           value: "Row 3",
-          text: "I believed it was a waste of time to pay attention to certain political ideas",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
         },
         {
           value: "Row 4",
-          text: "I was open to considering other political viewpoints about the criminal justice system in the U.S.",
+          text: "...are open to considering other political viewpoints about the criminal justice system",
         },
         {
           value: "Row 5",
-          text: "I considered as many different opinions as possible",
+          text: "...consider as many different opinions as possible about the criminal justice system",
         },
       ],
-    },
-
-    {
-      type: "comment",
-      name: "criminal-free-response",
-
-      title:
-        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
-    },
-    {
-      type: "radiogroup",
-      name: "criminal-willing-to-converse-likert-post",
-      title:
-        "Rate this conversation's effect on your willingness to converse with others about the criminal justice system in the U.S. Rate on the 7 point scale.",
-      isRequired: false,
-      choices: [
-        {
-          value: "Item 1",
-          text: "Much less willing",
-        },
-        {
-          value: "Item 2",
-          text: "Moderately less willing",
-        },
-        {
-          value: "Item 3",
-          text: "Somewhat less willing",
-        },
-        {
-          value: "Item 4",
-          text: "Neither more nor less willing",
-        },
-        {
-          value: "Item 5",
-          text: "Somewhat more willing",
-        },
-        {
-          value: "Item 6",
-          text: "Moderately more willing",
-        },
-        {
-          value: "Item 7",
-          text: "Much more willing",
-        },
-      ],
-    },
-    {
-      type: "comment",
-      name: "criminal-what-affected-post",
-
-      title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the criminal justice system in the U.S.?",
-      isRequired: false,
-    },
-    {
-      type: "comment",
-      name: "criminal-new-perspective-post",
-
-      title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about the criminal justice system? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?",
-      isRequired: false,
-    },
-    {
-      type: "comment",
-      name: "criminal-still-contributes-post",
-
-      title:
-        "What still contributes to your willingness or unwillingness to converse with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
     },
     {
       type: "matrix",
@@ -152,7 +81,7 @@ var post_convo_survey_criminal = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -220,7 +149,7 @@ var post_convo_survey_criminal = {
         },
         {
           value: "Column 4",
-          text: "Neither agree nor disgree",
+          text: "Neither agree nor disagree",
         },
         {
           value: "Column 5",
@@ -398,27 +327,6 @@ var post_convo_survey_criminal = {
           text: "Afraid of feeling unsafe",
         },
       ],
-    },
-    {
-      type: "comment",
-      name: "criminal-other-willingness-post",
-      title:
-        "What still contributes to your willingness or unwillingness to converse with others about the criminal justice system in the U.S.? Please freely reflect in the space below.",
-      isRequired: false,
-    },
-    {
-      type: "comment",
-      name: "criminal-convo-effect-on-willingness-post",
-      title:
-        "What parts of this conversation, if any, affected your willingness to talk with someone who has different views on the criminal justice system in the U.S.? What made you feel like the conversation was or was not productive?",
-      isRequired: false,
-    },
-    {
-      type: "comment",
-      name: "criminal-convo-effect-on-perspectives-post",
-      title:
-        "Throughout this conversation, were there any moments that opened you up to a new perspective about the criminal justice system in the U.S.? If so, what occurred in these moments?",
-      isRequired: false,
     },
   ],
 };
