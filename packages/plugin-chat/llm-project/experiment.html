@@ -217,19 +217,19 @@
             for (let row in responses) {
                 let columnValue = responses[row];
 
-                // Check if the column value is "Column 1" or "Column 7"
-                if (columnValue === "Column 1" || columnValue === "Column 7") {
+                // Check if the column value is 1 or 7
+                if (columnValue === 1 || columnValue === 7) {
                     //let relevantRow = row.toString()
                     relevantRow.push({ row });
                     break;
-                } else if (columnValue === "Column 2" || columnValue === "Column 6") {
+                } else if (columnValue === 2 || columnValue === 6) {
                     relevantRow.push({ row });
                     break;
                 } else if
-                    (columnValue === "Column 3" || columnValue === "Column 5") {
+                    (columnValue === 3 || columnValue === 5) {
                     relevantRow.push({ row });
                     break;
-                } else if (columnValue === "Column 4") {
+                } else if (columnValue === 4) {
                     relevantRow.push({ row });
                     break;
                 }

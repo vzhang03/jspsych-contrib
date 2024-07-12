@@ -8,31 +8,31 @@ var post_convo_survey_bombing = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
@@ -69,31 +69,31 @@ var post_convo_survey_bombing = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
@@ -142,31 +142,31 @@ var post_convo_survey_bombing = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
@@ -251,31 +251,31 @@ var post_convo_survey_bombing = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
