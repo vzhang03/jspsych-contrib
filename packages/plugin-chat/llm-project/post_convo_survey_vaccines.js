@@ -64,7 +64,6 @@ var post_convo_survey_vaccines = {
     {
       type: "matrix",
       name: "vaccines-polarization-post",
-      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
       isRequired: true,
@@ -131,7 +130,6 @@ var post_convo_survey_vaccines = {
     {
       type: "matrix",
       name: "vaccines-polarization-general-post",
-      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on vaccine mandates in the U.S.? ",
       isRequired: true,

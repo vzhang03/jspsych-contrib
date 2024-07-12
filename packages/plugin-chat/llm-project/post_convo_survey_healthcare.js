@@ -67,7 +67,6 @@ var post_convo_survey_healthcare = {
     {
       type: "matrix",
       name: "healthcare-polarization-post",
-      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
       isRequired: true,
@@ -136,7 +135,6 @@ var post_convo_survey_healthcare = {
     {
       type: "matrix",
       name: "healthcare-polarization-general-post",
-      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
       title:
         "How much do you agree or disagree with the following statements on the role of the U.S. government in healthcare? ",
       isRequired: true,

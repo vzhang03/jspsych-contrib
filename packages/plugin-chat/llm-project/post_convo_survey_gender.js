@@ -63,7 +63,6 @@ var post_convo_survey_gender = {
     {
       type: "matrix",
       name: "gender-polarization-post",
-      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
       isRequired: true,
@@ -135,7 +134,6 @@ var post_convo_survey_gender = {
     {
       type: "matrix",
       name: "gender-polarization-general-post",
-      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on gender equality in the U.S.? ",
       isRequired: true,

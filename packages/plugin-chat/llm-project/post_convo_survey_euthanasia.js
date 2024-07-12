@@ -135,7 +135,6 @@ var post_convo_survey_euthanasia = {
     {
       type: "matrix",
       name: "euthanasia-polarization-general-post",
-      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on human euthanasia in the U.S.? ",
       isRequired: true,

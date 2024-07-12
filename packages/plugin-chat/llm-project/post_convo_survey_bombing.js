@@ -62,10 +62,10 @@ var post_convo_survey_bombing = {
       ],
     },
     {
-      type: "comment",
-      name: "bombing-free-response",
+      type: "matrix",
+      name: "bombing-polarization-post",
       title:
-        "After your conversation with the chat bot, do you feel more willing to have a conversation with others about the atomic bombings of Hiroshima and Nagasaki? Please freely reflect in the space below.",
+        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
       isRequired: true,
       columns: [
         {
@@ -136,7 +136,6 @@ var post_convo_survey_bombing = {
     {
       type: "matrix",
       name: "bombing-polarization-general-post",
-      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
       isRequired: true,
