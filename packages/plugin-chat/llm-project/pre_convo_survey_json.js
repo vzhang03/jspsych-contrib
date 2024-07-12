@@ -61,22 +61,10 @@ var pre_convo_survey_json = {
       otherText: "Other (please specify)",
     },
     {
-      type: "radiogroup",
+      type: "text",
       name: "gender-identification",
       title: "With which gender do you most identify? (Select one)",
       isRequired: true,
-      choices: [
-        {
-          value: "Male",
-          text: "Male",
-        },
-        {
-          value: "Female",
-          text: "Female",
-        },
-      ],
-      showOtherItem: true,
-      otherText: "Other (please specify)",
     },
     {
       type: "radiogroup",
