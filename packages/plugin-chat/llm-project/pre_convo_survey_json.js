@@ -57,6 +57,8 @@ var pre_convo_survey_json = {
           text: "Independent",
         },
       ],
+      showOtherItem: true,
+      otherText: "Other (please specify)",
     },
     {
       type: "radiogroup",
@@ -74,6 +76,7 @@ var pre_convo_survey_json = {
         },
       ],
       showOtherItem: true,
+      otherText: "Other (please specify)",
     },
     {
       type: "radiogroup",
@@ -118,7 +121,7 @@ var pre_convo_survey_json = {
     {
       type: "text",
       name: "religious-affiliation",
-      title: "With which religious family do you most identify? (Fill in)",
+      title: "What religion do you most identify with? (Fill in)",
       isRequired: true,
     },
     {
@@ -170,7 +173,7 @@ var pre_convo_survey_json = {
         },
         {
           value: "Column 2",
-          text: "disagree strongly",
+          text: "Disagree moderately",
         },
         {
           value: "Column 3",
@@ -388,7 +391,7 @@ var pre_convo_survey_json = {
     {
       type: "radiogroup",
       name: "topicChoice",
-      title: "Which topic would you like to discuss with the chatbot?",
+      title: "Which topic would you like to share your thoughts on?",
       isRequired: true,
       choices: [
         {
@@ -673,8 +676,8 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Efforts to reduce equality for women often create unfair advantages for women over men",
-          text: "Efforts to reduce equality for women often create unfair advantages for women over men",
+            "Efforts to reduce inequality for women often create unfair advantages for women over men",
+          text: "Efforts to reduce inequality for women often create unfair advantages for women over men",
         },
       ],
       rowsOrder: "random",
@@ -991,7 +994,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+            "Businesses and institutions should be barred from discriminating based on vaccination status",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
