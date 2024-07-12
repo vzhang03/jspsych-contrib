@@ -4,7 +4,7 @@ var post_convo_survey_gender = {
       type: "matrix",
       name: "gender-openmindedness",
       title:
-        "Rate the following statements on the seven point scale: When you have conversations about gender equality in the U.S., you...",
+        "Rate the following statements on the seven point scale: When I have conversations about gender equality in the U.S., I...",
       isRequired: true,
       columns: [
         {
@@ -39,11 +39,11 @@ var post_convo_survey_gender = {
       rows: [
         {
           value: "Row 1",
-          text: "...have little patience for arguments about gender equality that you disagree with",
+          text: "...have little patience for arguments about gender equality that I disagree with",
         },
         {
           value: "Row 2",
-          text: "...avoid messages about gender equality that you disagree with",
+          text: "...avoid messages about gender equality that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_gender = {
         },
         {
           value: "Row 4",
-          text: "...are open to considering other political viewpoints about gender equality",
+          text: "...am open to considering other political viewpoints about gender equality",
         },
         {
           value: "Row 5",

@@ -4,7 +4,7 @@ var post_convo_survey_euthanasia = {
       type: "matrix",
       name: "euthanasia-openmindedness",
       title:
-        "Rate the following statements on the seven point scale: When you have conversations about human euthanasia in the U.S., you...",
+        "Rate the following statements on the seven point scale: When I have conversations about human euthanasia in the U.S., I...",
       isRequired: true,
       columns: [
         {
@@ -39,11 +39,11 @@ var post_convo_survey_euthanasia = {
       rows: [
         {
           value: "Row 1",
-          text: "...have little patience for arguments about human euthanasia that you disagree with",
+          text: "...have little patience for arguments about human euthanasia that I disagree with",
         },
         {
           value: "Row 2",
-          text: "...avoid messages about human euthanasia that you disagree with",
+          text: "...avoid messages about human euthanasia that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_euthanasia = {
         },
         {
           value: "Row 4",
-          text: "...are open to considering other political viewpoints about human euthanasia",
+          text: "...am open to considering other political viewpoints about human euthanasia",
         },
         {
           value: "Row 5",

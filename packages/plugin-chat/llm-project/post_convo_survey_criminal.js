@@ -4,7 +4,7 @@ var post_convo_survey_criminal = {
       type: "matrix",
       name: "criminal-openmindedness",
       title:
-        "Rate the following statements on the seven point scale: When you have conversations about the U.S. criminal justice system, you...",
+        "Rate the following statements on the seven point scale: When I have conversations about the U.S. criminal justice system, I...",
       isRequired: true,
       columns: [
         {
@@ -39,11 +39,11 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value: "Row 1",
-          text: "...have little patience for arguments about the criminal justice system that you disagree with",
+          text: "...have little patience for arguments about the criminal justice system that I disagree with",
         },
         {
           value: "Row 2",
-          text: "...avoid messages about the criminal justice system that you disagree with",
+          text: "...avoid messages about the criminal justice system that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_criminal = {
         },
         {
           value: "Row 4",
-          text: "...are open to considering other political viewpoints about the criminal justice system",
+          text: "...am open to considering other political viewpoints about the criminal justice system",
         },
         {
           value: "Row 5",

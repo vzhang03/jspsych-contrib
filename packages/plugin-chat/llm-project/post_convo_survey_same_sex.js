@@ -4,7 +4,7 @@ var post_convo_survey_same_sex = {
       type: "matrix",
       name: "same-sex-openmindedness",
       title:
-        "Rate the following statements on the seven point scale: When you have conversations about same-sex marriage in the U.S., you...",
+        "Rate the following statements on the seven point scale: When I have conversations about same-sex marriage in the U.S., I...",
       isRequired: true,
       columns: [
         {
@@ -39,11 +39,11 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value: "Row 1",
-          text: "...have little patience for arguments about same-sex marriage that you disagree with",
+          text: "...have little patience for arguments about same-sex marriage that I disagree with",
         },
         {
           value: "Row 2",
-          text: "...avoid messages about same-sex marriage that you disagree with",
+          text: "...avoid messages about same-sex marriage that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_same_sex = {
         },
         {
           value: "Row 4",
-          text: "...are open to considering other political viewpoints about same-sex marriage",
+          text: "...am open to considering other political viewpoints about same-sex marriage",
         },
         {
           value: "Row 5",
