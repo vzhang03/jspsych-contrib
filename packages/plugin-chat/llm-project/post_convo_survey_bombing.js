@@ -245,8 +245,8 @@ var post_convo_survey_bombing = {
       type: "matrix",
       name: "bombing-reason-of-avoidance-post",
       title:
-        "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: false,
+        "Imagine that you are asked to have a serious conversation about the atomic bombings of Hiroshima and Nagasaki with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
+      isRequired: true,
       columns: [
         {
           value: "Column 1",
@@ -279,44 +279,44 @@ var post_convo_survey_bombing = {
       ],
       rows: [
         {
-          value: "Row 1",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },

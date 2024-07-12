@@ -1818,7 +1818,6 @@ var pre_convo_survey_json = {
         },
       ],
     },
-
     {
       type: "matrix",
       name: "gender-offending-reason",
