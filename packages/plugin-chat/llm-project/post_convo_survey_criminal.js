@@ -8,53 +8,57 @@ var post_convo_survey_criminal = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
       rows: [
         {
-          value: "Row 1",
+          value:
+            "...have little patience for arguments about the criminal justice system that I disagree with",
           text: "...have little patience for arguments about the criminal justice system that I disagree with",
         },
         {
-          value: "Row 2",
+          value: "...avoid messages about the criminal justice system that I disagree with",
           text: "...avoid messages about the criminal justice system that I disagree with",
         },
         {
-          value: "Row 3",
+          value:
+            "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
         },
         {
-          value: "Row 4",
+          value:
+            "...am open to considering other political viewpoints about the criminal justice system",
           text: "...am open to considering other political viewpoints about the criminal justice system",
         },
         {
-          value: "Row 5",
+          value:
+            "...consider as many different opinions as possible about the criminal justice system",
           text: "...consider as many different opinions as possible about the criminal justice system",
         },
       ],
@@ -68,31 +72,31 @@ var post_convo_survey_criminal = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
@@ -136,31 +140,31 @@ var post_convo_survey_criminal = {
       isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
@@ -251,80 +255,79 @@ var post_convo_survey_criminal = {
     {
       type: "matrix",
       name: "criminal-reason-of-avoidance-post",
-
       title:
-        "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Please rate how much each of the following reasons might make you less willing to participate in the conversation. Rate on the 7 point scale.",
-      isRequired: false,
+        "Imagine that you are asked to have a serious conversation about the criminal justice system in the U.S. with a group of people. Rate the following statements: I would be less willing to join the conversation because...",
+      isRequired: true,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
       rows: [
         {
-          value: "Row 1",
-          text: "Do not want to offend someone",
+          value: "...I would not want to offend someone",
+          text: "...I would not want to offend someone",
         },
         {
-          value: "Row 2",
-          text: "Do not want to be offended by someone",
+          value: "...I would not want to be offended by someone",
+          text: "...I would not want to be offended by someone",
         },
         {
-          value: "Row 3",
-          text: "Do not want to be in an awkward, tense, or confrontational situation",
+          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "Row 4",
-          text: "Do not want to deal with emotional distress or fatigue",
+          value: "...I would not want to deal with emotional distress or fatigue",
+          text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "Row 5",
-          text: "Do not want people judging me negatively or misunderstanding me",
+          value: "...I would not want people judging me negatively or misunderstanding me",
+          text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "Row 6",
-          text: "Do not want to come off as ignorant or uneducated",
+          value: "...I would not want to come off as ignorant or uneducated",
+          text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "Row 7",
-          text: "Previous negative experiences",
+          value: "...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
-          value: "Row 8",
-          text: "Do not want to incur social repercussions",
+          value: "...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
-          value: "Row 9",
-          text: "Afraid of feeling disempowered, unheard, or invalidated",
+          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "Row 10",
-          text: "Afraid of feeling unsafe",
+          value: "...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },

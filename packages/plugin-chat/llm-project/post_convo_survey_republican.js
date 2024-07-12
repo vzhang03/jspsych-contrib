@@ -7,57 +7,57 @@ var post_convo_survey_republican = {
       isRequired: false,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Disagree strongly",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Disagree moderately",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Disagree a little",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither agree nor disagree",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Agree a little",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "Agree moderately",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Agree strongly",
         },
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "intelligent",
           text: "Democrats are intelligent",
         },
         {
-          value: "Row 2",
+          value: "open-minded",
           text: "Democrats are open-minded",
         },
         {
-          value: "Row 3",
+          value: "generous",
           text: "Democrats are generous",
         },
         {
-          value: "Row 4",
+          value: "hypocritical",
           text: "Democrats are hypocritical",
         },
         {
-          value: "Row 5",
+          value: "selfish",
           text: "Democrats are selfish",
         },
         {
-          value: "Row 6",
+          value: "mean",
           text: "Democrats are mean",
         },
       ],
@@ -69,45 +69,45 @@ var post_convo_survey_republican = {
       isRequired: false,
       columns: [
         {
-          value: "Column 1",
+          value: 1,
           text: "Very untrue of me",
         },
         {
-          value: "Column 2",
+          value: 2,
           text: "Untrue of me",
         },
         {
-          value: "Column 3",
+          value: 3,
           text: "Somewhat untrue of me",
         },
         {
-          value: "Column 4",
+          value: 4,
           text: "Neither true nor untrue of me",
         },
         {
-          value: "Column 5",
+          value: 5,
           text: "Somewhat true of me",
         },
         {
-          value: "Column 6",
+          value: 6,
           text: "True of me",
         },
         {
-          value: "Column 7",
+          value: 7,
           text: "Very true of me",
         },
       ],
       rows: [
         {
-          value: "Row 1",
+          value: "married",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "Row 2",
+          value: "socializing",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "Row 3",
+          value: "work",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],
