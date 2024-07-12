@@ -4,7 +4,7 @@ var post_convo_survey_healthcare = {
       type: "matrix",
       name: "healthcare-openmindedness",
       title:
-        "Rate the following statements on the seven point scale: When you have conversations about the role of the U.S. government in healthcare, you...",
+        "Rate the following statements on the seven point scale: When I have conversations about the role of the U.S. government in healthcare, I...",
       isRequired: true,
       columns: [
         {
@@ -39,11 +39,11 @@ var post_convo_survey_healthcare = {
       rows: [
         {
           value: "Row 1",
-          text: "...have little patience for arguments about the role of the government in healthcare that you disagree with",
+          text: "...have little patience for arguments about the role of the government in healthcare that I disagree with",
         },
         {
           value: "Row 2",
-          text: "...avoid messages about the role of the government in healthcare that you disagree with",
+          text: "...avoid messages about the role of the government in healthcare that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_healthcare = {
         },
         {
           value: "Row 4",
-          text: "...are open to considering other political viewpoints about the role of the government in healthcare",
+          text: "...am open to considering other political viewpoints about the role of the government in healthcare",
         },
         {
           value: "Row 5",

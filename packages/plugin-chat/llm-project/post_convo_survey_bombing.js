@@ -4,7 +4,7 @@ var post_convo_survey_bombing = {
       type: "matrix",
       name: "bombing-openmindedness",
       title:
-        "Rate the following statements on the seven point scale: When you have conversations about the atomic bombings of Hiroshima and Nagasaki, you...",
+        "Rate the following statements on the seven point scale: When I have conversations about the atomic bombings of Hiroshima and Nagasaki, I...",
       isRequired: true,
       columns: [
         {
@@ -39,11 +39,11 @@ var post_convo_survey_bombing = {
       rows: [
         {
           value: "Row 1",
-          text: "...have little patience for arguments about the atomic bombings that you disagree with",
+          text: "...have little patience for arguments about the atomic bombings that I disagree with",
         },
         {
           value: "Row 2",
-          text: "...avoid messages about the atomic bombings that you disagree with",
+          text: "...avoid messages about the atomic bombings that I disagree with",
         },
         {
           value: "Row 3",
@@ -51,7 +51,7 @@ var post_convo_survey_bombing = {
         },
         {
           value: "Row 4",
-          text: "...are open to considering other political viewpoints about the atomic bombings",
+          text: "...am open to considering other political viewpoints about the atomic bombings",
         },
         {
           value: "Row 5",
