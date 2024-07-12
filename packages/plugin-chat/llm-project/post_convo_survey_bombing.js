@@ -65,7 +65,7 @@ var post_convo_survey_bombing = {
       type: "matrix",
       name: "bombing-polarization-post",
       title:
-        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki?",
+        "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
       isRequired: true,
       columns: [
         {
@@ -136,7 +136,6 @@ var post_convo_survey_bombing = {
     {
       type: "matrix",
       name: "bombing-polarization-general-post",
-      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
       title:
         "How much do you agree or disagree with the following statements on the atomic bombings of Hiroshima and Nagasaki? ",
       isRequired: true,

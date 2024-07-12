@@ -66,7 +66,6 @@ var post_convo_survey_criminal = {
     {
       type: "matrix",
       name: "criminal-polarization-post",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
       isRequired: true,
@@ -134,7 +133,6 @@ var post_convo_survey_criminal = {
     {
       type: "matrix",
       name: "criminal-polarization-general-post",
-      visibleIf: "{topicChoice} = 'criminal justice reform in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on the criminal justice system in the U.S.? ",
       isRequired: true,

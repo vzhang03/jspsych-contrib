@@ -64,7 +64,6 @@ var post_convo_survey_same_sex = {
     {
       type: "matrix",
       name: "same-sex-polarization-post",
-      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
       isRequired: true,
@@ -133,7 +132,6 @@ var post_convo_survey_same_sex = {
     {
       type: "matrix",
       name: "same-sex-polarization-general-post",
-      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
       isRequired: true,

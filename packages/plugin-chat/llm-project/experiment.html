@@ -126,12 +126,18 @@
 
         /*  welcome message  */
         var welcome = {
+            data: {
+                phase: "welcome-message",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: "Welcome to the experiment! Press any key to begin.",
         };
 
         /* brief instructions for people in bot convo timelines */
         var preliminary_convo_instructions = {
+            data: {
+                phase: "convo-instructions",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
                 <p> In this experiment, you will have a short conversation with an AI chatbot about a disputed topic in America. </p>
@@ -145,6 +151,9 @@
 
         /* brief instructions for people in control timeline */
         var preliminary_control_instructions = {
+            data: {
+                phase: "control-instructions",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
                 <p> In this experiment, you will be asked to freely reflect on a disputed topic in America. </p>
@@ -281,6 +290,9 @@
 
         /* break between pre-intervention survey and bot conversation */
         var pre_bot_instructions_break = {
+            data: {
+                phase: "pre-bot-break",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
         <p> You have now completed the pre-conversation questionnaire. </p>
@@ -291,6 +303,9 @@
         };
 
         var pre_convo_instructions = {
+            data: {
+                phase: "pre-convo-instructions",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
         <p> You will be conversing with a chatbot designed for conversations about disputed topics. </p>
@@ -303,6 +318,9 @@
 
         /* break inbetween pre-intervention survey and free reflection*/
         var pre_control_break = {
+            data: {
+                phase: "pre-control-break",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
         <p> Good work! You have now completed the pre-reflection questionnaire. </p>
@@ -319,6 +337,9 @@
         let polaffiliation = "UNIDENTIFIED";
 
         var post_convo_break = {
+            data: {
+                phase: "post-convo-break",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
         <p> Great job! You have completed the conversation. Feel free to take a short break. <p>
@@ -329,6 +350,9 @@
         };
 
         var post_control_break = {
+            data: {
+                phase: "post-control-break",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
         <p> You have completed the free reflection! Feel free to take another short break. <p>
@@ -529,6 +553,9 @@
         //creating text box for control condition
         var control_intervention = {
             type: jsPsychSurvey,
+            data: {
+                phase: "control-intervention",
+            },
             survey_json: () => {
                 const row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
                     .rowAsString["row"]
@@ -551,6 +578,9 @@
         //post survey placed in main experiment html, and not a seperate json, because we needed to insert strings from the prior extracted data
 
         var republican_survey = {
+            data: {
+                phase: "post-convo-republican-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -566,6 +596,9 @@
         };
 
         var democrat_survey = {
+            data: {
+                phase: "post-convo-democrat-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -581,6 +614,9 @@
         };
 
         var neutral_survey = {
+            data: {
+                phase: "pre-convo-independent-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -602,6 +638,9 @@
 
 
         var other_survey = {
+            data: {
+                phase: "post-convo-no-political-affiliation-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -624,6 +663,9 @@
         //TOPIC SPECIFIC POST CHAT SURVEY
 
         var euthanasia_post_survey = {
+            data: {
+                phase: "post-convo-euthanasia-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -640,6 +682,9 @@
         };
 
         var gender_post_survey = {
+            data: {
+                phase: "post-convo-gender-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -657,6 +702,9 @@
 
 
         var healthcare_post_survey = {
+            data: {
+                phase: "post-convo-healthcare-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -673,6 +721,9 @@
         };
 
         var bombings_post_survey = {
+            data: {
+                phase: "post-convo-bombings-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -689,6 +740,9 @@
         };
 
         var vaccines_post_survey = {
+            data: {
+                phase: "post-convo-vaccines-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -706,6 +760,9 @@
 
 
         var criminal_post_survey = {
+            data: {
+                phase: "post-convo-criminal-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -722,6 +779,9 @@
         };
 
         var same_sex_post_survey = {
+            data: {
+                phase: "post-convo-same-sex-survey",
+            },
             timeline: [
                 {
                     type: jsPsychSurvey,
@@ -738,6 +798,9 @@
         };
 
         var last_questions = {
+            data: {
+                phase: "post-convo-last-questions-survey",
+            },
             type: jsPsychSurvey,
             survey_json: () => {
                 const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
@@ -825,6 +888,9 @@
 
         //goodbye message and brief explanation to user about our experimentation motive
         var goodbye = {
+            data: {
+                phase: "goodbye",
+            },
             type: jsPsychHtmlKeyboardResponse,
             stimulus: `
         <p> You have completed the experiment! Thank you for your contribution to our research. </p>
