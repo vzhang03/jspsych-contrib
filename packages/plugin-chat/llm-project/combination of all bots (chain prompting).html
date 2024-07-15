@@ -36,10 +36,13 @@
   
   prompt_chain = {
       message_trigger: 1,
-      prompts: [`First, concisely summarize the user's stance. Second, from the user's stance, determine whether to widen the user's perspective, it would be better to: 
-      1) ask the user about their experience and why they think the way they do 
-      2) provide a factual information that disproves the user's belief or 
-      3) share alternative perspectives of other people that disagree with the user's belief.`], // Ask the user what has led them to believe in the argument below.
+      prompts: [`Concisely summarize the user's stance. From the user's stance, determine whether to widen the user's perspective, it would be better to: 
+      1) ask the user about their experience and why they think the way they do, 
+      2) correct the user for factual information inaccuracy, or
+      3) share a different experience that differed from the user's. Share the perspective of a person with different views.
+        Change up your way of widening the user's perspective each time.`,
+      `Repeat the user input without repeating yourself. If you ask about the user experience more than once, share a different experience instead. Do not greet the user, do not say certainly.`
+      /*`Repeat the user input without greeting the user. Do not repeat what you said before.`*/], // Ask the user what has led them to believe in the argument below.
     }
 
     //"First, reiterate the user's statement. Second, you want to improve the user's open-mindedness and willingness to converse about this topic with others. Identify whether it would be most successful to do so by asking the user a deeper question about their beliefs based on what they've just stated, by providing a counter argument to the user's beliefs and asking what the user thinks, or by explaining why some people have different views from the user's views and asking what the user thinks."
@@ -47,7 +50,7 @@
     //First, concisely summarize the user's stance. Second, from the user's stance, determine whether to widen the user's perspective, it would be better to 1) ask the user about their experience and why they think the way they do 2) provide information that disproves the user's belief or 3) share alternative perspectives of other people that disagree with the user's belief.
 
   continue_button = {
-    message_trigger: 10,
+    message_trigger: 0,
     message: "You have completed your six rounds of messages with Adorabot! Click continue to proceed with the experiment.",
   }
 
