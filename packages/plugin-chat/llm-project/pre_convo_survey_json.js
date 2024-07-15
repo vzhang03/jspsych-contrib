@@ -89,7 +89,7 @@ var pre_convo_survey_json = {
           text: "Associate degree",
         },
         {
-          value: "Item 5",
+          value: "Bachelor's degree",
           text: "Bachelor's degree",
         },
         {

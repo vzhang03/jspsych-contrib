@@ -37,27 +37,27 @@ var post_convo_survey_republican = {
       ],
       rows: [
         {
-          value: "intelligent",
+          value: "Democrats are intelligent",
           text: "Democrats are intelligent",
         },
         {
-          value: "open-minded",
+          value: "Democrats are open-minded",
           text: "Democrats are open-minded",
         },
         {
-          value: "generous",
+          value: "Democrats are generous",
           text: "Democrats are generous",
         },
         {
-          value: "hypocritical",
+          value: "Democrats are hypocritical",
           text: "Democrats are hypocritical",
         },
         {
-          value: "selfish",
+          value: "Democrats are selfish",
           text: "Democrats are selfish",
         },
         {
-          value: "mean",
+          value: "Democrats are mean",
           text: "Democrats are mean",
         },
       ],
@@ -99,15 +99,15 @@ var post_convo_survey_republican = {
       ],
       rows: [
         {
-          value: "married",
+          value: "family married a democrat",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "socializing",
+          value: "socializing with a democrat",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "work",
+          value: "work closely with a democrat",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],
