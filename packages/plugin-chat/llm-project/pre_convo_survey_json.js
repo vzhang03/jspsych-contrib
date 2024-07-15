@@ -651,16 +651,16 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Efforts to reduce gender equality benefit society as a whole",
-          text: "Efforts to reduce gender equality benefit society as a whole",
+          value: "Efforts to reduce gender inequality benefit society as a whole",
+          text: "Efforts to reduce gender inequality benefit society as a whole",
         },
         {
-          value: "The federal government should take more action to address gender equality",
-          text: "The federal government should take more action to address gender equality",
+          value: "The federal government should take more action to address gender inequality",
+          text: "The federal government should take more action to address gender inequality",
         },
         {
-          value: "Reducing gender equality would lead to more opportunities for everyone",
-          text: "Reducing gender equality would lead to more opportunities for everyone",
+          value: "Reducing gender inequality would lead to more opportunities for everyone",
+          text: "Reducing gender inequality would lead to more opportunities for everyone",
         },
         {
           value:
