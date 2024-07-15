@@ -39,16 +39,16 @@ var post_convo_survey_vaccines = {
       rows: [
         {
           value:
-            "...have little patience for arguments about vaccines mandates that I disagree with",
+            "...have little patience for arguments about vaccines mandates that I disagree with @R@",
           text: "...have little patience for arguments about vaccines mandates that I disagree with",
         },
         {
-          value: "...avoid messages about vaccines mandates that I disagree with",
+          value: "...avoid messages about vaccines mandates that I disagree with @R@",
           text: "...avoid messages about vaccines mandates that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
+            "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
         },
         {
@@ -100,7 +100,7 @@ var post_convo_survey_vaccines = {
       rows: [
         {
           value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
           text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
         },
         {
@@ -113,7 +113,7 @@ var post_convo_survey_vaccines = {
         },
         {
           value:
-            "Barring businesses and institutions from discriminating based on vaccination status is wrong",
+            "Barring businesses and institutions from discriminating based on vaccination status is wrong @R@",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
@@ -179,7 +179,7 @@ var post_convo_survey_vaccines = {
         },
         {
           value:
-            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
+            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
       ],

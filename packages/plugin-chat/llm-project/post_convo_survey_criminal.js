@@ -39,16 +39,16 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value:
-            "...have little patience for arguments about the criminal justice system that I disagree with",
+            "...have little patience for arguments about the criminal justice system that I disagree with @R@",
           text: "...have little patience for arguments about the criminal justice system that I disagree with",
         },
         {
-          value: "...avoid messages about the criminal justice system that I disagree with",
+          value: "...avoid messages about the criminal justice system that I disagree with @R@",
           text: "...avoid messages about the criminal justice system that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
+            "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
         },
         {
@@ -168,8 +168,9 @@ var post_convo_survey_criminal = {
       ],
       rows: [
         {
-          value: "The benefits of the criminal justice system outweigh the potential downsides",
-          text: "The benefits of the criminal justice system outweigh the potential downsides",
+          value:
+            "The benefits of a punishment-focused criminal justice system outweigh the  downsides @R@",
+          text: "The benefits of a punishment-focused criminal justice system outweigh the downsides",
         },
         {
           value:
@@ -183,7 +184,7 @@ var post_convo_survey_criminal = {
         },
         {
           value:
-            "The federal government should implement greater punishments to improve public safety",
+            "The federal government should implement greater punishments to improve public safety @R@",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],

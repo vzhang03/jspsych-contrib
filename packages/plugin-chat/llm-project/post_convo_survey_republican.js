@@ -49,15 +49,15 @@ var post_convo_survey_republican = {
           text: "Democrats are generous",
         },
         {
-          value: "Democrats are hypocritical",
+          value: "Democrats are hypocritical @R@",
           text: "Democrats are hypocritical",
         },
         {
-          value: "Democrats are selfish",
+          value: "Democrats are selfish @R@",
           text: "Democrats are selfish",
         },
         {
-          value: "Democrats are mean",
+          value: "Democrats are mean @R@",
           text: "Democrats are mean",
         },
       ],
@@ -99,15 +99,15 @@ var post_convo_survey_republican = {
       ],
       rows: [
         {
-          value: "family married a democrat",
+          value: "family married a democrat @R@",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "socializing with a democrat",
+          value: "socializing with a democrat @R@",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "work closely with a democrat",
+          value: "work closely with a democrat @R@",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],

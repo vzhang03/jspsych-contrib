@@ -39,17 +39,17 @@ var post_convo_survey_healthcare = {
       rows: [
         {
           value:
-            "...have little patience for arguments about the role of the government in healthcare that I disagree with",
+            "...have little patience for arguments about the role of the government in healthcare that I disagree with @R@",
           text: "...have little patience for arguments about the role of the government in healthcare that I disagree with",
         },
         {
           value:
-            "...avoid messages about the role of the government in healthcare that I disagree with",
+            "...avoid messages about the role of the government in healthcare that I disagree with @R@",
           text: "...avoid messages about the role of the government in healthcare that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare",
+            "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare",
         },
         {
@@ -126,7 +126,7 @@ var post_convo_survey_healthcare = {
           text: "Government funding should be increased for mental health services",
         },
         {
-          value: "The competitive market should drive healthcare prices",
+          value: "The competitive market should drive healthcare prices @R@",
           text: "The competitive market should drive healthcare prices",
         },
       ],
@@ -174,7 +174,7 @@ var post_convo_survey_healthcare = {
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value: "Government involvement in healthcare would worsen overall public health",
+          value: "Government involvement in healthcare would worsen overall public health @R@",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
@@ -183,7 +183,7 @@ var post_convo_survey_healthcare = {
         },
         {
           value:
-            "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
+            "Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],

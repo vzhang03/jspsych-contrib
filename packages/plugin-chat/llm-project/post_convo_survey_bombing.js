@@ -39,16 +39,16 @@ var post_convo_survey_bombing = {
       rows: [
         {
           value:
-            "...have little patience for arguments about the atomic bombings that I disagree with",
+            "...have little patience for arguments about the atomic bombings that I disagree with @R@",
           text: "...have little patience for arguments about the atomic bombings that I disagree with",
         },
         {
-          value: "...avoid messages about the atomic bombings that I disagree with",
+          value: "...avoid messages about the atomic bombings that I disagree with @R@",
           text: "...avoid messages about the atomic bombings that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
+            "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
         },
         {
@@ -109,7 +109,7 @@ var post_convo_survey_bombing = {
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value: "The bombings were justified to bring a swift end to the war",
+          value: "The bombings were justified to bring a swift end to the war @R@",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
@@ -171,7 +171,7 @@ var post_convo_survey_bombing = {
       ],
       rows: [
         {
-          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
+          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
           text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
         },
         {

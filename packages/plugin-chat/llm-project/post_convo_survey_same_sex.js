@@ -39,16 +39,16 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value:
-            "...have little patience for arguments about same-sex marriage that I disagree with",
+            "...have little patience for arguments about same-sex marriage that I disagree with @R@",
           text: "...have little patience for arguments about same-sex marriage that I disagree with",
         },
         {
-          value: "...avoid messages about same-sex marriage that I disagree with",
+          value: "...avoid messages about same-sex marriage that I disagree with @R@",
           text: "...avoid messages about same-sex marriage that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
+            "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
         },
         {
@@ -118,7 +118,7 @@ var post_convo_survey_same_sex = {
         },
         {
           value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
           text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
         },
         {
@@ -168,7 +168,7 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value:
-            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
+            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
           text: "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
         },
         {

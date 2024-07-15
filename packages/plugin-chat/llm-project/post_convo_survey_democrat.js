@@ -12,7 +12,7 @@ var post_convo_survey_democrat = {
         },
         {
           value: 2,
-          text: "disagree moderately",
+          text: "Disagree moderately",
         },
         {
           value: 3,
@@ -49,15 +49,15 @@ var post_convo_survey_democrat = {
           text: "Republicans are generous",
         },
         {
-          value: "Republicans are hypocritical",
+          value: "Republicans are hypocritical @R@",
           text: "Republicans are hypocritical",
         },
         {
-          value: "Republicans are selfish",
+          value: "Republicans are selfish @R@",
           text: "Republicans are selfish",
         },
         {
-          value: "Republicans are mean",
+          value: "Republicans are mean @R@",
           text: "Republicans are mean",
         },
       ],
@@ -99,15 +99,15 @@ var post_convo_survey_democrat = {
       ],
       rows: [
         {
-          value: "family married a republican",
+          value: "family married a republican @R@",
           text: "I would be unhappy if someone in my immediate family married a republican",
         },
         {
-          value: "socializing with a republican",
+          value: "socializing with a republican @R@",
           text: "I would be unhappy if I had to spend time socializing with a republican",
         },
         {
-          value: "work closely with a republican",
+          value: "work closely with a republican @R@",
           text: "I would be unhappy if I had to work closely with a republican on the job",
         },
       ],

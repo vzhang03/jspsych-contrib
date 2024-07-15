@@ -39,16 +39,16 @@ var post_convo_survey_euthanasia = {
       rows: [
         {
           value:
-            "...have little patience for arguments about human euthanasia that I disagree with",
+            "...have little patience for arguments about human euthanasia that I disagree with @R@",
           text: "...have little patience for arguments about human euthanasia that I disagree with",
         },
         {
-          value: "...avoid messages about human euthanasia that I disagree with",
+          value: "...avoid messages about human euthanasia that I disagree with @R@",
           text: "...avoid messages about human euthanasia that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
+            "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
         },
         {
@@ -109,7 +109,7 @@ var post_convo_survey_euthanasia = {
         },
         {
           value:
-            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
           text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
         },
         {
@@ -118,15 +118,15 @@ var post_convo_survey_euthanasia = {
           text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
         },
         {
-          value: "Euthanasia should be banned for patients with non-terminal conditions",
+          value: "Euthanasia should be banned for patients with non-terminal conditions @R@",
           text: "Euthanasia should be banned for patients with non-terminal conditions",
         },
         {
-          value: "Euthanasia should be banned for all patients",
+          value: "Euthanasia should be banned for all patients @R@",
           text: "Euthanasia should be banned for all patients",
         },
         {
-          value: "Euthanasia should not be performed at home",
+          value: "Euthanasia should not be performed at home @R@",
           text: "Euthanasia should not be performed at home",
         },
       ],
@@ -182,7 +182,8 @@ var post_convo_survey_euthanasia = {
           text: "More access to euthanasia would alleviate suffering for terminally ill patients",
         },
         {
-          value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
+          value:
+            "More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],

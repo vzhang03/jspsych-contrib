@@ -198,15 +198,15 @@ var pre_convo_survey_json = {
           text: "Republicans are generous",
         },
         {
-          value: "Republicans are hypocritical",
+          value: "Republicans are hypocritical @R@",
           text: "Republicans are hypocritical",
         },
         {
-          value: "Republicans are selfish",
+          value: "Republicans are selfish @R@",
           text: "Republicans are selfish",
         },
         {
-          value: "Republicans are mean",
+          value: "Republicans are mean @R@",
           text: "Republicans are mean",
         },
       ],
@@ -261,15 +261,15 @@ var pre_convo_survey_json = {
           text: "Democrats are generous",
         },
         {
-          value: "Democrats are hypocritical",
+          value: "Democrats are hypocritical @R@",
           text: "Democrats are hypocritical",
         },
         {
-          value: "Democrats are selfish",
+          value: "Democrats are selfish @R@",
           text: "Democrats are selfish",
         },
         {
-          value: "Democrats are mean",
+          value: "Democrats are mean @R@",
           text: "Democrats are mean",
         },
       ],
@@ -312,15 +312,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "married",
+          value: "family married a republican @R@",
           text: "I would be unhappy if someone in my immediate family married a republican",
         },
         {
-          value: "socializing",
+          value: "socializing with a republican @R@",
           text: "I would be unhappy if I had to spend time socializing with a republican",
         },
         {
-          value: "work",
+          value: "work closely with a republican @R@",
           text: "I would be unhappy if I had to work closely with a republican on the job",
         },
       ],
@@ -363,15 +363,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "married",
+          value: "family married a democrat @R@",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "socializing",
+          value: "socializing with a democrat @R@",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "work",
+          value: "work closely with a democrat @R@",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],
@@ -460,7 +460,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
           text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
         },
         {
@@ -469,15 +469,15 @@ var pre_convo_survey_json = {
           text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
         },
         {
-          value: "Euthanasia should be banned for patients with non-terminal conditions",
+          value: "Euthanasia should be banned for patients with non-terminal conditions @R@",
           text: "Euthanasia should be banned for patients with non-terminal conditions",
         },
         {
-          value: "Euthanasia should be banned for all patients",
+          value: "Euthanasia should be banned for all patients @R@",
           text: "Euthanasia should be banned for all patients",
         },
         {
-          value: "Euthanasia should not be performed at home",
+          value: "Euthanasia should not be performed at home @R@",
           text: "Euthanasia should not be performed at home",
         },
       ],
@@ -534,7 +534,8 @@ var pre_convo_survey_json = {
           text: "More access to euthanasia would alleviate suffering for terminally ill patients",
         },
         {
-          value: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
+          value:
+            "More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],
@@ -664,7 +665,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Efforts to reduce inequality for women often create unfair advantages for women over men",
+            "Efforts to reduce inequality for women often create unfair advantages for women over men @R@",
           text: "Efforts to reduce inequality for women often create unfair advantages for women over men",
         },
       ],
@@ -733,7 +734,7 @@ var pre_convo_survey_json = {
           text: "Government funding should be increased for mental health services",
         },
         {
-          value: "The competitive market should drive healthcare prices",
+          value: "The competitive market should drive healthcare prices @R@",
           text: "The competitive market should drive healthcare prices",
         },
       ],
@@ -783,7 +784,7 @@ var pre_convo_survey_json = {
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value: "Government involvement in healthcare would worsen overall public health",
+          value: "Government involvement in healthcare would worsen overall public health @R@",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
@@ -792,7 +793,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
+            "Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],
@@ -847,7 +848,7 @@ var pre_convo_survey_json = {
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value: "The bombings were justified to bring a swift end to the war",
+          value: "The bombings were justified to bring a swift end to the war @R@",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
@@ -910,7 +911,7 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
+          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
           text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
         },
         {
@@ -969,7 +970,7 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
           text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
         },
         {
@@ -982,7 +983,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Businesses and institutions should be barred from discriminating based on vaccination status",
+            "Businesses and institutions should be barred from discriminating based on vaccination status @R@",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
@@ -1049,7 +1050,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
+            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
       ],
@@ -1163,8 +1164,9 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The benefits of the criminal justice system outweigh the potential downsides",
-          text: "The benefits of the criminal justice system outweigh the potential downsides",
+          value:
+            "The benefits of a punishment-focused criminal justice system outweigh the downsides @R@",
+          text: "The benefits of a punishment-focused criminal justice system outweigh the downsides",
         },
         {
           value:
@@ -1178,7 +1180,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "The federal government should implement greater punishments to improve public safety",
+            "The federal government should implement greater punishments to improve public safety @R@",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],
@@ -1242,7 +1244,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
           text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
         },
         {
@@ -1293,7 +1295,7 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
+            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
           text: "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
         },
         {

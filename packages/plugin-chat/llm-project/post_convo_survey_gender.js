@@ -38,16 +38,17 @@ var post_convo_survey_gender = {
       ],
       rows: [
         {
-          value: "...have little patience for arguments about gender equality that I disagree with",
+          value:
+            "...have little patience for arguments about gender equality that I disagree with @R@",
           text: "...have little patience for arguments about gender equality that I disagree with",
         },
         {
-          value: "...avoid messages about gender equality that I disagree with",
+          value: "...avoid messages about gender equality that I disagree with @R@",
           text: "...avoid messages about gender equality that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about gender equality",
+            "...believe it is a waste of time to pay attention to certain political ideas about gender equality @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about gender equality",
         },
         {
@@ -182,7 +183,7 @@ var post_convo_survey_gender = {
         },
         {
           value:
-            "Efforts to reduce inequality for women often create unfair advantages for women over men",
+            "Efforts to reduce inequality for women often create unfair advantages for women over men @R@",
           text: "Efforts to reduce inequality for women often create unfair advantages for women over men",
         },
       ],
