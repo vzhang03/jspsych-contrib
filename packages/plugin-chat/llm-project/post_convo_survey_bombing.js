@@ -39,24 +39,27 @@ var post_convo_survey_bombing = {
       rows: [
         {
           value:
-            "...have little patience for arguments about the atomic bombings that I disagree with @R@",
+            "bombing-openmindedness...have little patience for arguments about the atomic bombings that I disagree with @R@",
           text: "...have little patience for arguments about the atomic bombings that I disagree with",
         },
         {
-          value: "...avoid messages about the atomic bombings that I disagree with @R@",
+          value:
+            "bombing-openmindedness...avoid messages about the atomic bombings that I disagree with @R@",
           text: "...avoid messages about the atomic bombings that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings @R@",
+            "bombing-openmindedness...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
         },
         {
-          value: "...am open to considering other political viewpoints about the atomic bombings",
+          value:
+            "bombing-openmindedness...am open to considering other political viewpoints about the atomic bombings",
           text: "...am open to considering other political viewpoints about the atomic bombings",
         },
         {
-          value: "...consider as many different opinions as possible about the atomic bombings",
+          value:
+            "bombing-openmindedness...consider as many different opinions as possible about the atomic bombings",
           text: "...consider as many different opinions as possible about the atomic bombings",
         },
       ],
@@ -100,34 +103,36 @@ var post_convo_survey_bombing = {
       rows: [
         {
           value:
-            "A memorial should be established in the U.S. to honor the victims of the bombings",
+            "bombing-polarization-post-A memorial should be established in the U.S. to honor the victims of the bombings",
           text: "A memorial should be established in the U.S. to honor the victims of the bombings",
         },
         {
           value:
-            "The U.S. government should provide financial reparations to the survivors and their families",
+            "bombing-polarization-post-The U.S. government should provide financial reparations to the survivors and their families",
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value: "The bombings were justified to bring a swift end to the war @R@",
+          value:
+            "bombing-polarization-post-The bombings were justified to bring a swift end to the war @R@",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
-          value: "The bombings were morally wrong",
+          value: "bombing-polarization-post-The bombings were morally wrong",
           text: "The bombings were morally wrong",
         },
         {
           value:
-            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+            "bombing-polarization-post-Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
           text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
         },
         {
-          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
+          value:
+            "bombing-polarization-post-The U.S. should take responsibility for the humanitarian impact of the bombings",
           text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
         },
         {
           value:
-            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+            "bombing-polarization-post-The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
           text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
         },
       ],
@@ -171,20 +176,23 @@ var post_convo_survey_bombing = {
       ],
       rows: [
         {
-          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
+          value:
+            "bombing-polarization-general-post-The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
           text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
         },
         {
-          value: "The U.S. government should have issued a formal apology to Japan",
+          value:
+            "bombing-polarization-general-post-The U.S. government should have issued a formal apology to Japan",
           text: "The U.S. government should have issued a formal apology to Japan",
         },
         {
-          value: "The bombings should be recognized as a war crime under international law",
+          value:
+            "bombing-polarization-general-post-The bombings should be recognized as a war crime under international law",
           text: "The bombings should be recognized as a war crime under international law",
         },
         {
           value:
-            "The bombings should be included in educational curricula as a significant historical event",
+            "bombing-polarization-general-post-The bombings should be included in educational curricula as a significant historical event",
           text: "The bombings should be included in educational curricula as a significant historical event",
         },
       ],
@@ -280,43 +288,49 @@ var post_convo_survey_bombing = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "bombing-reason-of-avoidance-post...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "bombing-reason-of-avoidance-post...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "bombing-reason-of-avoidance-post...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "bombing-reason-of-avoidance-post...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "bombing-reason-of-avoidance-post...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "bombing-reason-of-avoidance-post...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "bombing-reason-of-avoidance-post...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value:
+            "bombing-reason-of-avoidance-post...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "bombing-reason-of-avoidance-post...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "bombing-reason-of-avoidance-post...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],

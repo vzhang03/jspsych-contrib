@@ -39,24 +39,27 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value:
-            "...have little patience for arguments about same-sex marriage that I disagree with @R@",
+            "same-sex-openmindedness...have little patience for arguments about same-sex marriage that I disagree with @R@",
           text: "...have little patience for arguments about same-sex marriage that I disagree with",
         },
         {
-          value: "...avoid messages about same-sex marriage that I disagree with @R@",
+          value:
+            "same-sex-openmindedness...avoid messages about same-sex marriage that I disagree with @R@",
           text: "...avoid messages about same-sex marriage that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage @R@",
+            "same-sex-openmindedness...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
         },
         {
-          value: "...am open to considering other political viewpoints about same-sex marriage",
+          value:
+            "same-sex-openmindedness...am open to considering other political viewpoints about same-sex marriage",
           text: "...am open to considering other political viewpoints about same-sex marriage",
         },
         {
-          value: "...consider as many different opinions as possible about same-sex marriage",
+          value:
+            "same-sex-openmindedness...consider as many different opinions as possible about same-sex marriage",
           text: "...consider as many different opinions as possible about same-sex marriage",
         },
       ],
@@ -99,31 +102,32 @@ var post_convo_survey_same_sex = {
       ],
       rows: [
         {
-          value: "Same-sex marriage should remain legalized nationwide",
+          value: "same-sex-polarization-post-Same-sex marriage should remain legalized nationwide",
           text: "Same-sex marriage should remain legalized nationwide",
         },
         {
-          value: "Adoption rights should be granted to married same-sex couples",
+          value:
+            "same-sex-polarization-post-Adoption rights should be granted to married same-sex couples",
           text: "Adoption rights should be granted to married same-sex couples",
         },
         {
           value:
-            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+            "same-sex-polarization-post-Employment non-discrimination protections should be provided for gay and lesbian individuals",
           text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
         },
         {
           value:
-            "Same-sex couples should receive spousal benefits (e.g. health insurance; survivor benefits)",
+            "same-sex-polarization-post-Same-sex couples should receive spousal benefits (e.g. health insurance; survivor benefits)",
           text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
         },
         {
           value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
+            "same-sex-polarization-post-It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
           text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
         },
         {
           value:
-            "Discrimination against same-sex couples in housing and public accommodations should be banned",
+            "same-sex-polarization-post-Discrimination against same-sex couples in housing and public accommodations should be banned",
           text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
         },
       ],
@@ -131,7 +135,7 @@ var post_convo_survey_same_sex = {
     },
     {
       type: "matrix",
-      name: "same-sex-polarization-general-post",
+      name: "same-sex-polarization-general-post-",
       title:
         "How much do you agree or disagree with the following statements on same-sex marriage in the U.S.? ",
       isRequired: true,
@@ -168,21 +172,22 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value:
-            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
+            "same-sex-polarization-general-post-Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
           text: "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
         },
         {
-          value: "The federal government should ensure equal rights for married same-sex couples",
+          value:
+            "same-sex-polarization-general-post-The federal government should ensure equal rights for married same-sex couples",
           text: "The federal government should ensure equal rights for married same-sex couples",
         },
         {
           value:
-            "More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
+            "same-sex-polarization-general-post-More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
           text: "More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
         },
         {
           value:
-            "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
+            "same-sex-polarization-general-post-More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
           text: "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
         },
       ],
@@ -278,43 +283,48 @@ var post_convo_survey_same_sex = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "same-sex-offending-reason-post...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "same-sex-offending-reason-post...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "same-sex-offending-reason-post...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "same-sex-offending-reason-post...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "same-sex-offending-reason-post...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "same-sex-offending-reason-post...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "same-sex-offending-reason-post...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "same-sex-offending-reason-post...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "same-sex-offending-reason-post...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "same-sex-offending-reason-post...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],

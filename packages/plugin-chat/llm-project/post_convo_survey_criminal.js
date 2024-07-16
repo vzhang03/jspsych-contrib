@@ -39,26 +39,27 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value:
-            "...have little patience for arguments about the criminal justice system that I disagree with @R@",
+            "criminal-openmindedness-...have little patience for arguments about the criminal justice system that I disagree with @R@",
           text: "...have little patience for arguments about the criminal justice system that I disagree with",
         },
         {
-          value: "...avoid messages about the criminal justice system that I disagree with @R@",
+          value:
+            "criminal-openmindedness-...avoid messages about the criminal justice system that I disagree with @R@",
           text: "...avoid messages about the criminal justice system that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system @R@",
+            "criminal-openmindedness-...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
         },
         {
           value:
-            "...am open to considering other political viewpoints about the criminal justice system",
+            "criminal-openmindedness-...am open to considering other political viewpoints about the criminal justice system",
           text: "...am open to considering other political viewpoints about the criminal justice system",
         },
         {
           value:
-            "...consider as many different opinions as possible about the criminal justice system",
+            "criminal-openmindedness-...consider as many different opinions as possible about the criminal justice system",
           text: "...consider as many different opinions as possible about the criminal justice system",
         },
       ],
@@ -102,29 +103,31 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value:
-            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+            "criminal-polarization-post-Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
           text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
         },
         {
           value:
-            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+            "criminal-polarization-post-Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
           text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
         },
         {
-          value: "The use of solitary confinement as a punishment should be banned",
+          value:
+            "criminal-polarization-post-The use of solitary confinement as a punishment should be banned",
           text: "The use of solitary confinement as a punishment should be banned",
         },
         {
-          value: "Inmates should have greater access to educational programs",
+          value:
+            "criminal-polarization-post-Inmates should have greater access to educational programs",
           text: "Inmates should have greater access to educational programs",
         },
         {
           value:
-            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+            "criminal-polarization-post-Non-violent offenders should be permitted to serve sentences through community service or house arrest",
           text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
         },
         {
-          value: "The use of private prisons should be restricted",
+          value: "criminal-polarization-post-The use of private prisons should be restricted",
           text: "The use of private prisons should be restricted",
         },
       ],
@@ -169,22 +172,22 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value:
-            "The benefits of a punishment-focused criminal justice system outweigh the  downsides @R@",
+            "criminal-polarization-general-post-The benefits of a punishment-focused criminal justice system outweigh the  downsides @R@",
           text: "The benefits of a punishment-focused criminal justice system outweigh the downsides",
         },
         {
           value:
-            "The federal government should implement stricter regulations to reduce incarceration rates",
+            "criminal-polarization-general-post-The federal government should implement stricter regulations to reduce incarceration rates",
           text: "The federal government should implement stricter regulations to reduce incarceration rates",
         },
         {
           value:
-            "The federal government should implement more robust rehabilitation programs to improve public safety",
+            "criminal-polarization-general-post-The federal government should implement more robust rehabilitation programs to improve public safety",
           text: "The federal government should implement more robust rehabilitation programs to improve public safety",
         },
         {
           value:
-            "The federal government should implement greater punishments to improve public safety @R@",
+            "criminal-polarization-general-post-The federal government should implement greater punishments to improve public safety @R@",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],
@@ -289,43 +292,48 @@ var post_convo_survey_criminal = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "criminal-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "criminal-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "criminal-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "criminal-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "criminal-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "criminal-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "criminal-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "criminal-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "criminal-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "criminal-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],

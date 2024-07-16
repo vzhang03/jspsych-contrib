@@ -39,24 +39,27 @@ var post_convo_survey_euthanasia = {
       rows: [
         {
           value:
-            "...have little patience for arguments about human euthanasia that I disagree with @R@",
+            "euthanasia-openmindedness...have little patience for arguments about human euthanasia that I disagree with @R@",
           text: "...have little patience for arguments about human euthanasia that I disagree with",
         },
         {
-          value: "...avoid messages about human euthanasia that I disagree with @R@",
+          value:
+            "euthanasia-openmindedness...avoid messages about human euthanasia that I disagree with @R@",
           text: "...avoid messages about human euthanasia that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia @R@",
+            "euthanasia-openmindedness...believe it is a waste of time to pay attention to certain political ideas about human euthanasia @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
         },
         {
-          value: "...am open to considering other political viewpoints about human euthanasia",
+          value:
+            "euthanasia-openmindedness...am open to considering other political viewpoints about human euthanasia",
           text: "...am open to considering other political viewpoints about human euthanasia",
         },
         {
-          value: "...consider as many different opinions as possible about human euthanasia",
+          value:
+            "euthanasia-openmindedness...consider as many different opinions as possible about human euthanasia",
           text: "...consider as many different opinions as possible about human euthanasia",
         },
       ],
@@ -100,33 +103,36 @@ var post_convo_survey_euthanasia = {
       ],
       rows: [
         {
-          value: "Euthanasia should be allowed for terminally ill patients who request it",
+          value:
+            "euthanasia-polarization-post-Euthanasia should be allowed for terminally ill patients who request it",
           text: "Euthanasia should be allowed for terminally ill patients who request it",
         },
         {
-          value: "Legal protections should be provided for doctors who perform euthanasia",
+          value:
+            "euthanasia-polarization-post-Legal protections should be provided for doctors who perform euthanasia",
           text: "Legal protections should be provided for doctors who perform euthanasia",
         },
         {
           value:
-            "It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
+            "euthanasia-polarization-post-It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
           text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
         },
         {
           value:
-            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+            "euthanasia-polarization-post-Euthanasia should only be allowed if the patient has received a psychological evaluation",
           text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
         },
         {
-          value: "Euthanasia should be banned for patients with non-terminal conditions @R@",
+          value:
+            "euthanasia-polarization-post-Euthanasia should be banned for patients with non-terminal conditions @R@",
           text: "Euthanasia should be banned for patients with non-terminal conditions",
         },
         {
-          value: "Euthanasia should be banned for all patients @R@",
+          value: "euthanasia-polarization-post-Euthanasia should be banned for all patients @R@",
           text: "Euthanasia should be banned for all patients",
         },
         {
-          value: "Euthanasia should not be performed at home @R@",
+          value: "euthanasia-polarization-post-Euthanasia should not be performed at home @R@",
           text: "Euthanasia should not be performed at home",
         },
       ],
@@ -170,20 +176,23 @@ var post_convo_survey_euthanasia = {
       ],
       rows: [
         {
-          value: "The benefits of euthanasia outweigh the potential downsides",
+          value:
+            "euthanasia-polarization-general-post-The benefits of euthanasia outweigh the potential downsides",
           text: "The benefits of euthanasia outweigh the potential downsides",
         },
         {
-          value: "The federal government should make it easier for people to access euthanasia",
+          value:
+            "euthanasia-polarization-general-post-The federal government should make it easier for people to access euthanasia",
           text: "The federal government should make it easier for people to access euthanasia",
         },
         {
-          value: "More access to euthanasia would alleviate suffering for terminally ill patient",
+          value:
+            "euthanasia-polarization-general-post-More access to euthanasia would alleviate suffering for terminally ill patient",
           text: "More access to euthanasia would alleviate suffering for terminally ill patients",
         },
         {
           value:
-            "More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
+            "euthanasia-polarization-general-post-More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],
@@ -279,43 +288,50 @@ var post_convo_survey_euthanasia = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "euthanasia-reason-of-avoidance-post-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "euthanasia-reason-of-avoidance-post-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "euthanasia-reason-of-avoidance-post-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "euthanasia-reason-of-avoidance-post-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],

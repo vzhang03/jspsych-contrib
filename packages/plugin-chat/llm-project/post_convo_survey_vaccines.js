@@ -39,24 +39,27 @@ var post_convo_survey_vaccines = {
       rows: [
         {
           value:
-            "...have little patience for arguments about vaccines mandates that I disagree with @R@",
+            "vaccines-openmindedness...have little patience for arguments about vaccines mandates that I disagree with @R@",
           text: "...have little patience for arguments about vaccines mandates that I disagree with",
         },
         {
-          value: "...avoid messages about vaccines mandates that I disagree with @R@",
+          value:
+            "vaccines-openmindedness...avoid messages about vaccines mandates that I disagree with @R@",
           text: "...avoid messages about vaccines mandates that I disagree with",
         },
         {
           value:
-            "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates @R@",
+            "vaccines-openmindedness...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
         },
         {
-          value: "...am open to considering other political viewpoints about vaccines mandates",
+          value:
+            "vaccines-openmindedness...am open to considering other political viewpoints about vaccines mandates",
           text: "...am open to considering other political viewpoints about vaccines mandates",
         },
         {
-          value: "...consider as many different opinions as possible about vaccine mandates",
+          value:
+            "vaccines-openmindedness...consider as many different opinions as possible about vaccine mandates",
           text: "...consider as many different opinions as possible about vaccine mandates",
         },
       ],
@@ -100,28 +103,30 @@ var post_convo_survey_vaccines = {
       rows: [
         {
           value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
+            "vaccines-polarization-post-Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
           text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
         },
         {
-          value: "Vaccines should be mandated for healthcare workers",
+          value: "vaccines-polarization-post-Vaccines should be mandated for healthcare workers",
           text: "Vaccines should be mandated for healthcare workers",
         },
         {
-          value: "Businesses should be allowed to require proof of vaccination for entry",
+          value:
+            "vaccines-polarization-post-Businesses should be allowed to require proof of vaccination for entry",
           text: "Businesses should be allowed to require proof of vaccination for entry",
         },
         {
           value:
-            "Barring businesses and institutions from discriminating based on vaccination status is wrong @R@",
+            "vaccines-polarization-post-Barring businesses and institutions from discriminating based on vaccination status is wrong @R@",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
-          value: "Schools should be allowed to require vaccinations for attendance",
+          value:
+            "vaccines-polarization-post-Schools should be allowed to require vaccinations for attendance",
           text: "Schools should be allowed to require vaccinations for attendance",
         },
         {
-          value: "All government-approved vaccines should be mandated",
+          value: "vaccines-polarization-post-All government-approved vaccines should be mandated",
           text: "All government-approved vaccines should be mandated",
         },
       ],
@@ -165,21 +170,23 @@ var post_convo_survey_vaccines = {
       ],
       rows: [
         {
-          value: "The benefits of vaccine mandates outweigh the potential downsides",
+          value:
+            "vaccines-polarization-general-post-The benefits of vaccine mandates outweigh the potential downsides",
           text: "The benefits of vaccine mandates outweigh the potential downsides",
         },
         {
-          value: "The federal government should make it mandatory for people to get vaccinated",
+          value:
+            "vaccines-polarization-general-post-The federal government should make it mandatory for people to get vaccinated",
           text: "The federal government should make it mandatory for people to get vaccinated",
         },
         {
           value:
-            "More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
+            "vaccines-polarization-general-post-More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
           text: "More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
         },
         {
           value:
-            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
+            "vaccines-polarization-general-post-More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
       ],
@@ -275,43 +282,49 @@ var post_convo_survey_vaccines = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "vaccines-reason-of-avoidance-post...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "vaccines-reason-of-avoidance-post...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "vaccines-reason-of-avoidance-post...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "vaccines-reason-of-avoidance-post...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "vaccines-reason-of-avoidance-post...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "vaccines-reason-of-avoidance-post...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "vaccines-reason-of-avoidance-post...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value:
+            "vaccines-reason-of-avoidance-post...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "vaccines-reason-of-avoidance-post...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "vaccines-reason-of-avoidance-post...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],

@@ -186,27 +186,27 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Republicans are intelligent",
+          value: "pre-rating-republicans-Republicans are intelligent",
           text: "Republicans are intelligent",
         },
         {
-          value: "Republicans are open-minded",
+          value: "pre-rating-republicans-Republicans are open-minded",
           text: "Republicans are open-minded",
         },
         {
-          value: "Republicans are generous",
+          value: "pre-rating-republicans-Republicans are generous",
           text: "Republicans are generous",
         },
         {
-          value: "Republicans are hypocritical @R@",
+          value: "pre-rating-republicans-Republicans are hypocritical @R@",
           text: "Republicans are hypocritical",
         },
         {
-          value: "Republicans are selfish @R@",
+          value: "pre-rating-republicans-Republicans are selfish @R@",
           text: "Republicans are selfish",
         },
         {
-          value: "Republicans are mean @R@",
+          value: "pre-rating-republicans-Republicans are mean @R@",
           text: "Republicans are mean",
         },
       ],
@@ -249,27 +249,27 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Democrats are intelligent",
+          value: "pre-rating-democrats-Democrats are intelligent",
           text: "Democrats are intelligent",
         },
         {
-          value: "Democrats are open-minded",
+          value: "pre-rating-democrats-Democrats are open-minded",
           text: "Democrats are open-minded",
         },
         {
-          value: "Democrats are generous",
+          value: "pre-rating-democrats-Democrats are generous",
           text: "Democrats are generous",
         },
         {
-          value: "Democrats are hypocritical @R@",
+          value: "pre-rating-democrats-Democrats are hypocritical @R@",
           text: "Democrats are hypocritical",
         },
         {
-          value: "Democrats are selfish @R@",
+          value: "pre-rating-democrats-Democrats are selfish @R@",
           text: "Democrats are selfish",
         },
         {
-          value: "Democrats are mean @R@",
+          value: "pre-rating-democrats-Democrats are mean @R@",
           text: "Democrats are mean",
         },
       ],
@@ -312,15 +312,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "family married a republican @R@",
+          value: "pre-interacting-with-republicans-family married a republican @R@",
           text: "I would be unhappy if someone in my immediate family married a republican",
         },
         {
-          value: "socializing with a republican @R@",
+          value: "pre-interacting-with-republicans-socializing with a republican @R@",
           text: "I would be unhappy if I had to spend time socializing with a republican",
         },
         {
-          value: "work closely with a republican @R@",
+          value: "pre-interacting-with-republicans-work closely with a republican @R@",
           text: "I would be unhappy if I had to work closely with a republican on the job",
         },
       ],
@@ -363,15 +363,15 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "family married a democrat @R@",
+          value: "pre-interacting-with-democrats-family married a democrat @R@",
           text: "I would be unhappy if someone in my immediate family married a democrat",
         },
         {
-          value: "socializing with a democrat @R@",
+          value: "pre-interacting-with-democrats-socializing with a democrat @R@",
           text: "I would be unhappy if I had to spend time socializing with a democrat",
         },
         {
-          value: "work closely with a democrat @R@",
+          value: "pre-interacting-with-democrats-work closely with a democrat @R@",
           text: "I would be unhappy if I had to work closely with a democrat on the job",
         },
       ],
@@ -451,33 +451,36 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Euthanasia should be allowed for terminally ill patients who request it",
+          value:
+            "pre-euthanasia-polarization-Euthanasia should be allowed for terminally ill patients who request it",
           text: "Euthanasia should be allowed for terminally ill patients who request it",
         },
         {
-          value: "Legal protections should be provided for doctors who perform euthanasia",
+          value:
+            "pre-euthanasia-polarization-Legal protections should be provided for doctors who perform euthanasia",
           text: "Legal protections should be provided for doctors who perform euthanasia",
         },
         {
           value:
-            "It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
+            "pre-euthanasia-polarization-It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
           text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
         },
         {
           value:
-            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
+            "pre-euthanasia-polarization-Euthanasia should only be allowed if the patient has received a psychological evaluation",
           text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
         },
         {
-          value: "Euthanasia should be banned for patients with non-terminal conditions @R@",
+          value:
+            "pre-euthanasia-polarization-Euthanasia should be banned for patients with non-terminal conditions @R@",
           text: "Euthanasia should be banned for patients with non-terminal conditions",
         },
         {
-          value: "Euthanasia should be banned for all patients @R@",
+          value: "pre-euthanasia-polarization-Euthanasia should be banned for all patients @R@",
           text: "Euthanasia should be banned for all patients",
         },
         {
-          value: "Euthanasia should not be performed at home @R@",
+          value: "pre-euthanasia-polarization-Euthanasia should not be performed at home @R@",
           text: "Euthanasia should not be performed at home",
         },
       ],
@@ -522,20 +525,23 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The benefits of euthanasia outweigh the potential downsides",
+          value:
+            "pre-euthanasia-polarization-general-The benefits of euthanasia outweigh the potential downsides",
           text: "The benefits of euthanasia outweigh the potential downsides",
         },
         {
-          value: "The federal government should make it easier for people to access euthanasia",
+          value:
+            "pre-euthanasia-polarization-general-The federal government should make it easier for people to access euthanasia",
           text: "The federal government should make it easier for people to access euthanasia",
         },
         {
-          value: "More access to euthanasia would alleviate suffering for terminally ill patient",
+          value:
+            "pre-euthanasia-polarization-general-More access to euthanasia would alleviate suffering for terminally ill patient",
           text: "More access to euthanasia would alleviate suffering for terminally ill patients",
         },
         {
           value:
-            "More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
+            "pre-euthanasia-polarization-general-More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],
@@ -580,34 +586,38 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Gender quotas should be implemented in corporate boards and executive positions",
+          value:
+            "pre-gender-polarization-Gender quotas should be implemented in corporate boards and executive positions",
           text: "Gender quotas should be implemented in corporate boards and executive positions",
         },
         {
           value:
-            "Mandating equal pay for equal work regardless of gender would improve gender equality",
+            "pre-gender-polarization-Mandating equal pay for equal work regardless of gender would improve gender equality",
           text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
         },
         {
-          value: "Both mothers and fathers should be provided with parental leave",
+          value:
+            "pre-gender-polarization-Both mothers and fathers should be provided with parental leave",
           text: "Both mothers and fathers should be provided with parental leave",
         },
         {
-          value: "Free childcare services should be provided to support working parents",
+          value:
+            "pre-gender-polarization-Free childcare services should be provided to support working parents",
           text: "Free childcare services should be provided to support working parents",
         },
         {
-          value: "Funding for programs aimed at reducing gender-based violence should be increased",
+          value:
+            "pre-gender-polarization-Funding for programs aimed at reducing gender-based violence should be increased",
           text: "Funding for programs aimed at reducing gender-based violence should be increased",
         },
         {
           value:
-            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
+            "pre-gender-polarization-Gender diversity should be encouraged in STEM fields through scholarships and grant",
           text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
         },
         {
           value:
-            "Gender should be disregarded when selecting candidates for career advancement opportunities",
+            "pre-gender-polarization-Gender should be disregarded when selecting candidates for career advancement opportunities",
           text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
         },
       ],
@@ -652,20 +662,23 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Efforts to reduce gender inequality benefit society as a whole",
+          value:
+            "pre-gender-polarization-general-Efforts to reduce gender inequality benefit society as a whole",
           text: "Efforts to reduce gender inequality benefit society as a whole",
         },
         {
-          value: "The federal government should take more action to address gender inequality",
+          value:
+            "pre-gender-polarization-general-The federal government should take more action to address gender inequality",
           text: "The federal government should take more action to address gender inequality",
         },
         {
-          value: "Reducing gender inequality would lead to more opportunities for everyone",
+          value:
+            "pre-gender-polarization-general-Reducing gender inequality would lead to more opportunities for everyone",
           text: "Reducing gender inequality would lead to more opportunities for everyone",
         },
         {
           value:
-            "Efforts to reduce inequality for women often create unfair advantages for women over men @R@",
+            "pre-gender-polarization-general-Efforts to reduce inequality for women often create unfair advantages for women over men @R@",
           text: "Efforts to reduce inequality for women often create unfair advantages for women over men",
         },
       ],
@@ -710,31 +723,38 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "A universal healthcare system should be implemented in the U.S.",
+          value:
+            "pre-healthcare-polarization-A universal healthcare system should be implemented in the U.S.",
           text: "A universal healthcare system should be implemented in the U.S.",
         },
         {
-          value: "Medicaid should be expanded to cover more low-income individuals",
+          value:
+            "pre-healthcare-polarization-Medicaid should be expanded to cover more low-income individuals",
           text: "Medicaid should be expanded to cover more low-income individuals",
         },
         {
-          value: "Prescription drug prices should be regulated to make them more affordable",
+          value:
+            "pre-healthcare-polarization-Prescription drug prices should be regulated to make them more affordable",
           text: "Prescription drug prices should be regulated to make them more affordable",
         },
         {
-          value: "Government subsidies should be provided for private health insurance",
+          value:
+            "pre-healthcare-polarization-Government subsidies should be provided for private health insurance",
           text: "Government subsidies should be provided for private health insurance",
         },
         {
-          value: "The government should negotiate drug prices with pharmaceutical companies",
+          value:
+            "pre-healthcare-polarization-The government should negotiate drug prices with pharmaceutical companies",
           text: "The government should negotiate drug prices with pharmaceutical companies",
         },
         {
-          value: "Government funding should be increased for mental health services",
+          value:
+            "pre-healthcare-polarization-Government funding should be increased for mental health services",
           text: "Government funding should be increased for mental health services",
         },
         {
-          value: "The competitive market should drive healthcare prices @R@",
+          value:
+            "pre-healthcare-polarization-The competitive market should drive healthcare prices @R@",
           text: "The competitive market should drive healthcare prices",
         },
       ],
@@ -780,20 +800,23 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The federal government should ensure that all citizens have access to healthcare",
+          value:
+            "pre-healthcare-polarization-general-The federal government should ensure that all citizens have access to healthcare",
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value: "Government involvement in healthcare would worsen overall public health @R@",
+          value:
+            "pre-healthcare-polarization-general-Government involvement in healthcare would worsen overall public health @R@",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
-          value: "More government regulation in healthcare would lead to better patient outcomes",
+          value:
+            "pre-healthcare-polarization-general-More government regulation in healthcare would lead to better patient outcomes",
           text: "More government regulation in healthcare would lead to better patient outcomes",
         },
         {
           value:
-            "Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
+            "pre-healthcare-polarization-general-Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],
@@ -839,34 +862,36 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "A memorial should be established in the U.S. to honor the victims of the bombings",
+            "pre-bombing-polarization-A memorial should be established in the U.S. to honor the victims of the bombings",
           text: "A memorial should be established in the U.S. to honor the victims of the bombings",
         },
         {
           value:
-            "The U.S. government should provide financial reparations to the survivors and their families",
+            "pre-bombing-polarization-The U.S. government should provide financial reparations to the survivors and their families",
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value: "The bombings were justified to bring a swift end to the war @R@",
+          value:
+            "pre-bombing-polarization-The bombings were justified to bring a swift end to the war @R@",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
-          value: "The bombings were morally wrong",
+          value: "pre-bombing-polarization-The bombings were morally wrong",
           text: "The bombings were morally wrong",
         },
         {
           value:
-            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+            "pre-bombing-polarization-Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
           text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
         },
         {
-          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
+          value:
+            "pre-bombing-polarization-The U.S. should take responsibility for the humanitarian impact of the bombings",
           text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
         },
         {
           value:
-            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+            "pre-bombing-polarization-The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
           text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
         },
       ],
@@ -911,20 +936,23 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
+          value:
+            "pre-bombing-polarization-general-The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
           text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
         },
         {
-          value: "The U.S. government should have issued a formal apology to Japan",
+          value:
+            "pre-bombing-polarization-general-The U.S. government should have issued a formal apology to Japan",
           text: "The U.S. government should have issued a formal apology to Japan",
         },
         {
-          value: "The bombings should be recognized as a war crime under international law",
+          value:
+            "pre-bombing-polarization-general-The bombings should be recognized as a war crime under international law",
           text: "The bombings should be recognized as a war crime under international law",
         },
         {
           value:
-            "The bombings should be included in educational curricula as a significant historical event",
+            "pre-bombing-polarization-general-The bombings should be included in educational curricula as a significant historical event",
           text: "The bombings should be included in educational curricula as a significant historical event",
         },
       ],
@@ -970,28 +998,30 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
+            "pre-vaccines-polarization-Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
           text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
         },
         {
-          value: "Vaccines should be mandated for healthcare workers",
+          value: "pre-vaccines-polarization-Vaccines should be mandated for healthcare workers",
           text: "Vaccines should be mandated for healthcare workers",
         },
         {
-          value: "Businesses should be allowed to require proof of vaccination for entry",
+          value:
+            "pre-vaccines-polarization-Businesses should be allowed to require proof of vaccination for entry",
           text: "Businesses should be allowed to require proof of vaccination for entry",
         },
         {
           value:
-            "Businesses and institutions should be barred from discriminating based on vaccination status @R@",
+            "pre-vaccines-polarization-Businesses and institutions should be barred from discriminating based on vaccination status @R@",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
-          value: "Schools should be allowed to require vaccinations for attendance",
+          value:
+            "pre-vaccines-polarization-Schools should be allowed to require vaccinations for attendance",
           text: "Schools should be allowed to require vaccinations for attendance",
         },
         {
-          value: "All government-approved vaccines should be mandated",
+          value: "pre-vaccines-polarization-All government-approved vaccines should be mandated",
           text: "All government-approved vaccines should be mandated",
         },
       ],
@@ -1036,21 +1066,23 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The benefits of vaccine mandates outweigh the potential downsides",
+          value:
+            "pre-vaccines-polarization-general-The benefits of vaccine mandates outweigh the potential downsides",
           text: "The benefits of vaccine mandates outweigh the potential downsides",
         },
         {
-          value: "The federal government should make it mandatory for people to get vaccinated",
+          value:
+            "pre-vaccines-polarization-general-The federal government should make it mandatory for people to get vaccinated",
           text: "The federal government should make it mandatory for people to get vaccinated",
         },
         {
           value:
-            "More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
+            "pre-vaccines-polarization-general-More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
           text: "More vaccine mandates would decrease the spread of infectious diseases by ensuring more people are vaccinated",
         },
         {
           value:
-            "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
+            "pre-vaccines-polarization-general-More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
       ],
@@ -1096,29 +1128,31 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+            "pre-criminal-polarization-Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
           text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
         },
         {
           value:
-            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+            "pre-criminal-polarization-Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
           text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
         },
         {
-          value: "The use of solitary confinement as a punishment should be banned",
+          value:
+            "pre-criminal-polarization-The use of solitary confinement as a punishment should be banned",
           text: "The use of solitary confinement as a punishment should be banned",
         },
         {
-          value: "Inmates should have greater access to educational programs",
+          value:
+            "pre-criminal-polarization-Inmates should have greater access to educational programs",
           text: "Inmates should have greater access to educational programs",
         },
         {
           value:
-            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+            "pre-criminal-polarization-Non-violent offenders should be permitted to serve sentences through community service or house arrest",
           text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
         },
         {
-          value: "The use of private prisons should be restricted",
+          value: "pre-criminal-polarization-The use of private prisons should be restricted",
           text: "The use of private prisons should be restricted",
         },
       ],
@@ -1165,22 +1199,22 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "The benefits of a punishment-focused criminal justice system outweigh the downsides @R@",
+            "pre-criminal-polarization-general-The benefits of a punishment-focused criminal justice system outweigh the downsides @R@",
           text: "The benefits of a punishment-focused criminal justice system outweigh the downsides",
         },
         {
           value:
-            "The federal government should implement stricter regulations to reduce incarceration rates",
+            "pre-criminal-polarization-general-The federal government should implement stricter regulations to reduce incarceration rates",
           text: "The federal government should implement stricter regulations to reduce incarceration rates",
         },
         {
           value:
-            "The federal government should implement more robust rehabilitation programs to improve public safety",
+            "pre-criminal-polarization-general-The federal government should implement more robust rehabilitation programs to improve public safety",
           text: "The federal government should implement more robust rehabilitation programs to improve public safety",
         },
         {
           value:
-            "The federal government should implement greater punishments to improve public safety @R@",
+            "pre-criminal-polarization-general-The federal government should implement greater punishments to improve public safety @R@",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],
@@ -1225,31 +1259,32 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "Same-sex marriage should remain legalized nationwide",
+          value: "pre-same-sex-polarization-Same-sex marriage should remain legalized nationwide",
           text: "Same-sex marriage should remain legalized nationwide",
         },
         {
-          value: "Adoption rights should be granted to married same-sex couples",
+          value:
+            "pre-same-sex-polarization-Adoption rights should be granted to married same-sex couples",
           text: "Adoption rights should be granted to married same-sex couples",
         },
         {
           value:
-            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
+            "pre-same-sex-polarization-Employment non-discrimination protections should be provided for gay and lesbian individuals",
           text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
         },
         {
           value:
-            "Same-sex couples should receive spousal benefits (e.g. health insurance; survivor benefits)",
+            "pre-same-sex-polarization-Same-sex couples should receive spousal benefits (e.g. health insurance; survivor benefits)",
           text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
         },
         {
           value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
+            "pre-same-sex-polarization-It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
           text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
         },
         {
           value:
-            "Discrimination against same-sex couples in housing and public accommodations should be banned",
+            "pre-same-sex-polarization-Discrimination against same-sex couples in housing and public accommodations should be banned",
           text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
         },
       ],
@@ -1295,21 +1330,22 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
+            "pre-same-sex-polarization-general-Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
           text: "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
         },
         {
-          value: "The federal government should ensure equal rights for married same-sex couples",
+          value:
+            "pre-same-sex-polarization-general-The federal government should ensure equal rights for married same-sex couples",
           text: "The federal government should ensure equal rights for married same-sex couples",
         },
         {
           value:
-            "More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
+            "pre-same-sex-polarization-general-More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
           text: "More protections for married same-sex couples would decrease discrimination and improve societal acceptance",
         },
         {
           value:
-            "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
+            "pre-same-sex-polarization-general-More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
           text: "More restrictions on same-sex marriage would increase discrimination and harm the well-being of same-sex couples",
         },
       ],
@@ -1779,44 +1815,50 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-euthanasia-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-euthanasia-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-euthanasia-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-euthanasia-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-euthanasia-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-euthanasia-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
-          text: "...I have had previous negative experiences",
+          value: "pre-euthanasia-offending-reason-...I have had previous negative experiences",
+          text: "euthanasia-offending-reason-...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
-          text: "...I would not want to incur social repercussions",
+          value:
+            "pre-euthanasia-offending-reason-...I would not want to incur social repercussions",
+          text: "euthanasia-offending-reason-...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
-          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-euthanasia-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "euthanasia-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
-          text: "...I would be afraid of feeling unsafe",
+          value: "pre-euthanasia-offending-reason-...I would be afraid of feeling unsafe",
+          text: "euthanasia-offending-reason-...I would be afraid of feeling unsafe",
         },
       ],
     },
@@ -1859,43 +1901,48 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-gender-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-gender-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-gender-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-gender-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-gender-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-gender-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "pre-gender-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "pre-gender-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-gender-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "pre-gender-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],
@@ -1940,43 +1987,49 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-healthcare-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-healthcare-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-healthcare-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-healthcare-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-healthcare-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-healthcare-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "pre-healthcare-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value:
+            "pre-healthcare-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-healthcare-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "pre-healthcare-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],
@@ -2020,43 +2073,48 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-bombing-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-bombing-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-bombing-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-bombing-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-bombing-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-bombing-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "pre-bombing-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "pre-bombing-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-bombing-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "pre-bombing-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],
@@ -2100,43 +2158,48 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-vaccines-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-vaccines-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-vaccines-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-vaccines-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-vaccines-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-vaccines-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "pre-vaccines-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "pre-vaccines-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-vaccines-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "pre-vaccines-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],
@@ -2180,43 +2243,48 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-criminal-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-criminal-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-criminal-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-criminal-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-criminal-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-criminal-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "pre-criminal-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "pre-criminal-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-criminal-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "pre-criminal-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],
@@ -2260,43 +2328,48 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "...I would not want to offend someone",
+          value: "pre-same-sex-offending-reason-...I would not want to offend someone",
           text: "...I would not want to offend someone",
         },
         {
-          value: "...I would not want to be offended by someone",
+          value: "pre-same-sex-offending-reason-...I would not want to be offended by someone",
           text: "...I would not want to be offended by someone",
         },
         {
-          value: "...I would not want to be in an awkward, tense, or confrontational situation",
+          value:
+            "pre-same-sex-offending-reason-...I would not want to be in an awkward, tense, or confrontational situation",
           text: "...I would not want to be in an awkward, tense, or confrontational situation",
         },
         {
-          value: "...I would not want to deal with emotional distress or fatigue",
+          value:
+            "pre-same-sex-offending-reason-...I would not want to deal with emotional distress or fatigue",
           text: "...I would not want to deal with emotional distress or fatigue",
         },
         {
-          value: "...I would not want people judging me negatively or misunderstanding me",
+          value:
+            "pre-same-sex-offending-reason-...I would not want people judging me negatively or misunderstanding me",
           text: "...I would not want people judging me negatively or misunderstanding me",
         },
         {
-          value: "...I would not want to come off as ignorant or uneducated",
+          value:
+            "pre-same-sex-offending-reason-...I would not want to come off as ignorant or uneducated",
           text: "...I would not want to come off as ignorant or uneducated",
         },
         {
-          value: "...I have had previous negative experiences",
+          value: "pre-same-sex-offending-reason-...I have had previous negative experiences",
           text: "...I have had previous negative experiences",
         },
         {
-          value: "...I would not want to incur social repercussions",
+          value: "pre-same-sex-offending-reason-...I would not want to incur social repercussions",
           text: "...I would not want to incur social repercussions",
         },
         {
-          value: "...I would be afraid of feeling disempowered, unheard, or invalidated",
+          value:
+            "pre-same-sex-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
           text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
-          value: "...I would be afraid of feeling unsafe",
+          value: "pre-same-sex-offending-reason-...I would be afraid of feeling unsafe",
           text: "...I would be afraid of feeling unsafe",
         },
       ],

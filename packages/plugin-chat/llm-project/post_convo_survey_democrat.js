@@ -37,27 +37,27 @@ var post_convo_survey_democrat = {
       ],
       rows: [
         {
-          value: "Republicans are intelligent",
+          value: "rating-republicans-post-Republicans are intelligent",
           text: "Republicans are intelligent",
         },
         {
-          value: "Republicans are open-minded",
+          value: "rating-republicans-post-Republicans are open-minded",
           text: "Republicans are open-minded",
         },
         {
-          value: "Republicans are generous",
+          value: "rating-republicans-post-Republicans are generous",
           text: "Republicans are generous",
         },
         {
-          value: "Republicans are hypocritical @R@",
+          value: "rating-republicans-post-Republicans are hypocritical @R@",
           text: "Republicans are hypocritical",
         },
         {
-          value: "Republicans are selfish @R@",
+          value: "rating-republicans-post-Republicans are selfish @R@",
           text: "Republicans are selfish",
         },
         {
-          value: "Republicans are mean @R@",
+          value: "rating-republicans-post-Republicans are mean @R@",
           text: "Republicans are mean",
         },
       ],
@@ -99,15 +99,15 @@ var post_convo_survey_democrat = {
       ],
       rows: [
         {
-          value: "family married a republican @R@",
+          value: "interacting-with-republicans-post-family married a republican @R@",
           text: "I would be unhappy if someone in my immediate family married a republican",
         },
         {
-          value: "socializing with a republican @R@",
+          value: "interacting-with-republicans-post-socializing with a republican @R@",
           text: "I would be unhappy if I had to spend time socializing with a republican",
         },
         {
-          value: "work closely with a republican @R@",
+          value: "interacting-with-republicans-post-work closely with a republican @R@",
           text: "I would be unhappy if I had to work closely with a republican on the job",
         },
       ],
