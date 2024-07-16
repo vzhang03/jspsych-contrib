@@ -1844,21 +1844,21 @@ var pre_convo_survey_json = {
         },
         {
           value: "pre-euthanasia-offending-reason-...I have had previous negative experiences",
-          text: "euthanasia-offending-reason-...I have had previous negative experiences",
+          text: "...I have had previous negative experiences",
         },
         {
           value:
             "pre-euthanasia-offending-reason-...I would not want to incur social repercussions",
-          text: "euthanasia-offending-reason-...I would not want to incur social repercussions",
+          text: "...I would not want to incur social repercussions",
         },
         {
           value:
             "pre-euthanasia-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
-          text: "euthanasia-offending-reason-...I would be afraid of feeling disempowered, unheard, or invalidated",
+          text: "...I would be afraid of feeling disempowered, unheard, or invalidated",
         },
         {
           value: "pre-euthanasia-offending-reason-...I would be afraid of feeling unsafe",
-          text: "euthanasia-offending-reason-...I would be afraid of feeling unsafe",
+          text: "...I would be afraid of feeling unsafe",
         },
       ],
     },
