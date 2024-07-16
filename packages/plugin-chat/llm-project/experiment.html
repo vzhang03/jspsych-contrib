@@ -193,39 +193,42 @@
                 }
             });
         };
-
-        //creating function that extracts rows for which the rating is either column 1 or column 7
+        
         let surveyResponses = [];
 
-        function extractrelevantRow(responses) {
+        function extractRelevantRow(responses) {
             let relevantRow = [];
-            //For each survey matrix, search through each row for any selection in Col 1 or 7 (Strongly Agree/Disagree)
-            //if user didn't rate any statement strongly, search for moderately agree of disagree (col 2 or 6), etc.
-            //Save row so we know which statement the user rated strongest to be used as convo starter in chat condition.
-            for (let row in responses) {
-                let columnValue = responses[row];
 
-                // Check if the column value is 1 or 7
-                if (columnValue === 1 || columnValue === 7) {
-                    //let relevantRow = row.toString()
-                    relevantRow.push({ row });
-                    break;
-                } else if (columnValue === 2 || columnValue === 6) {
-                    relevantRow.push({ row });
-                    break;
-                } else if
-                    (columnValue === 3 || columnValue === 5) {
-                    relevantRow.push({ row });
-                    break;
-                } else if (columnValue === 4) {
-                    relevantRow.push({ row });
-                    break;
+            // Function to find a row with specific column values
+            function findRowWithValue(values) {
+                for (let row in responses) {
+                    let columnValue = responses[row];
+                    if (columnValue === values) {
+                        return  [{ row }];
+                    }
                 }
+                return null;
             }
 
-            return relevantRow;
-        }
+            // Loop to check i or 8-i)
+            for (let i = 1; i <= 4; i++) {
+                // Check for i
+                relevantRow = findRowWithValue(i);
+                if (relevantRow !== null) {
+                    return relevantRow;
+            }
+                // Check for 8 - i
+                relevantRow = findRowWithValue(8 - i);
+                if (relevantRow !== null) {
+                    return relevantRow;
+                }}
+            }
 
+         //   return relevantRow;
+       // }
+
+        
+// check i and 8-i and then loop 
         //creating variable for saving user response to use for conditional survey structure 
         //(so user only answer question for the topic they selected)
         let rowAsString;
@@ -272,7 +275,7 @@
                         //console.log('Survey responses', surveyResponses);  //check console for debugging
 
                         // extract relevant rows
-                        let relevantRow = extractrelevantRow(surveyResponses);
+                        let relevantRow = extractRelevantRow(surveyResponses);
                         //console.log('Relevant rows', relevantRow);  //check console for debugging
 
                         // convert relevant row into a string so we can feed it into chat later
