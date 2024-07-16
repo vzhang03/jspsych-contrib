@@ -451,36 +451,33 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value:
-            "pre-euthanasia-polarization-Euthanasia should be allowed for terminally ill patients who request it",
+          value: "Euthanasia should be allowed for terminally ill patients who request it",
           text: "Euthanasia should be allowed for terminally ill patients who request it",
         },
         {
-          value:
-            "pre-euthanasia-polarization-Legal protections should be provided for doctors who perform euthanasia",
+          value: "Legal protections should be provided for doctors who perform euthanasia",
           text: "Legal protections should be provided for doctors who perform euthanasia",
         },
         {
           value:
-            "pre-euthanasia-polarization-It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
           text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
         },
         {
           value:
-            "pre-euthanasia-polarization-Euthanasia should only be allowed if the patient has received a psychological evaluation",
+            "Euthanasia should only be allowed if the patient has received a psychological evaluation",
           text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
         },
         {
-          value:
-            "pre-euthanasia-polarization-Euthanasia should be banned for patients with non-terminal conditions @R@",
+          value: "Euthanasia should be banned for patients with non-terminal conditions @R@",
           text: "Euthanasia should be banned for patients with non-terminal conditions",
         },
         {
-          value: "pre-euthanasia-polarization-Euthanasia should be banned for all patients @R@",
+          value: "Euthanasia should be banned for all patients @R@",
           text: "Euthanasia should be banned for all patients",
         },
         {
-          value: "pre-euthanasia-polarization-Euthanasia should not be performed at home @R@",
+          value: "Euthanasia should not be performed at home @R@",
           text: "Euthanasia should not be performed at home",
         },
       ],
@@ -586,38 +583,34 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value:
-            "pre-gender-polarization-Gender quotas should be implemented in corporate boards and executive positions",
+          value: "Gender quotas should be implemented in corporate boards and executive positions",
           text: "Gender quotas should be implemented in corporate boards and executive positions",
         },
         {
           value:
-            "pre-gender-polarization-Mandating equal pay for equal work regardless of gender would improve gender equality",
+            "Mandating equal pay for equal work regardless of gender would improve gender equality",
           text: "Mandating equal pay for equal work regardless of gender would improve gender equality",
         },
         {
-          value:
-            "pre-gender-polarization-Both mothers and fathers should be provided with parental leave",
+          value: "Both mothers and fathers should be provided with parental leave",
           text: "Both mothers and fathers should be provided with parental leave",
         },
         {
-          value:
-            "pre-gender-polarization-Free childcare services should be provided to support working parents",
+          value: "Free childcare services should be provided to support working parents",
           text: "Free childcare services should be provided to support working parents",
         },
         {
-          value:
-            "pre-gender-polarization-Funding for programs aimed at reducing gender-based violence should be increased",
+          value: "Funding for programs aimed at reducing gender-based violence should be increased",
           text: "Funding for programs aimed at reducing gender-based violence should be increased",
         },
         {
           value:
-            "pre-gender-polarization-Gender diversity should be encouraged in STEM fields through scholarships and grant",
+            "Gender diversity should be encouraged in STEM fields through scholarships and grant",
           text: "Gender diversity should be encouraged in STEM fields through scholarships and grants",
         },
         {
           value:
-            "pre-gender-polarization-Gender should be disregarded when selecting candidates for career advancement opportunities",
+            "Gender should be disregarded when selecting candidates for career advancement opportunities",
           text: "Gender should be disregarded when selecting candidates for career advancement opportunities",
         },
       ],
@@ -723,38 +716,31 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value:
-            "pre-healthcare-polarization-A universal healthcare system should be implemented in the U.S.",
+          value: "A universal healthcare system should be implemented in the U.S.",
           text: "A universal healthcare system should be implemented in the U.S.",
         },
         {
-          value:
-            "pre-healthcare-polarization-Medicaid should be expanded to cover more low-income individuals",
+          value: "Medicaid should be expanded to cover more low-income individuals",
           text: "Medicaid should be expanded to cover more low-income individuals",
         },
         {
-          value:
-            "pre-healthcare-polarization-Prescription drug prices should be regulated to make them more affordable",
+          value: "Prescription drug prices should be regulated to make them more affordable",
           text: "Prescription drug prices should be regulated to make them more affordable",
         },
         {
-          value:
-            "pre-healthcare-polarization-Government subsidies should be provided for private health insurance",
+          value: "Government subsidies should be provided for private health insurance",
           text: "Government subsidies should be provided for private health insurance",
         },
         {
-          value:
-            "pre-healthcare-polarization-The government should negotiate drug prices with pharmaceutical companies",
+          value: "The government should negotiate drug prices with pharmaceutical companies",
           text: "The government should negotiate drug prices with pharmaceutical companies",
         },
         {
-          value:
-            "pre-healthcare-polarization-Government funding should be increased for mental health services",
+          value: "Government funding should be increased for mental health services",
           text: "Government funding should be increased for mental health services",
         },
         {
-          value:
-            "pre-healthcare-polarization-The competitive market should drive healthcare prices @R@",
+          value: "The competitive market should drive healthcare prices @R@",
           text: "The competitive market should drive healthcare prices",
         },
       ],
@@ -800,23 +786,20 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value:
-            "pre-healthcare-polarization-general-The federal government should ensure that all citizens have access to healthcare",
+          value: "The federal government should ensure that all citizens have access to healthcare",
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value:
-            "pre-healthcare-polarization-general-Government involvement in healthcare would worsen overall public health @R@",
+          value: "Government involvement in healthcare would worsen overall public health @R@",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
-          value:
-            "pre-healthcare-polarization-general-More government regulation in healthcare would lead to better patient outcomes",
+          value: "More government regulation in healthcare would lead to better patient outcomes",
           text: "More government regulation in healthcare would lead to better patient outcomes",
         },
         {
           value:
-            "pre-healthcare-polarization-general-Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
+            "Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],
@@ -862,36 +845,34 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "pre-bombing-polarization-A memorial should be established in the U.S. to honor the victims of the bombings",
+            "A memorial should be established in the U.S. to honor the victims of the bombings",
           text: "A memorial should be established in the U.S. to honor the victims of the bombings",
         },
         {
           value:
-            "pre-bombing-polarization-The U.S. government should provide financial reparations to the survivors and their families",
+            "The U.S. government should provide financial reparations to the survivors and their families",
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value:
-            "pre-bombing-polarization-The bombings were justified to bring a swift end to the war @R@",
+          value: "The bombings were justified to bring a swift end to the war @R@",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
-          value: "pre-bombing-polarization-The bombings were morally wrong",
+          value: "The bombings were morally wrong",
           text: "The bombings were morally wrong",
         },
         {
           value:
-            "pre-bombing-polarization-Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
+            "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
           text: "Learning about the atomic bombings of Hiroshima and Nagasaki is essential for understanding the consequences of nuclear warfare",
         },
         {
-          value:
-            "pre-bombing-polarization-The U.S. should take responsibility for the humanitarian impact of the bombings",
+          value: "The U.S. should take responsibility for the humanitarian impact of the bombings",
           text: "The U.S. should take responsibility for the humanitarian impact of the bombings",
         },
         {
           value:
-            "pre-bombing-polarization-The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
+            "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
           text: "The U.S. should participate in international efforts to promote nuclear disarmament and non-proliferation",
         },
       ],
@@ -998,30 +979,28 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "pre-vaccines-polarization-Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
           text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
         },
         {
-          value: "pre-vaccines-polarization-Vaccines should be mandated for healthcare workers",
+          value: "Vaccines should be mandated for healthcare workers",
           text: "Vaccines should be mandated for healthcare workers",
         },
         {
-          value:
-            "pre-vaccines-polarization-Businesses should be allowed to require proof of vaccination for entry",
+          value: "Businesses should be allowed to require proof of vaccination for entry",
           text: "Businesses should be allowed to require proof of vaccination for entry",
         },
         {
           value:
-            "pre-vaccines-polarization-Businesses and institutions should be barred from discriminating based on vaccination status @R@",
+            "Businesses and institutions should be barred from discriminating based on vaccination status @R@",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
-          value:
-            "pre-vaccines-polarization-Schools should be allowed to require vaccinations for attendance",
+          value: "Schools should be allowed to require vaccinations for attendance",
           text: "Schools should be allowed to require vaccinations for attendance",
         },
         {
-          value: "pre-vaccines-polarization-All government-approved vaccines should be mandated",
+          value: "All government-approved vaccines should be mandated",
           text: "All government-approved vaccines should be mandated",
         },
       ],
@@ -1128,31 +1107,29 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "pre-criminal-polarization-Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
+            "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
           text: "Implementing comprehensive background checks for all individuals entering the criminal justice system is necessary",
         },
         {
           value:
-            "pre-criminal-polarization-Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
+            "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
           text: "Enhancing mental health support services for incarcerated individuals would be worth the cost and resources",
         },
         {
-          value:
-            "pre-criminal-polarization-The use of solitary confinement as a punishment should be banned",
+          value: "The use of solitary confinement as a punishment should be banned",
           text: "The use of solitary confinement as a punishment should be banned",
         },
         {
-          value:
-            "pre-criminal-polarization-Inmates should have greater access to educational programs",
+          value: "Inmates should have greater access to educational programs",
           text: "Inmates should have greater access to educational programs",
         },
         {
           value:
-            "pre-criminal-polarization-Non-violent offenders should be permitted to serve sentences through community service or house arrest",
+            "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
           text: "Non-violent offenders should be permitted to serve sentences through community service or house arrest",
         },
         {
-          value: "pre-criminal-polarization-The use of private prisons should be restricted",
+          value: "The use of private prisons should be restricted",
           text: "The use of private prisons should be restricted",
         },
       ],
@@ -1259,32 +1236,31 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "pre-same-sex-polarization-Same-sex marriage should remain legalized nationwide",
+          value: "Same-sex marriage should remain legalized nationwide",
           text: "Same-sex marriage should remain legalized nationwide",
         },
         {
-          value:
-            "pre-same-sex-polarization-Adoption rights should be granted to married same-sex couples",
+          value: "Adoption rights should be granted to married same-sex couples",
           text: "Adoption rights should be granted to married same-sex couples",
         },
         {
           value:
-            "pre-same-sex-polarization-Employment non-discrimination protections should be provided for gay and lesbian individuals",
+            "Employment non-discrimination protections should be provided for gay and lesbian individuals",
           text: "Employment non-discrimination protections should be provided for gay and lesbian individuals",
         },
         {
           value:
-            "pre-same-sex-polarization-Same-sex couples should receive spousal benefits (e.g. health insurance; survivor benefits)",
+            "Same-sex couples should receive spousal benefits (e.g. health insurance; survivor benefits)",
           text: "Same-sex couples should receive spousal benefits (e.g., health insurance, survivor benefits)",
         },
         {
           value:
-            "pre-same-sex-polarization-It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
           text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
         },
         {
           value:
-            "pre-same-sex-polarization-Discrimination against same-sex couples in housing and public accommodations should be banned",
+            "Discrimination against same-sex couples in housing and public accommodations should be banned",
           text: "Discrimination against same-sex couples in housing and public accommodations should be banned",
         },
       ],
