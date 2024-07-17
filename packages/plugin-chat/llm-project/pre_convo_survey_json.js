@@ -1328,6 +1328,461 @@ var pre_convo_survey_json = {
       rowsOrder: "random",
     },
     {
+      type: "matrix",
+      name: "pre-euthanasia-openmindedness",
+      visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about human euthanasia in the U.S., I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree a little",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-euthanasia-openmindedness...have little patience for arguments about human euthanasia that I disagree with @R@",
+          text: "...have little patience for arguments about human euthanasia that I disagree with",
+        },
+        {
+          value:
+            "pre-euthanasia-openmindedness...avoid messages about human euthanasia that I disagree with @R@",
+          text: "...avoid messages about human euthanasia that I disagree with",
+        },
+        {
+          value:
+            "pre-euthanasia-openmindedness...believe it is a waste of time to pay attention to certain political ideas about human euthanasia @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
+        },
+        {
+          value:
+            "pre-euthanasia-openmindedness...am open to considering other political viewpoints about human euthanasia",
+          text: "...am open to considering other political viewpoints about human euthanasia",
+        },
+        {
+          value:
+            "pre-euthanasia-openmindedness...consider as many different opinions as possible about human euthanasia",
+          text: "...consider as many different opinions as possible about human euthanasia",
+        },
+      ],
+    },
+    {
+      type: "matrix",
+      name: "pre-gender-openmindedness",
+      visibleIf: "{topicChoice} = 'gender equality in the U.S.'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about gender equality in the U.S., I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree somewhat",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-gender-openmindedness...have little patience for arguments about gender equality that I disagree with @R@",
+          text: "...have little patience for arguments about gender equality that I disagree with",
+        },
+        {
+          value:
+            "pre-gender-openmindedness...avoid messages about gender equality that I disagree with @R@",
+          text: "...avoid messages about gender equality that I disagree with",
+        },
+        {
+          value:
+            "pre-gender-openmindedness...believe it is a waste of time to pay attention to certain political ideas about gender equality @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about gender equality",
+        },
+        {
+          value:
+            "pre-gender-openmindedness...am open to considering other political viewpoints about gender equality",
+          text: "...am open to considering other political viewpoints about gender equality",
+        },
+        {
+          value:
+            "pre-gender-openmindedness...consider as many different opinions as possible about gender equality",
+          text: "...consider as many different opinions as possible about gender equality",
+        },
+      ],
+    },
+    {
+      type: "matrix",
+      name: "pre-healthcare-openmindedness",
+      visibleIf: "{topicChoice} = 'the role of the U.S. government in healthcare'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about the role of the U.S. government in healthcare, I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree a little",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-healthcare-openmindedness...have little patience for arguments about the role of the government in healthcare that I disagree with @R@",
+          text: "...have little patience for arguments about the role of the government in healthcare that I disagree with",
+        },
+        {
+          value:
+            "pre-healthcare-openmindedness...avoid messages about the role of the government in healthcare that I disagree with @R@",
+          text: "...avoid messages about the role of the government in healthcare that I disagree with",
+        },
+        {
+          value:
+            "pre-healthcare-openmindedness...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare",
+        },
+        {
+          value:
+            "pre-healthcare-openmindedness...am open to considering other political viewpoints about the role of the government in healthcare",
+          text: "...am open to considering other political viewpoints about the role of the government in healthcare",
+        },
+        {
+          value:
+            "pre-healthcare-openmindedness...consider as many different opinions as possible about the role of the government in healthcare",
+          text: "...consider as many different opinions as possible about the role of the government in healthcare",
+        },
+      ],
+    },
+    {
+      type: "matrix",
+      name: "pre-bombing-openmindedness",
+      visibleIf: "{topicChoice} = 'the atomic bombings of Hiroshima and Nagasaki'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about the atomic bombings of Hiroshima and Nagasaki, I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree a little",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-bombing-openmindedness...have little patience for arguments about the atomic bombings that I disagree with @R@",
+          text: "...have little patience for arguments about the atomic bombings that I disagree with",
+        },
+        {
+          value:
+            "pre-bombing-openmindedness...avoid messages about the atomic bombings that I disagree with @R@",
+          text: "...avoid messages about the atomic bombings that I disagree with",
+        },
+        {
+          value:
+            "pre-bombing-openmindedness...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
+        },
+        {
+          value:
+            "pre-bombing-openmindedness...am open to considering other political viewpoints about the atomic bombings",
+          text: "...am open to considering other political viewpoints about the atomic bombings",
+        },
+        {
+          value:
+            "pre-bombing-openmindedness...consider as many different opinions as possible about the atomic bombings",
+          text: "...consider as many different opinions as possible about the atomic bombings",
+        },
+      ],
+    },
+    {
+      type: "matrix",
+      name: "pre-vaccines-openmindedness",
+      visibleIf: "{topicChoice} = 'mandating vaccines in the U.S.'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about vaccines mandates in the U.S., I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree a little",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-vaccines-openmindedness...have little patience for arguments about vaccines mandates that I disagree with @R@",
+          text: "...have little patience for arguments about vaccines mandates that I disagree with",
+        },
+        {
+          value:
+            "pre-vaccines-openmindedness...avoid messages about vaccines mandates that I disagree with @R@",
+          text: "...avoid messages about vaccines mandates that I disagree with",
+        },
+        {
+          value:
+            "pre-vaccines-openmindedness...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
+        },
+        {
+          value:
+            "pre-vaccines-openmindedness...am open to considering other political viewpoints about vaccines mandates",
+          text: "...am open to considering other political viewpoints about vaccines mandates",
+        },
+        {
+          value:
+            "pre-vaccines-openmindedness...consider as many different opinions as possible about vaccine mandates",
+          text: "...consider as many different opinions as possible about vaccine mandates",
+        },
+      ],
+    },
+    {
+      type: "matrix",
+      name: "pre-criminal-openmindedness",
+      visibleIf: "{topicChoice} = 'the criminal justice system in the U.S.'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about the U.S. criminal justice system, I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree a little",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-criminal-openmindedness-...have little patience for arguments about the criminal justice system that I disagree with @R@",
+          text: "...have little patience for arguments about the criminal justice system that I disagree with",
+        },
+        {
+          value:
+            "pre-criminal-openmindedness-...avoid messages about the criminal justice system that I disagree with @R@",
+          text: "...avoid messages about the criminal justice system that I disagree with",
+        },
+        {
+          value:
+            "pre-criminal-openmindedness-...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
+        },
+        {
+          value:
+            "pre-criminal-openmindedness-...am open to considering other political viewpoints about the criminal justice system",
+          text: "...am open to considering other political viewpoints about the criminal justice system",
+        },
+        {
+          value:
+            "pre-criminal-openmindedness-...consider as many different opinions as possible about the criminal justice system",
+          text: "...consider as many different opinions as possible about the criminal justice system",
+        },
+      ],
+    },
+    {
+      type: "matrix",
+      name: "pre-same-sex-openmindedness",
+      visibleIf: "{topicChoice} = 'same-sex marriage in the U.S.'",
+      title:
+        "Rate the following statements on the seven point scale: When I have conversations about same-sex marriage in the U.S., I...",
+      isRequired: true,
+      columns: [
+        {
+          value: 1,
+          text: "Disagree strongly",
+        },
+        {
+          value: 2,
+          text: "Disagree moderately",
+        },
+        {
+          value: 3,
+          text: "Disagree a little",
+        },
+        {
+          value: 4,
+          text: "Neither agree nor disagree",
+        },
+        {
+          value: 5,
+          text: "Agree a little",
+        },
+        {
+          value: 6,
+          text: "Agree moderately",
+        },
+        {
+          value: 7,
+          text: "Agree strongly",
+        },
+      ],
+      rows: [
+        {
+          value:
+            "pre-same-sex-openmindedness...have little patience for arguments about same-sex marriage that I disagree with @R@",
+          text: "...have little patience for arguments about same-sex marriage that I disagree with",
+        },
+        {
+          value:
+            "pre-same-sex-openmindedness...avoid messages about same-sex marriage that I disagree with @R@",
+          text: "...avoid messages about same-sex marriage that I disagree with",
+        },
+        {
+          value:
+            "pre-same-sex-openmindedness...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage @R@",
+          text: "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
+        },
+        {
+          value:
+            "pre-same-sex-openmindedness...am open to considering other political viewpoints about same-sex marriage",
+          text: "...am open to considering other political viewpoints about same-sex marriage",
+        },
+        {
+          value:
+            "pre-same-sex-openmindedness...consider as many different opinions as possible about same-sex marriage",
+          text: "...consider as many different opinions as possible about same-sex marriage",
+        },
+      ],
+    },
+    {
       type: "expression",
       name: "euthanasia-slider1",
       visibleIf: "{topicChoice} = 'human euthanasia in the U.S.'",

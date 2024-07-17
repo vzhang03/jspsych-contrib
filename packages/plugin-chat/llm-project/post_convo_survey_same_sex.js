@@ -2,7 +2,7 @@ var post_convo_survey_same_sex = {
   elements: [
     {
       type: "matrix",
-      name: "same-sex-openmindedness",
+      name: "same-sex-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about same-sex marriage in the U.S., I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_same_sex = {
       rows: [
         {
           value:
-            "same-sex-openmindedness...have little patience for arguments about same-sex marriage that I disagree with @R@",
+            "same-sex-openmindedness-post...have little patience for arguments about same-sex marriage that I disagree with @R@",
           text: "...have little patience for arguments about same-sex marriage that I disagree with",
         },
         {
           value:
-            "same-sex-openmindedness...avoid messages about same-sex marriage that I disagree with @R@",
+            "same-sex-openmindedness-post...avoid messages about same-sex marriage that I disagree with @R@",
           text: "...avoid messages about same-sex marriage that I disagree with",
         },
         {
           value:
-            "same-sex-openmindedness...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage @R@",
+            "same-sex-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about same-sex marriage",
         },
         {
           value:
-            "same-sex-openmindedness...am open to considering other political viewpoints about same-sex marriage",
+            "same-sex-openmindedness-post...am open to considering other political viewpoints about same-sex marriage",
           text: "...am open to considering other political viewpoints about same-sex marriage",
         },
         {
           value:
-            "same-sex-openmindedness...consider as many different opinions as possible about same-sex marriage",
+            "same-sex-openmindedness-post...consider as many different opinions as possible about same-sex marriage",
           text: "...consider as many different opinions as possible about same-sex marriage",
         },
       ],

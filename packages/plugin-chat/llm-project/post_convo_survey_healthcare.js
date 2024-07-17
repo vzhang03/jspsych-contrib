@@ -2,7 +2,7 @@ var post_convo_survey_healthcare = {
   elements: [
     {
       type: "matrix",
-      name: "healthcare-openmindedness",
+      name: "healthcare-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about the role of the U.S. government in healthcare, I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_healthcare = {
       rows: [
         {
           value:
-            "healthcare-openmindedness...have little patience for arguments about the role of the government in healthcare that I disagree with @R@",
+            "healthcare-openmindedness-post...have little patience for arguments about the role of the government in healthcare that I disagree with @R@",
           text: "...have little patience for arguments about the role of the government in healthcare that I disagree with",
         },
         {
           value:
-            "healthcare-openmindedness...avoid messages about the role of the government in healthcare that I disagree with @R@",
+            "healthcare-openmindedness-post...avoid messages about the role of the government in healthcare that I disagree with @R@",
           text: "...avoid messages about the role of the government in healthcare that I disagree with",
         },
         {
           value:
-            "healthcare-openmindedness...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare @R@",
+            "healthcare-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the role of the government in healthcare",
         },
         {
           value:
-            "healthcare-openmindedness...am open to considering other political viewpoints about the role of the government in healthcare",
+            "healthcare-openmindedness-post...am open to considering other political viewpoints about the role of the government in healthcare",
           text: "...am open to considering other political viewpoints about the role of the government in healthcare",
         },
         {
           value:
-            "healthcare-openmindedness...consider as many different opinions as possible about the role of the government in healthcare",
+            "healthcare-openmindedness-post...consider as many different opinions as possible about the role of the government in healthcare",
           text: "...consider as many different opinions as possible about the role of the government in healthcare",
         },
       ],

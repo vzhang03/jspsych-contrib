@@ -2,7 +2,7 @@ var post_convo_survey_bombing = {
   elements: [
     {
       type: "matrix",
-      name: "bombing-openmindedness",
+      name: "bombing-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about the atomic bombings of Hiroshima and Nagasaki, I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_bombing = {
       rows: [
         {
           value:
-            "bombing-openmindedness...have little patience for arguments about the atomic bombings that I disagree with @R@",
+            "bombing-openmindedness-post...have little patience for arguments about the atomic bombings that I disagree with @R@",
           text: "...have little patience for arguments about the atomic bombings that I disagree with",
         },
         {
           value:
-            "bombing-openmindedness...avoid messages about the atomic bombings that I disagree with @R@",
+            "bombing-openmindedness-post...avoid messages about the atomic bombings that I disagree with @R@",
           text: "...avoid messages about the atomic bombings that I disagree with",
         },
         {
           value:
-            "bombing-openmindedness...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings @R@",
+            "bombing-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the atomic bombings",
         },
         {
           value:
-            "bombing-openmindedness...am open to considering other political viewpoints about the atomic bombings",
+            "bombing-openmindedness-post...am open to considering other political viewpoints about the atomic bombings",
           text: "...am open to considering other political viewpoints about the atomic bombings",
         },
         {
           value:
-            "bombing-openmindedness...consider as many different opinions as possible about the atomic bombings",
+            "bombing-openmindedness-post...consider as many different opinions as possible about the atomic bombings",
           text: "...consider as many different opinions as possible about the atomic bombings",
         },
       ],

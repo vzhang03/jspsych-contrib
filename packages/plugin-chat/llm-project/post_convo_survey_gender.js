@@ -2,7 +2,7 @@ var post_convo_survey_gender = {
   elements: [
     {
       type: "matrix",
-      name: "gender-openmindedness",
+      name: "gender-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about gender equality in the U.S., I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_gender = {
       rows: [
         {
           value:
-            "gender-openmindedness...have little patience for arguments about gender equality that I disagree with @R@",
+            "gender-openmindedness-post...have little patience for arguments about gender equality that I disagree with @R@",
           text: "...have little patience for arguments about gender equality that I disagree with",
         },
         {
           value:
-            "gender-openmindedness...avoid messages about gender equality that I disagree with @R@",
+            "gender-openmindedness-post...avoid messages about gender equality that I disagree with @R@",
           text: "...avoid messages about gender equality that I disagree with",
         },
         {
           value:
-            "gender-openmindedness...believe it is a waste of time to pay attention to certain political ideas about gender equality @R@",
+            "gender-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about gender equality @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about gender equality",
         },
         {
           value:
-            "gender-openmindedness...am open to considering other political viewpoints about gender equality",
+            "gender-openmindedness-post...am open to considering other political viewpoints about gender equality",
           text: "...am open to considering other political viewpoints about gender equality",
         },
         {
           value:
-            "gender-openmindedness...consider as many different opinions as possible about gender equality",
+            "gender-openmindedness-post...consider as many different opinions as possible about gender equality",
           text: "...consider as many different opinions as possible about gender equality",
         },
       ],

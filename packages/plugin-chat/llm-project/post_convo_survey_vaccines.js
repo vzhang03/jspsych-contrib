@@ -2,7 +2,7 @@ var post_convo_survey_vaccines = {
   elements: [
     {
       type: "matrix",
-      name: "vaccines-openmindedness",
+      name: "vaccines-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about vaccines mandates in the U.S., I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_vaccines = {
       rows: [
         {
           value:
-            "vaccines-openmindedness...have little patience for arguments about vaccines mandates that I disagree with @R@",
+            "vaccines-openmindedness-post...have little patience for arguments about vaccines mandates that I disagree with @R@",
           text: "...have little patience for arguments about vaccines mandates that I disagree with",
         },
         {
           value:
-            "vaccines-openmindedness...avoid messages about vaccines mandates that I disagree with @R@",
+            "vaccines-openmindedness-post...avoid messages about vaccines mandates that I disagree with @R@",
           text: "...avoid messages about vaccines mandates that I disagree with",
         },
         {
           value:
-            "vaccines-openmindedness...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates @R@",
+            "vaccines-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about vaccine mandates",
         },
         {
           value:
-            "vaccines-openmindedness...am open to considering other political viewpoints about vaccines mandates",
+            "vaccines-openmindedness-post...am open to considering other political viewpoints about vaccines mandates",
           text: "...am open to considering other political viewpoints about vaccines mandates",
         },
         {
           value:
-            "vaccines-openmindedness...consider as many different opinions as possible about vaccine mandates",
+            "vaccines-openmindedness-post...consider as many different opinions as possible about vaccine mandates",
           text: "...consider as many different opinions as possible about vaccine mandates",
         },
       ],

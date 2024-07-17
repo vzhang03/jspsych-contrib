@@ -2,7 +2,7 @@ var post_convo_survey_criminal = {
   elements: [
     {
       type: "matrix",
-      name: "criminal-openmindedness",
+      name: "criminal-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about the U.S. criminal justice system, I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_criminal = {
       rows: [
         {
           value:
-            "criminal-openmindedness-...have little patience for arguments about the criminal justice system that I disagree with @R@",
+            "criminal-openmindedness-post...have little patience for arguments about the criminal justice system that I disagree with @R@",
           text: "...have little patience for arguments about the criminal justice system that I disagree with",
         },
         {
           value:
-            "criminal-openmindedness-...avoid messages about the criminal justice system that I disagree with @R@",
+            "criminal-openmindedness-post...avoid messages about the criminal justice system that I disagree with @R@",
           text: "...avoid messages about the criminal justice system that I disagree with",
         },
         {
           value:
-            "criminal-openmindedness-...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system @R@",
+            "criminal-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about the criminal justice system",
         },
         {
           value:
-            "criminal-openmindedness-...am open to considering other political viewpoints about the criminal justice system",
+            "criminal-openmindedness-post..am open to considering other political viewpoints about the criminal justice system",
           text: "...am open to considering other political viewpoints about the criminal justice system",
         },
         {
           value:
-            "criminal-openmindedness-...consider as many different opinions as possible about the criminal justice system",
+            "criminal-openmindedness-post...consider as many different opinions as possible about the criminal justice system",
           text: "...consider as many different opinions as possible about the criminal justice system",
         },
       ],

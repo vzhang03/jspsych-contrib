@@ -2,7 +2,7 @@ var post_convo_survey_euthanasia = {
   elements: [
     {
       type: "matrix",
-      name: "euthanasia-openmindedness",
+      name: "euthanasia-openmindedness-post",
       title:
         "Rate the following statements on the seven point scale: When I have conversations about human euthanasia in the U.S., I...",
       isRequired: true,
@@ -39,27 +39,27 @@ var post_convo_survey_euthanasia = {
       rows: [
         {
           value:
-            "euthanasia-openmindedness...have little patience for arguments about human euthanasia that I disagree with @R@",
+            "euthanasia-openmindedness-post...have little patience for arguments about human euthanasia that I disagree with @R@",
           text: "...have little patience for arguments about human euthanasia that I disagree with",
         },
         {
           value:
-            "euthanasia-openmindedness...avoid messages about human euthanasia that I disagree with @R@",
+            "euthanasia-openmindedness-post...avoid messages about human euthanasia that I disagree with @R@",
           text: "...avoid messages about human euthanasia that I disagree with",
         },
         {
           value:
-            "euthanasia-openmindedness...believe it is a waste of time to pay attention to certain political ideas about human euthanasia @R@",
+            "euthanasia-openmindedness-post...believe it is a waste of time to pay attention to certain political ideas about human euthanasia @R@",
           text: "...believe it is a waste of time to pay attention to certain political ideas about human euthanasia",
         },
         {
           value:
-            "euthanasia-openmindedness...am open to considering other political viewpoints about human euthanasia",
+            "euthanasia-openmindedness-post...am open to considering other political viewpoints about human euthanasia",
           text: "...am open to considering other political viewpoints about human euthanasia",
         },
         {
           value:
-            "euthanasia-openmindedness...consider as many different opinions as possible about human euthanasia",
+            "euthanasia-openmindedness-post...consider as many different opinions as possible about human euthanasia",
           text: "...consider as many different opinions as possible about human euthanasia",
         },
       ],
