@@ -469,15 +469,15 @@ var pre_convo_survey_json = {
           text: "Euthanasia should only be allowed if the patient has received a psychological evaluation",
         },
         {
-          value: "Euthanasia should be banned for patients with non-terminal conditions @R@",
+          value: "Euthanasia should be banned for patients with non-terminal conditions",
           text: "Euthanasia should be banned for patients with non-terminal conditions",
         },
         {
-          value: "Euthanasia should be banned for all patients @R@",
+          value: "Euthanasia should be banned for all patients",
           text: "Euthanasia should be banned for all patients",
         },
         {
-          value: "Euthanasia should not be performed at home @R@",
+          value: "Euthanasia should not be performed at home",
           text: "Euthanasia should not be performed at home",
         },
       ],
@@ -538,7 +538,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "pre-euthanasia-polarization-general-More access to euthanasia could lead to abuse and misuse by healthcare providers @R@",
+            "pre-euthanasia-polarization-general-More access to euthanasia could lead to abuse and misuse by healthcare providers",
           text: "More access to euthanasia could lead to abuse and misuse by healthcare providers",
         },
       ],
@@ -671,7 +671,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "pre-gender-polarization-general-Efforts to reduce inequality for women often create unfair advantages for women over men @R@",
+            "pre-gender-polarization-general-Efforts to reduce inequality for women often create unfair advantages for women over men",
           text: "Efforts to reduce inequality for women often create unfair advantages for women over men",
         },
       ],
@@ -740,7 +740,7 @@ var pre_convo_survey_json = {
           text: "Government funding should be increased for mental health services",
         },
         {
-          value: "The competitive market should drive healthcare prices @R@",
+          value: "The competitive market should drive healthcare prices",
           text: "The competitive market should drive healthcare prices",
         },
       ],
@@ -790,7 +790,7 @@ var pre_convo_survey_json = {
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value: "Government involvement in healthcare would worsen overall public health @R@",
+          value: "Government involvement in healthcare would worsen overall public health",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
@@ -799,7 +799,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Increased government involvement in healthcare could lead to inefficiencies and higher costs @R@",
+            "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],
@@ -854,7 +854,7 @@ var pre_convo_survey_json = {
           text: "The U.S. government should provide financial reparations to the survivors and their families",
         },
         {
-          value: "The bombings were justified to bring a swift end to the war @R@",
+          value: "The bombings were justified to bring a swift end to the war",
           text: "The bombings were justified to bring a swift end to the war",
         },
         {
@@ -918,7 +918,7 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "pre-bombing-polarization-general-The bombings of Hiroshima and Nagasaki were necessary to end World War II @R@",
+            "pre-bombing-polarization-general-The bombings of Hiroshima and Nagasaki were necessary to end World War II",
           text: "The bombings of Hiroshima and Nagasaki were necessary to end World War II",
         },
         {
@@ -979,7 +979,7 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good @R@",
+            "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
           text: "Preventing people without vaccinations from entering public spaces and transportation would do more harm than good",
         },
         {
@@ -992,7 +992,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "Businesses and institutions should be barred from discriminating based on vaccination status @R@",
+            "Businesses and institutions should be barred from discriminating based on vaccination status",
           text: "Barring businesses and institutions from discriminating based on vaccination status is wrong",
         },
         {
@@ -1061,7 +1061,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "pre-vaccines-polarization-general-More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon @R@",
+            "pre-vaccines-polarization-general-More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
           text: "More vaccine mandates would increase public resistance by making people feel their freedoms are being infringed upon",
         },
       ],
@@ -1176,7 +1176,7 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "pre-criminal-polarization-general-The benefits of a punishment-focused criminal justice system outweigh the downsides @R@",
+            "pre-criminal-polarization-general-The benefits of a punishment-focused criminal justice system outweigh the downsides",
           text: "The benefits of a punishment-focused criminal justice system outweigh the downsides",
         },
         {
@@ -1191,7 +1191,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "pre-criminal-polarization-general-The federal government should implement greater punishments to improve public safety @R@",
+            "pre-criminal-polarization-general-The federal government should implement greater punishments to improve public safety",
           text: "The federal government should implement greater punishments to improve public safety",
         },
       ],
@@ -1255,7 +1255,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples @R@",
+            "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
           text: "It is not right to provide the same federal rights and support for same-sex couples as opposite-sex couples",
         },
         {
@@ -1306,7 +1306,7 @@ var pre_convo_survey_json = {
       rows: [
         {
           value:
-            "pre-same-sex-polarization-general-Same-sex couples should not have the same right to legal marriage that opposite-sex couples have @R@",
+            "pre-same-sex-polarization-general-Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
           text: "Same-sex couples should not have the same right to legal marriage that opposite-sex couples have",
         },
         {
