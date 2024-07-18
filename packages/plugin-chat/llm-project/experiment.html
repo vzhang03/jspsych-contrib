@@ -413,7 +413,7 @@
                     const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
                     const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
                         .response["topicChoice"];
-                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. I'm not here to judge your beliefs; I'm just here to help you explore your views. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
                 message_trigger: 0
@@ -526,7 +526,7 @@
                     const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
                     const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
                         .response["topicChoice"];
-                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. I'm not here to judge your beliefs; I'm just here to help you explore your views. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
                 message_trigger: 0
