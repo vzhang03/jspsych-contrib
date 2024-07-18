@@ -460,7 +460,7 @@ var pre_convo_survey_json = {
         },
         {
           value:
-            "It is not right for family members to request euthanasia on behalf of incapacitated patients @R@",
+            "It is not right for family members to request euthanasia on behalf of incapacitated patients",
           text: "It is not right for family members to request euthanasia on behalf of incapacitated patients",
         },
         {
