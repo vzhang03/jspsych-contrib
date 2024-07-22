@@ -113,7 +113,7 @@
         // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
         async function createExperiment() {
-            const condition = 2;
+            const condition = 1;
             if (condition == 0) { timeline = counter_timeline; }
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
@@ -393,7 +393,7 @@
         /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!----------INTERVENTIONS (BOT CONDITIONS) ---------- !!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
         // Declaring the prompts for three chat bot conditions: counter bot (only argues), question bot (only ask question), viewpoint bot (provide alternative viewpoint)
-        
+        const topicChoiceAsString = ""
         //counter bot prompts
         combination_prompts = [
             //set role to 'chatbot' for specific message to be sent via the bot
@@ -410,11 +410,10 @@
                         return str.charAt(0).toLowerCase() + str.slice(1);
                     };
 
-                    const bot_row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                        .rowAsString["row"]; // extracting the depolarization statement again because it didn't work if i tried to use the string from earlier
+                    const bot_row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].rowAsString["row"];
+                         // extracting the depolarization statement again because it didn't work if i tried to use the string from earlier
                     const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
-                    const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] // get topic choice
-                        .response["topicChoice"];
+                    const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].response["topicChoice"]; // get topic choice
                     return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
                 },
                 role: "chatbot-message",
@@ -448,7 +447,9 @@
         
         const combination_trial = {
             type: jsPsychChat,
-            ai_prompt: `Concisely summarize the user's stance. From the user's stance, determine whether to widen the user's perspective, it would be better to: 
+            ai_prompt: `
+            You are having a conversation with the user about ${topicChoiceAsString}. Stay on topic.
+            Concisely summarize the user's stance. From the user's stance, determine whether to widen the user's perspective, it would be better to: 
       1) ask the user about their experience and why they think the way they do, 
       2) correct the user for factual information inaccuracy, provide new factual information that reshapes the user stance or
       3) share the perspective of a someone with a different societal position, political stance, experience that differed from the user's. Make sure the perspective differs from the user's.
@@ -500,7 +501,7 @@
                 role: "chatbot-message",
                 message_trigger: 0
             },
-            
+
             {
                 prompt: `Role: Your role is to be a policy education expert with whom people can discuss their beliefs about contentious topics. 
                 Style: You should be conversational but use technically precise language. Be concise. You should match your response length to the user's input length.
@@ -508,6 +509,16 @@
                 role: "chatbot-prompt",
                 message_trigger: 5,
             }
+            /*
+            {
+                prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+            Style: You should be conversational and use colloquial language. You should match your response length to the user's input length.
+            Task: You should always respond to the other person's argument with a counterargument. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
+                role: "chatbot-prompt",
+                message_trigger: 5,
+            }*/
+            
+            
             //message_trigger run the prompt after 5 message is sent by the user, we repeated the same prompt again after 5 message because when we were running it (as if the prompt 'faded out'), the bot stopped arguing frequently after a few round of convo. Future editions of GPT API might not have same issue.
         ]
         
@@ -530,9 +541,9 @@
         // putting prompt into counter bot conversation trial (a trial is where the actual convo happens with all the UI implemented for the plug-in)
         const counter_trial = {
             type: jsPsychChat,
-            ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
-            Style: You should be conversational and use colloquial language. You should match your response length to the user's input length.
-            Task: You should always respond to the other person's argument with a counterargument. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
+            ai_prompt: `Role: Your role is to be a policy education expert with whom people can discuss their beliefs about contentious topics. 
+                Style: You should be conversational but use technically precise language. Be concise. You should match your response length to the user's input length.
+                Task: You should always respond to the other person's argument with a counterargument with specific examples. You should never dive into asking the user how they would implement their views. You should always concisely present a specific argument that counters the user's perspective. At the end of your response, you should always ask the user what they think. You should always ensure that your message includes a counterargument; and you should never simply agree with the user.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             //prompt_chain: prompt_chain, //previousl fed in chain prompting here.
@@ -570,22 +581,25 @@
             {
                 prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics.
                 Style: You should be conversational and use colloquial language. You should match your response length to the user's input length.
-                Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views.`,
+                Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views. Do not repeat questions, but you can dive deeper into previous questions.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
             }
         ]
+        //Do not repeat questions, but you can dive deeper into previous questions.
         const question_trial = {
             type: jsPsychChat,
             ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics.
             Style: You should be conversational and use colloquial language. You should match your response length to the user's input length.
-            Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views.`,
+            Task: You should always ask a question about the user's stance. You should always ask why the user thinks what they think or ask if there were any experiences that led to their views. Do not repeat questions, but you can dive deeper into previous questions.`,
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             additional_prompts: question_prompts,
         };
         jsPsych.run([question_trial]);
 
+
+        
         //creating prompts for viewpoint bot condition
         viewpoint_prompts = [
             {
@@ -616,20 +630,30 @@
                 message_trigger: 0
             },
             {
-                //prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide the alternative viewpoints of people with different jobs, positions in society, beliefs, etc. Give different perspectives each time. Ask what the user thinks about those peoples' stances. Acknowledge the user's perpsective. Respond in 1 paragraph.",
+                
+                prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+                Style: You should be conversational and use colloquial language. You should match your response length to the user's input length.
+                Task: You should always identify a specific group of people who may have differing opinions from the user. You should always explain, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. Do not repeat viewpoints, instead you can dive deeper into previously mentioned viewpoints. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
+                role: "chatbot-prompt",
+                message_trigger: 5,
+            }
+            /*{
+            //NEW PROMPT
+                
                 prompt: `Role: Your role is to be a policy education expert with whom people can discuss their beliefs about contentious topics. 
                 Style: You should be conversational but use technically precise language. Be concise. You should match your response length to the user's input length.
                 Task: You should always identify a specific group of people who may have differing opinions from the user. You should always talk about, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
                 role: "chatbot-prompt",
                 message_trigger: 5,
-            }
+            }*/
         ]
         const viewpoint_trial = {
             type: jsPsychChat,
-            //ai_prompt: "Always explain in detail the experiences of people with opposite views from the user without repeating the user's input. Provide the alternative viewpoints of people with different jobs, positions in society, beliefs, etc. Give different perspectives each time. Ask what the user thinks about those peoples' stances. Acknowledge the user's perpsective. Respond in 1 paragraph.",
-            ai_prompt: `Role: Your role is to be a policy education expert with whom people can discuss their beliefs about contentious topics. 
-                Style: You should be conversational but use technically precise language. Be concise. You should match your response length to the user's input length.
-                Task: You should always identify a specific group of people who may have differing opinions from the user. You should always talk about, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
+           
+            ai_prompt: `Role: Your role is to be a conversational chatbot with whom people can discuss their beliefs about contentious topics. 
+                Style: You should be conversational and use colloquial language. You should match your response length to the user's input length.
+                Task: You should always identify a specific group of people who may have differing opinions from the user. You should always explain, in detail, their experiences and why they may disagree with the user's beliefs. You should provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. You should give uniquely different perspectives in each message. You should always end your response with a question that asks the user what they think about those peoples' stances.`,
+            continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
             additional_prompts: viewpoint_prompts,
         };
@@ -651,7 +675,7 @@
                         type: "comment",
                         name: "control-free-response",
                         title: `Please freely reflect in the space below on the following statement: "${row}"`,
-                        isRequired: true,
+                        isRequired: false,
                     }]
                 }
                 return control_intervention_json
@@ -898,14 +922,14 @@
                             name: "free-response",
                             title:
                                 `After your conversation with the chat bot, do you feel more willing to have a conversation with others about ${topicChoiceAsString}? Please freely reflect in the space below.`,
-                            isRequired: true,
+                            isRequired: false,
                         },
                         {
                             type: "radiogroup",
                             name: "willing-to-converse-likert-post",
                             title:
                                 `Rate this conversation's effect on your willingness to converse about ${topicChoiceAsString} with others. Rate on the seven point scale.`,
-                            isRequired: true,
+                            isRequired: false,
                             choices: [
                                 {
                                     value: "Item 1",
@@ -942,28 +966,28 @@
                             name: "convo-effect-on-willingness-post",
                             title:
                                 `What parts of this conversation, if any, affected your willingness to talk with someone who has different views about ${topicChoiceAsString}? What made you feel like the conversation was or was not productive?`,
-                            isRequired: true,
+                            isRequired: false,
                         },
                         {
                             type: "comment",
                             name: "new-perspective-post",
                             title:
                                 `Throughout this conversation, were there any moments that opened you up to a new perspective about ${topicChoiceAsString}? If so, what occurred in these moments? If not, what made you feel like the conversation was not productive?`,
-                            isRequired: true,
+                            isRequired: false,
                         },
                         {
                             type: "comment",
                             name: "still-contributes-post",
                             title:
                                 `What still contributes to your willingness or unwillingness to converse with others about ${topicChoiceAsString}? Please freely reflect in the space below.`,
-                            isRequired: true,
+                            isRequired: false,
                         },
                         {
                             type: "comment",
                             name: "feelings-about-bot",
                             title:
                                 `We are still working on improving our chatbot. How did you like talking with the bot? What do you wish were different? Please provide any feedback regarding your conversation that we have not already covered.`,
-                            isRequired: true,
+                            isRequired: false,
                         },
                     ],
                 };
