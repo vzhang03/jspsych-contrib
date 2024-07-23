@@ -786,20 +786,23 @@ var pre_convo_survey_json = {
       ],
       rows: [
         {
-          value: "The federal government should ensure that all citizens have access to healthcare",
+          value:
+            "pre-healthcare-polarization-general-The federal government should ensure that all citizens have access to healthcare",
           text: "The federal government should ensure that all citizens have access to healthcare",
         },
         {
-          value: "Government involvement in healthcare would worsen overall public health",
+          value:
+            "pre-healthcare-polarization-general-Government involvement in healthcare would worsen overall public health",
           text: "Government involvement in healthcare would worsen overall public health",
         },
         {
-          value: "More government regulation in healthcare would lead to better patient outcomes",
+          value:
+            "pre-healthcare-polarization-general-More government regulation in healthcare would lead to better patient outcomes",
           text: "More government regulation in healthcare would lead to better patient outcomes",
         },
         {
           value:
-            "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
+            "pre-healthcare-polarization-general-Increased government involvement in healthcare could lead to inefficiencies and higher costs",
           text: "Increased government involvement in healthcare could lead to inefficiencies and higher costs",
         },
       ],
