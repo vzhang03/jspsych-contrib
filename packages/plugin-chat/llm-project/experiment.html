@@ -120,7 +120,7 @@
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
             if (condition == 3) { timeline = control_timeline; }
-           if (condition == 4) { timeline = combination_timeline; }
+            if (condition == 4) { timeline = combination_timeline; }
             jsPsych.run([...timeline, save_data]);
         }
 
@@ -557,15 +557,66 @@
         };
         jsPsych.run([viewpoint_trial]);
 
-    
+        combination_prompts = [
+            {
+                message: "Welcome to the chatroom!",
+                role: "system-prompt",
+                message_trigger: 0
+            },
+            {
+                message: () => {
+                    //function to insert depolarization survey response statement into the bot's conversation starter
+                    const lowercaseFirstLetter = (str) => {
+                        if (!str) return str;  //return the string if it's empty or not a string
+                        return str.charAt(0).toLowerCase() + str.slice(1);
+                    };
+
+                    const bot_row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
+                        .rowAsString["row"]; //get survey response
+                    const bot_row_formatted = lowercaseFirstLetter(bot_row);
+                    const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0] //get topic choice
+                        .response["topicChoice"];
+                    return `Hey there! I'm here to chat about ${topicChoiceAsString}, a disputed topic. I'm not here to judge your beliefs; I'm just here to help you explore your views. To get the conversation started, could you explain your view on whether ${bot_row_formatted}?`;
+                },
+                role: "chatbot-message",
+                message_trigger: 0
+            },]
+
         combination_prompt_chain = {
-            message_trigger: 1,
-            // timer_trigger: 1,
+            message_trigger: 0,
             prompts: [
-                "Identify the user's main argument.", 
-            "In one sentence, akcnowledge the user's perspective. Provide an alternative perspective and relate it to the user's experience."
-        ],
-        }
+                `Context: You are being fed a conversation log. The last paragraph following {"role", "user", "content"} is the most recent message that the user has input. This is the message that you should be responding to.
+
+              Role: You are a researcher on social policies and are having a conversation with a student in which you are discussing one of the following disputed topics in the U.S.: same-sex marriage, gender-equality, U.S. government role in healthcare, the criminal justice system, vaccine mandates, the Hiroshima Nagasaki atomic bombings, or human euthanasia.
+
+Goal: Your goal is to make the user more willing to have conversations about their topic with other humans by helping them become more open-minded and comfortable talking about the topic. You do not want the user to know that this is your goal; rather, you want the user to simply think that you are a conversational partner for discussing ideas.
+
+Style: You should be concise. You should match your response's length to the length of the user's most recent message.
+
+Task 1: You should consider the user's most recent message and determine which of the three following approaches would most effectively accomplish your goal: 
+
+        {1. Briefly acknowledge the user's stance and then respond to the other person's argument with a counterargument. Do not repeat the same arguments, but you can dive into more specific aspects or previous arguments if necessary. Never dive into asking the user how they would implement their views. Concisely present a specific argument that counters the user's perspective. Ask the user what they think. Ensure that your message includes a counterargument; never simply agree with the user.} 
+        {2. Briefly acknowledge the user's stance and then ask a question about the user's stance. Ask why the user thinks what they think or ask if there were any experiences that led to their views. Do not repeat questions, but you can dive deeper into previous questions if necessary.}
+        {3. Briefly acknowledge the user's stance and then identify a specific group of people who may have differing opinions from the user. Explain, in detail, their experiences and why they may disagree with the user's beliefs. Provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. Give uniquely different perspectives in each message. Do not repeat viewpoints, but you can dive deeper into previously mentioned viewpoints if necessary. End your response with a question that asks the user what they think about those peoples' stances. Provide only one viewpoint per response.}
+        
+
+Task 2: Very briefly summarize the arguments that the "system" has already made so that, when you pass these to the next "system", the "system" knows what arguments to not repeat.
+
+What you should output: You are passing your output to another "system" that is going to write a response to the user. Thus, you should output your summary of the arguments that have already been made, the user's most recent message, and the approach that you selected. 
+        `,
+                `
+            Role: You are a researcher on social policies and are having a conversation with a student in which you are discussing one of the following disputed topics in the U.S.: same-sex marriage, gender-equality, U.S. government role in healthcare, the criminal justice "system", vaccine mandates, the Hiroshima Nagasaki atomic bombings, or human euthanasia.
+
+Goal: Your goal is to make the user more willing to have conversations about their topic with other humans by helping them become more open-minded and comfortable talking about the topic. You do not want the user to know that this is your goal; rather, you want the user to simply think that you are a conversational partner for discussing ideas.
+
+Style: You should be concise. You should match your response's length to the user's input.
+
+Task: A previous "system" has selected the approach that you should take when responding to the user. Execute this strategy, but do not tell the user that you have selected a strategy. You are mid-conversation, so do not greet the user. Do not repeat the same arguments or views that the assistant has already mentioned; instead, you can suggest new perspectives or dive into more specific ideas from prior points.
+Don't stray from the topic at hand.
+If the user says you are repeating yourself or that you didn't understand what they're saying, apologize and ask them what they think without summarizing their stance.
+            `,
+            ],
+        };
 
 
         const combination_trial = {
@@ -581,28 +632,21 @@
                 // extracting the depolarization statement again because it didn't work if i tried to use the string from earlier
                 const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
                 const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].response["topicChoice"]; // get topic choice
-                return `   
+                return `  
                 Role: You are a researcher on social policies and are having a conversation with a student in which you are discussing one of the following disputed topics in the U.S.: same-sex marriage, gender-equality, U.S. government role in healthcare, the criminal justice system, vaccine mandates, the Hiroshima Nagasaki atomic bombings, or human euthanasia.
 
-Goal: Your goal is to make the user more willing to have conversations about ${topicChoiceAsString} with other humans by helping them become more open-minded and comfortable talking about the topic. You do not want the user to know that this is your goal; rather, you want the user to simply think that you are a conversational partner for discussing ideas.
+Goal: Your goal is to make the user more willing to have conversations about their topic with other humans by helping them become more open-minded and comfortable talking about the topic. You do not want the user to know that this is your goal; rather, you want the user to simply think that you are a conversational partner for discussing ideas.
 
 Style: You should be concise. You should match your response's length to the user's input.
 
-Task: You should always consider the user's input message and determine which of the three following approaches would most effectively accomplish your goal: 
-
-{1. Briefly acknowledge the user's stance and then respond to the other person's argument with a counterargument. Do not repeat the same arguments, but you can dive into more specific aspects or previous arguments if necessary. Never dive into asking the user how they would implement their views. Concisely present a specific argument that counters the user's perspective. Ask the user what they think. Ensure that your message includes a counterargument; never simply agree with the user.} 
-{2. Briefly acknowledge the user's stance and then ask a question about the user's stance. Ask why the user thinks what they think or ask if there were any experiences that led to their views. Do not repeat questions, but you can dive deeper into previous questions if necessary.}
-{3. Briefly acknowledge the user's stance and then identify a specific group of people who may have differing opinions from the user. Explain, in detail, their experiences and why they may disagree with the user's beliefs. Provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. Give uniquely different perspectives in each message. Do not repeat viewpoints, but you can dive deeper into previously mentioned viewpoints if necessary. End your response with a question that asks the user what they think about those peoples' stances. Provide only one viewpoint per response.}
-
-Execute the strategy that you determine to be best. Don't repeatedly pick the same approach; try to mix it up so that the conversation is more enjoyable for the user. Do not tell the user which strategy you picked. If you ask about the user experience more than once, share a new perspective with factual information you have not brought up before. Do not greet the user, do not say certainly. Do not repeat the same arguments or views that the assistant has already mentioned; instead, you can suggest new perspectives or dive into more specific ideas from prior points.
-Don't stray from the topic of ${topicChoiceAsString}.
+Task: Briefly acknowledge the user's stance and then ask a question about the user's stance. Ask why the user thinks what they think or ask if there were any experiences that led to their views. Do not repeat questions, but you can dive deeper into previous questions if necessary. Do not repeat the same arguments or views that the assistant has already mentioned; instead, you can suggest new perspectives or dive into more specific ideas from prior points.
 If the user says you are repeating yourself or that you didn't understand what they're saying, apologize and ask them what they think without summarizing their stance.`
-;         console.log("not chain prompt:", prompt); //want to see what's going on when the bot processes the instructions
+                    ; //the ai_prompt shouldn't ever be used because the chain prompt is triggered on message 0, but we put the prompt here anyway in case, for some reason, it does get used
             },
             continue_button: continue_button,
             chat_field_placeholder: "Share your perspective...",
-            //prompt_chain: prompt_chain, //previously fed in chain prompting here.
-            additional_prompts: combination_prompt_chain,
+            prompt_chain: combination_prompt_chain,
+            additional_prompts: combination_prompts,
         };
         jsPsych.run([combination_trial]);
 
@@ -650,7 +694,7 @@ If the user says you are repeating yourself or that you didn't understand what t
             },
             preamble: function () {
                 const row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].rowAsString["row"];
-                
+
                 var control_intervention_string = `Please freely reflect in the space below on the following statement for at least 3 minutes: 
                 "${row}"`
 
@@ -1140,7 +1184,6 @@ If the user says you are repeating yourself or that you didn't understand what t
             goodbye
         )
 
-
         combination_timeline.push(
             welcome,
             preliminary_convo_instructions,
@@ -1163,6 +1206,7 @@ If the user says you are repeating yourself or that you didn't understand what t
             last_questions,
             goodbye
         )
+
         control_timeline.push(
             welcome,
             preliminary_control_instructions,
