@@ -1,0 +1,165 @@
+
+var start_time;
+var last_activity_time;
+var inactive_time = 0;
+var inactivity_threshold = 20000; // in ms
+let lastKeyPressTime = null;
+let countdownTime = 120; // 2 minutes in seconds
+let countdownInterval = null;
+
+
+// Function to update the countdown display
+function updateCountdownDisplay() {
+const minutes = Math.floor(countdownTime / 60);
+const seconds = countdownTime % 60;
+document.getElementById('countdown').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+// Function to start the countdown
+function startCountdown() {
+countdownInterval = setInterval(function() {
+if (lastKeyPressTime !== null && (jsPsych.currentTime() - lastKeyPressTime) > 20000) {
+  // Pause the countdown if more than 20 seconds have passed since the last key press
+  clearInterval(countdownInterval);
+} else {
+  if (countdownTime > 0) {
+    countdownTime--;
+    updateCountdownDisplay();
+    
+  } else {
+    clearInterval(countdownInterval);
+    alert('You have completed the minimum amount of reflection time. Feel free to keep writing or continue with the experiment');
+    console.log('in function', countdownInterval)
+  }
+}
+}, 1000);
+}
+
+// Event listener for key presses
+document.addEventListener('keydown', function(event) {
+lastKeyPressTime = jsPsych.currentTime();
+if (countdownInterval === null) {
+startCountdown(); // Start the countdown if it's not already running
+} else {
+clearInterval(countdownInterval); // Clear the previous interval
+startCountdown(); // Restart the countdown
+}
+});
+
+// Initialize the countdown display
+updateCountdownDisplay();
+startCountdown(); // Start the countdown on load
+
+function getElapsedTimeSinceLastKeyPress() {
+    if (lastKeyPressTime === null) {
+        return 'No key press detected yet';
+    } else {
+        const currentTime = jsPsych.currentTime();
+        return currentTime - lastKeyPressTime;
+    }
+}
+
+function checkIfCountdownFinished() {
+    if (lastKeyPressTime === null) {
+        return 'No key press detected yet';
+    } else {
+        const currentTime = jsPsych.currentTime();
+        return currentTime - lastKeyPressTime;
+    }
+}
+// function to check elapsed time
+function checkElapsedTimeWithoutInactivity() {
+    var currentTime = Date.now();
+    var elapsedTimeWithInactivity = (currentTime - start_time) / 1000; // elapsedTime is in seconds
+    var elapsedTimeWithoutInactivity = (currentTime - start_time - inactive_time) / 1000; // elapsedTime is in seconds
+    if (elapsedTimeWithoutInactivity < 30) {
+        alert("Please reflect on the statement for the full duration of time.");
+        //   jsPsych.endExperiment('Restarting survey due to insufficient time.');
+        jsPsych.run([ //basically just restart the control timeline, picking up with control intervention
+            control_intervention,
+            post_control_break,
+            republican_survey,
+            democrat_survey,
+            neutral_survey,
+            other_survey,
+            euthanasia_post_survey,
+            gender_post_survey,
+            healthcare_post_survey,
+            bombings_post_survey,
+            vaccines_post_survey,
+            criminal_post_survey,
+            same_sex_post_survey,
+            goodbye,
+            save_data]);
+        console.log('inactive time', inactive_time);
+        console.log('elapsedTimeWithInactivity', elapsedTimeWithInactivity);
+        console.log('elapsedTimeWithoutInactivity', elapsedTimeWithoutInactivity)
+    } else {
+        jsPsych.finishTrial();
+    }
+
+}
+
+function keyboardInactivity() {
+    var currentTime = Date.now();
+    if (last_activity_time && (currentTime - last_activity_time) > inactivity_threshold) {
+        inactive_time += (currentTime - last_activity_time - inactivity_threshold);
+    }
+    last_activity_time = currentTime;
+}
+
+//creating text box for control condition
+var control_intervention = {
+    type: jsPsychSurvey,
+    data: {
+        phase: "control-intervention",
+    },
+    survey_json: () => {
+        const row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].rowAsString["row"];
+        var control_intervention_json = {
+            elements: [{
+                type: "comment",
+                name: "control-free-response",
+                title: `Please freely reflect in the space below on the following statement: "${row}"`,
+                isRequired: true,
+            }]
+        };
+        return control_intervention_json;
+    },
+    on_load: function () {
+        // Record the start time
+        start_time = Date.now();
+        startCountdown();
+    },
+    on_finish: function (data) {
+        // Check elapsed time when the survey is finished
+        if (countdownInterval > 0) {
+        alert("Please reflect on the statement for the full duration of time.");
+        //   jsPsych.endExperiment('Restarting survey due to insufficient time.');
+        jsPsych.run([ //basically just restart the control timeline, picking up with control intervention
+            control_intervention,
+            post_control_break,
+            republican_survey,
+            democrat_survey,
+            neutral_survey,
+            other_survey,
+            euthanasia_post_survey,
+            gender_post_survey,
+            healthcare_post_survey,
+            bombings_post_survey,
+            vaccines_post_survey,
+            criminal_post_survey,
+            same_sex_post_survey,
+            goodbye,
+            save_data]); 
+            console.log('in on finish', countdownInterval)
+        }
+      else {
+        jsPsych.finishTrial();
+
+    }
+        //  checkIfCountdownFinished();
+    }
+
+};
+jsPsych.run([control_intervention]);
