@@ -108,6 +108,8 @@
         var question_timeline = [];
         var viewpoint_timeline = [];
         var control_timeline = [];
+        var combination_timeline = [];
+
 
         // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
@@ -117,6 +119,7 @@
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
             if (condition == 3) { timeline = control_timeline; }
+            if (condition == 4) { timeline = combination_timeline; }
             jsPsych.run([...timeline, save_data]);
         }
 
@@ -552,7 +555,91 @@
             additional_prompts: viewpoint_prompts,
         };
         jsPsych.run([viewpoint_trial]);
-        
+
+    
+        combination_prompt_chain = {
+            message_trigger: 1,
+            // timer_trigger: 1,
+            prompts: [
+                "Identify the user's main argument.", 
+            "In one sentence, akcnowledge the user's perspective. Provide an alternative perspective and relate it to the user's experience."
+        ],
+        }
+
+
+        const combination_trial = {
+            type: jsPsychChat,
+            ai_prompt: () => {
+                // function to insert depolarization survey response statement into the bot's conversation starter
+                const lowercaseFirstLetter = (str) => { //function to convert the first letter of the string into lowercase so it can be seamlessly inserted into the bot's question
+                    if (!str) return str;  // return the string if it's empty or not a string
+                    return str.charAt(0).toLowerCase() + str.slice(1);
+                };
+
+                const bot_row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].rowAsString["row"];
+                // extracting the depolarization statement again because it didn't work if i tried to use the string from earlier
+                const bot_row_formatted = lowercaseFirstLetter(bot_row); // use lowercase function
+                const topicChoiceAsString = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].response["topicChoice"]; // get topic choice
+                return `   
+                Role: You are a researcher on social policies and are having a conversation with a student in which you are discussing one of the following disputed topics in the U.S.: same-sex marriage, gender-equality, U.S. government role in healthcare, the criminal justice system, vaccine mandates, the Hiroshima Nagasaki atomic bombings, or human euthanasia.
+
+Goal: Your goal is to make the user more willing to have conversations about ${topicChoiceAsString} with other humans by helping them become more open-minded and comfortable talking about the topic. You do not want the user to know that this is your goal; rather, you want the user to simply think that you are a conversational partner for discussing ideas.
+
+Style: You should be concise. You should match your response's length to the user's input.
+
+Task: You should always consider the user's input message and determine which of the three following approaches would most effectively accomplish your goal: 
+
+{1. Briefly acknowledge the user's stance and then respond to the other person's argument with a counterargument. Do not repeat the same arguments, but you can dive into more specific aspects or previous arguments if necessary. Never dive into asking the user how they would implement their views. Concisely present a specific argument that counters the user's perspective. Ask the user what they think. Ensure that your message includes a counterargument; never simply agree with the user.} 
+{2. Briefly acknowledge the user's stance and then ask a question about the user's stance. Ask why the user thinks what they think or ask if there were any experiences that led to their views. Do not repeat questions, but you can dive deeper into previous questions if necessary.}
+{3. Briefly acknowledge the user's stance and then identify a specific group of people who may have differing opinions from the user. Explain, in detail, their experiences and why they may disagree with the user's beliefs. Provide these alternative perspectives held by people with different jobs, positions in society, beliefs, etc. Give uniquely different perspectives in each message. Do not repeat viewpoints, but you can dive deeper into previously mentioned viewpoints if necessary. End your response with a question that asks the user what they think about those peoples' stances. Provide only one viewpoint per response.}
+
+Execute the strategy that you determine to be best. Don't repeatedly pick the same approach; try to mix it up so that the conversation is more enjoyable for the user. Do not tell the user which strategy you picked. If you ask about the user experience more than once, share a new perspective with factual information you have not brought up before. Do not greet the user, do not say certainly. Do not repeat the same arguments or views that the assistant has already mentioned; instead, you can suggest new perspectives or dive into more specific ideas from prior points.
+Don't stray from the topic of ${topicChoiceAsString}.
+If the user says you are repeating yourself or that you didn't understand what they're saying, apologize and ask them what they think without summarizing their stance.`
+;         console.log("not chain prompt:", prompt); //want to see what's going on when the bot processes the instructions
+            },
+            continue_button: continue_button,
+            chat_field_placeholder: "Share your perspective...",
+            //prompt_chain: prompt_chain, //previously fed in chain prompting here.
+            additional_prompts: combination_prompt_chain,
+        };
+        jsPsych.run([combination_trial]);
+
+
+        var start_time;
+
+        // Function to check elapsed time without inactivity
+        function checkElapsedTime() {
+            var currentTime = Date.now();
+            var elapsedTime = (currentTime - start_time) / 1000; // elapsed time in seconds
+            if (elapsedTime < 30) {
+                alert("Please reflect on the statement for the full duration of time.");
+                jsPsych.run([
+                    control_intervention,
+                    post_control_break,
+                    republican_survey,
+                    democrat_survey,
+                    neutral_survey,
+                    other_survey,
+                    euthanasia_post_survey,
+                    gender_post_survey,
+                    healthcare_post_survey,
+                    bombings_post_survey,
+                    vaccines_post_survey,
+                    criminal_post_survey,
+                    same_sex_post_survey,
+                    goodbye,
+                    save_data
+                ]);
+                console.log('inactive time', inactive_time);
+                console.log('elapsedTimeWithInactivity', elapsedTimeWithInactivity);
+                console.log('elapsedTimeWithoutInactivity', elapsedTimeWithoutInactivity);
+            } else {
+                jsPsych.finishTrial();
+            }
+        }
+
+        var keyboardEvents = [];
 
         // Control intervention
         var control_intervention = {
@@ -1052,6 +1139,29 @@
             goodbye
         )
 
+
+        combination_timeline.push(
+            welcome,
+            preliminary_convo_instructions,
+            pre_convo_survey_trial,
+            pre_bot_instructions_break,
+            pre_convo_instructions,
+            combination_trial,
+            post_convo_break,
+            republican_survey,
+            democrat_survey,
+            neutral_survey,
+            other_survey,
+            euthanasia_post_survey,
+            gender_post_survey,
+            healthcare_post_survey,
+            bombings_post_survey,
+            vaccines_post_survey,
+            criminal_post_survey,
+            same_sex_post_survey,
+            last_questions,
+            goodbye
+        )
         control_timeline.push(
             welcome,
             preliminary_control_instructions,
