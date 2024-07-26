@@ -115,12 +115,12 @@
         // sequential condition assignment using data pipe. pushing a condition timeline into the timeline variable
         var timeline = [];
         async function createExperiment() {
-            const condition = await jsPsychPipe.getCondition("P09AXWX5b5t6");
+            const condition = 4 // await jsPsychPipe.getCondition("P09AXWX5b5t6");
             if (condition == 0) { timeline = counter_timeline; }
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
             if (condition == 3) { timeline = control_timeline; }
-          //  if (condition == 4) { timeline = combination_timeline; }
+           if (condition == 4) { timeline = combination_timeline; }
             jsPsych.run([...timeline, save_data]);
         }
 
