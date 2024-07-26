@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@1.1.3"></script>
     <link rel="stylesheet" href="https://unpkg.com/@jspsych/plugin-survey@1.0.1/css/survey.css" />
     <script src="https://unpkg.com/@jspsych/plugin-survey@1.0.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.0.0"></script> <!--- for control intervention--- 
 
     <!-- loading react-->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> <!-- -->
@@ -119,7 +120,7 @@
             if (condition == 1) { timeline = question_timeline; }
             if (condition == 2) { timeline = viewpoint_timeline; }
             if (condition == 3) { timeline = control_timeline; }
-            if (condition == 4) { timeline = combination_timeline; }
+          //  if (condition == 4) { timeline = combination_timeline; }
             jsPsych.run([...timeline, save_data]);
         }
 
@@ -656,7 +657,7 @@ If the user says you are repeating yourself or that you didn't understand what t
                 return control_intervention_string;
             },
             questions: [
-                { prompt: '<span>Time remaining <div id="timer" class="inline-display">60</div></span> Timer pauses if you stop typing for 20 seconds.', rows: 5 }
+                { prompt: '<span>Time remaining <div id="timer" class="inline-display">60</div></span> Prolonged periods of keyboard inactivity will pause the timer.', rows: 5 }
             ],
             on_load: function () {
                 let timerElement = document.getElementById('timer'); // Get the timer display element
