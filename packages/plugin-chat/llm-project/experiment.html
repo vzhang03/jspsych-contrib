@@ -552,96 +552,100 @@
             additional_prompts: viewpoint_prompts,
         };
         jsPsych.run([viewpoint_trial]);
-
-
-        var start_time;
-
-        // Function to check elapsed time without inactivity
-        function checkElapsedTime() {
-            var currentTime = Date.now();
-            var elapsedTime = (currentTime - start_time) / 1000; // elapsed time in seconds
-            if (elapsedTime < 30) {
-                alert("Please reflect on the statement for the full duration of time.");
-                jsPsych.run([
-                    control_intervention,
-                    post_control_break,
-                    republican_survey,
-                    democrat_survey,
-                    neutral_survey,
-                    other_survey,
-                    euthanasia_post_survey,
-                    gender_post_survey,
-                    healthcare_post_survey,
-                    bombings_post_survey,
-                    vaccines_post_survey,
-                    criminal_post_survey,
-                    same_sex_post_survey,
-                    goodbye,
-                    save_data
-                ]);
-                console.log('inactive time', inactive_time);
-                console.log('elapsedTimeWithInactivity', elapsedTimeWithInactivity);
-                console.log('elapsedTimeWithoutInactivity', elapsedTimeWithoutInactivity);
-            } else {
-                jsPsych.finishTrial();
-            }
-        }
+        
 
         // Control intervention
         var control_intervention = {
-            type: jsPsychSurvey,
+            type: jsPsychSurveyText,
             data: {
                 phase: "control-intervention",
             },
-            survey_json: function () {
+            preamble: function () {
                 const row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0].rowAsString["row"];
-                var control_intervention_json = {
-                    elements: [{
-                        type: "comment",
-                        name: "control-free-response",
-                        title: `Please freely reflect in the space below on the following statement: "${row}"`,
-                        isRequired: true,
-                    }]
-                };
-                return control_intervention_json;
+                
+                var control_intervention_string = `Please freely reflect in the space below on the following statement for at least 3 minutes: 
+                "${row}"`
+
+                return control_intervention_string;
             },
+            questions: [
+                { prompt: '<span>Time remaining <div id="timer" class="inline-display">60</div></span> Timer pauses if you stop typing for 20 seconds.', rows: 5 }
+            ],
             on_load: function () {
-                // Record the start time and set up the keyboard activity listener
-                start_time = Date.now();
-            },
-            on_finish: function (data) {
-                // Remove the keyboard activity listener and inactivity timer
-                // Check elapsed time when the survey is finished
-                checkElapsedTime();
+                let timerElement = document.getElementById('timer'); // Get the timer display element
+                let textInput = document.getElementById('input-0'); // Get the text input element
+                let button = document.getElementById('jspsych-survey-text-next'); // Get the continue button element
+
+
+                let countdown = 3 * 60; // Set initial countdown time in seconds
+                let inactivityLimit = 20; // Set inactivity limit in seconds
+
+
+                let inactivityTimer; // Declare variable for inactivity timer
+                let countdownTimer; // Declare variable for countdown timer
+                let isCountingDown = false; // Flag to track if countdown is active
+
+                button.disabled = true; // Initially disable the continue button
+
+                function updateTimerDisplay() {
+                    let minutes = Math.floor(countdown / 60); // Calculate remaining minutes
+                    let seconds = countdown % 60; // Calculate remaining seconds
+                    seconds = String(seconds).padStart(2, '0'); // Format seconds with leading zero if needed
+                    timerElement.textContent = `${minutes}:${seconds}`; // Update timer display with mm:ss format
+                }
+
+                function startCountdownTimer() {
+                    if (countdownTimer) {
+                        clearInterval(countdownTimer); // Clear existing countdown timer if it exists
+                    }
+                    countdownTimer = setInterval(() => {
+                        countdown--; // Decrement countdown each second
+                        updateTimerDisplay(); // Update the timer display
+                        if (countdown <= 0) {
+                            clearInterval(countdownTimer); // Stop the countdown timer when it reaches 0
+                            clearTimeout(inactivityTimer); // Clear the inactivity timer
+                            console.log("Timer finished."); // Log message indicating timer has finished
+                            button.disabled = false; // Enable the continue button
+                        }
+                    }, 1000); // Set interval to 1 second
+                    isCountingDown = true; // Set flag indicating countdown has started
+                }
+
+                function stopCountdownTimer() {
+                    clearInterval(countdownTimer); // Stop the countdown timer
+                    isCountingDown = false; // Reset flag indicating countdown is not active
+                }
+
+                function resetInactivityTimer() {
+                    clearTimeout(inactivityTimer); // Clear existing inactivity timer
+                    inactivityTimer = setTimeout(() => {
+                        stopCountdownTimer(); // Stop the countdown timer due to inactivity
+                        alert("Timer stopped due to inactivity."); // Alert user that timer stopped due to inactivity
+                    }, inactivityLimit * 1000); // Set inactivity timer based on inactivity limit
+                }
+
+                function handleTyping() {
+                    console.log("Typing..."); // Log message indicating typing activity
+                    if (countdown > 0) {
+                        resetInactivityTimer(); // Reset inactivity timer on typing
+                        if (!isCountingDown) {
+                            startCountdownTimer(); // Start countdown timer if not already started
+                        }
+                    }
+                }
+
+                textInput.addEventListener('input', handleTyping); // Add event listener for typing in the text input
+
+                // Initialize the display and timers
+                updateTimerDisplay(); // Update the timer display initially
+                resetInactivityTimer(); // Reset inactivity timer initially
+                startCountdownTimer(); // Start the countdown timer initially
             }
         };
 
         // Run the experiment
         jsPsych.run([control_intervention]);
 
-
-        //creating text box for control condition
-        var control_intervention = {
-            type: jsPsychSurvey,
-            data: {
-                phase: "control-intervention",
-            },
-            survey_json: () => {
-                const row = jsPsych.data.get().filter({ phase: "pre-convo-survey" }).values()[0]
-                    .rowAsString["row"]
-
-                var control_intervention_json = {
-                    elements: [{
-                        type: "comment",
-                        name: "control-free-response",
-                        title: `Please freely reflect in the space below on the following statement: "${row}"`,
-                        isRequired: true,
-                    }]
-                }
-                return control_intervention_json
-            },
-            survey_function: initializePostSlider,
-        }
 
         /* ---------- PARTY SPECIFIC POST CHAT SURVEYS ---------- */
         //this is where the survey response from the pre-convo survey is for, to change the survey to be specific to the user
