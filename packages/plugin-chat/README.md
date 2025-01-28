@@ -31,3 +31,9 @@ See [documentation](https://github.com/jspsych/jspsych-contrib/blob/main/package
 ## Author / Citation
 
 Victor Zhang and Niranjan Baskaran
+
+## Known Issues
+
+- canvas package -- need to install using homebrew
+- compability with node version above 20
+- husky
