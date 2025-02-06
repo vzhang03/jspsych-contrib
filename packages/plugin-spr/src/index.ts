@@ -58,6 +58,13 @@ const info = <const>{
       type: ParameterType.KEYS,
       default: [" "],
     },
+    /**
+     * If `true`, tapping or clicking the screen will advance to the next segment.
+     */
+    click_to_advance: {
+      type: ParameterType.BOOL,
+      default: false,
+    },
   },
   data: {
     /** The individual segments that are displayed per key press. */
@@ -82,8 +89,8 @@ const info = <const>{
         segment: {
           type: ParameterType.STRING,
         },
-        /** The key that was pressed by the participant. */
-        key_pressed: {
+        /** The button/tap that was received from the participant. */
+        response: {
           type: ParameterType.STRING,
         },
       },
@@ -111,6 +118,7 @@ class SprPlugin implements JsPsychPlugin<Info> {
   private index: number;
   // --- parameter fields ---
   private mode: 1 | 2 | 3;
+  private eventElement: HTMLElement;
   // --- data fields ---
   private results = [];
   private startTime: number;
@@ -119,6 +127,7 @@ class SprPlugin implements JsPsychPlugin<Info> {
 
   trial(display_element: HTMLElement, trial: TrialType<Info>) {
     // setup styles and trial parameters
+    this.eventElement = document.querySelector(".jspsych-display-element");
     var css = this.initializeVariables(trial);
 
     // setup html logic
@@ -136,6 +145,16 @@ class SprPlugin implements JsPsychPlugin<Info> {
       results: this.results,
     };
     // end trial
+    window.removeEventListener("mousedown", (e) => {
+      e.preventDefault();
+      this.onValidKeyPress({ key: "click" });
+      console.log("click");
+    });
+    window.removeEventListener("touchstart", (e) => {
+      e.preventDefault();
+      this.onValidKeyPress({ key: "tap" });
+    });
+
     this.jsPsych.pluginAPI.cancelAllKeyboardResponses();
     this.jsPsych.finishTrial(trial_data);
   }
@@ -176,14 +195,28 @@ class SprPlugin implements JsPsychPlugin<Info> {
       allow_held_key: false,
     });
 
+    if (trial.click_to_advance) {
+      window.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        this.onValidKeyPress({ key: "click" });
+        console.log("click");
+      });
+      window.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        this.onValidKeyPress({ key: "tap" });
+      });
+    }
+
     var css = `<style>
+    #jspsych-spr-content {
+      user-select: none;
+    }
     .jspsych-spr-before-region {
-      ${this.mode !== 2 ? "color: white; border-bottom: 1px solid black; user-select: none;" : ""}
+      ${this.mode !== 2 ? "color: white; border-bottom: 1px solid black;" : ""}
     }
     .jspsych-spr-after-region {
       color: white;
       border-bottom: 1px solid black;
-      user-select: none;
     }
     </style>`;
 
@@ -257,7 +290,7 @@ class SprPlugin implements JsPsychPlugin<Info> {
     }
   }
 
-  // helper function to generate a blank string of input length for data
+  /** helper function to generate a blank string of input length for data */
   private generateBlank(text: string): string {
     const split = text.split(" ");
     if (split.length > 1) return split.map((word) => "_".repeat(word.length)).join(" ");

@@ -30,6 +30,7 @@
       {
         type: jsPsychSpr,
         sentence: jsPsych.timelineVariable('stimulus'),
+        click_to_advance: true,
         mode: 1
       }
     ],
@@ -41,7 +42,8 @@
     type: jsPsychSpr,
     sentence: "Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich. :)",
     mode: 1,
-    segments_per_key_press: 2
+    segments_per_key_press: 2,
+    click_to_advance: true
   };
 
   jsPsych.run([procedure, segment_size_trial]);

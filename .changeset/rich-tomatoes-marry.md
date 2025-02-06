@@ -1,5 +1,5 @@
 ---
-"@jspsych-contrib/plugin-self-paced-reading": major
+"@jspsych-contrib/plugin-spr": major
 ---
 
-Inital version of SPR plugin
+initial implementation of a DOM-based version of self-paced-reading trials.

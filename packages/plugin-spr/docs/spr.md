@@ -46,7 +46,7 @@ npm install @jspsych-contrib/plugin-spr
 ```
 
 ```js
-import Spr from '@jspsych-contrib/plugin-spr';
+import jsPsychSpr from '@jspsych-contrib/plugin-spr';
 ```
 
 ## Examples
